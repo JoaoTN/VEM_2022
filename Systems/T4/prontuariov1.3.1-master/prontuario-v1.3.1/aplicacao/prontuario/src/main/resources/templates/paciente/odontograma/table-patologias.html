@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+</head>
+
+<body>
+	<div th:fragment="patologiasList" class="">
+		<table id="table-patologias" class="mf-table">
+			<thead>
+				<tr>
+					<th>Data</th>
+					<th>Nome</th>
+					<th>Dente</th>
+					<th>Face</th>
+					<th sec:authorize="hasAuthority('ESTUDANTE')" th:if="${existeAtendimento}" />
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="patologia: ${patologias}">
+					<td th:text="${#dates.format(patologia.data, 'dd/MM/yyyy')}"></td>
+					<td><a class="deep-orange-text waves-effect tooltipped patologia-table-item"
+						th:text="${patologia.tipo.nome}"
+						th:onclick="${'abrirModalDetalhesPatologia(__${patologia.id}__)'}"
+						style="cursor: pointer;"></a></td>
+					<td th:text="${patologia.dente} ? ${patologia.dente.numero} : '-'"></td>
+					<td th:text="${patologia.face} ? ${patologia.face.descricao} : '-'"></td>
+					<td sec:authorize="hasAuthority('ESTUDANTE')" th:if="${existeAtendimento}" >
+						<a th:if="${patologia.tratamento == null}" class="btn waves-effect waves-light tratar-patologia" th:onclick="${'tratarPatologiaForm(__${patologia.id}__)'}">Tratar</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<script type="text/javascript" th:inline="javascript">
+			
+		</script>
+	</div>
+</body>
+</html>

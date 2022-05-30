@@ -1,0 +1,86 @@
+.face{
+	fill: black;
+	fill-opacity: 0.0;
+	stroke: black;
+	stroke-opacity: 0.2;
+	stroke-width: 100;
+}
+
+.focus-face{
+	fill-opacity: 0.2;
+	stroke-opacity: 0.3;
+}
+
+.procedimento{
+	fill: #2196f3;
+	fill-opacity:0.7;
+	stroke:black;
+	stroke-opacity:0.7;
+}
+
+div.procedimento{
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	display: inline;
+	background: #2196f3;
+	margin-right: 8px;
+}
+
+.patologia{
+	fill: #FF0000;
+	fill-opacity:0.3;
+	stroke:black;
+	stroke-opacity:0.3;
+}
+
+.patologia-ativa{
+	fill-opacity:0.7;
+}
+
+div.patologia{
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	display: inline-block;
+	background: #FF0000;
+	margin-right: 8px;
+}
+
+.proced-exist{
+	fill: #4caf50;
+	fill-opacity:0.7;
+	stroke:black;
+	stroke-opacity:0.7;
+}
+
+div.proced-exist{
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	display: inline-block;
+	background: #4caf50;
+	margin-right: 8px;
+}
+
+.txt-dente{
+	fill: #000000;
+	background-color: #a40000;
+	background: #000000;
+}
+
+.margin-right {
+	margin-right: 20px !important;
+}
+
+.arcadas-container {
+	
+}
+
+.alert-fail {
+	border-left: 5px solid #f57900;
+}
+
+.alert-success {
+	border-left: 5px solid #3465a4;
+}

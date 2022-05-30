@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ptBR" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="icon" type="image/png" sizes="16x16" th:href="@{/img/logo.png}"/>
+    <title>Contest</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <!-- CSS  -->
+    <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />-->
+    <link th:href="@{/css/materialize.min.css}" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link th:href="@{/css/font-awesome.min.css}" type="text/css" rel="stylesheet" />
+    <link th:href="@{/css/time-line-style.css}" type="text/css" rel="stylesheet" media="screen,projection" />
+    <!--<link th:href="@{/css/jquery.dataTables.css}" type="text/css" rel="stylesheet" />-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.0/css/select.dataTables.min.css"/>
+    <link th:href="@{/css/select2.min.css}" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link th:href="@{/css/style.css}" type="text/css" rel="stylesheet" media="screen,projection" />
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <!-- default header name is X-CSRF-TOKEN -->
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+    <meta name="_context" th:content="${#httpServletRequest.getContextPath()}" />
+    <!-- CONFIGURACAO DO CONTEXTO -->
+    <meta name="_context" th:content="${#httpServletRequest.getContextPath()}"/>
+</head>
+
+<body>
+    <div th:replace="fragments/header :: header"></div>
+
+    <div class="container">
+        <div id="toast-container">
+            <div class="toast alert-info rounded" th:if="${not #strings.isEmpty(info)}" >
+                <div class="valign-wrapper">
+                    <i class="material-icons green-text">check</i> <span class="green-text" th:text="${info}"></span>
+                </div>
+            </div>
+
+            <div class="toast alert-erro rounded" th:if="${not #strings.isEmpty(error)}" >
+                <div class="valign-wrapper">
+                    <i class="material-icons red-text">error</i><span class="red-text" th:text="${error}"></span>
+                </div>
+            </div>
+        </div>
+
+        <section layout:fragment="conteudo"></section>
+
+        <div id="modal-excluir" class="modal">
+            <form id="form-nova-sessao" class="col s12">
+                <div class="modal-content">
+                    <h4>Excluir</h4>
+                    <p>Tem certeza de que deseja realizar a exclusão?</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="" id="confirmAcao" class="btn red waves-effect waves-light">Sim, desejo excluir</a>
+                    <a href="#!" class="modal-close btn-flat">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript" th:src="@{https://code.jquery.com/jquery-3.3.1.js}"></script>
+    <script type="text/javascript" th:src="@{/js/materialize.min.js}"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/select/1.3.0/js/dataTables.select.min.js"></script>
+    <script type="text/javascript" th:src="@{/js/select2.min.js}"></script>
+
+
+    <!-- https://igorescobar.github.io/jQuery-Mask-Plugin/docs.html -->
+    <script type="text/javascript" th:src="@{/js/jquery.mask.min.js}"></script>
+
+    <script type="text/javascript">
+        var _context = $("meta[name='_context']").attr("content");
+
+        if (_context == null) {
+            _context = "";
+        }
+
+        $(document).ready(function() {
+            var _context = $("meta[name='_context']").attr("content");
+
+            if (_context == null) {
+                _context = "";
+            }
+
+            $('.tabs').tabs();
+            //$('select').formSelect();
+            $(".confirmacao").click(function() {
+                var link = $(this).data("link");
+                $("#confirmAcao").attr("href", link);
+            });
+
+            $('#toast-container').click(function () {
+                $('#toast-container').fadeOut();
+            });
+
+            setTimeout(function() {
+                $('#toast-container').fadeOut();
+            }, 3000);
+
+        });
+
+
+
+    </script>
+    <section layout:fragment="js"></section>
+
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="base/base"
+    th:with="currentPage='alunos'">
+
+	<head>
+	    <title>Prontuário - Alunos</title>
+	    <link rel="stylesheet" type="text/css" th:href="@{/css/aluno/listagem-alunos.css}"/>
+	</head>
+	<section layout:fragment="conteudo">
+		<div class="row">
+			<!-- BREADCRUMBS - Mostra o caminho até a página atual -->
+			<div class="col s12 breadcrumbs valign-wrapper">
+	            <a th:href="@{/}" class="breadcrumb blue-grey-text">
+	                <i class="material-icons left">home</i>
+	            </a>
+	            <a class="breadcrumb blue-grey-text">Alunos</a>
+	        </div>
+	        <!-- BREADCRUMBS -->
+
+			<!-- CONTAINER - Conteiner principal da aplicação -->
+		    <div class="col s12">
+		    	<!-- Conteúdo da página ... -->
+		    	<div class="card">
+	    			<a th:href="@{/aluno/adicionar}"
+	    				class="listar-aluno__add-button login__card-submit-button-hided btn-floating btn-large tooltipped"
+	    				data-tooltip="Adicionar Aluno">
+						<i class="material-icons white-text waves-effect waves-light">add</i>
+					</a>
+	    		
+	    			<div class="card-content" th:if="${#lists.isEmpty(alunos)}">
+	    				Nenhum aluno encontrado!
+	    			</div>
+					
+					<table id="alunos" class="mf-table striped" th:unless="${#lists.isEmpty(alunos)}">
+						<thead>
+							<tr>
+								<th>Nome</th>
+								<th>Email</th>
+								<th>Matrícula</th>
+								<th>Ingresso</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="aluno :${alunos}">
+								<td>
+									<a th:text="${aluno.nome}" th:href="@{/aluno/detalhes/} + ${aluno.id}" data-tooltip="Visualizar" class="waves-effect deep-orange-text tooltipped"></a>
+								</td>
+								<td th:text="${aluno.email}"></td>
+								<td th:text="${aluno.matricula}"></td>
+								<td th:text="${aluno.anoIngresso} + '.' + ${aluno.semestreIngresso}"></td>
+								
+								<td>
+									<!-- Estrutura pergunta de confirmação -->
+									<div th:id="excluir+${aluno.id}" class="modal">
+								  		<div class="modal-content">
+											<h4>Excluir aluno</h4>
+											<p>Tem certeza de que deseja excluir este Aluno?</p>
+											<blockquote>
+												Esta ação não poderá ser desfeita!
+											</blockquote>
+									  	</div>
+										<div class="modal-footer">
+											<a class="modal-action modal-close waves-effect waves-green btn-flat">Não</a>
+											<a th:href="@{/aluno/remover/} + ${aluno.id}" class=" modal-action modal-close waves-effect waves-green btn-flat">Sim</a>
+										</div>
+									</div>
+
+									<div class="valign-wrapper">
+										<a class="btn-floating z-depth-0 transparent waves-effect tooltipped" data-tooltip="Editar" th:href="@{/aluno/editar/} + ${aluno.id}">
+											<i class="material-icons teal-text">edit</i>
+										</a>
+										<a class="btn-floating z-depth-0 transparent waves-effect tooltipped modal-trigger" data-tooltip="Excluir" th:href="@{#excluir}+${aluno.id}">
+											<i class="material-icons red-text">delete</i>
+										</a>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+		    	</div>
+		    </div>
+		    <!-- CONTAINER -->
+		    
+		</div>
+	</section>
+
+	<section layout:fragment="js">
+		<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+		<script type="text/javascript" th:src="@{/js/aluno/listagem.js}"></script>
+	</section>
+</html>

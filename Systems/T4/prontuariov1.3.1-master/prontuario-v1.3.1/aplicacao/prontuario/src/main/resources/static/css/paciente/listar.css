@@ -1,0 +1,11 @@
+.listar-paciente__add-button {
+	
+	position: absolute;
+	top: -26px;
+	right: 26px;
+	
+}
+
+.dataTables_filter {
+	float: left;
+}

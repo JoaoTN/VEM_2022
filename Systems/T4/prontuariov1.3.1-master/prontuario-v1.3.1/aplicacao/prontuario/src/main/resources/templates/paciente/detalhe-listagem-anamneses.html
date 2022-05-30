@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="paciente/detalhes-base"
+    th:with="currentPage='pacientes',currentSubPage='anamneses'">
+
+	<section layout:fragment="tab-content">
+		<div class="card">
+					
+			<div class="card-content relative-position">
+			
+				<a sec:authorize="hasAuthority('ESTUDANTE')" th:unless="${#lists.isEmpty(anamneses)}"
+					class="paciente__edit-button login__card-submit-button-hided btn-floating btn-large tooltipped dropdown-button"
+					data-activates="anamneses-dropdown"
+					data-alignment="right"
+					data-constrainwidth="false"
+					data-beloworigin="true"
+					data-delay="1500"
+					data-position="left"
+    				data-tooltip="Realizar Anamnese">
+					<i class="material-icons white-text waves-effect waves-light">add</i>
+				</a>
+				<ul sec:authorize="hasAuthority('ESTUDANTE')" id='anamneses-dropdown' class='dropdown-content'>
+					<li th:each="anamnese : ${anamneses}"><a th:href="@{'/paciente/' + ${paciente.id} + '/anamnese?idAnamnese=' + ${anamnese.id}}" th:text="${anamnese.nome}"></a></li>
+				</ul>
+			
+				<p th:if="${#lists.isEmpty(pacienteAnamneses)}">Este paciente não possui anamneses!</p>
+				<p th:if="${#lists.isEmpty(anamneses)}">Não existem modelos de anamnese disponíveis! Contate o administrador do sistema.</p>
+				<table th:unless="${#lists.isEmpty(pacienteAnamneses)}" class="pacientes_detalhe-anamneses-table mf-table">
+				
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Data</th>
+							<th>Responsável</th>
+						</tr>
+					</thead>
+				
+					<tbody>
+						<tr th:each="anamnesePaciente : ${pacienteAnamneses}">
+							<td>
+								<a th:href="@{'/paciente/' + ${paciente.id} + '/anamnese/' + ${anamnesePaciente.id}}" class="deep-orange-text waves-effect" th:text="${anamnesePaciente.anamnese.nome}"></a>
+							</td>
+							<td th:text="${#dates.format(anamnesePaciente.data, 'dd/MM/yyyy')}" />
+							<td th:text="${anamnesePaciente.responsavel.nome}" />
+						</tr>
+					</tbody>
+				</table>
+			    					
+			</div>
+		</div>
+	</section>
+
+</html>

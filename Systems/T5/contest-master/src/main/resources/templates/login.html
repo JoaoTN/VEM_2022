@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:include="fragments/head :: head"></div>
+</head>
+<body>
+<nav class="purple darken-4" role="navigation">
+    <div class="nav-wrapper container">
+        <a class="brand-logo center" th:href="@{/}" id="logo-container"><img alt="logo" th:src="@{/img/logotipo_white.png}"
+                                                                       width="200px"/></a>
+    </div>
+</nav>
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+        <div class="row">
+            <h1 class="center header">Controle de Eventos de Submissão</h1>
+            <div class="col s12 m4 offset-m4">
+                <ul class="tabs purple-text">
+                    <li class="tab col s6"><a href="#login">LOGIN</a></li>
+                    <li class="tab col s6"><a th:classappend="${cadastroPage} ? active" href="#cadastro">CADASTRO</a></li>
+                </ul>
+            </div>
+            <div class="col s12 m4 offset-m4" id="login">
+                <div class="section">
+                    <div class="chip amber darken-3" th:if="${secaoExpiradaError}">
+                        <span class="white-text" th:text="#{SESSAO_EXPIRADA}"></span>
+                        <i class="close material-icons">close</i>
+                    </div>
+                    <div class="chip red darken-1" th:if="${loginError}">
+                        <span class="white-text" th:text="#{LOGIN_INVALIDO}"></span>
+                        <i class="close material-icons">close</i>
+                    </div>
+                    <div class="chip blue darken-1" th:if="${logoutSuccess}">
+                        <span class="white-text" th:text="#{LOGOUT_SUCESSO}"></span>
+                        <i class="close material-icons">close</i>
+                    </div>
+                    <div class="chip blue darken-1" th:if="${esqueciSenha}">
+                <span class="white-text"
+                      th:text="'Em breve você receberá um email com mais informações.'"></span>
+                        <i class="close material-icons">close</i>
+                    </div>
+                    <div class="chip blue darken-1" th:if="${senhaRedefinida}">
+                        <span class="white-text" th:text="'Sua senha foi redefinida com sucesso.'"></span>
+                        <i class=" close material-icons">close</i>
+                    </div>
+                    <div class="chip blue darken-1" th:if="${cadastroSucesso}">
+                        <span class="white-text" th:text="'Cadastro realizado com sucesso.'"></span>
+                        <i class=" close material-icons">close</i>
+                    </div>
+                    <div class="chip blue darken-1" th:if="${participacaoSuccess}">
+                        <span class="white-text" th:text="#{PARTICIPACAO_REGISTRADA_SUCESSO}"></span>
+                        <i class="close material-icons">close</i>
+                    </div>
+
+                    <form class="valign" method="post" name="loginForm" th:action="@{/login}">
+                        <input th:name="${_csrf.parameterName}" th:value="${_csrf.token}" type="hidden"/>
+
+                        <div class="input-field">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="user" th:name="username" type="text"/>
+                            <label for="user">Usuário (Email)</label>
+                        </div>
+
+                        <div class="input-field">
+                            <i class="material-icons prefix">vpn_key</i>
+                            <input id="password" th:name="password" type="password"/>
+                            <label for="password">Senha</label>
+                        </div>
+                        <div class="row">
+                            <div class="col s8">
+                                <a th:href="@{/esqueci-minha-senha}">Esqueceu sua senha?</a>
+                                <a th:href="@{/participacao}" class="btn-block">Registrar participação em uma atividade</a>
+                            </div>
+                            <div class="col s4">
+                                <button class="right btn waves-effect waves-light purple darken-4" type="submit">Entrar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col s12 m4 offset-m4" id="cadastro">
+                <div class="section">
+                    <div class="chip red darken-1" th:if="${cadastroError}">
+                        <span class="white-text" th:text="${cadastroError}"></span>
+                        <i class="close material-icons">close</i>
+                    </div>
+
+                    <form class="valign" method="post" th:action="@{/cadastro}" th:object="${user}">
+
+                        <div class="input-field">
+                            <input id="nome" required="required" th:field="*{nome}" type="text"/>
+                            <label for="nome">*Nome</label>
+                        </div>
+
+                        <div class="input-field">
+                            <input id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                                   th:field="*{email}" type="email"/>
+                            <label for="email">*Email</label>
+                        </div>
+
+                        <div class="input-field">
+
+                            <input id="cpf" name="cpf" placeholder="Exemplo: 11111111111" required="required"
+                                   th:field="*{cpf}" type="number"/>
+
+                            <label for="cpf">*CPF</label>
+                        </div>
+
+                        <div class="input-field">
+                            <input id="password_cadastro" required="required" th:name="senha" type="password"/>
+                            <label for="password">*Senha</label>
+                        </div>
+
+                        <div class="input-field">
+                            <input id="password_confirm" name="senhaConfirma" required="required" type="password"/>
+                            <label for="password_confirm">*Repetir Senha</label>
+                        </div>
+
+                        <span>(*) Campos Obrigatórios</span>
+                        <button class="right btn waves-effect waves-light purple darken-4" disabled="disabled" id="btn_cadastro" type="submit">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:include="fragments/footer :: footer"></div>
+<script type="text/javascript" th:src="@{/js/login.js}"></script>
+</body>
+</html>

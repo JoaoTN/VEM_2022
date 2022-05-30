@@ -1,0 +1,94 @@
+
+<ul id="slide-out" class="side-nav fixed " th:fragment="side-nav">
+    <li>
+    	<a class="userView waves-effect waves-light teal lighten-1 valign-wrapper" th:href="@{/}">
+	        <i class="cover material-icons cyan-text text-lighten-5">assignment</i>
+	        <span class="cyan-text text-lighten-5 title">PRONTUÁRIO</span>
+    	</a>
+    </li>
+    
+    <li>
+    	<a th:href="@{/}" class="waves-effect waves-light" th:classappend="(${currentPage} == 'inicio')? sidenav-active">
+    		<i class="material-icons">home</i>
+    		Início
+    	</a>
+    </li>
+    <li>
+    	<a sec:authorize="hasAuthority('ESTUDANTE')" th:href="@{/aluno/detalhes/} + ${#authentication.principal.id}" class="waves-effect waves-light" th:classappend="(${currentPage} == 'aluno' AND ${alunoId} == ${#authentication.principal.id}) ? sidenav-active">
+    		<i class="material-icons">face</i>
+    		Meu perfil
+    	</a>
+    	<a sec:authorize="hasAuthority('PROFESSOR')" th:href="@{/professor/detalhes/} + ${#authentication.principal.id}" class="waves-effect waves-light" th:classappend="(${currentPage} == 'professor' AND ${professorId} == ${#authentication.principal.id}) ? sidenav-active">
+    		<i class="material-icons">face</i>
+    		Meu perfil
+    	</a>
+    </li>
+    <li sec:authorize="hasAuthority('ADMINISTRACAO')">
+    	<a th:href="@{/aluno/listar/}" class="waves-effect waves-light" th:classappend="((${currentPage} == 'alunos') OR (${currentPage} == 'aluno' AND ${alunoId} != ${#authentication.principal.id}))? sidenav-active">
+    		<i class="material-icons">group</i>
+    		Alunos
+    	</a>
+    </li>
+    <li sec:authorize="hasAuthority('ADMINISTRACAO') OR hasAuthority('PROFESSOR')">
+    	<a th:href="@{/disciplina/listar}" class="waves-effect waves-light" th:classappend="(${currentPage} == 'disciplinas')? sidenav-active">
+			<i class="mdi mdi-library"></i>
+			Disciplinas
+		</a>
+    </li>
+    <li sec:authorize="hasAuthority('ADMINISTRACAO') OR hasAuthority('PROFESSOR')">
+    	<a th:href="@{/turma/listar}" class="waves-effect waves-light" th:classappend="(${currentPage} == 'turmas')? sidenav-active">
+    		<i class="mdi mdi-book-multiple"></i>
+    		Turmas
+    	</a>
+    </li>
+    <li sec:authorize="hasAuthority('ADMINISTRACAO')">
+    	<a th:href="@{/professor/listar}" class="waves-effect waves-light" th:classappend="((${currentPage} == 'professores') OR (${currentPage} == 'professor' AND ${professorId} != ${#authentication.principal.id}))? sidenav-active">
+    		<i class="material-icons">school</i>
+    		Servidores
+    	</a>
+    </li>
+    <li>
+    	<a th:href="@{/anamnese}" class="waves-effect waves-light" th:classappend="(${currentPage} == 'anamneses')? sidenav-active">
+    		<i class="material-icons">assignment</i>
+    		Anamneses
+    	</a>
+    </li>
+    <li>
+    	<a th:href="@{/paciente/}" class="waves-effect waves-light" th:classappend="(${currentPage} == 'pacientes')? sidenav-active">
+    		<i class="mdi mdi-seat-flat"></i>
+    		Pacientes
+    	</a>
+    </li>
+    <li>
+    	<a th:href="@{/tipo-patologia/listar}" class="waves-effect waves-light" th:classappend="(${currentPage} == 'tipos-patologia')? sidenav-active">
+    		<i class="mdi mdi-tooth"></i>
+    		Patologias
+    	</a>
+    </li>
+    <li>
+    	<a th:href="@{/tipo-procedimento/listar}" class="waves-effect waves-light" th:classappend="(${currentPage} == 'tipos-procedimento')? sidenav-active">
+    		<i class="mdi mdi-stethoscope"></i>
+    		Procedimentos
+    	</a>
+    </li>
+     <li>
+    	<a th:href="@{/plano-tratamento/aguardando-tratamento}" class="waves-effect waves-light" th:classappend="(${currentPage} == 'aguardando-tratamento')? sidenav-active">
+    		<i class="mdi mdi-seat-flat"></i>
+    		Triagem
+    	</a>
+    </li>
+    <li sec:authorize="hasAuthority('ADMINISTRACAO')">
+    	<a th:href="@{/avaliacao}" class="waves-effect waves-light" th:classappend="(${currentPage} == 'avaliacao')? sidenav-active">
+    		<i class="material-icons">assignment</i>
+    		Avaliações
+    	</a>
+    </li>
+    <li>
+    	<div class="divider blue-grey darken-3"></div>
+    </li>
+    <li>
+    	<a th:href="@{/logout}" class="waves-effect waves-light" th:classappend="(${currentPage} == 'sair')? sidenav-active">
+    		Sair
+    	</a>
+    </li>
+</ul>

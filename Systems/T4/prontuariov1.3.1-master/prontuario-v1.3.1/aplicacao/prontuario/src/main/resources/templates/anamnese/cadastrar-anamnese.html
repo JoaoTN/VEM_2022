@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="base/base"
+    th:with="currentPage='anamneses'">
+
+	<head>
+	
+	    <title>Cadastrar Anamnese</title>
+	    
+	</head>
+
+	<section layout:fragment="conteudo">
+		
+		<div class="row">
+		
+			<!-- BREADCRUMBS - Mostra o caminho até a página atual -->
+			
+			<div class="col s12 breadcrumbs valign-wrapper">
+	            
+	            <a th:href="@{/}" class="breadcrumb blue-grey-text">
+	                <i class="material-icons left">home</i>
+	            </a>
+	            
+	            <a th:href="@{/anamnese}" class="breadcrumb blue-grey-text">Anamneses</a>
+	            
+	            <a class="breadcrumb blue-grey-text">Cadastrar</a>
+	            
+	        </div>
+	        
+	        <!-- BREADCRUMBS -->
+		
+		
+			<!-- CONTAINER - Conteiner principal da aplicação -->
+			
+		    <div class="col s12">
+		    	
+				<form class="card" id="anamnese-form"
+					th:action="@{/anamnese/cadastrar-anamnese}" method="post"
+					th:object="${anamnese}">
+					
+					<div class="card-content">
+					
+						<div class="row">
+							<div class="col s6 input-field">
+								<label for="anamneseNome">* Nome</label>
+								<input type="text" class="form-control" th:field="*{nome}" id="anamneseNome" required="required" /> 
+							</div>
+							
+							<div class="col s6 input-field">
+								<label for="anamneseDescricao">* Descrição</label>
+								<input type="text" class="form-control" th:field="*{descricao}" id="anamneseDescricao" required="required" /> 
+							</div>
+							<div class="row">
+								<span class="grey-text">* Campos obrigatórios</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="card-action right-align">
+						<a th:href="@{/anamnese}" class="btn btn-flat waves-effect">Cancelar</a>
+						<button id="sub" type="submit"  class="btn waves-effect waves-light">Cadastrar</button>
+					</div>
+				</form>
+			</div>
+		    	        	   
+		    <!-- CONTAINER -->
+		    
+		</div>
+		
+	</section>
+
+	<section layout:fragment="js">
+	
+		<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+		<script type="text/javascript" th:src="@{/material/js/dynamic-list.js}"></script>
+		
+	</section>
+
+</html>

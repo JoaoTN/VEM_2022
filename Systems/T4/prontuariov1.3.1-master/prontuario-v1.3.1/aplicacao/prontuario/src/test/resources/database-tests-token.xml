@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	
+	<!-- Alunos -->
+    <aluno id="1" nome="aluno 1" email="aluno1@email.com" matricula="1111" ano_ingresso="2013" semestre_ingresso="1" senha="$2a$08$7ZoeQ8pkNKGKZOsSwIcc3u/.qpodWCajWkHxoejTc/m5xbCv/O3pq"/>
+    <aluno id="2" nome="aluno 2" email="aluno2@email.com" matricula="2222" ano_ingresso="2013" semestre_ingresso="2" senha="$2a$08$7ZoeQ8pkNKGKZOsSwIcc3u/.qpodWCajWkHxoejTc/m5xbCv/O3pq"/>
+    <aluno id="3" nome="aluno 3" email="aluno3@email.com" matricula="3333" ano_ingresso="2014" semestre_ingresso="1" senha="$2a$08$7ZoeQ8pkNKGKZOsSwIcc3u/.qpodWCajWkHxoejTc/m5xbCv/O3pq"/>
+	
+	<!-- Servidores -->
+	<servidor id="4" email="servidor1@email.com" matricula="555555" nome="Servidor 1" senha="$2a$08$7ZoeQ8pkNKGKZOsSwIcc3u/.qpodWCajWkHxoejTc/m5xbCv/O3pq"/>
+	<servidor id="5" email="servidor2@email.com" matricula="555556" nome="Servidor 2" senha="$2a$08$7ZoeQ8pkNKGKZOsSwIcc3u/.qpodWCajWkHxoejTc/m5xbCv/O3pq"/>
+
+	<!-- Papel do usuário -->
+	<papel_usuario usuario_id="1" papel="ESTUDANTE" />
+	<papel_usuario usuario_id="2" papel="ESTUDANTE" />
+	<papel_usuario usuario_id="3" papel="ESTUDANTE" />
+	<papel_usuario usuario_id="4" papel="PROFESSOR" />
+	<papel_usuario usuario_id="5" papel="PROFESSOR" />
+	
+	<!-- Token -->
+	<token token="6a8b39b2-361b-4842-a80f-48b234f7918d" usuario_id="4"></token>
+
+</dataset>

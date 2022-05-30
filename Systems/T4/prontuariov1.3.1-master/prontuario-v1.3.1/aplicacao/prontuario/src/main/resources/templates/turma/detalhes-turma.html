@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="base/base" th:with="currentPage='turmas'">
+
+<head>
+
+<title>Prontuário - Turma</title>
+<link rel="stylesheet" type="text/css"
+	href="/css/aluno/listagem-alunos.css" />
+
+</head>
+
+<section layout:fragment="conteudo">
+
+	<div class="row">
+
+		<!-- BREADCRUMBS - Mostra o caminho até a página atual -->
+
+		<div class="col s12 breadcrumbs valign-wrapper">
+
+			<a th:href="@{/}" class="breadcrumb blue-grey-text"> <i
+				class="material-icons left">home</i>
+			</a> <a th:href="@{/turma/listar}" class="breadcrumb blue-grey-text">Turmas</a>
+
+			<a class="breadcrumb blue-grey-text">Detalhes</a>
+
+		</div>
+
+		<!-- BREADCRUMBS -->
+
+
+		<!-- CONTAINER - Conteiner principal da aplicação -->
+
+		<div class="col s12">
+			<!-- Conteúdo da página ... -->
+
+			<div class="card">
+			
+				<div class="card-content">
+
+					<div class="row">
+						<div class="col l5 no-padding">
+							<span class="bold-text grey-text text-darken-3">Disciplina:</span>
+							<span class="paciente-nome light-text text-18 truncate" th:text="${turma.disciplina.nome}"></span>
+						</div>
+						<div class="col l3 no-padding">
+							<span class="bold-text grey-text text-darken-3">Nome: </span>
+							<span class="paciente-nome light-text text-18 truncate" th:text="${turma.nome}"></span>
+						</div>
+						<div class="col l2 no-padding">
+							<span class="bold-text grey-text text-darken-3">Período: </span>
+							<span class="paciente-nome light-text text-18 truncate" th:text="${turma.ano} + '.' + ${turma.semestre}"> </span>
+						</div>
+
+						<div class="col l2 no-padding">
+							<span class="bold-text grey-text text-darken-3">Status: </span>
+							<div class="switch">
+								<label>
+									<input id="status-turma" th:checked="${turma.ativo}" type="checkbox" th:attr="turma-id = ${turma.id}"></input>
+									<span class="lever"></span>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="card">
+				<div class="card-action">
+					<div class="row">
+						<div class="col l12 no-padding">
+							<span class="bold-text grey-text text-darken-3">Professor(es)</span>
+						</div>	
+							
+						<div class="col l12 no-padding">	
+							<!-- form adicionar um novo professor a turma -->
+							<form sec:authorize="hasAuthority('ADMINISTRACAO')"
+								id="form-add-professor" th:action="@{/turma/{idTurma}/adicionar-professor(idTurma=${turma.id})}" method="post" th:object="${novosProfessores}">
+		    					
+		    					<div th:if="${#lists.isEmpty(lista_professores)}">
+		    						Está turma já possui todos os professores cadastrados!
+								</div>
+								
+								<div class="row input-field" th:unless="${#lists.isEmpty(lista_professores)}">
+									<div class="col s10">
+										<select th:disabled="${!turma.ativo}" multiple="multiple" th:field="*{professores}" id="professor" class="form-control">
+											<option th:each="professor : ${lista_professores}"
+											th:value="${professor.id}"
+											th:text="${professor.nome}">
+											</option>
+										</select>
+									</div>
+									<div class="col s2">		
+										<button th:disabled="${!turma.ativo}" type="submit" class="btn waves-effect waves-light">Incluir</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						
+						<div class="col l12 no-padding">
+							<p th:if="${#lists.isEmpty(turma.professores)}">Esta turma
+								não possui professores!</p>
+							<table th:unless="${#lists.isEmpty(turma.professores)}" class="mf-table striped">
+								<thead>
+									<tr>
+										<th>Nome</th>
+										<th>E-mail</th>
+										<th>Matrícula</th>
+										<th sec:authorize="hasAuthority('ADMINISTRACAO')"></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="professor : ${turma.professores}">
+										<td th:text="${professor.nome}"></td>
+										<td th:text="${professor.email}" />
+										<td th:text="${professor.matricula}" />
+										<td sec:authorize="hasAuthority('ADMINISTRACAO')">
+											<a class="btn-floating z-depth-0 transparent waves-effect tooltipped" data-tooltip="Remover Professor" th:href="@{/turma/{idTurma}/remover-professor/{idProfessor}(idTurma=${turma.id},idProfessor=${professor.id})}">
+												<i class="mdi mdi-account-remove deep-orange-text"></i>
+											</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-action">
+					<div class="row">
+						<div class="col l12 no-padding">
+							<span class="bold-text grey-text text-darken-3">Alunos matriculados</span>
+						</div>
+						
+						<div class="col l12 no-padding">
+							<!-- form adicionar um novo aluno a turma -->
+							<form sec:authorize="hasAuthority('ADMINISTRACAO')" id="form-add-aluno" th:action="@{/turma/{idTurma}/inscrever(idTurma=${turma.id})}" method="post">
+		    					<div class="row input-field">
+		    						<div class="col s3">
+										<label for="inputMatricula">Matricula do Aluno</label>
+										<input th:disabled="${!turma.ativo}" type="text" name="matricula" id="inputMatricula" required="required"></input> 					
+									</div>
+									<div class="col s2">
+										<button th:disabled="${!turma.ativo}" type="submit" class="btn waves-effect waves-light">Incluir</button>
+									</div>
+								</div>
+	    					</form>
+						</div>
+						
+						<div class="col l12 no-padding">
+							<p th:if="${#lists.isEmpty(turma.alunoTurmas)}">Esta turma não possui alunos matriculados!</p>
+							<table th:unless="${#lists.isEmpty(turma.alunoTurmas)}" class="mf-table striped">
+								<thead>
+									<tr>
+										<th>Nome</th>
+										<th>E-mail</th>
+										<th>Matrícula</th>
+										<th>Status</th>
+										<th sec:authorize="hasAuthority('ADMINISTRACAO')"></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="alunoTurma : ${turma.alunoTurmas}">
+										<td class=""><a
+											th:href="@{/aluno/detalhes/} + ${alunoTurma.aluno.id}"
+											th:text="${alunoTurma.aluno.nome}"
+											class="deep-orange-text waves-effect"></a></td>
+										<td th:text="${alunoTurma.aluno.email}" />
+										<td th:text="${alunoTurma.aluno.matricula}" />
+										<td class="bold-text"
+											th:classappend="${alunoTurma.ativo} ? 'blue-text': 'grey-text'"
+											th:text="${alunoTurma.ativo} ? 'MATRICULADO' : 'CANCELADO'"></td>
+										<td sec:authorize="hasAuthority('ADMINISTRACAO')">
+											<a class="btn-floating z-depth-0 transparent waves-effect tooltipped" data-tooltip="Remover aluno" th:href="@{/turma/{idTurma}/remover-aluno/{idAluno}(idTurma=${turma.id},idAluno=${alunoTurma.aluno.id})}">
+												<i class="mdi mdi-account-remove deep-orange-text"></i>
+											</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-content">
+					<div class="row">
+						<div class="col l12 no-padding">
+							<span class="bold-text grey-text text-darken-3">Atendimentos realizados</span>
+							<p th:if="${#lists.isEmpty(turma.atendimentos)}">Esta turma não realizou atendimentos!</p>
+							<table th:unless="${#lists.isEmpty(turma.atendimentos)}" class="pacientes_detalhe-anamneses-table">
+								<thead>
+									<tr>
+										<th>Data</th>
+										<th>Responsável</th>
+										<th>Auxiliar</th>
+										<th>Paciente</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="atendimento : ${turma.atendimentos}"
+									    th:if="${atendimento.isVisivel(#authentication.principal.email) OR 
+									    		#strings.contains(#authentication.principal.authorities,'ADMINISTRACAO')}">
+										<td><a
+											th:text="${#dates.format(atendimento.data, 'dd/MM/yyyy')}"
+											th:href="@{/atendimento/} + ${atendimento.id}"></a></td>
+										<td th:text="${atendimento.responsavel.nome}" />
+										<td th:text="${atendimento.ajudante} ? ${atendimento.ajudante.nome} : '-'" />
+										<td th:text="${atendimento.paciente.nome}" />
+										<td th:text="${atendimento.status.descricao}" />
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- CONTAINER -->
+</section>
+
+<section layout:fragment="js">
+
+	<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+	<script type="text/javascript" th:src="@{/js/turma/detalhes.js}"></script>
+
+</section>
+
+</html>

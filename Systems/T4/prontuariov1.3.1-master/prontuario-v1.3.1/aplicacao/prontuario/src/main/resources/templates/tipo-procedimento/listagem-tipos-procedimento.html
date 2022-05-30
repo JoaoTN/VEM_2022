@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html layout:decorator="base/base"
+      th:with="currentPage='tipos-procedimento'"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Prontuário - Tipos Procedimento</title>
+
+    <link rel="stylesheet" th:href="@{/css/aluno/listagem-alunos.css}"
+          type="text/css"/>
+
+</head>
+
+<section layout:fragment="conteudo">
+
+    <div class="row">
+
+        <!-- BEGIN BREADCRUMBS - Mostra o caminho até a página atual -->
+
+        <div class="col s12 breadcrumbs valign-wrapper">
+
+            <a class="breadcrumb blue-grey-text" th:href="@{/}"> <i
+                    class="material-icons left">home</i>
+            </a>
+            <a class="breadcrumb blue-grey-text">Procedimentos</a>
+
+        </div>
+
+        <!-- END BREADCRUMBS -->
+
+        <!-- BEGIN CONTAINER - Conteiner principal da aplicação -->
+
+        <div class="col s12">
+
+
+            <div class="card">
+
+
+                <a class="listar-aluno__add-button login__card-submit-button-hided btn-floating btn-large tooltipped"
+                   data-tooltip="Adicionar Procedimentos"
+                   sec:authorize="hasAuthority('ADMINISTRACAO')"
+                   th:href="@{/tipo-procedimento/adicionar}">
+                    <i class="material-icons white-text waves-effect waves-light">add</i>
+                </a>
+
+
+                <div class="card-content">
+                    <p th:if="${#lists.isEmpty(tiposProcedimento)}">Nenhum procedimento encontrado!</p>
+                    <table class="mf-table striped"
+                           th:unless="${#lists.isEmpty(tiposProcedimento)}">
+                        <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th sec:authorize="hasAuthority('ADMINISTRACAO')"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="tipoProcedimento :${tiposProcedimento}">
+                            <td th:text="${tipoProcedimento.codigo}"></td>
+                            <td th:text="${tipoProcedimento.nome}"></td>
+                            <td th:text="${tipoProcedimento.descricao}"></td>
+                            <td sec:authorize="hasAuthority('ADMINISTRACAO')">
+                                <div class="valign-wrapper">
+                                    <a class="waves-effect btn-floating transparent z-depth-0 tooltipped"
+                                       data-tooltip="Editar"
+                                       th:href="@{/tipo-procedimento/editar/} + ${tipoProcedimento.id}">
+                                        <i class="material-icons small teal-text">mode_edit</i>
+                                    </a>
+                                    <a class="btn-floating z-depth-0 transparent waves-effect tooltipped"
+                                       data-tooltip="Excluir"
+                                       th:href="@{/tipo-procedimento/remover/} + ${tipoProcedimento.id}">
+                                        <i class="material-icons red-text">delete</i>
+                                    </a>
+                                </div>
+
+                            </td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- END CONTAINER -->
+
+    </div>
+</section>
+<section layout:fragment="js">
+
+    <script>
+        $(document).ready(function () {
+            mf_base.doAddDataTable($("table"), {
+                order: [[1, 'asc']],
+            });
+        });
+    </script>
+
+</section>
+
+</html>

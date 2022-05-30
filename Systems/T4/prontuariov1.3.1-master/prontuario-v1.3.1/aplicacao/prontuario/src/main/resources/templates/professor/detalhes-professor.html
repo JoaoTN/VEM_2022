@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="base/base"
+    th:with="currentPage='servidor' , professorId=${professor.id}">
+
+	<head>
+	
+	    <title>Detalhes Servidor</title>
+	    
+	</head>
+
+	<section layout:fragment="conteudo">
+		
+		<div class="row">
+		
+			<!-- BREADCRUMBS - Mostra o caminho até a página atual -->
+			
+			<div class="col s12 breadcrumbs valign-wrapper">
+	            
+	            <a th:href="@{/}" class="breadcrumb blue-grey-text">
+	                <i class="material-icons left">home</i>
+	            </a>
+	            
+	            <a th:href="@{/professor/listar}" class="breadcrumb blue-grey-text">Servidores</a>
+	            
+	            <a class="breadcrumb blue-grey-text">Detalhes</a>
+	            
+	        </div>
+	        
+	        <!-- BREADCRUMBS -->
+		
+		
+			<!-- CONTAINER - Conteiner principal da aplicação -->
+			
+		    <div class="col s12">
+		    	<!-- Conteúdo da página ... -->
+		    	
+		    	<div class="card">
+		    		<div class="card-content">
+		    			<div class="row">
+		    				<div class="col l5 no-padding">
+		    					<span class="bold-text grey-text text-darken-3">Nome: </span>
+								<span class="light-text text-18 truncate">
+									<span th:text="${professor.nome}" class=""></span>
+								</span>
+		    				</div>
+		    				<div class="col l5 no-padding">
+		    					<span class="bold-text grey-text text-darken-3">Email: </span>
+								<span class="light-text text-18 truncate">
+									<span th:text="${professor.email}" class=""></span>
+								</span>
+		    				</div>
+		    				<div class="col l2 no-padding">
+		    					<span class="bold-text grey-text text-darken-3">Siape: </span>
+								<span class="light-text text-18 truncate">
+									<span th:text="${professor.matricula}" class=""></span>
+								</span>
+		    				</div>
+		    			</div>
+		    		</div>
+		    	</div>
+		    	
+		    	<div class="card">
+		    		<div class="card-content">
+						<div class="row no-margin">
+							<div class="col l12 no-padding">
+								<span class="bold-text grey-text text-darken-3">Turmas: </span>
+								
+								<p th:if="${#lists.isEmpty(turmas)}">Este professor não está cadastrado em nenhuma turma!</p>
+								<table id="turmas" th:unless="${#lists.isEmpty(turmas)}" class="mf-table">
+									<thead>
+										<tr>
+											<th>Turma</th>
+											<th>Período</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr th:each="turma :${turmas}">
+											<td><a th:href="|@{/turma/}${turma.id}|" th:text="|${turma.disciplina.nome} - ${turma.nome}|"></a></td>
+											<td th:text="|${turma.ano}.${turma.semestre}|"></td>
+										</tr>	
+									</tbody>		
+								</table>
+								
+							</div>
+							
+						</div>
+						
+					</div>
+		    	</div>
+		    	
+		    	<div th:if="${#authentication.principal.id == professor.id}" class="card">
+		    		<div class="card-content">
+						<div class="row no-margin">
+							<div class="col l12 no-padding">
+								<span class="bold-text grey-text text-darken-3">Atendimentos não Finalizados: </span>
+								
+								<p th:if="${#lists.isEmpty(atendimentos)}">Não existem atendimentos</p>
+								<table id="atendimentos" th:unless="${#lists.isEmpty(atendimentos)}" class="pacientes_detalhe-atendimentos-table mf-table">
+									<thead>
+										<tr>
+											<th>Data</th>
+											<th>Responsável</th>
+											<th>Ajudante</th>
+											<th>Turma</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr th:each="atendimento : ${atendimentos}">
+											<td><a class="waves-effect deep-orange-text" th:text="${#dates.format(atendimento.data, 'dd/MM/yyyy')}" th:href="@{/atendimento/} + ${atendimento.id}"></a></td>
+											<td th:text="${atendimento.responsavel.nome}" />
+											<td th:text="${atendimento.ajudante} ? ${atendimento.ajudante.nome} : '-'" />
+											<td th:text="${atendimento.turma.disciplina.nome} + ' - ' + ${atendimento.turma.nome}" />
+											<td th:text="${atendimento.status.descricao}"></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+						</div>
+						
+					</div>
+		    	</div>
+		    </div>
+		    	        	   
+		    <!-- CONTAINER -->
+		    
+		</div>
+		
+	</section>
+
+	<section layout:fragment="js">
+	
+		<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+		<script type="text/javascript" th:src="@{/js/professor/listagem.js}"></script>
+			
+	</section>
+
+</html>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<!-- 	 -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="paciente/detalhes-base"
+	th:with="currentPage='pacientes',currentSubPage='odontograma'"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+
+
+<section layout:fragment="tab-content">
+	<div class="card">
+		<div class="card-content">
+			<div class="row no-margin">
+				<div class="col s9">
+					<span class="light text-20">Cadastrar Patologias e
+						Procedimentos</span>
+					<div th:if="${existeAtendimento == true}">
+						<a sec:authorize="hasAuthority('ESTUDANTE')"
+							th:href="@{/atendimento/__${atendimento.id}__/finalizar/odontograma}"
+							class="btn waves-effect waves-light tooltipped"
+							data-tooltip="Finalizar atendimento"> Finalizar Atendimento </a>
+					</div>
+					<div th:if="${existeAtendimento == false}">
+						<a sec:authorize="hasAuthority('ESTUDANTE')"
+							th:href="@{/atendimento/__${paciente.id}__/cadastrar}"
+							class="btn waves-effect waves-light tooltipped"
+							data-tooltip="Realizar Atendimento">Novo Atendimento</a>
+					</div>
+				</div>
+				<div class="col s3">
+					<div class="">
+						<label for="select-arcada">Arcada</label> <select
+							id="select-arcada">
+							<option value="permanente">Arcada Permanente</option>
+							<option value="decidua">Arcada Decídua</option>
+							<option value="ambas">Duas Arcadas</option>
+						</select>
+					</div>
+				</div>
+				<div class="col s12">
+					<ul class="tabs">
+						<li class="tab waves-effect waves-block active"><a
+							id="tab-patologias">Patologias</a></li>
+						<li id="procedimentos-existentes"
+							class="tab waves-effect waves-block"><a
+							id="tab-procedimentos-existentes">Procedimentos
+								pré-existentes</a></li>
+						<li class="tab waves-effect waves-block"><a
+							id="tab-procedimentos">Procedimentos realizados</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row no-margin">
+				<div class="col s12 center-align arcadas-container"
+					id="odonto-patologias">
+					<svg id="arcada-permanente-patologias" class="arcada-permanente"></svg>
+					<svg id="arcada-decidua-patologias" class="arcada-decidua"
+						hidden="hidden"></svg>
+				</div>
+
+				<div class="col s12 center-align arcadas-container"
+					id="odonto-procedimentos">
+					<svg id="arcada-permanente-procedimentos" class="arcada-permanente"></svg>
+					<svg id="arcada-decidua-procedimentos" class="arcada-decidua"
+						hidden="hidden"></svg>
+				</div>
+
+				<div class="col s12 center-align arcadas-container"
+					id="odonto-procedimentos-existentes">
+					<svg id="arcada-permanente-procedimentos-existentes"
+						class="arcada-permanente"></svg>
+					<svg id="arcada-decidua-procedimentos-existentes"
+						class="arcada-decidua" hidden="hidden"></svg>
+				</div>
+			</div>
+		</div>
+		<div class="card-action valign-wrapper row">
+			<!--<div class="left-align col s10 valign-wrapper">
+					<div class="valign-wrapper margin-right">
+						<div class="patologia"></div>
+						<span>Patologia</span>
+					</div>
+					<div class="valign-wrapper margin-right">
+						<div class="procedimento"></div>
+						<span>Procedimento</span>
+					</div>
+					<div class="valign-wrapper">
+						<div class="proced-exist"></div>
+						<span>Procedimentos pré-existentes</span>
+					</div>
+				</div>-->
+			<div class="right-align col s2">
+				<a id="patologia-geral" sec:authorize="hasAuthority('ESTUDANTE')"
+					th:if="${existeAtendimento}"
+					class="btn waves-effect waves-light tooltipped geral"
+					data-tooltip="Incluir patologia geral" tipo="PA">Geral</a>
+				<a id="procedimento-geral" sec:authorize="hasAuthority('ESTUDANTE')"
+					th:if="${existeAtendimento}"
+					class="btn waves-effect waves-light tooltipped geral"
+					data-tooltip="Incluir procedimento geral" tipo="PR">Geral</a>
+				<a id="procedimento-existente-geral" sec:authorize="hasAuthority('ESTUDANTE')"
+					th:if="${existeAtendimento}"
+					class="btn waves-effect waves-light tooltipped geral"
+					data-tooltip="Incluir procedimento pré-existente geral" tipo="PE">Geral</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-content">
+			<!-- inputs hidden -->
+			<input id="odontograma-id" type="hidden" th:value="${odontograma.id}" />
+
+			<div class="row">
+				<span class="light text-20">Patologias</span>
+				<div id="result-patologias"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-content">
+			<div class="row">
+				<span class="light text-20">Procedimentos</span>
+				<div id="result-procedimentos"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal adicionar patologia -->
+	<div class=""></div>
+	<div sec:authorize="hasAuthority('ESTUDANTE')"
+		th:if="${existeAtendimento}" id="modal-patologias" class="modal"
+		role="dialog">
+		<div class="modal-content">
+			<div class="card-content">
+
+				<div class="row">
+					<span class="light text-20">Selecionar Patologias</span> <input
+						id="id-face-dente-patologia" hidden="hidden" /> <input
+						id="id-dente-patologia" hidden="hidden" />
+
+					<form id="form-patologia" class="col s12">
+						<div class="row">
+
+							<div>
+								<label for="search_input">Buscar:</label> <input type="text"
+									id="busca-patologia-input"
+									placeholder="Digite ao menos três caracteres para realizar a busca" />
+							</div>
+
+							<div class="input-field col s8">
+								<br /> <label id="label-resultado-busca-patologia">Resultado</label>
+							</div>
+
+							<div id="resultado-busca-patologia-1" class="input-field col s6">
+							</div>
+
+							<div id="resultado-busca-patologia-2" class="input-field col s6">
+							</div>
+
+							<div class="input-field col s8">
+								<br /> <label id="label-patologias-selecionadas">Patologias
+									selecionadas </label>
+							</div>
+							<div id="selecionados-busca-patologia" class="input-field col s6"></div>
+
+
+						</div>
+					</form>
+
+					<div class="col s12 input-field">
+						<textarea id="descricao-patologia" rows="1" cols="50"
+							class="materialize-textarea"></textarea>
+						<label for="descricao-patologia">Descrição</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal-footer card-action right-align">
+				<button id="confirm-patologia" type="submit"
+					class="btn waves-effect waves-light" data-dismiss="modal">Confirmar</button>
+				<a id="cancelar-patologia"
+					class="btn btn-flat margin-right waves-effect">Cancelar</a>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Modal adicionar procedimento -->
+	<div sec:authorize="hasAuthority('ESTUDANTE')"
+		th:if="${existeAtendimento}" id="modal-procedimentos" class="modal"
+		role="dialog">
+		<div class="modal-content">
+			<div class="card-content">
+
+				<div class="row">
+					<span class="light text-20">Selecionar Procedimentos</span> <input
+						id="id-face-dente-procedimento" hidden="hidden" /> <input
+						id="id-dente-procedimento" hidden="hidden" />
+
+
+
+					<form id="form-procedimento" class="col s12">
+						<div class="row">
+
+							<div>
+								<label>Buscar:</label> <input type="text"
+									id="busca-novo-procedimento-input"
+									placeholder="Digite ao menos três caracteres para realizar a busca" />
+							</div>
+
+							<div class="input-field col s8">
+								<br /> <label id="label-resultado-busca-novo-procedimento">Resultado</label>
+							</div>
+
+							<div id="resultado-busca-procedimento-1"
+								class="input-field col s6"></div>
+
+							<div id="resultado-busca-procedimento-2"
+								class="input-field col s6"></div>
+
+							<div class="input-field col s8">
+								<br /> <label id="label-novos-procedimentos-selecionados">Procedimentos
+									selecionados </label>
+							</div>
+							<div id="selecionados-busca-procedimento"
+								class="input-field col s6"></div>
+
+
+						</div>
+					</form>
+					<div id="patologias-dente-busca">
+						<div class="row">
+							<span class="light text-20">Patologias</span><br /> <label>Existentes:</label>
+							<br />
+							<div id="patologias-dente-selecionado-1"
+								class="input-field col s6"></div>
+
+
+							<div id="patologias-dente-selecionado-2"
+								class="input-field col s6"></div>
+
+						</div>
+
+						<br />
+
+						<div class="row">
+							<label>Selecionadas para tratamento:</label> <br />
+							<div id="patologias-dente-selecionado"
+								class="col s12 input-field"></div>
+
+							<br />
+							<div class="col s12 input-field">
+								<label for="data-patologia-tratamento">Data do
+									tratamento</label> <input id="data-patologia-tratamento" type="text"
+									name="data" pattern="\d{1,2}/\d{1,2}/\d{4}"
+									class="form-control date" autocomplete="off"
+									data-mask="99/99/9999"></input>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="col s12 input-field">
+						<textarea id="descricao-procedimento" rows="1" cols="50"
+							class="materialize-textarea"></textarea>
+						<label for="descricao-procedimento">Descrição</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal-footer card-action right-align">
+				<button id="confirm-procedimento" type="submit"
+					class="btn waves-effect waves-light" data-dismiss="modal">Confirmar</button>
+				<a id="cancelar-procedimento"
+					class="btn btn-flat margin-right waves-effect">Cancelar</a>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Modal adicionar procedimento existente -->
+	<div sec:authorize="hasAuthority('ESTUDANTE')"
+		th:if="${existeAtendimento}" id="modal-procedimentos-existentes"
+		class="modal" role="dialog">
+		<div class="modal-content">
+			<div class="card-content">
+
+				<div class="row">
+					<span class="light text-20">Selecionar Procedimentos
+						pré-existentes</span> <input id="id-face-dente-proced-exist"
+						hidden="hidden" /> <input id="id-dente-proced-exist"
+						hidden="hidden" />
+
+					<form id="form-proced-exist" class="col s12">
+						<div class="row">
+
+							<div>
+								<label>Buscar:</label> <input type="text"
+									id="busca-procedimento-existente-input"
+									placeholder="Digite ao menos três caracteres para realizar a busca" />
+							</div>
+
+							<div class="input-field col s8">
+								<br /> <label id="label-resultado-busca-procedimento-existente">Resultado</label>
+							</div>
+
+							<div id="resultado-busca-procedimento-existente-1"
+								class="input-field col s6"></div>
+
+							<div id="resultado-busca-procedimento-existente-2"
+								class="input-field col s6"></div>
+
+							<div class="input-field col s8">
+								<br /> <label id="label-procedimentos-selecionados-existentes">Procedimentos
+									selecionados </label>
+							</div>
+
+							<div id="selecionados-busca-procedimento-existente"
+								class="input-field col s6"></div>
+
+
+						</div>
+					</form>
+
+					<div class="col s12 input-field">
+						<textarea id="descricao-proced-exist" rows="1" cols="50"
+							class="materialize-textarea"></textarea>
+						<label for="descricao-proced-exist">Descrição</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal-footer card-action right-align">
+				<button id="confirm-proced-exist" type="submit"
+					class="btn waves-effect waves-light" data-dismiss="modal">Confirmar</button>
+				<a id="cancelar-proced-exist"
+					class="btn btn-flat margin-right waves-effect">Cancelar</a>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- Modal tratar patologia -->
+	<div sec:authorize="hasAuthority('ESTUDANTE')"
+		th:if="${existeAtendimento}" id="modal-tratamento-patologia"
+		class="modal" role="dialog">
+		<div class="modal-content">
+			<div class="card-content">
+
+				<input id="id-patologia" hidden="hidden" />
+
+				<form id="form-tratamento-patologia">
+
+					<div class="row">
+						<span class="light text-20">Tratar patologia</span>
+
+						<div class="col s12 input-field">
+							<label for="data-tratamento">Data do tratamento</label> <input
+								id="data-tratamento" type="text" name="data"
+								pattern="\d{1,2}/\d{1,2}/\d{4}" class="form-control date"
+								autocomplete="off" data-mask="99/99/9999" />
+						</div>
+
+						<div class="col s12 input-field">
+							<label for="descricao-tratamento">Descrição</label>
+							<textarea id="descricao-tratamento" rows="1" cols="50"
+								name="descricao" class="materialize-textarea"></textarea>
+						</div>
+					</div>
+
+				</form>
+
+			</div>
+
+			<div class="modal-footer card-action right-align">
+				<button id="confirm-tratamento-patologia" type="submit"
+					class="btn waves-effect waves-light" data-dismiss="modal">Confirmar</button>
+				<a id="cancelar-tratamento-patologia"
+					class="btn btn-flat margin-right waves-effect">Cancelar</a>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- Modal detalhes patologia -->
+	<div id="div-detalhes-patologia">
+		<div id="modal-detalhes-patologia"
+			th:fragment="modal-detalhes-patologia" th:if="${patologia}"
+			class="modal" role="dialog">
+			<div class="modal-content">
+
+				<p class="light text-20">Detalhes da patologia</p>
+
+				<div class="row">
+					<div class="col l3 no-padding">
+						<p class="bold-text grey-text text-darken-3">Tipo:</p>
+						<span class="light-text text-16 truncate"
+							th:text="${patologia.tipo.nome}"></span>
+					</div>
+
+					<div class="col l3 no-padding">
+						<p class="bold-text grey-text text-darken-3">Data:</p>
+						<span class="light-text text-16 truncate"
+							th:text="${#dates.format(patologia.data, 'dd/MM/yyyy')}"></span>
+					</div>
+
+					<div class="col l3 no-padding">
+						<p class="bold-text grey-text text-darken-3">Dente:</p>
+						<span class="light-text text-16 truncate"
+							th:text="${patologia.dente} ? ${patologia.dente.numero} : '-'"></span>
+					</div>
+
+					<div class="col l3 no-padding">
+						<p class="bold-text grey-text text-darken-3">Face:</p>
+						<span class="light-text text-16 truncate"
+							th:text="${patologia.face} ? ${patologia.face.descricao} : '-'"></span>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="no-padding">
+						<p class="bold-text grey-text text-darken-3">Descrição</p>
+						<blockquote th:text="${patologia.descricao}"
+							style="margin-bottom: 0"></blockquote>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col l6 no-padding">
+						<p class="bold-text grey-text text-darken-3">Responsável</p>
+						<span class="light-text text-16 truncate"
+							th:text="${patologia.atendimento.responsavel.nome}"></span>
+					</div>
+
+					<div class="col l6 no-padding"
+						th:if="${patologia.atendimento.ajudante}">
+						<p class="bold-text grey-text text-darken-3">Auxiliar</p>
+						<span class="light-text text-16 truncate"
+							th:text="${patologia.atendimento.ajudante.nome}"></span>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="no-padding">
+						<p class="bold-text grey-text text-darken-3">Data do
+							tratamento</p>
+						<span class="light-text text-16 truncate"
+							th:text="${patologia.tratamento} ? ${#dates.format(patologia.tratamento.data, 'dd/MM/yyyy')} : '-'"></span>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="no-padding">
+						<p class="bold-text grey-text text-darken-3">Descrição do
+							tratamento</p>
+						<blockquote
+							th:text="${patologia.tratamento} ? ${patologia.tratamento.descricao} : '-'"
+							style="margin-bottom: 0"></blockquote>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</section>
+
+<section layout:fragment="js-paciente">
+
+	<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+	<script th:src="@{/js/paciente/odontograma/odontograma-svg.js}"></script>
+	<script th:src="@{/js/paciente/odontograma/odontograma.js}"></script>
+	<script th:src="@{/js/libs/jquery-svg/jquery.svg.js}"></script>
+	<script type="text/javascript" th:src="@{/js/paciente/detalhes.js}"></script>
+
+	<script type="text/javascript" th:inline="javascript">
+		function tratarPatologiaForm(idPatologia) {
+			if ($("#modal-tratamento-patologia").length) {
+				$("#modal-tratamento-patologia").openModal();
+				$("#id-patologia").val(idPatologia);
+			}
+		}
+		function abrirModalDetalhesPatologia(idPatologia) {
+			var _context = $("meta[name='_context']").attr("content");
+			if (_context == null) {
+				_context = "";
+			}
+			$("#div-detalhes-patologia").load(
+					_context + "/odontograma/patologias/" + idPatologia,
+					function() {
+						$("#modal-detalhes-patologia").openModal();
+					});
+		}
+	</script>
+
+	<script>
+		$('#data-tratamento').focusout(function() {
+			validar($('#data-tratamento'), $('#error-data-tratamento'));
+		});
+	</script>
+
+	<script>
+		$('#data-patologia-tratamento').focusout(
+				function() {
+					validar($('#data-patologia-tratamento'),
+							$('#error-data-tratamento'));
+				});
+	</script>
+
+</section>
+
+</html>

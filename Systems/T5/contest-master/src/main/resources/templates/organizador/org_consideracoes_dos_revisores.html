@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<div th:include="fragments/head :: head"></div>
+<link th:href="@{/css/jPages.css}" type="text/css" rel="stylesheet"
+	media="screen,projection" />
+</head>
+<body>
+	<div th:include="fragments/header :: header"></div>
+
+	<div class="container page">
+		<br />
+
+		<div
+			th:include="fragments/organizador_menu_navegacao :: organizador_menu_navegacao"></div>
+
+
+		<h2>Considerações dos Revisores</h2>
+
+		<div th:unless="${#lists.isEmpty(trabalhos)}" class="row holder center"></div>
+		<div id="itemContainer" class="col s12"
+			th:if="${not #lists.isEmpty(trabalhos)}">
+
+			<div th:each="trabalho : ${trabalhos}">
+				<div class="col s12">
+					<div class="col s12 m7">
+						<div class="card horizontal">
+							<div class="card-stacked">
+								<div class="card-content" th:each="revisao,count : ${trabalho.revisoes}">
+									<div th:if="${count.index} == 0">
+										<i class="small material-icons left">description</i>
+										<h5 th:text="${trabalho.titulo}"></h5> <br/>
+									</div>
+									<h6 th:text="'REVISÃO ' +	${count.index + 1}"></h6>
+									<p><strong>Revisor:</strong><br/><span th:text="${revisao.revisor.nome}"></span></p>
+									<div
+										th:include="fragments/listar_participacoes :: listar-inline('Autor(es):', ${revisao.trabalho.autoresDoTrabalho})">
+									</div>
+									<p><strong>Considerações:</strong><br/><span th:text="${revisao.observacoes}"></span></p>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div th:unless="${#lists.isEmpty(revisoes)}" class="row holder center"></div>
+
+	</div>
+	<div th:include="fragments/footer :: footer"></div>
+
+	<script type="text/javascript" th:src="@{/js/jPages.min.js}"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("div.holder").jPages({
+				containerID : "itemContainer",
+				perPage : 4
+			});
+		});
+	</script>
+</body>
+</html>

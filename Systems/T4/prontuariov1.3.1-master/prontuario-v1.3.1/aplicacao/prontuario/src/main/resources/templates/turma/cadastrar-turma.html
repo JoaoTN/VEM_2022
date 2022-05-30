@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="base/base"
+    th:with="currentPage='turmas'">
+
+	<head>
+	
+	    <title>Prontuário - Turma</title>
+	    
+	</head>
+
+	<section layout:fragment="conteudo">
+		
+		<div class="row">
+		
+			<!-- BREADCRUMBS - Mostra o caminho até a página atual -->
+			
+			<div class="col s12 breadcrumbs valign-wrapper">
+	            
+	            <a th:href="@{/}" class="breadcrumb blue-grey-text">
+	                <i class="material-icons left">home</i>
+	            </a>
+	            
+	            <a th:href="@{/turma/listar}" class="breadcrumb blue-grey-text">Turmas</a>
+	            
+	            <a class="breadcrumb blue-grey-text">Cadastrar</a>
+	            
+	        </div>
+	        
+	        <!-- BREADCRUMBS -->
+		
+		
+			<!-- CONTAINER - Conteiner principal da aplicação -->
+			
+		    <div class="col s12">
+		    	<!-- Conteúdo da página ... -->
+			
+				<form class="card" th:action="@{/turma/adicionar}"
+					th:object="${turma}" method="post">
+					
+					<div class="card-content">
+					
+						<div class="row">
+						
+							<div class="col l6 m6 s12">
+								<div class="input-field">
+									<select th:field="*{disciplina}" id="disciplina" class="form-control" required="required">
+										<option th:each="disciplinas : ${disciplinas}"
+											th:value="${disciplinas.id}" th:text="${disciplinas.nome}">
+										</option>
+									</select>
+									<label for="disciplina">Disciplina</label>
+								</div>
+							</div>
+							
+							<div class="col l3 m3 s12">
+								<div class="input-field">
+									<label for="nome">* Nome</label>
+									<input type="text" th:field="*{nome}" class="form-control" id="nome" required="required" />
+								</div>
+							</div>
+							
+							<div class="col l2 m2 s12">
+								<div class="input-field">
+									<label for="ano">* Ano</label>
+									<input type="text" th:field="*{ano}" class="form-control"
+										id="ano" required="required" /> 
+								</div>
+							</div>
+							
+							<div class="col l1 m1 s12">
+								<div class="input-field">
+									<select th:field="*{semestre}" id="semestre" class="form-control" required="required">
+										<option value="1">1</option>
+										<option value="2">2</option>
+									</select> <label for="semestre">Semestre</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col l12 m12 s12">
+								<div class="input-field">
+									<select multiple="multiple" th:field="*{professores}" id="professor" class="form-control" required="required">
+										<option th:each="professor : ${professores}"
+												th:value="${professor.id}"
+												th:text="${professor.nome}"></option>
+									</select>
+									<label for="professor">Professor(es)</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<span class="grey-text">* Campos obrigatórios</span>
+						</div>
+					</div>
+						<!--end .card-body -->
+					<div class="card-action right-align">
+						<a th:href="@{/turma/listar}" class="btn btn-flat waves-effect">Cancelar</a>
+						<button type="submit" class="btn waves-effect waves-light">Salvar</button>
+					</div>
+					<!--end .card -->
+				</form>
+				<!-- END VERTICAL FORM -->
+			
+			</div>
+		    	        	   
+		    <!-- CONTAINER -->
+		    
+		</div>
+		
+	</section>
+
+	<section layout:fragment="js">
+	
+		<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+		<script type="text/javascript" th:src="@{/js/turma/cadastro.js}"></script>
+			
+	</section>
+
+</html>

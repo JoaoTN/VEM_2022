@@ -1,0 +1,38 @@
+
+.full {
+	position: relative;
+	width: 100%;
+	height: 100%;	
+}
+
+.centered-layout {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.circular-card {
+	margin-top: -72px !important;
+	margin-bottom: 72px !important;
+	width: 360px;
+	height: 360px;
+	border-radius: 50%;
+	box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.2),
+				inset 0 1px 1px 0 rgba(0,0,0,.14),
+				inset 0 2px 1px -1px rgba(0,0,0,.12)
+}
+
+.error-label {
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	
+	font-size: 96px;
+	font-weight: 700;
+	line-height: 360px;
+	text-align: center;
+	text-shadow: 0 1px 3px rgba(0,0,0,.2), 
+				 0 1px 1px rgba(0,0,0,.14), 
+				 0 2px 1px rgba(0,0,0,.12); 
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="paciente/detalhes-base"
+	th:with="currentPage='pacientes',currentSubPage='atendimentos'"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<section layout:fragment="tab-content">
+	<div class="card">
+		<div class="card-content">
+			<input id="atendimento-id" type="hidden" th:value="${atendimento.id}" />
+
+			<div class="row">
+				<div class="col l5 no-padding">
+					<span class="bold-text grey-text text-darken-3">Responsável:
+					</span> <span class="light-text text-18 truncate"> <span
+						th:text="${atendimento.responsavel.nome}"></span>
+					</span>
+				</div>
+				<div class="col l5 no-padding">
+					<span class="bold-text grey-text text-darken-3">Auxiliar: </span> <span
+						class="light-text text-18 truncate"> <span
+						th:text="${atendimento.ajudante} ? ${atendimento.ajudante.nome} : '-'"></span>
+					</span>
+				</div>
+				<div class="col l2 no-padding">
+					<span class="bold-text grey-text text-darken-3">Data:</span>
+					<span class="light-text text-18 truncate" th:text="${#dates.format(atendimento.data, 'dd/MM/yyyy')}"></span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col l5 no-padding">
+					<span class="bold-text grey-text text-darken-3">Professor Supervisor:</span>
+					<span class="light-text text-18 truncate" th:text="${atendimento.professor.nome}"></span>
+				</div>
+				<div class="col l5 no-padding">
+					<span class="bold-text grey-text text-darken-3">Turma: </span> <span
+						class="light-text text-18 truncate"> <span
+						th:text="${atendimento.turma.disciplina.nome} + ' - ' + ${atendimento.turma.nome}"></span>
+					</span>
+				</div>
+				<div class="col l2 no-padding">
+					<span class="bold-text grey-text text-darken-3"> Status: </span>
+					<span class="light-text text-18 truncate" th:text="${atendimento.status.descricao}"></span>
+				</div>
+			</div>
+		</div>
+		<div class="card-action right-align">
+			<a th:if="(${atendimento.status.name() EQ 'EM_ANDAMENTO'}) AND (${atendimento.responsavel.id EQ #authentication.principal.id})"
+				class="btn waves-effect waves-light tooltipped" data-tooltip="Editar"
+				th:href="@{/atendimento/editar/} + ${atendimento?.id}">Editar</a>
+			<a th:if="(${atendimento.status.name() EQ 'EM_ANDAMENTO'}) AND (${atendimento.responsavel.id EQ #authentication.principal.id} OR ${atendimento.professor.id EQ #authentication.principal.id})"
+				class="btn waves-effect waves-light tooltipped modal-trigger" href="#modal_finalizar_atendimento" data-tooltip="Finalizar"
+				>Finalizar</a>
+			<a th:if="(${atendimento.status.name() EQ 'REALIZADO'}) AND (${atendimento.professor.id == #authentication.principal.id})"
+				class="btn waves-effect waves-light tooltipped" data-tooltip="Validar"
+				th:href="@{/atendimento/validar/} + ${atendimento.id}">Validar </a>
+			<a th:if="(${atendimento.status.name() EQ 'EM_ANDAMENTO'}) AND (${atendimento.responsavel.id EQ #authentication.principal.id})"
+				class="btn waves-effect waves-light tooltipped red" data-tooltip="Excluir" 
+				th:href="@{/atendimento/excluir/} + ${atendimento.id}">Excluir</a>
+		</div>
+		
+		<div th:id="modal_finalizar_atendimento" class="modal">
+			<div class="modal-content">
+				<h4>Finalizar Atendimento</h4>
+				<p>Tem certeza de que deseja finalizar este atendimento?</p>
+				<blockquote>
+					Esta ação não poderá ser desfeita!
+				</blockquote>
+			</div>
+			<div class="modal-footer">
+				<a class="modal-action modal-close waves-effect waves-green btn-flat">Não</a>
+				<a th:href="@{/atendimento/finalizar/} + ${atendimento.id}" class=" modal-action modal-close waves-effect waves-green btn-flat">Sim</a>
+			</div>
+		</div>
+		
+	</div>
+
+	<div class="card">
+		<div class="card-content">
+			<div class="row no-margin">
+				<div class="col l12 no-padding">
+					<span class="bold-text grey-text text-darken-3">Patologias</span>
+
+					<p th:if="${#lists.isEmpty(atendimento.patologias)}">Este
+						atendimento não possui patologias!</p>
+					<table th:unless="${#lists.isEmpty(atendimento.patologias)}"
+						class="pacientes_detalhe-anamneses-table mf-table">
+						<thead>
+							<tr>
+								<th>Nome</th>
+								<th>Descrição</th>
+								<th>Local</th>
+								<th>Face</th>
+								<th>Dente</th>
+								<th
+									sec:authorize="hasAuthority('ESTUDANTE') OR hasAuthority('PROFESSOR')"
+									th:if="${(atendimento.responsavel.id EQ #authentication.principal.id AND atendimento.status.name() EQ 'EM_ANDAMENTO') OR (atendimento.professor.id EQ #authentication.principal.id AND !(atendimento.status.name() EQ 'VALIDADO'))}"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="patologia : ${atendimento.patologias}">
+								<td th:text="${patologia.tipo.nome}" />
+								<td th:text="${patologia.descricao}" />
+								<td th:text="${patologia.local}" />
+								<th th:text="${patologia.face?.descricao}" />
+								<th th:text="${patologia.dente?.numero}" />
+								<td sec:authorize="hasAuthority('ESTUDANTE') OR hasAuthority('PROFESSOR')"
+									th:if="${(atendimento.responsavel.id EQ #authentication.principal.id AND atendimento.status.name() EQ 'EM_ANDAMENTO') OR (atendimento.professor.id EQ #authentication.principal.id AND !(atendimento.status.name() EQ 'VALIDADO'))}">
+									<a class="btn-floating z-depth-0 transparent waves-effect tooltipped" data-tooltip="Excluir"
+										th:href="@{/atendimento/__${atendimento.id}__/excluir-patologia/__${patologia.id}__}">
+										<i class="material-icons red-text">delete</i>
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-content">
+			<div class="row no-margin">
+				<div class="col l12 no-padding">
+					<span class="bold-text grey-text text-darken-3">Procedimentos</span>
+					<p th:if="${#lists.isEmpty(atendimento.procedimentos)}">Este atendimento não possui procedimentos!</p>
+					<table th:unless="${#lists.isEmpty(atendimento.procedimentos)}"
+						class="pacientes_detalhe-anamneses-table mf-table">
+						<thead>
+							<tr>
+								<th>Nome</th>
+								<th>Descrição</th>
+								<th>Local</th>
+								<th>Face</th>
+								<th>Dente</th>
+								<th>Tipo</th>
+								<th sec:authorize="hasAuthority('ESTUDANTE') OR hasAuthority('PROFESSOR')"
+									th:if="${(atendimento.responsavel.id EQ #authentication.principal.id AND atendimento.status.name() EQ 'EM_ANDAMENTO') OR (atendimento.professor.id EQ #authentication.principal.id AND !(atendimento.status.name() EQ 'VALIDADO'))}"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="procedimento : ${atendimento.procedimentos}">
+								<td th:text="${procedimento.tipoProcedimento.nome}" />
+								<td th:text="${procedimento.descricao}" />
+								<td th:text="${procedimento.local}" />
+								<th th:text="${procedimento.face?.descricao}" />
+								<th th:text="${procedimento.dente?.numero}" />
+								<td th:text="${procedimento.preExistente} ? 'Pré-existente' : 'Realizado'"></td>
+								<td sec:authorize="hasAuthority('ESTUDANTE') OR hasAuthority('PROFESSOR')"
+									th:if="${(atendimento.responsavel.id EQ #authentication.principal.id AND atendimento.status.name() EQ 'EM_ANDAMENTO') OR (atendimento.professor.id EQ #authentication.principal.id AND !(atendimento.status.name() EQ 'VALIDADO'))}">
+									<a class="btn-floating z-depth-0 transparent waves-effect tooltipped" data-tooltip="Excluir"
+										th:href="@{/atendimento/__${atendimento.id}__/excluir-procedimento/__${procedimento.id}__}">
+										<i class="material-icons red-text">delete</i>
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="card" th:if="${atendimento.turma.ativo AND atendimento.professor.id EQ #authentication.principal.id}">
+		<form th:action="@{/atendimento/avaliar/__${atendimento.id}__}" method="post" 
+			th:object="${avaliacaoAtendimento}" class="relative-position">
+			<div class="card-content">
+				<div class="row no-margin">
+					<div class="col l12 no-padding">
+						<span class="bold-text grey-text text-darken-3">Avaliação</span>
+						<div th:each="item, stat : ${atendimento.avaliacao.itens}">
+							<div class="col l3">
+								<div class="input-field">
+									<label th:text="'__${item.itemAvaliacao.nome}__ (PESO: __${item.itemAvaliacao.peso}__)'"></label>
+									<input type="hidden" th:value="${item.id}" th:name="'itens[' + ${stat.index} + ']'" />
+									<input type="hidden" th:value="${item.itemAvaliacao.id}" th:name="'itens[' + ${stat.index} + '].itemAvaliacao'" />
+									<input type="hidden" th:value="${avaliacaoAtendimento.id}" th:name="'itens[' + ${stat.index} + '].avaliacaoAtendimento'" />
+									<input type="number" th:field="*{itens[__${stat.index}__].nota}"/>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12 input-field">
+								<span class="light-text text-20 grey-text text-darken-3">Observação: </span>
+								<textarea class="materialize-textarea" th:field="*{observacao}"></textarea>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col l6">
+								<span class="light-text text-20 grey-text text-darken-3">Média:</span>
+								<span class="light-text text-18 truncate" th:text="${atendimento.avaliacao.media}"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-action right-align">
+				<button class="btn waves-effect waves-light" type="submit">Avaliar</button>
+			</div>
+		</form>
+	</div>
+	
+	<div class="card" th:if="${#authentication.principal.isAdmin() OR atendimento.responsavel.id EQ #authentication.principal.id OR atendimento.ajudante?.id EQ #authentication.principal.id OR (atendimento.professor.id EQ #authentication.principal.id AND !atendimento.turma.ativo)}">
+		<div class="card-content">
+			<div class="row no-margin">
+				<div class="col l12 no-padding">
+					<span class="bold-text grey-text text-darken-3">Avaliação</span>
+					<div class="row">
+						<div th:each="item: ${atendimento.avaliacao.itens}" class="col l3">
+							<span class="bold-text grey-text text-darken-3" th:text="${item.itemAvaliacao.nome}"></span>
+							<span class="light-text text-18 truncate" th:text="${item.nota}"></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col l3">
+							<span class="bold-text grey-text text-darken-3">Média:</span>
+							<span class="light-text text-18 truncate" th:text="${atendimento.avaliacao.media}"></span>
+						</div>
+						<div class="col l9">
+							<span class="bold-text grey-text text-darken-3">Observação: </span>
+							<span class="light-text text-18 truncate" th:text="${atendimento.avaliacao.observacao} ? ${atendimento.avaliacao.observacao} : '-'"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section layout:fragment="js-paciente">
+	<script type="text/javascript" th:src="@{/js/atendimento/detalhes.js}"></script>
+</section>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="paciente/detalhes-base"
+	th:with="currentPage='pacientes',currentSubPage='tratamentos'">
+
+<section layout:fragment="tab-content">
+	<div id="tratamentosList">
+		<div th:fragment="tratamentosList">
+			<div class="card">
+				<div class="card-content relative-position">
+
+					<a sec:authorize="hasAuthority('ATENDENTE')"
+						th:href="@{/paciente/plano-tratamento/__${paciente.id}__/cadastrar}"
+						class="paciente__edit-button login__card-submit-button-hided btn-floating btn-large tooltipped"
+						data-tooltip="Realizar Atendimento"> <i
+						class="material-icons white-text waves-effect waves-light">add</i>
+					</a>
+
+					<p th:if="${#lists.isEmpty(tratamentos)}" class="center-align">Este
+						paciente não possui tratamentos!</p>
+
+					<table th:unless="${#lists.isEmpty(tratamentos)}"
+						class="pacientes_detalhe-atendimentos-table mf-table">
+						<thead>
+							<tr>
+								<th>Clínica</th>
+								<th>Prioridade</th>
+								<th>Status</th>
+								<th>Data</th>
+								<th>Responsável</th>
+								<th sec:authorize="hasAuthority('ATENDENTE')"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="tratamento : ${tratamentos}">
+								<td th:text="${tratamento.clinica.nome}" />
+								<td th:text="${tratamento.prioridade}" />
+								<td th:text="${tratamento.status.descricao}" />
+								<td th:text="${#dates.format(tratamento.data, 'dd/MM/yyyy')}"></td>
+								<td th:text="${tratamento.responsavel.nome}" />
+								<td>
+									<div class="row">
+										<button
+											style="display:inline-block"
+											th:if="${!(tratamento.status.name() EQ 'CONCLUIDO' OR tratamento.status.name() EQ 'INTERROMPIDO')}"
+											th:classappend="${tratamento.status.name() EQ 'CONCLUIDO' OR tratamento.status.name() EQ 'INTERROMPIDO'} ? disabled"
+											id="button-open-modal-excluir"
+											sec:authorize="hasAuthority('ATENDENTE')"
+											class="btn-small btn-floating z-depth-0 transparent remover-tratamento"
+											th:attr=" link = @{/paciente/plano-tratamento/{paciente}/excluir/{tratamento}(paciente=${paciente.id},tratamento=${tratamento.id})}">
+											<i class="material-icons red-text">delete</i>
+										</button>
+										<a
+											style="display:inline-block"
+											th:if="${!(tratamento.status.name() EQ 'CONCLUIDO' OR tratamento.status.name() EQ 'INTERROMPIDO')}"
+											th:classappend="${tratamento.status.name() EQ 'CONCLUIDO' OR tratamento.status.name() EQ 'INTERROMPIDO'} ? disabled"
+											id="button-open-modal-finalizar"
+											sec:authorize="hasAuthority('ATENDENTE')"
+											class="btn-small btn-floating z-depth-0 transparent"
+											th:href="@{/plano-tratamento/pagina-editar/{tratamento}(tratamento=${tratamento.id})}">
+											<i class="material-icons green-text">edit_mode</i>
+										</a>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal excluir tratamento -->
+	<div id="modal-excluir-tratamento" class="modal" role="dialog">
+		<div class="modal-content">
+			<div class="card-content">
+
+				<span>Tem certeza que deseja excluir esse tratamento?</span>
+
+			</div>
+
+			<div class="modal-footer card-action right-align">
+				<a id="confirm-excluir-tratamento" type="submit"
+					class="btn waves-effect waves-light" data-dismiss="modal">Excluir</a>
+				<a id="cancelar-excluir-tratamento"
+					class="btn btn-flat margin-right waves-effect">Cancelar</a>
+			</div>
+
+		</div>
+
+	</div>
+	<!-- Modal finalizar tratamento -->
+	<div id="modal-finalizar-tratamento" class="modal" role="dialog">
+		<div class="modal-content">
+			<div class="card-content">
+
+				<span>Tem certeza que deseja finalizar esse tratamento?</span>
+
+			</div>
+
+			<div class="modal-footer card-action right-align">
+				<a id="confirm-finalizar-tratamento" type="submit"
+					class="btn waves-effect waves-light" data-dismiss="modal">Finalizar</a>
+				<a id="cancelar-finalizar-tratamento"
+					class="btn btn-flat margin-right waves-effect">Cancelar</a>
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+</html>

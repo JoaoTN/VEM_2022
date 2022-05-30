@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="fragments/base"
+>
+<title>Sessão - Detalhes</title>
+
+<section layout:fragment="conteudo" th:with="isOrganizador=${sessao.evento.isOrganizador(#authentication.getPrincipal())}">
+	<input type="hidden" id="isOrganizador" th:value="${isOrganizador}"/>
+	<div class="row">
+		<div class="col s12">
+			<div class="card">
+				<div class="card-content">
+					<div class="row">
+						<div class="col s8">
+							<h4 class="header" th:text="'Sessão - __${sessao.nome}__'"></h4>
+							<h5 th:text="${sessao.evento.nome}"></h5>
+						</div>
+						<div class="col s4 right-align">
+							<a title="Editar Sessão" class="btn waves-effect purple darken-4 modal-trigger" href="#editar-sessao" th:if="${isOrganizador}">Editar Sessão</a>
+							<a onClick="window.history.back()" title="Voltar" class="btn waves-effect grey">Voltar</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s3">
+							<p>Local</p>
+							<h5 th:text="${sessao.local}"></h5>
+						</div>
+						<div class="col s3">
+							<p>Data</p>
+							<h5 th:text="${sessao.dataSecao}"></h5>
+						</div>
+						<div class="col s3">
+							<p>Horário</p>
+							<h5 th:text="${sessao.horario}"></h5>
+						</div>
+						<div class="col s3">
+							<p>Responsável</p>
+							<h5 th:text="${sessao.responsavel.nome}"></h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<table id="tb-trabalhos" class="display">
+								<thead>
+								<tr>
+									<th>Título</th>
+									<th>Autor</th>
+									<th th:if="${isOrganizador}">Apresentou trabalho?</th>
+									<th th:if="${isOrganizador}"></th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr th:each="trabalho : ${sessao.trabalhos}">
+									<td th:if="${isOrganizador or sessao.responsavel eq #authentication.getPrincipal()}"><a th:href="@{/trabalho/__${trabalho.id}__}" th:text="${trabalho.titulo}"></a></td>
+									<td th:if="${!isOrganizador and sessao.responsavel != #authentication.getPrincipal()}" th:text="${trabalho.titulo}"></td>
+									<td th:text="${trabalho.autor?.nome}"></td>
+									<td th:if="${isOrganizador}">
+										<div class="switch">
+											<label>
+												<input th:id="${trabalho.id}" type="checkbox" class="status-apresentacao" th:checked="${trabalho.statusApresentacao}"/>
+												<span class="lever"></span>
+											</label>
+										</div>
+									</td>
+									<td class="right" th:if="${isOrganizador}">
+										<a title="Excluir alocação" href="#modal-excluir" class="btn-floating waves-effect red btn-small modal-trigger confirmacao" th:attr="data-link=@{'/sessao/excluir-trabalho/__${trabalho.id}__/true'}">
+											<i class="material-icons">clear</i>
+										</a>
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Structure -->
+	<div id="editar-sessao" class="modal modal-fixed-footer">
+		<form id="form-nova-sessao" class="col s12" th:action="@{'/sessao/__${sessao.id}__/editar'}" method="post">
+			<div class="modal-content">
+				<input id="id" type="hidden" th:value="${sessao.id}"/>
+				<input id="respId" type="hidden" th:value="${sessao.responsavel.id}"/>
+				<input id="respNome" type="hidden" th:value="${sessao.responsavel.nome}"/>
+				<h4>Nova Sessão</h4>
+				<div class="row">
+					<div class="input-field col s6">
+						<input id="nome" type="text" required="required" name="nome" th:value="${sessao.nome}"/>
+						<label for="nome">* Nome</label>
+					</div>
+					<div class="input-field col s6">
+						<select id="responsavel" name="responsavel" class="js-data-example-ajax browser-default" required="required">
+							<option selected="selected" th:value="${sessao.responsavel.id}" th:text="${sessao.responsavel.nome}"></option>
+						</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s6">
+						<input id="local" type="text" name="local" th:value="${sessao.local}"/>
+						<label for="local">Local</label>
+					</div>
+					<div class="input-field col s3">
+						<input id="data" type="text" name="dataSecao" data-mask="00/00/0000" placeholder="dd/mm/aaaa" th:value="${sessao.dataSecao}"/>
+						<label for="data">Data</label>
+					</div>
+					<div class="input-field col s3">
+						<input id="horario" type="text" name="horario" data-mask="00:00 - 00:00" placeholder="hh:mm - hh:mm" th:value="${sessao.horario}"/>
+						<label for="horario">Horário</label>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" class="btn waves-effect waves-light purple darken-4">Atualizar</button>
+				<a href="#!" class="modal-close btn-flat">Cancelar</a>
+			</div>
+		</form>
+	</div>
+
+</section>
+
+<section layout:fragment="js">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.modal').modal({
+				dismissible: false
+			});
+
+			if ($('#isOrganizador').val() === 'true') {
+				$('#tb-trabalhos').DataTable({
+					"language": {
+						url: _context + '/js/Portuguese-Brasil.json'
+					},
+					"order": [[0, 'asc']],
+					"paging": false,
+					columnDefs: [
+						{orderable: false, targets: [2,3]},
+					]
+
+
+				});
+			} else {
+				$('#tb-trabalhos').DataTable({
+					"language": {
+						url: _context + '/js/Portuguese-Brasil.json'
+					},
+					"order": [[0, 'asc']],
+					"paging": false
+				});
+			}
+
+
+			$('.js-data-example-ajax').select2({
+				allowClear: true,
+				minimumInputLength: 5,
+				placeholder: 'Nome do organizador...',
+				language: {
+					"noResults": function () {
+						return "Nenhum resultado encontrado";
+					},
+					"inputTooShort": function () {
+						return "Digite pelo menos 5 caracteres..."
+					}
+				},
+				ajax: {
+					url: _context + '/api/users/findByNome',
+					dataType: 'json',
+					data: function (params) {
+						var query = {
+							search: params.term
+						}
+						return query;
+					},
+					processResults: function (data) {
+						// Transforms the top-level key of the response object from 'items' to 'results'
+						var result = $.map(data, function (obj) {
+							obj.id = obj.id || obj.id; // replace pk with your identifier
+							obj.text = obj.text || obj.nome;
+							return obj;
+						});
+						return {
+							results: result
+						};
+					},
+				},
+			});
+
+			$(".status-apresentacao").change(function() {
+				$.ajax({
+					type: "GET",
+					contentType: "application/json",
+					url: "/api/apresentacao/" + $(this).attr('id') + "/" + $(this).is(":checked"),
+					dataType: 'json'
+				});
+			})
+
+		});
+
+	</script>
+</section>
+</html>

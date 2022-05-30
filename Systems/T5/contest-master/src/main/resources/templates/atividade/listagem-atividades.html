@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="fragments/base"
+>
+<title>Atividades</title>
+
+<section layout:fragment="conteudo" th:with="isOrganizador=${evento.isOrganizador(#authentication.getPrincipal())}">
+	<input type="hidden" id="isOrganizador" th:value="${isOrganizador}"/>
+	<div class="row">
+		<div class="col s12">
+			<div class="card">
+				<div class="card-content">
+					<div class="row">
+						<div class="col s8">
+							<h4 class="header">Atividades</h4>
+							<h5 th:text="${evento.nome}"></h5>
+						</div>
+						<div class="col s4 right-align">
+							<a title="Nova Sessão" class="btn waves-effect purple darken-4 modal-trigger" href="#nova-atividade" th:if="${isOrganizador}">Nova Atividade</a>
+							<a th:href="@{'/evento/__${evento.id}__'}" title="Voltar" class="btn waves-effect grey">Voltar</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<ul class="tabs tabs-fixed-width tab-demo z-depth-1">
+								<li class="tab"><a href="#atividades">Atividades do Evento <i class="material-icons">dns</i></a></li>
+								<li th:if="${isOrganizador}" class="tab"><a href="#participantes" th:classappend="${sorteado != null} ? active">Participantes do Evento <i class="material-icons">people</i></a></li>
+								<li class="tab"><a href="#minhas-participacoes">Minhas Participações <i class="material-icons">person</i></a></li>
+							</ul>
+
+							<div id="atividades" class="col s12 mt-20">
+								<table id="tb-atividades" class="display">
+									<thead>
+										<tr>
+											<th>Nome</th>
+											<th>Descrição</th>
+											<th>Local</th>
+											<th>CH</th>
+											<th>Data</th>
+											<th>Horário</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr th:each="atividade : ${atividades}">
+											<td th:if="${isOrganizador}"><a th:href="@{'/atividade/__${atividade.id}__'}" th:text="${atividade.nome}"></a></td>
+											<td th:unless="${isOrganizador}" th:text="${atividade.nome}"></td>
+											<td th:text="${atividade.descricao}"></td>
+											<td th:text="${atividade.local}"></td>
+											<td th:text="'__${atividade.cargaHoraria}__h'"></td>
+											<td th:inline="text">[[${atividade.inicio != null ? #dates.format(atividade.inicio, 'dd/MM/yyyy') : '-'}]]</td>
+											<td th:inline="text">[[${atividade.inicio != null ? #dates.format(atividade.inicio, 'HH:mm') : ''}]] - [[${atividade.termino != null ? #dates.format(atividade.termino, 'HH:mm') : ''}]]</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div th:if="${isOrganizador}" id="participantes" class="col s12 mt-20">
+								<a th:if="${isOrganizador}" title="sorteio" th:href="@{'/evento/__${evento.id}__/sorteio'}" class="btn waves-effect teal modal-trigger">Sortear</a>
+								<div class="row" th:if="${sorteado}">
+									<div id="sorteado" class="card-panel green lighten-5 center-align">
+										<img th:src="@{'/img/gifs/__${gif}__.gif'}"/>
+										<h1 th:text="${sorteado.nome}"></h1>
+									</div>
+								</div>
+								<table id="tb-participantes" class="display">
+									<thead>
+									<tr>
+										<th>Nome</th>
+										<th>Email</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr th:each="participante : ${participantes }">
+										<td><a th:href="@{'/evento/__${evento.id}__/participante/__${participante.id}__'}" th:text="${participante.nome}"></a></td>
+										<td th:text="${participante.email}"></td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+					
+							<div id="minhas-participacoes" class="col s12 mt-20">
+								<table id="tb-minhas-participacoes" class="display">
+									<thead>
+										<tr>
+											<th>Nome</th>
+											<th>CH</th>
+											<th>Status</th>
+											<th>Registro</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr th:each="participacao : ${participacoes }">
+											<td th:text="${participacao.atividade.nome}"></td>
+											<td th:text="'__${participacao.atividade.cargaHoraria}__h'"></td>
+											<td th:if="${participacao.valida}">
+												<div class="chip green darken-4 white-text">VÁLIDA</div>
+											</td>
+											<td th:unless="${participacao.valida}">
+												<div class="chip red darken-4 white-text">INVÁLIDA</div>
+											</td>
+											<td th:text="${#dates.format(participacao.data, 'dd/MM/yyyy - HH:mm')}"></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal Structure -->
+	<div id="nova-atividade" class="modal modal-fixed-footer">
+		<form id="form-nova-atividade" class="col s12" th:action="@{'/atividade/__${evento.id}__/adicionar/'}" method="post">
+			<div class="modal-content">
+				<h4>Nova Atividade</h4>
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="nome" type="text" required="required" name="nome"/>
+						<label for="nome">* Nome</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<textarea id="descricao" name="descricao" class="materialize-textarea"></textarea>
+						<label for="descricao">* Descrição</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s4">
+						<input id="local" type="text" required="required" name="local"/>
+						<label for="local">* Local</label>
+					</div>
+					<div class="input-field col s4">
+						<input id="pontuacao" type="number" th:min="0" required="required" name="pontuacao"/>
+						<label for="pontuacao">* Pontuação</label>
+					</div>
+					<div class="input-field col s4">
+						<input id="cargaHoraria" type="number" th:min="0" name="cargaHoraria" required="required"/>
+						<label for="cargaHoraria">* Carga Horária</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s6">
+						<input id="inicio" type="text" data-mask="00/00/0000 00:00" name="inicio"/>
+						<label for="inicio">Início</label>
+					</div>
+					<div class="input-field col s6">
+						<input id="termino" type="text" data-mask="00/00/0000 00:00" name="termino"/>
+						<label for="termino">Término</label>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" class="btn waves-effect waves-light purple darken-4">Cadastrar</button>
+				<a href="#!" class="modal-close btn-flat">Cancelar</a>
+			</div>
+		</form>
+	</div>
+</section>
+<section layout:fragment="js">
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.modal').modal({
+				dismissible: false,
+				onCloseEnd: function () {
+					$('#form-nova-atividade').trigger("reset");
+				}
+			});
+
+			$('#tb-atividades,#tb-minhas-participacoes,#tb-participantes').DataTable({
+				"language" : {
+					url : _context + '/js/Portuguese-Brasil.json'
+				},
+				"order": [[ 0, 'asc' ]],
+				"pageLength": 100,
+			});
+		});
+
+	</script>
+</section>
+</html>

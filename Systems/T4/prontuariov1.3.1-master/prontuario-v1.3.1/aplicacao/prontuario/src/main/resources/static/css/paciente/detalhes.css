@@ -1,0 +1,57 @@
+.paciente__view-card-flex-row {
+	display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    
+}
+
+.paciente__view-left-options-wrapper {
+	position: relative;
+}
+
+.paciente__view-left-options > li {
+	height: 52px;
+}
+
+.paciente__view-left-options > li:hover {
+	background: #efefef;
+}
+
+.paciente__view-left-options > li.active {
+	border: none;
+	border-left-style: solid;
+	border-left-width: 6px;
+	border-left-color: #ff5722;
+	color: #ff5722;
+}
+
+.paciente__view-left-options > li > a {
+	display: block;
+	width: 100%;
+	line-height: 52px;
+	padding: 0 16px;
+	transition: all .1s linear;
+	font-weight: 500;
+}
+
+.paciente__edit-button {
+	position: absolute;
+	top: -26px;
+	right: 26px;
+	z-index: 100;
+}
+
+.to-up {
+	z-index: 1;
+}
+
+.right-space {
+	margin-right: 20px;
+}

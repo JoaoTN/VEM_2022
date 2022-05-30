@@ -1,0 +1,42 @@
+variables:
+  MAVEN_OPTS: "-Dhttps.protocols=TLSv1.2 -Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=WARN -Dorg.slf4j.simpleLogger.showDateTime=true -Djava.awt.headless=true"
+  MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end --show-version -DinstallAtEnd=true -DdeployAtEnd=true"
+  SONAR_SOURCES: "src/main/java,src/main/resources/static/js,pom.xml"
+  SONAR_OPTS: "-Dsonar.host.url=$SONAR_URL -Dsonar.login=$SONAR_LOGIN -Dsonar.gitlab.project_id=$CI_PROJECT_PATH -Dsonar.gitlab.commit_sha=$CI_COMMIT_SHA -Dsonar.gitlab.ref_name=$CI_COMMIT_REF_NAME -Dsonar.gitlab.json_mode=CODECLIMATE -Dsonar.gitlab.failure_notification_mode=commit-status -Dsonar.branch.name=$CI_COMMIT_REF_NAME -Dsonar.sources=$SONAR_SOURCES -Dsonar.test=src/test/java -Dsonar.junit.reportsPath=target/surefire-reports"
+
+cache:
+  paths:
+    - .m2/repository
+
+
+stages:
+  - build
+  - quality
+
+validate:jdk8:
+  stage: build
+  image: maven:3.3.9-jdk-8
+  script:
+    - 'cd aplicacao/prontuario'
+    - 'mvn $MAVEN_CLI_OPTS verify sonar:sonar $SONAR_OPTS'
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - codeclimate.json
+    reports:
+      junit:
+        - aplicacao/prontuario/target/surefire-reports/TEST-*.xml
+
+
+codequality:
+  stage: quality
+  image: docker:latest
+  variables:
+    GIT_STRATEGY: none
+    DOCKER_DRIVER: overlay2
+  script:
+    - echo ok
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - codeclimate.json

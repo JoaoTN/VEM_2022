@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="base/base"
+    th:with="currentPage='alunos', alunoId=${aluno.id}">
+
+	<head>
+	
+	    <title>Prontuário - Página Modelo</title>
+	    
+	</head>
+
+	<section layout:fragment="conteudo">
+		
+		<div class="row">
+		
+			<!-- BREADCRUMBS - Mostra o caminho até a página atual -->
+			
+			<div class="col s12 breadcrumbs valign-wrapper">
+	            
+	            <a th:href="@{/}" class="breadcrumb blue-grey-text">
+	                <i class="material-icons left">home</i>
+	            </a>
+	            
+	            <a sec:authorize="hasAuthority('ADMINISTRACAO')" th:href="@{/aluno/listar}" class="breadcrumb blue-grey-text">Alunos</a>
+	            
+	            <a sec:authorize="!hasAuthority('ADMINISTRACAO')" class="breadcrumb blue-grey-text">Alunos</a>
+	            
+	            <a class="breadcrumb blue-grey-text">Detalhes</a>
+	            
+	        </div>
+	        
+	        <!-- BREADCRUMBS -->
+		
+		
+			<!-- CONTAINER - Conteiner principal da aplicação -->
+			
+		    <div class="col s12">
+		    	<!-- Conteúdo da página ... -->
+		    	
+		    
+		    	<div class="card">
+		    		<div class="card-content">
+				    	<div class="row">
+							<div class="col l4 no-padding">
+								<span class="bold-text grey-text text-darken-3">Nome: </span>
+								<span class="light-text text-18 truncate"
+									th:text="${aluno.nome}">
+								</span>
+							</div>
+							<div class="col l4 no-padding">
+								<span class="bold-text grey-text text-darken-3">Email: </span>
+								<span class="light-text text-18 truncate">
+									<span th:text="${aluno.email}" class=""></span>
+								</span>
+							</div>
+							<div class="col l2 no-padding">
+								<span class="bold-text grey-text text-darken-3">Matricula: </span>
+								<span class="light-text text-18 truncate">
+									<span th:text="${aluno.matricula}" class=""></span>
+								</span>
+							</div>
+							<div class="col l2 no-padding">
+								<span class="bold-text grey-text text-darken-3">Ingresso: </span>
+								<span class="light-text text-18 truncate">
+									<span th:text="${aluno.anoIngresso} + '.' + ${aluno.semestreIngresso}" class=""></span>
+								</span>
+							</div>
+						</div>						
+					</div>
+				</div>
+					
+				<div class="card">
+		    		<div class="card-content">
+						<div class="row no-margin">
+							<div class="col l12 no-padding">
+								<span class="bold-text grey-text text-darken-3">Turmas: </span>
+								
+								<p th:if="${#lists.isEmpty(aluno.alunoTurmas)}">Este aluno não está cadastrado em turmas!</p>
+								<table th:unless="${#lists.isEmpty(aluno.alunoTurmas)}" class="mf-table">
+									<thead>
+										<tr>
+											<th>Turma</th>
+											<th>Período</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr th:each="alunoTurma :${aluno.alunoTurmas}">
+											<td th:text="${alunoTurma.turma.disciplina.nome} + ' - ' + ${alunoTurma.turma.nome}"></td>
+											<td th:text="${alunoTurma.turma.ano} + '.' + ${alunoTurma.turma.semestre}"></td>
+										</tr>	
+									</tbody>		
+								</table>
+								
+							</div>
+							
+						</div>
+						
+					</div>
+		    	</div>
+		    	
+		    	
+		    	<div class="card">
+		    		<div class="card-content">
+						<div class="row no-margin">
+							<div class="col l12 no-padding">
+								<span class="bold-text grey-text text-darken-3">Atendimentos: </span>
+								
+								<p th:if="${#lists.isEmpty(atendimentos)}">Este aluno não realizou atendimentos!</p>
+								<table id="atendimentos" th:unless="${#lists.isEmpty(atendimentos)}" class="pacientes_detalhe-anamneses-table">
+									<thead>
+										<tr>
+											<th>Data</th>
+											<th>Paciente</th>
+											<th>Turma</th>
+											<th>Professor</th>
+											<th>Situação</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr th:each="atendimento :${atendimentos}"
+											th:if="${atendimento.isVisivel(#authentication.principal.email) OR #strings.contains(#authentication.principal.authorities,'ADMINISTRACAO')}">
+											<td>
+												<a class="waves-effect deep-orange-text" th:href="@{/atendimento/} + ${atendimento.id}" th:text="${#dates.format(atendimento.data, 'dd/MM/yyyy')}"></a>
+											</td>
+											<td th:text="${atendimento.paciente.nome}"></td>
+											<td>
+												<span th:text="${atendimento.turma.disciplina.nome} + ' - ' + ${atendimento.turma.nome}"></span>
+											</td>
+											<td th:text="${atendimento.professor.nome}"></td>
+											
+											<td th:if="${atendimento.status.name()} EQ 'EM_ANDAMENTO'" th:text="${atendimento.status.descricao}" class="grey-text"></td>
+											<td th:if="${atendimento.status.name()} EQ 'REALIZADO'" th:text="${atendimento.status.descricao}" class="blue-text"></td>
+											<td th:if="${atendimento.status.name()} EQ 'VALIDADO'" th:text="${atendimento.status.descricao}" class="green-text"></td>
+										</tr>	
+									</tbody>		
+								</table>
+								
+							</div>
+							
+						</div>
+						
+					</div>
+		    	</div>
+			
+				
+		    </div>
+		    	        	   
+		    <!-- CONTAINER -->
+		    
+		</div>
+		
+	</section>
+
+	<section layout:fragment="js">
+	
+		<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+		<script type="text/javascript" th:src="@{/js/aluno/listagem.js}"></script>
+			
+	</section>
+
+</html>

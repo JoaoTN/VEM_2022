@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html layout:decorator="base/base"
+      th:with="currentPage='tipoPatologia'"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Prontuário - Cadastrar Tipo de Alteração</title>
+
+</head>
+
+<section layout:fragment="conteudo">
+
+    <div class="row">
+
+        <!-- BEGIN BREADCRUMBS - Mostra o caminho até a página atual -->
+
+        <div class="col s12 breadcrumbs valign-wrapper">
+
+            <a class="breadcrumb blue-grey-text" th:href="@{/}"> <i
+                    class="material-icons left">home</i>
+            </a> <a class="breadcrumb blue-grey-text"
+                    th:href="@{/tipo-patologia/listar}">Patologias</a> <a
+                class="breadcrumb blue-grey-text"
+                th:text="${tipoPatologia.id} == null ? Cadastrar : Editar"></a>
+
+        </div>
+
+        <!-- END BREADCRUMBS -->
+
+
+        <!-- BEGIN CONTAINER - Conteiner principal da aplicação -->
+
+        <div class="col s12">
+
+            <!-- BEGIN FORM -->
+            <form class="card" method="post"
+                  th:action="@{/tipo-patologia/adicionar}" th:object="${tipoPatologia}">
+
+
+                <div class="card-content">
+                    <div class="row">
+                        <input th:field="*{id}" type="hidden"/>
+                        <div class="col l6 m6 s12">
+                            <div class="input-field">
+                                <label for="codigo">Código</label> <input class="form-control"
+                                                                            id="codigo" maxlength="6"
+                                                                            th:field="*{codigo}" type="text"/>
+                            </div>
+                        </div>
+
+                        <div class="col l6 m6 s12">
+                            <div class="input-field">
+                                <label for="nome">* Nome</label> <input class="form-control"
+                                                                        id="nome" required="required"
+                                                                        th:field="*{nome}"
+                                                                        type="text"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col l12 m12 s12">
+                            <div class="input-field">
+                                <label for="descricao">* Descrição</label> <input class="form-control"
+                                                                                  id="descricao"
+                                                                                  required="required"
+                                                                                  th:field="*{descricao}"
+                                                                                  type="text"/>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <span class="grey-text">* Campos obrigatórios</span>
+                    </div>
+                </div>
+
+                <div class="card-action right-align">
+                    <a class="btn btn-flat waves-effect" th:href="@{/tipo-patologia/listar/}">Cancelar</a>
+                    <button class="btn waves-effect waves-light" type="submit">Salvar</button>
+                </div>
+            </form>
+            <!-- END FORM -->
+
+        </div>
+
+        <!-- END CONTAINER -->
+
+    </div>
+
+</section>
+
+<section layout:fragment="js">
+
+    <!-- SCRIPTS - Coloque aqui os scripts desta página -->
+
+</section>
+
+</html>

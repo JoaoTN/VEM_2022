@@ -1,0 +1,15 @@
+/target/
+
+.mvn/
+.settings/
+.classpath
+.project
+mvnw
+mvnw.cmd
+.idea/
+prontuario.iml
+
+.tern-project
+*application-homo.properties
+*application-prod.properties
+/bin/

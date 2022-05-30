@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="base/base"
+    th:with="currentPage='anamneses'">
+
+	<head>
+	 	
+	 	<title>Prontuário - Anamnese</title>
+	 	
+	 	<link rel="stylesheet" type="text/css" th:href="@{/css/anamnese/anamnese.css}"/>
+	 	
+	</head>
+	
+<body>
+	   
+	<section layout:fragment="conteudo">
+		
+		<div class="row">
+		
+			<!-- BREADCRUMBS - Mostra o caminho até a página atual -->
+			
+			<div class="col s12 breadcrumbs valign-wrapper">
+	            
+	            <a th:href="@{/}" class="breadcrumb blue-grey-text">
+	                <i class="material-icons left">home</i>
+	            </a>
+	            
+	            <a class="breadcrumb blue-grey-text">Anamneses</a>
+	            
+	        </div>
+	        
+	        <!-- BREADCRUMBS -->
+		
+		
+			<!-- CONTAINER - Conteiner principal da aplicação -->
+			
+		    <div class="col s12">
+		    	
+		    	<div class="card">
+		    	
+		    		<div class="card-content">
+		    			<a sec:authorize="hasAuthority('ADMINISTRACAO')" th:href="@{/anamnese/cadastrar-anamnese}" 
+		    				class="listar-anamnese__add-button login__card-submit-button-hided btn-floating btn-large tooltipped"
+		    				data-tooltip="Adicionar Anamnese">
+							<i class="material-icons white-text waves-effect waves-light">add</i>
+						</a>
+						
+		    			<p th:if="${#lists.isEmpty(anamneses)}">Nenhuma anamnese cadastrada!</p>
+						<table class="mf-table striped" id="table-anamneses" th:unless="${#lists.isEmpty(anamneses)}">
+							<thead>
+								<tr>
+									<th>Nome</th>
+									<th>Descrição</th>
+									<th>Status</th>
+									<th/>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="anamnese : ${anamneses}">
+									<td>
+										<a class="deep-orange-text waves-effect tooltipped"
+											th:href="@{/anamnese/anamnese-detalhes/} + ${anamnese.id}"
+										 	th:text="${anamnese.nome}"
+										 	data-tooltip="Vizualizar">
+										</a>
+									</td>
+									<td th:text="${anamnese.descricao}" />
+									<td th:text="${anamnese.status.descricao}" class="bold-text" th:classappend="${anamnese.status.descricao} == 'Finalizada'? grey-text: 'blue-text'" />
+									<td sec:authorize="hasAuthority('ADMINISTRACAO')">
+										<div th:if="${anamnese.status.descricao} != 'Finalizada'">
+											<a class="btn-floating z-depth-0 transparent waves-effect tooltipped" data-tooltip="Excluir" th:href="@{/anamnese/remover/} + ${anamnese.id}">
+												<i class="material-icons red-text">delete</i>
+											</a>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+		    	</div>
+		    	
+			</div>
+		</div>
+		
+	</section>
+
+	<section layout:fragment="js">
+	
+		<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+			
+	</section>
+</body>
+</html>

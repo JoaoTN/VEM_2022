@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Prontuário - Alterar senha</title>
+</head>
+<body>
+	<form id="form-nova-senha" th:action="@{/usuario/senha}" method="post" th:object="${token}">
+		
+		<input type="hidden" th:field="*{token}" />
+		
+		<div>
+			<label for="nova-senha">Informe a nova senha</label>
+			<input id="nova-senha" type="password" name="senha" />
+		</div>
+		
+		<div>
+			<label for="confirm-senha">Confirme a nova senha</label>
+			<input id="confirm-senha" type="password" name="senhaConfirm" />
+		</div>
+		
+		<button type="submit">Alterar</button>
+	</form>
+	
+	<script type="text/javascript" th:src="@{/js/libs/jquery/jquery-1.12.4.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/libs/jquery/jquery.validate.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/usuario/alteracao-senha.js}"></script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="fragments/base"
+>
+<title>Trabalho - Detalhes</title>
+
+<section layout:fragment="conteudo" th:with="isOrganizador=${trabalho.evento.isOrganizador(#authentication.getPrincipal())},isRevisor=${trabalho.getTrabalhoProduct().isRevisor(#authentication.getPrincipal())}">
+	<input type="hidden" id="isOrganizador" th:value="${isOrganizador}"/>
+	<div class="row">
+		<div class="col s12">
+			<div class="card">
+				<div class="card-content">
+					<div class="row">
+						<div class="col s8">
+							<h4 class="header">Trabalho</h4>
+							<p th:text="${trabalho.evento.nome}"></p>													
+						</div>
+						<div class="col s4 right-align">
+							<a th:if="${trabalho.autor.equals(#authentication.getPrincipal())}" th:href="@{'/trabalho/__${trabalho.evento.id}__/editar/__${trabalho.id}__'}" title="Editar Submissão" class="btn waves-effect purple darken-4">Editar Submissão</a>
+							<a th:if="${trabalho.arquivo}" th:href="@{/arquivo/__${trabalho.id}__}" title="Visualizar trabalho" class="btn waves-effect cyan" target="_blank">Visualizar</a>
+							<a th:if="${trabalho.autor.equals(#authentication.getPrincipal())}" th:href="@{'/trabalho/__${trabalho.evento.id}__/excluir/__${trabalho.id}__'}" title="Excluir" class="btn waves-effect red">Excluir</a>
+							<a onclick="window.history.back()" class="btn waves-effect grey">Voltar</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<p>Título</p>
+							<h5 class="header" th:text="${trabalho.titulo}"></h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<p>Resumo (Abstract)</p>
+							<h5 class="header" th:text="${trabalho.resumo}"></h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<p>Palavras-chave</p>
+							<h5 class="header" th:text="${trabalho.palavrasChave}"></h5>
+						</div>
+					</div>
+					<div th:if="${isOrganizador or trabalho.isAutor(#authentication.getPrincipal()) or trabalho.isCoautor(#authentication.getPrincipal()) or
+						(trabalho.getTrabalhoProduct().isRevisor(#authentication.getPrincipal()) and trabalho.evento.isAfterRevisao()) or trabalho.isChefeSessao(#authentication.getPrincipal())}">
+						<div class="row">
+							<div class="col s6">
+								<p>Autor</p>
+								<h5 th:text="${trabalho.autor.nome}"></h5>
+							</div>
+							<div class="col s6">
+								<p>Orientador</p>
+								<h5 th:text="${trabalho.orientador} ? ${trabalho.orientador.nome} : '-'"></h5>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12">
+								<p>Coautores</p>
+								<h5 th:if="${trabalho.coautores.size() == 0}">-</h5>
+								<h5 th:each="coautor, index : ${trabalho.coautores}" class="display-inline" th:text="${index.index} + 1 eq ${trabalho.coautores.size()} ? '__${coautor.nome}__' : '__${coautor.nome}__, '"></h5>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12">
+								<p>Bolsistas</p>
+								<h5 th:if="${trabalho.bolsistas.size() == 0}">-</h5>
+								<h5 th:each="bolsista, index : ${trabalho.bolsistas}" class="display-inline" th:text="${index.index} + 1 eq ${trabalho.bolsistas.size()} ? '__${bolsista.nome}__' : '__${bolsista.nome}__, '"></h5>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s4">
+							<p>Trilha</p>
+							<h5 th:text="${trabalho.trilha.nome}" class="header"></h5>
+						</div>
+						<div class="col s4">
+							<p>Modalidade de Submissão</p>
+							<h5 th:text="${trabalho.modalidadeSubmissao} ? ${trabalho.modalidadeSubmissao.nome} : '-'"></h5>
+						</div>
+						<div class="col s4">
+							<p>Modalidade de Apresentação</p>
+							<h5 th:text="${trabalho.modalidadeApresentacao} ? ${trabalho.modalidadeApresentacao.nome} : '-'"></h5>
+						</div>
+					</div>
+					
+				    <div class="row" th:if="${trabalho.isAutor(#authentication.getPrincipal()) and trabalho.evento.isPeriodoSubmissaoFinal()}">
+				        <div class="col s12">
+				            <div class="card">
+				                <div class="card-content">
+				                    <div class="row">
+				                        <div class="col s8">
+				                            <h4 class="header">Submissão Final</h4>
+				                        </div>
+				                    </div>
+				
+				                    <form method="POST" enctype="multipart/form-data" th:action="@{'/trabalho/__${trabalho.evento.id}__/submissao-final/__${trabalho.id}__'}">
+										<div class="row">
+											<div class="file-field input-field">
+												<div class="btn">
+													<span>* TRABALHO</span> <input type="file" name="file" required="required"/>
+												</div>
+												<div class="file-path-wrapper">
+													<input class="file-path validate" type="text"/>
+												</div>
+											</div>
+										</div>
+				                        <button type="submit" class="btn waves-effect waves-light purple darken-4 right">Submeter</button>
+				                        <br/>
+										<span>(*) Campos obrigatórios. </span>
+				                    </form>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+
+					
+					<div th:each="revisao,indice : ${trabalho.revisoes}" class="row">
+						<div class="col s12" th:if="${trabalho.evento.isAfterSubmissao() and (isOrganizador or revisao.revisor eq #authentication.getPrincipal() or (trabalho.evento.isAfterRevisao() and (trabalho.autor eq #authentication.getPrincipal() or
+											trabalho.coautores.contains(#authentication.getPrincipal()))))}">
+							<div class="card">
+								<div class="card-head">
+									<span class="card-title green-text display-inline">Revisão</span>
+									<p th:if="${isOrganizador or revisao.revisor eq #authentication.getPrincipal()}" class="display-inline ml-10" th:text="'(__${revisao.revisor.nome}__)'"></p>
+									<div th:if="${(isOrganizador || revisao.revisor eq #authentication.getPrincipal()) and revisao.indicacao}" class="chip orange white-text" th:inline="text">
+										<i class="material-icons tiny">star</i>Best Paper
+									</div>
+									<div th:if="${(isOrganizador || revisao.revisor eq #authentication.getPrincipal()) and revisao.revisado}" th:classappend="${revisao.avaliacao eq T(ufc.quixada.npi.contest.model.Avaliacao).APROVADO} ? 'green' : (${revisao.avaliacao eq T(ufc.quixada.npi.contest.model.Avaliacao).RESSALVAS} ? 'orange' : 'red')" class="chip white-text" th:text="${revisao.avaliacao.descricao}"></div>
+									<div th:if="${(isOrganizador || revisao.revisor eq #authentication.getPrincipal()) and not revisao.revisado}" class="chip grey white-text" th:inline="text">
+										Não revisado
+									</div>
+								</div>
+								<div class="card-content">
+									<div class="row" th:if="${revisao.revisor eq #authentication.getPrincipal() and trabalho.evento.isPeriodoRevisao()}">
+										<form id="form-revisao" class="col s12" enctype="multipart/form-data" th:action="@{'/revisao/'}" method="post">
+											<input type="hidden" th:value="${revisao.id}" name="id"/>
+											<div class="row">
+												<div class="input-field col s12">
+													<textarea id="comentarios" type="text" required="required" name="comentarios" class="materialize-textarea" th:inline="text">[[${revisao.comentarios} == null ? '' : ${revisao.comentarios}]]</textarea>
+													<label for="comentarios">* Avaliação</label>
+												</div>
+											</div>
+											<div class="row">
+												<div class="input-field col s4">
+													<select id="originalidade" type="text" required="required" name="originalidade">
+														<option value="">Selecione...</option>
+														<option th:each="avaliacao : ${avaliacoes}" th:value="${avaliacao}" th:text="${avaliacao.nome}"  th:selected="${revisao.originalidade eq avaliacao}"></option>
+													</select>
+													<label for="originalidade">* Originalidade</label>
+												</div>
+												<div class="input-field col s4">
+													<select id="merito" type="text" required="required" name="merito">
+														<option value="">Selecione...</option>
+														<option th:each="avaliacao : ${avaliacoes}" th:value="${avaliacao}" th:text="${avaliacao.nome}"  th:selected="${revisao.merito eq avaliacao}"></option>
+													</select>
+													<label for="merito">* Mérito</label>
+												</div>
+												<div class="input-field col s4">
+													<select id="clareza" type="text" required="required" name="clareza">
+														<option value="">Selecione...</option>
+														<option th:each="avaliacao : ${avaliacoes}" th:value="${avaliacao}" th:text="${avaliacao.nome}"  th:selected="${revisao.clareza eq avaliacao}"></option>
+													</select>
+													<label for="clareza">* Clareza</label>
+												</div>
+											</div>
+											<div class="row">
+												<div class="input-field col s4">
+													<select id="qualidade" type="text" required="required" name="qualidade">
+														<option value="">Selecione...</option>
+														<option th:each="avaliacao : ${avaliacoes}" th:value="${avaliacao}" th:text="${avaliacao.nome}"  th:selected="${revisao.qualidade eq avaliacao}"></option>
+													</select>
+													<label for="qualidade">* Qualidade</label>
+												</div>
+												<div class="input-field col s4">
+													<select id="relevancia" type="text" required="required" name="relevancia">
+														<option value="">Selecione...</option>
+														<option th:each="avaliacao : ${avaliacoes}" th:value="${avaliacao}" th:text="${avaliacao.nome}"  th:selected="${revisao.relevancia eq avaliacao}"></option>
+													</select>
+													<label for="relevancia">* Relevância</label>
+												</div>
+												<div class="input-field col s4">
+													<select id="autoAvaliacao" type="text" required="required" name="autoAvaliacao">
+														<option value="">Selecione...</option>
+														<option value="Não Conhecedor"  th:selected="${revisao.autoAvaliacao eq 'Não Conhecedor'}">Não conhecedor</option>
+														<option value="Conhecedor" th:selected="${revisao.autoAvaliacao eq 'Conhecedor'}">Conhecedor</option>
+														<option value="Especialista"  th:selected="${revisao.autoAvaliacao eq 'Especialista'}">Especialista</option>
+													</select>
+													<label for="autoAvaliacao">* Auto avaliação</label>
+												</div>
+											</div>
+											<div class="row">
+												<div class="input-field col s4">
+													<select id="avaliacaoGeral" type="text" required="required" name="avaliacaoGeral">
+														<option value="">Selecione...</option>
+														<option th:each="avaliacao : ${avaliacoes}" th:value="${avaliacao}" th:text="${avaliacao.nome}" th:selected="${revisao.avaliacaoGeral eq avaliacao}"></option>
+													</select>
+													<label for="avaliacaoGeral">* Avaliação Geral</label>
+												</div>
+												<div class="input-field col s4">
+													<select id="avaliacao" type="text" required="required" name="avaliacao">
+														<option value="">Selecione...</option>
+														<option th:each="resultado : ${resultados}" th:value="${resultado}" th:text="${resultado.descricao}" th:selected="${revisao.avaliacao eq resultado}"></option>
+													</select>
+													<label for="avaliacao">* Resultado</label>
+												</div>
+												<div class="input-field col s4">
+													<label>
+														<input type="checkbox" name="indicacao" th:checked="${revisao.indicacao}"/>
+														<span>Indicar como Best Paper</span>
+													</label>
+												</div>
+											</div>
+											<div class="row">
+												<div class="input-field col s12">
+													<textarea id="observacoes" type="text" th:value="${revisao.observacoes}" name="observacoes" class="materialize-textarea" th:inline="text">[[${revisao.observacoes} == null ? '' : ${revisao.observacoes}]]</textarea>
+													<label for="observacoes">Observações para a organização</label>
+												</div>
+											</div>
+											<div class="row">
+												<div class="file-field input-field">
+													<div class="btn">
+														<span>Arquivo</span>
+														<input type="file" name="file"/>
+													</div>
+													<div class="file-path-wrapper">
+														<input class="file-path validate" type="text"/>
+													</div>
+												</div>
+											</div>
+											<div class="right-align">
+												<button type="submit" class="btn waves-effect waves-light purple darken-4" th:text="${revisao.revisado} ? 'Atualizar' : 'Salvar'"></button>
+											</div>
+										</form>
+									</div>
+									<div th:if="${not trabalho.evento.isAfterRevisao() and isOrganizador and revisao.revisor != #authentication.getPrincipal()}">
+										<p>Aguardando término do período de revisão.</p>
+									</div>
+									<div th:if="${trabalho.evento.isAfterRevisao() and revisao.revisado}">
+										<div class="row">
+											<div class="col s3">
+												<p>Originalidade</p>
+												<h5 th:text="${revisao.originalidade?.nome}"></h5>
+											</div>
+											<div class="col s3">
+												<p>Mérito</p>
+												<h5 th:text="${revisao.merito?.nome}"></h5>
+											</div>
+											<div class="col s3">
+												<p>Clareza</p>
+												<h5 th:text="${revisao.clareza?.nome}"></h5>
+											</div>
+											<div class="col s3">
+												<p>Qualidade</p>
+												<h5 th:text="${revisao.qualidade?.nome}"></h5>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col s3">
+												<p>Relevância</p>
+												<h5 th:text="${revisao.relevancia?.nome}"></h5>
+											</div>
+											<div class="col s3">
+												<p>Conhecimento do avaliador</p>
+												<h5 th:text="${revisao.autoAvaliacao}"></h5>
+											</div>
+											<div class="col s3">
+												<p>Avaliação Geral</p>
+												<h5 class="green-text" th:text="${revisao.avaliacaoGeral?.nome}"></h5>
+											</div>
+											<div class="col s3">
+												<p>Resultado</p>
+												<h5 class="green-text" th:text="${revisao.avaliacao.descricao}"></h5>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col s12">
+												<p>Avaliação</p>
+												<h5 th:text="${revisao.comentarios}"></h5>
+											</div>
+										</div>
+										<div class="row" th:if="${isOrganizador or revisao.revisor eq #authentication.getPrincipal()}">
+											<div class="col s12">
+												<p>Observações à organização</p>
+												<h5 th:text="${revisao.observacoes == null or revisao.observacoes.isEmpty()} ? '-' : ${revisao.observacoes}"></h5>
+											</div>
+										</div>
+									</div>
+									<a th:if="${revisao.arquivo}" th:href="@{/arquivo/revisao/__${revisao.id}__}" title="Visualizar arquivo de revisão" class="btn waves-effect cyan" target="_blank">Visualizar arquivo de revisão</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section layout:fragment="js">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('select').formSelect();
+			M.updateTextFields();
+		});
+
+	</script>
+</section>
+</html>

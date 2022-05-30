@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dataset>
+	<!-- Odontograma dos Pacientes -->
+	<odontograma id="1" />
+	
+	<!-- Pacientes -->
+	<paciente id="1" nome="Paciente Um" cpf="12345678900" odontograma_id="1"/>
+	
+	<!-- Disciplinas -->
+	<disciplina id="1" codigo="CLI001" nome="Disciplina Um"/>
+	
+	<!-- Turmas -->
+	<turma id="1" ano="2016" ativo="true" nome="Turma A" semestre="1" disciplina_id="1"/>
+
+	<!-- Alunos -->
+	<aluno id="1" nome="Aluno Um" email="aluno1@email.com" matricula="111111" ano_ingresso="2015" semestre_ingresso="1" />
+	<aluno id="2" nome="Aluno Dois" email="aluno2@email.com" matricula="222222" ano_ingresso="2015" semestre_ingresso="1" />
+	
+	<!-- Matricula dos alunos na Turma -->
+	<aluno_turma ativo="true" turma_id="1" aluno_id="1"/>
+	<aluno_turma ativo="true" turma_id="1" aluno_id="2"/>
+	
+	<!-- Professores -->
+	<servidor id="101" nome="Professor Um" email="professor1@email.com" matricula="111111" senha="111111" />
+	
+	<!-- Professores da Turma -->
+	<turma_professores professores_id="101" turma_id="1" />
+	
+	<!-- Atendimentos -->
+	<atendimento id="1" data="2001-01-01 00:00:00" status="EM_ANDAMENTO" paciente_id="1" responsavel_id="1" ajudante_id="2" professor_id="101" turma_id="1"/>
+	
+	<!-- Tipos de Procedimentos -->
+	<tipo_procedimento id="1" nome="Extração" descricao="Extração" />
+	<tipo_procedimento id="2" nome="Obturação" descricao="Obturação" />
+	
+	<!-- Procedimentos -->
+	<procedimento id="1" dente="D18" face="O" local="FACE" tipo_procedimento_id="1" descricao="PROCEDIMENTO DO ATENDIMENTO" atendimento_id="1" odontograma_id="1" />
+
+</dataset>

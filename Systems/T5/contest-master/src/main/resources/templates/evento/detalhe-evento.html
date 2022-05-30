@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="fragments/base"
+>
+<title>Eventos</title>
+
+<section layout:fragment="conteudo" th:with="isOrganizador=${evento.isOrganizador(#authentication.getPrincipal())}">
+	<input type="hidden" id="isOrganizador" th:value="${isOrganizador}"/>
+	<div class="row">
+		<div class="col s12">
+			<div class="card">
+				<div class="card-content">
+					<div class="row">
+						<div class="col s8">
+							<h4 class="header" th:text="${evento.nome}"></h4>
+						</div>
+						<div class="col s4 right-align">
+							<a title="Editar Evento" class="btn waves-effect purple darken-4 modal-trigger" href="#editar-evento" th:if="${isOrganizador}">Editar Evento</a>
+							<a th:href="@{'/evento/__${evento.id}__'}" title="Voltar" class="btn waves-effect grey">Voltar</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<p>Descrição</p>
+							<h5 th:text="${evento.descricao}"></h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s4">
+							<p>Período de Submissão</p>
+							<h5 th:text="'__${#dates.format(evento.inicioSubmissao,'dd/MM/yyyy')}__ a __${#dates.format(evento.terminoSubmissao,'dd/MM/yyyy')}__'"></h5>
+						</div>
+						<div class="col s4">
+							<p>Notificação de Aceitação</p>
+							<h5 th:text="${#dates.format(evento.prazoNotificacao,'dd/MM/yyyy')}"></h5>
+						</div>
+						<div class="col s4">
+							<p>Submissão Final</p>
+							<h5 th:text="${#dates.format(evento.cameraReady,'dd/MM/yyyy')}"></h5>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col s12">
+							<ul class="tabs tabs-fixed-width tab-demo z-depth-1">
+								<li class="tab"><a href="#trilhas" th:classappend="'trilhas' eq ${tab} ? active">Trilhas <i class="material-icons">format_list_bulleted</i></a></li>
+								<li class="tab"><a href="#modalidades-submissao" th:classappend="'modalidades-submissao' eq ${tab} ? active">Modalidades de Submissão <i class="material-icons">cloud_upload</i></a></li>
+								<li class="tab"><a href="#modalidades-apresentacao" th:classappend="'modalidades-apresentacao' eq ${tab} ? active">Modalidades de Apresentação <i class="material-icons">slideshow</i></a></li>
+							</ul>
+							<div id="trilhas" class="col s12 mt-20">
+								<form th:action="@{/evento/__${evento.id}__/trilha}" method="post" th:if="${isOrganizador}">
+									<div class="col m4">
+										<input id="nome" type="text" required="required" name="nome"/>
+									</div>
+									<button type="submit" class="btn waves-effect waves-light purple darken-4">Adicionar Trilha</button>
+								</form>
+
+								<table id="tb-trilhas" class="display">
+									<thead>
+										<tr>
+											<th>Nome</th>
+											<th th:if="${isOrganizador}"></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr th:each="trilha : ${evento.trilhas}" th:if="${not #lists.isEmpty(evento.trilhas)}">
+											<td th:text="${trilha.nome}"></td>
+											<td class="right" th:if="${isOrganizador}">
+												<a title="Excluir Trilha" href="#modal-excluir" class="btn-floating waves-effect red btn-small modal-trigger confirmacao" th:attr="data-link=@{/evento/__${evento.id}__/excluir-trilha/__${trilha.id}__}">
+													<i class="material-icons">delete</i>
+												</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div id="modalidades-submissao" class="col s12 mt-20">
+								<form th:action="@{/evento/__${evento.id}__/modalidade-submissao}" method="post" th:if="${isOrganizador}">
+									<div class="col m4">
+										<input id="nome" type="text" required="required" name="nome"/>
+									</div>
+									<button type="submit" class="btn waves-effect waves-light purple darken-4">Adicionar Modalidade de Submissão</button>
+								</form>
+
+								<table id="tb-modalidades-submissao" class="display" th:if="${not #lists.isEmpty(evento.modalidadesSubmissao)}">
+									<thead>
+										<tr>
+											<th>Nome</th>
+											<th th:if="${isOrganizador}"></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr th:each="modalidade : ${evento.modalidadesSubmissao}">
+											<td th:text="${modalidade.nome}"></td>
+											<td class="right" th:if="${isOrganizador}">
+												<a title="Excluir Modalidade" href="#modal-excluir" class="btn-floating waves-effect red btn-small modal-trigger confirmacao" th:attr="data-link=@{/evento/__${evento.id}__/excluir-modalidade-submissao/__${modalidade.id}__}">
+													<i class="material-icons">delete</i>
+												</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div id="modalidades-apresentacao" class="col s12 mt-20">
+								<form th:action="@{/evento/__${evento.id}__/modalidade-apresentacao}" method="post" th:if="${isOrganizador}">
+									<div class="col m4">
+										<input id="nome" type="text" required="required" name="nome"/>
+									</div>
+									<button type="submit" class="btn waves-effect waves-light purple darken-4">Adicionar Modalidade de Apresentação</button>
+								</form>
+
+								<table id="tb-modalidades-apresentacao" class="display" th:if="${not #lists.isEmpty(evento.modalidadesApresentacao)}">
+									<thead>
+									<tr>
+										<th>Nome</th>
+										<th th:if="${isOrganizador}"></th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr th:each="modalidade : ${evento.modalidadesApresentacao}">
+										<td th:text="${modalidade.nome}"></td>
+										<td class="right" th:if="${isOrganizador}">
+											<a title="Excluir Modalidade" href="#modal-excluir" class="btn-floating waves-effect red btn-small modal-trigger confirmacao" th:attr="data-link=@{/evento/__${evento.id}__/excluir-modalidade-apresentacao/__${modalidade.id}__}">
+												<i class="material-icons">delete</i>
+											</a>
+										</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Modal Structure -->
+	<div id="editar-evento" class="modal modal-fixed-footer">
+		<form id="form-editar-evento" class="col s12" th:action="@{'/evento/__${evento.id}__/editar/'}" method="post">
+			<div class="modal-content">
+				<input  id="id" type="hidden" name="id" value=""/>
+				<h4>Editar Evento</h4>
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="nome" type="text" required="required" name="nome" th:value="${evento.nome}"/>
+						<label for="nome">* Nome</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="descricao" type="text" required="required" name="descricao" th:value="${evento.descricao}"/>
+						<label for="descricao">Descrição</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s6">
+						<input id="inicioSubmissao" type="text" name="inicioSubmissao" data-mask="00/00/0000" placeholder="dd/mm/aaaa" th:value="${#dates.format(evento.inicioSubmissao, 'dd/MM/yyyy')}"/>
+						<label for="inicioSubmissao">Início da Submissão</label>
+					</div>
+					<div class="input-field col s6">
+						<input id="terminoSubmissao" type="text" name="terminoSubmissao" data-mask="00/00/0000" placeholder="dd/mm/aaaa" th:value="${#dates.format(evento.terminoSubmissao, 'dd/MM/yyyy')}"/>
+						<label for="terminoSubmissao">Término da Submissão</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s6">
+						<input id="prazoNotificacao" type="text" name="prazoNotificacao" data-mask="00/00/0000" placeholder="dd/mm/aaaa" th:value="${#dates.format(evento.prazoNotificacao, 'dd/MM/yyyy')}"/>
+						<label for="prazoNotificacao">Notificação de Aceitação</label>
+					</div>
+					<div class="input-field col s6">
+						<input id="cameraReady" type="text" name="cameraReady" data-mask="00/00/0000" placeholder="dd/mm/aaaa" th:value="${#dates.format(evento.cameraReady, 'dd/MM/yyyy')}"/>
+						<label for="cameraReady">Submissão Final</label>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" class="btn waves-effect waves-light purple darken-4">Salvar Alterações</button>
+				<a href="#!" class="modal-close btn-flat">Cancelar</a>
+			</div>
+		</form>
+	</div>
+	
+</section>
+<section layout:fragment="js">
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$('.modal').modal({
+				dismissible: false,
+				onCloseEnd: function () {
+					$('#form-editar-evento').trigger("reset");
+					M.updateTextFields();
+				}
+			});
+
+			if ($('#isOrganizador').val() === 'true') {
+				$('#tb-trilhas').DataTable({
+					"language": {
+						url: _context + '/js/Portuguese-Brasil.json'
+					},
+					"order": [[0, 'asc']],
+					columnDefs: [
+						{orderable: false, targets: [1]}
+					],
+					"paging": false,
+					"searching": false
+				});
+
+
+				$('#tb-modalidades-submissao').DataTable({
+					"language": {
+						url: _context + '/js/Portuguese-Brasil.json'
+					},
+					"order": [[0, 'asc']],
+					columnDefs: [
+						{orderable: false, targets: [1]}
+					],
+					"paging": false,
+					"searching": false
+				});
+
+				$('#tb-modalidades-apresentacao').DataTable({
+					"language": {
+						url: _context + '/js/Portuguese-Brasil.json'
+					},
+					"order": [[0, 'asc']],
+					columnDefs: [
+						{orderable: false, targets: [1]}
+					],
+					"paging": false,
+					"searching": false
+				});
+			} else {
+				$('#tb-trilhas').DataTable({
+					"language": {
+						url: _context + '/js/Portuguese-Brasil.json'
+					},
+					"order": [[0, 'asc']],
+					"paging": false,
+					"searching": false
+				});
+
+
+				$('#tb-modalidades-submissao').DataTable({
+					"language": {
+						url: _context + '/js/Portuguese-Brasil.json'
+					},
+					"order": [[0, 'asc']],
+					"paging": false,
+					"searching": false
+				});
+
+				$('#tb-modalidades-apresentacao').DataTable({
+					"language": {
+						url: _context + '/js/Portuguese-Brasil.json'
+					},
+					"order": [[0, 'asc']],
+					"paging": false,
+					"searching": false
+				});
+			}
+
+
+		});
+	
+
+	</script>
+</section>
+
+</html>

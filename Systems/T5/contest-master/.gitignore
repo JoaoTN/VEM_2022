@@ -1,0 +1,6 @@
+/target/
+/.factorypath
+/.apt_generated/
+/.idea/
+.settings/
+.settings/org.eclipse.core.resources.prefs

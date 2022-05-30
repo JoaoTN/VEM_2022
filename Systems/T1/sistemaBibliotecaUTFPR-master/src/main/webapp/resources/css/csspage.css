@@ -1,0 +1,187 @@
+html,body{
+    font-family: 'Open Sans';
+    min-height: 100%;
+    position: relative;
+}
+body{
+    margin: 0 0 60px;
+    padding:0;
+}
+
+.corpo{
+    width: 100%;
+    margin: 0px auto;
+}
+
+.corpo .topo{
+    height: 190px;
+    width: 100%;
+    float: left;
+    background: #EDF3FF;
+    margin: 0%;
+    padding: 0%;
+}
+.corpo .topo .logo{
+    margin: 0.2em;    
+    width: 150px;
+    height: 152px;
+    float: left;
+    background-image:url(images/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    border: 2px;
+    box-sizing: border-box;
+}
+
+.corpo .topo .barNav a {
+position: relative; 
+font-size: 1.2em;
+color: #000;
+text-decoration: none;
+background:  #cccccc;
+text-align: center;
+padding: 1px 5px;
+left: -152px;   
+top : 148px;
+border: 1px solid #000;
+}
+
+.barNav a:hover {
+color: #666;
+background: #e3e3e3;
+border: 1px solid #666;
+}
+
+.loginRR{
+    position: relative;
+    /*margin: 1.75em;*/
+    top : -40px;
+    left : -60px;
+    /*margin-top: 0.0em;*/
+    max-width: 250px;
+    width: 100%;
+    float: right;
+    font-size: 1.5em;
+    font-family: 'Open Sans';
+}
+
+.loginRR input[type="text"]{
+    font-size: 0.75em;
+    font-family: 'Open Sans';
+    padding: 10px 10px; 
+    line-height: 28px;
+}
+.loginRR input[type="password"]{
+    font-size: 0.75em;
+    font-family: 'Open Sans';
+    padding: 10px 10px; 
+    line-height: 28px;
+}
+
+.loginButton {
+    float: right;
+    font-family: 'Open Sans';
+    /*outline: 0;*/
+    /*background: #4CAF50;*/
+    background: #0088cc;
+    width: 100%;
+    border: 0;
+    padding: 5%;
+    color: #FFFFFF;
+
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.logoutButton {
+    float: right;
+
+    /*outline: 0;*/
+    /*background: #4CAF50;*/
+    background: red;
+    width: 10%;
+    border: 0;
+    border-radius: 10px;
+    padding: 4%;
+    color: #FFFFFF;
+    font-size: .75em;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.corpo .topo .login .botaoLogin{
+    float: right;
+}
+.corpo .conteudo{
+    width: 90%;
+    float: left;
+    background: #EDF3F3;
+    margin: 1%;
+    padding: 1%;
+}
+.corpo .rodape{
+    width: 100%;
+    float: left;
+    background: #EDF3FF;
+    margin: 2% 0 0 0 ;
+    padding: 3% 0 3% 0;
+}
+.corpo .rodape .infoRodape{
+    width: 100%;
+    float: left;
+    text-align: center;
+    font-size: 1em;
+}
+
+.gridSemBorda tr, .gridSemBorda td {
+    font-family: 'Open Sans';
+    font-size: .85em;
+    max-width: 350px;
+    width: 100%;
+    border: none !important;
+    background-color: #EDF3F3;
+}
+
+.relatorioAling{
+    margin: 0% 10% 10% 10%;
+    padding-top: 15%;
+}
+
+
+/*  #header{
+            min-height: 100px;
+            background-color: #666699;
+        }
+        #menu{
+            min-height: 40px;
+            background-color: #999999;
+        }
+        #body{
+            min-height: 400px;
+            margin-top: 3%;
+            background-color: #efefef;
+        }
+        #footer{
+            min-height: 100px;
+            margin-top: 3%;
+            background-color: #666699;
+        }
+        #header, #menu, #body, #footer{
+            margin-left: 10%;
+            margin-right: 10%;
+            
+            box-shadow: 3px 5px 7px #666666;
+            border: 1px solid black;
+        }
+        @viewport{
+            zoom: 1.0;
+            width: extend-to-zoom;
+        }
+        @-ms-viewport{
+            width: extend-to-zoom;
+            zoom: 1.0;
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        }*/

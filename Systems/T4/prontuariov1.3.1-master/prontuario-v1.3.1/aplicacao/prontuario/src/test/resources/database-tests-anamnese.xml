@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	
+	<!-- Anamnese -->
+	<anamnese id="1" descricao="Descrição da anamnese 1" nome="anamnese 1" status="FINALIZADA"/>
+	<anamnese id="2" descricao="Descrição da anamnese 2" nome="Anamnese 2" status="EM_ANDAMENTO"/>
+	<anamnese id="3" descricao="Descrição da anamnese 3" nome="anamnese 3" status="FINALIZADA"/>
+			
+	<!-- Pergunta -->
+	<pergunta id="1" texto="Texto da pergunta 1" tipo="TEXTO" anamnese_id="1"/>
+	<pergunta id="2" texto="Texto da pergunta 2" tipo="TEXTO_E_SIM_OU_NAO" anamnese_id="1"/>
+	<pergunta id="3" texto="Texto da pergunta 3" tipo="SIM_OU_NAO" anamnese_id="3"/>
+	<pergunta id="4" texto="Texto da pergunta 4" tipo="TEXTO" anamnese_id="2"></pergunta>
+
+</dataset>

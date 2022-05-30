@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	
+	<!-- Alunos -->
+    <aluno id="1" nome="aluno 1" email="aluno1@email.com" matricula="1111" ano_ingresso="2013" semestre_ingresso="1"/>
+    <aluno id="2" nome="aluno 2" email="aluno2@email.com" matricula="2222" ano_ingresso="2013" semestre_ingresso="2"/>
+    <aluno id="3" nome="aluno 3" email="aluno3@email.com" matricula="3333" ano_ingresso="2014" semestre_ingresso="1"/>
+	
+	<!-- Disciplina -->
+    <disciplina id="1" codigo="1" nome="disciplina1"/>
+    <disciplina id="2" codigo="2" nome="disciplina2"/>
+    
+	<!-- Turmas -->
+	<turma id="1" ano="2016" ativo="true" nome="Turma 1" semestre="1" disciplina_id="1"/>
+	<turma id="2" ano="2016" ativo="false" nome="Turma 1" semestre="2" disciplina_id="2"/>
+	<turma id="3" ano="2016" ativo="true" nome="Turma 1" semestre="2" disciplina_id="2"/>
+	
+	<!-- Alunos na Turma -->
+	<aluno_turma ativo="true" turma_id="1" aluno_id="1"/>
+	<aluno_turma ativo="true" turma_id="1" aluno_id="2"/>
+	<aluno_turma ativo="true" turma_id="1" aluno_id="3"/>
+	<aluno_turma ativo="true" turma_id="2" aluno_id="1"/>
+	<aluno_turma ativo="true" turma_id="3" aluno_id="1"/>
+	<aluno_turma ativo="true" turma_id="3" aluno_id="2"/>
+
+	<!-- Papel do usuário -->
+	<papel_usuario usuario_id="1" papel="ESTUDANTE" />
+	<papel_usuario usuario_id="2" papel="ESTUDANTE" />
+	<papel_usuario usuario_id="3" papel="ESTUDANTE" />
+</dataset>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="base/base"
+	  th:with="currentPage='tipos-patologia'">
+
+<head>
+	<title>Prontuário - Tipos Alteração</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/aluno/listagem-alunos.css}"/>
+</head>
+
+<section layout:fragment="conteudo">
+
+	<div class="row">
+		<!-- BEGIN BREADCRUMBS - Mostra o caminho até a página atual -->
+		<div class="col s12 breadcrumbs valign-wrapper">
+			<a th:href="@{/}" class="breadcrumb blue-grey-text"> <i
+					class="material-icons left">home</i>
+			</a>
+			<a class="breadcrumb blue-grey-text">Alterações</a>
+		</div>
+		<!-- END BREADCRUMBS -->
+
+		<!-- BEGIN CONTAINER - Conteiner principal da aplicação -->
+
+		<div class="col s12">
+			<!-- BEGIN FORM -->
+
+			<div class="card">
+				<a th:href="@{/tipo-patologia/adicionar}"
+				   class="listar-aluno__add-button login__card-submit-button-hided btn-floating btn-large tooltipped"
+				   data-tooltip="Adicionar Tipo de Alteração">
+					<i class="material-icons white-text waves-effect waves-light">add</i>
+				</a>
+
+				<div class="card-content" th:if="${#lists.isEmpty(tiposPatologia)}">
+					Nenhum tipo de patologia encontrado!
+				</div>
+
+				<div class="card-content">
+					<table class="mf-table striped" th:unless="${#lists.isEmpty(tiposPatologia)}">
+						<thead>
+						<tr>
+							<th>Código</th>
+							<th>Nome</th>
+							<th>Descrição</th>
+							<th sec:authorize="hasAuthority('ADMINISTRACAO')"></th>
+						</tr>
+						</thead>
+
+						<tbody>
+						<tr th:each="tipoPatologia :${tiposPatologia}">
+							<td th:text="${tipoPatologia.codigo}"></td>
+							<td th:text="${tipoPatologia.nome}"></td>
+							<td th:text="${tipoPatologia.descricao}"></td>
+							<td sec:authorize="hasAuthority('ADMINISTRACAO')">
+								<div class="valign-wrapper">
+									<a th:href="@{/tipo-patologia/editar/{idTipoPatologia}(idTipoPatologia=${tipoPatologia.id})}" data-tooltip="Editar" class="waves-effect btn-floating transparent z-depth-0 tooltipped">
+										<i class="material-icons small teal-text">mode_edit</i>
+									</a>
+									<a class="btn-floating z-depth-0 transparent waves-effect tooltipped" data-tooltip="Excluir" th:href="@{/tipo-patologia/remover/} + ${tipoPatologia.id}">
+										<i class="material-icons red-text">delete</i>
+									</a>
+								</div>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- END CONTAINER -->
+	</div>
+
+</section>
+
+<section layout:fragment="js">
+
+	<script>
+		$(document).ready(function () {
+			mf_base.doAddDataTable($("table"), {
+				order: [[1, 'asc']],
+			});
+		});
+	</script>
+
+</section>
+
+</html>

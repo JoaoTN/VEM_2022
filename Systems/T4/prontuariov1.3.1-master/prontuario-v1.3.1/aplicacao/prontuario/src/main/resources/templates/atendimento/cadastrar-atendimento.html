@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="paciente/detalhes-base"
+    th:with="currentPage='pacientes',currentSubPage='atendimentos'">
+
+	<section layout:fragment="tab-content">
+		<form class="card" th:action="@{/atendimento/__${action}__}"
+			method="post" th:object="${atendimento}">
+			<input type="hidden" name="paciente" id="paciente" th:value="${paciente.id}"/>
+			<input type="hidden" name="responsavel" id="responsavel" th:value="${#authentication.principal.id}" />
+			<input type="hidden" name="atendimento" id="atendimento" th:value="${atendimento.id}"/>
+			
+			<div class="card-content">
+				<div class="row">
+					<div class="col l6 m4 s12">
+						<div class="input-field">
+							<label for="data">Data</label> <input id="data" type="text"
+								th:field="${atendimento.data}"  placeholder="Selecione a Data"
+								pattern="\d{1,2}/\d{1,2}/\d{4}" required="required"
+								class="form-control date" autocomplete="off" data-mask="99/99/9999" />
+						</div>
+						<span id="error-data" class="no-display"></span>
+					</div>
+					<div class="col l6 m6 s12">
+						<div class="input-field">
+							<select th:field="*{turma}" id="turma" class="form-control">
+								<option value="" selected="selected">Selecione...</option>
+								<option th:each="turma : ${turmas}" th:value="${turma.id}" th:text="${turma.nome} + ' - ' + ${turma.disciplina.nome}">
+								</option>
+							</select>
+							<label for="turma">Turma</label>
+						</div>
+					</div>
+					
+					<div class="col l6 m6 s12">
+						<div class="input-field">
+							<select th:fragment="campo-professor" name="professor" id="professor" class="form-control" required="required">
+								<option value="" selected="selected" id="">Selecione...</option>
+								<option th:selected="${atendimento != null and professor.id == atendimento.professor.id}" th:each="professor : ${professores}" th:value="${professor.id}" th:text="${professor.nome}">
+								</option> 
+							</select>
+							<label for="professor">Professor</label>
+						</div>
+					</div>
+
+					<div class="col l6 m6 s12">
+						<div class="input-field">
+							<select th:fragment="campo-ajudante" name="ajudante" id="ajudante" class="form-control">
+								<option value="">Nenhum...</option>
+								<option th:selected="${atendimento != null and atendimento.ajudante != null and ajudante.id == atendimento.ajudante.id}" th:each="ajudante : ${ajudantes}" th:value="${ajudante.id}" th:text="${ajudante.nome}">
+								</option>
+							</select> <label for="ajudante">Auxiliar</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="card-action right-align">
+
+				<a th:href="@{/paciente/__${paciente.id}__/atendimentos}" class="btn btn-flat waves-effect">Cancelar</a>
+				<button type="submit" id="salvar" class="btn waves-effect waves-light">Salvar</button>
+
+			</div>
+
+		</form>
+	</section>
+
+	<section layout:fragment="js-paciente">
+	
+		<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+		<script type="text/javascript" th:src="@{/js/atendimento/cadastro-atendimento.js}"></script>
+		
+		<script>
+	   $('#data').focusout(function() {
+			validar($('#data'), $('#error-data'));	
+		});
+	  
+	
+   		</script>
+	</section>
+
+</html>

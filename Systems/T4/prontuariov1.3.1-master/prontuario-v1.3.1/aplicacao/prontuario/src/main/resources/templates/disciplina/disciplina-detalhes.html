@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="base/base"
+    th:with="currentPage='disciplinas'">
+
+	<head>
+	
+	    <title>Prontuário - Detalhes Disciplina</title>
+	    
+	</head>
+
+	<section layout:fragment="conteudo">
+		
+		<div class="row">
+		
+			<!-- BREADCRUMBS - Mostra o caminho até a página atual -->
+			
+			<div class="col s12 breadcrumbs valign-wrapper">
+	            
+	            <a th:href="@{/}" class="breadcrumb blue-grey-text">
+	                <i class="material-icons left">home</i>
+	            </a>
+	            
+	            <a th:href="@{/disciplina/listar}" class="breadcrumb blue-grey-text">Disciplinas</a>
+	            
+	            <a class="breadcrumb blue-grey-text">Detalhes</a>
+	            
+	        </div>
+	        
+	        <!-- BREADCRUMBS -->
+		
+		
+			<!-- CONTAINER - Conteiner principal da aplicação -->
+			
+		    <div class="col s12">
+		    	<!-- Conteúdo da página ... -->
+		    	
+		    	<div class="card">
+		    		<div class="card-content">
+		    			<div class="row">
+							<div class="col l8 no-padding">
+								<span class="bold-text grey-text text-darken-3">Nome: </span>
+								<span class="light-text text-18 truncate"
+									th:text="${disciplina.nome}">
+								</span>
+							</div>
+							<div class="col l4 no-padding">
+								<span class="bold-text grey-text text-darken-3">Código: </span>
+								<span class="light-text text-18 truncate">
+									<span th:text="${disciplina.codigo}" class=""></span>
+								</span>
+							</div>
+						</div>
+		    		</div>
+		    	</div>
+		    	
+		    	<div class="card">
+		    		<div class="card-content">
+		    			<div class="row no-margin">
+		    				<div class="col l12 no-padding">
+		    					<span class="bold-text grey-text text-darken-3">Turmas: </span>
+				    			<p th:if="${#lists.isEmpty(disciplina.turmas)}">Nenhuma turma encontrada!</p>
+				    			<table th:unless="${#lists.isEmpty(disciplina.turmas)}" class="mf-table">
+				    				<thead>
+										<tr>
+											<th>Nome</th>
+											<th>Período</th>
+											<th>Professor(es)</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+				    			
+				    				<tbody>
+				    					<tr th:each="turma : ${disciplina.turmas}">
+											<td>
+												<a th:text="${turma.nome}" th:href="@{/turma/} + ${turma.id}" class="deep-orange-text waves-effect"></a>
+											</td>
+								         	<td th:text="${turma.ano} + '.' + ${turma.semestre}"></td>
+								         	<td>
+								         		<span th:each="professor : ${turma.professores}" th:text="${professor.nome}+';'"></span>
+								         	</td>
+								         	<td class="bold-text" th:classappend="${turma.ativo} ? 'blue-text': 'grey-text'" th:text="${turma.ativo} ? 'ATIVA' : 'ENCERRADA'"></td>
+										</tr>		
+				    				</tbody>
+				    			</table>
+				    		</div>
+		    			</div>
+			    	</div>
+		    	</div>
+		    </div>
+		    	        	   
+		    <!-- CONTAINER -->
+		    
+		</div>
+		
+	</section>
+
+	<section layout:fragment="js">
+	
+		<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+		
+	</section>
+
+</html>

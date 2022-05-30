@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="base/base"
+    th:with="currentPage='pacientes'">
+
+	<head>
+	
+	    <title>Prontuário - Paciente</title>
+	    
+	    <link rel="stylesheet" type="text/css" th:href="@{/css/paciente/detalhes.css}"/>
+	    <link rel="stylesheet" type="text/css" th:href="@{/css/atendimento/detalhes.css}"/>
+	    <link type="text/css" rel="stylesheet" th:href="@{/css/odontograma/odontograma.css}" />
+		<link type="text/css" rel="stylesheet" th:href="@{/css/odontograma/jquery.svg.css}" />
+	    
+	</head>
+
+	<section layout:fragment="conteudo">
+		
+		<div class="row">
+		
+			<!-- BREADCRUMBS - Mostra o caminho até a página atual -->
+			
+			<div class="col s12 breadcrumbs valign-wrapper">
+	            
+	            <a th:href="@{/}" class="breadcrumb blue-grey-text">
+	                <i class="material-icons left">home</i>
+	            </a>
+	            
+	            <a th:href="@{/paciente}" class="breadcrumb blue-grey-text">Pacientes</a>
+	            
+	            <a class="breadcrumb blue-grey-text">Detalhes</a>
+	            
+	            <a class="breadcrumb blue-grey-text" id="id-paciente" th:attr="pacienteId=${paciente.id}" th:text="${paciente.nome}"></a>
+	            
+	        </div>
+	        
+	        <!-- BREADCRUMBS -->
+		
+		
+			<!-- CONTAINER - Container principal da aplicação -->
+			
+			<div class="col s12">
+				<div class="card">
+				
+					<ul class="tabs">
+					
+						<li class="tab waves-effect waves-block">
+	    					<a target="_self" class="" th:href="@{'/paciente/' + ${paciente.id}}" 
+	    						th:classappend="(${currentSubPage} == 'dados-pessoais')? active">Dados Pessoais</a>
+	    				</li>
+	    				<li sec:authorize="hasAuthority('PROFESSOR') OR hasAuthority('ESTUDANTE') OR hasAuthority('ADMINISTRACAO')" class="tab waves-effect waves-block">
+	    					<a target="_self" class="" th:href="@{'/paciente/' + ${paciente.id} + '/anamneses'}" 
+	    						th:classappend="(${currentSubPage} == 'anamneses')? active">Anamneses</a>
+	    				</li>
+	    				<li sec:authorize="hasAuthority('PROFESSOR') OR hasAuthority('ESTUDANTE') OR hasAuthority('ADMINISTRACAO')" class="tab waves-effect waves-block">
+	    					<a target="_self" class="" th:href="@{'/paciente/' + ${paciente?.id} + '/atendimentos'}" 
+	    						th:classappend="(${currentSubPage} == 'atendimentos')? active">Atendimentos</a>
+	    				</li>
+	    				<li sec:authorize="hasAuthority('PROFESSOR') OR hasAuthority('ESTUDANTE') OR hasAuthority('ADMINISTRACAO')" class="tab waves-effect waves-block">
+	    					<a target="_self" class="" th:href="@{'/odontograma/paciente/' + ${paciente.id}}"
+	    						th:classappend="(${currentSubPage} == 'odontograma')? active">Odontograma</a>
+	    				</li>
+	    				<li class="tab waves-effect waves-block">
+	    					<a target="_self" class="" th:href="@{'/paciente/' + ${paciente.id} + '/tratamentos'}"
+	    						th:classappend="(${currentSubPage} == 'tratamentos')? active">Plano</a>
+	    				</li>
+						<li sec:authorize="hasAuthority('PROFESSOR') OR hasAuthority('ESTUDANTE') OR hasAuthority('ADMINISTRACAO')" class="tab waves-effect waves-block">
+	    					<a target="_self" class="" th:href="@{'/documento/paciente/' + ${paciente.id}}"
+	    						th:classappend="(${currentSubPage} == 'documentos')? active">Arquivos</a>
+	    				</li>
+					</ul>
+					
+				</div>
+			</div>
+			
+			<!-- Modal excluir atendimento -->
+			<div sec:authorize="hasAuthority('ESTUDANTE')" id="modal-excluir-atendimento" class="modal" role="dialog">
+				<div class="modal-content">
+					<div class="card-content">
+					
+						<span>Tem certeza que deseja excluir esse atendimento?</span>
+						
+					</div>
+					
+					<div class="modal-footer card-action right-align">
+						<a id="confirm-excluir-atendimento" type="submit" class="btn waves-effect waves-light" data-dismiss="modal" >Excluir</a>
+						<a id="cancelar-excluir-atendimento" class="btn btn-flat margin-right waves-effect">Cancelar</a>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		    <div class="col s12">
+		    	<!-- Conteúdo da página ... -->
+		    				
+		    	<!-- TAB CONTENTS -->
+		    	<section id="tab-content" layout:fragment="tab-content"></section>
+		    	
+		    </div>
+		    	        	   
+		    <!-- CONTAINER -->
+		    
+		</div>
+		
+	</section>
+
+	<section layout:fragment="js">
+	
+		<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+		<section layout:fragment="js-paciente"></section>
+		
+	</section>
+
+</html>

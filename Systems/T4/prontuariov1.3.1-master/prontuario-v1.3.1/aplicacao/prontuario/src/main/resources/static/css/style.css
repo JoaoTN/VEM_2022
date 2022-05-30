@@ -1,0 +1,77 @@
+.card-custom {
+	position: relative;
+  margin: 0.5rem 0 1rem 0;
+  background-color: #fff;
+  transition: box-shadow .25s;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.07), 0 2px 1px -1px rgba(0, 0, 0, 0.06)	
+}
+
+.card-custom .card-content {
+	padding: 20px;
+    border-radius: 0 0 2px 2px;
+}
+
+.card-spacing {
+	margin: 5%;  
+}
+
+.row-icon {
+	margin-top: 15px;	
+}
+
+.img-icon {
+	width: 32px;
+	heigth: 32px;
+}
+
+.saiba-mais {
+	position:absolute;
+    bottom:0;
+    width:100%;
+    margin-left: 20.89999%;
+}
+
+.sobre-background-top {
+	background: url('../../img/back.jpg') center / cover;
+	position: absolute;
+	top: 0; bottom: calc(100% / 1.618);
+	left: 0; right: 0;
+}
+
+.sobre-card-wrapper {
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	
+	justify-content: center;
+}
+
+.sobre-card {
+	width: 1000px;
+	height: calc(300px * 1.618);
+}
+
+.sobre-equipe {
+	margin-top: 15%;
+}
+
+.sobre-text {
+	font-family: 'Noto Sans', sans-serif;
+	color: #FFF;
+}
+
+.title {
+	font-size: 250%;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.conteudo {
+	font-family: 'Muli', sans-serif;
+	font-size: 110%;
+	text-indent: 1.5em;
+	text-align: justify;
+	
+}

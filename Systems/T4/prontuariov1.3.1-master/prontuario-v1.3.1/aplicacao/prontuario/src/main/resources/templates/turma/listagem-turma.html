@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="base/base" th:with="currentPage='turmas'">
+
+	<head>
+	
+	    <title>Prontuário - Listagem de turmas</title>
+	    
+	    <link rel="stylesheet" type="text/css" th:href="@{/css/aluno/listagem-alunos.css}"/>
+	    
+	</head>
+
+	<section layout:fragment="conteudo">
+		
+		<div class="row">
+		
+			<!-- BREADCRUMBS - Mostra o caminho até a página atual -->
+			
+			<div class="col s12 breadcrumbs valign-wrapper">
+	            
+	            <a th:href="@{/}" class="breadcrumb blue-grey-text">
+	                <i class="material-icons left">home</i>
+	            </a>
+	            
+	            <a th:href="@{/turma/listar}" class="breadcrumb blue-grey-text">Turmas</a>
+	            
+	        </div>
+	        
+	        <!-- BREADCRUMBS -->
+		
+		
+			<!-- CONTAINER - Conteiner principal da aplicação -->
+			
+		    <div class="col s12">
+		    	<!-- Conteúdo da página ... -->
+		    	
+		    	<div class="card">
+		    	
+		    		<a sec:authorize="hasAuthority('ADMINISTRACAO')" th:href="@{/turma/adicionar}"
+	    				class="listar-aluno__add-button login__card-submit-button-hided btn-floating btn-large tooltipped"
+	    				data-tooltip="Adicionar Turma">
+						<i class="material-icons white-text waves-effect waves-light">add</i>
+					</a>
+					
+					<div class="card-action" th:if="${#lists.isEmpty(turmas)}">Nenhuma turma encontrada!</div>
+	    		
+	    			<table th:unless="${#lists.isEmpty(turmas)}" class="mf-table striped">
+	    				<thead>
+							<tr>
+								<th>Turma</th>
+								<th>Período</th>
+								<th>Professor(es)</th>
+								<th>Status</th>
+								<th sec:authorize="hasAuthority('ADMINISTRACAO')"></th>
+							</tr>
+						</thead>
+	    			
+	    				<tbody>
+	    					<tr th:each="turma : ${turmas}">
+	    						<td>
+	    							<a th:text="${turma.disciplina.nome} + ' - ' + ${turma.nome}" th:href="@{/turma/} + ${turma.id}" data-tooltip="Vizualizar" class="deep-orange-text waves-effect tooltipped"></a>
+	    						</td> 
+					         	<td th:text="${turma.ano} + '.' + ${turma.semestre}"></td>
+					         	
+					         	<td>
+					         		<span th:each="professor : ${turma.professores}" th:text="${professor.nome}+';'"></span>
+					         	</td>
+
+					         	<td class="bold-text" th:classappend="${turma.ativo} ? 'blue-text': 'grey-text'" th:text="${turma.ativo} ? 'ATIVA' : 'ENCERRADA'"></td>
+								
+								<td sec:authorize="hasAuthority('ADMINISTRACAO')">
+									<a class="btn-floating z-depth-0 transparent waves-effect tooltipped" data-tooltip="Excluir" th:href="@{/turma/remover/} + ${turma.id}">
+										<i  class="material-icons red-text">delete</i>
+									</a>
+								</td>
+							
+							</tr>		
+	    				</tbody>
+	    			
+	    			</table>
+		    		
+		    	</div>
+		    </div>
+		    	        	   
+		    <!-- CONTAINER -->
+		    
+		</div>
+		
+	</section>
+
+	<section layout:fragment="js">
+	
+		<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+		<script type="text/javascript" th:src="@{/js/turma/listagem.js}"></script>
+			
+	</section>
+
+</html>

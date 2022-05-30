@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="base/base"
+    th:with="currentPage='inicio'">
+
+	<head>
+	
+	    <title>Prontuário - Bem Vindo</title>
+	    
+	    <link rel="stylesheet" type="text/css" th:href="@{/css/index/index.css}"/>
+	    <link rel="stylesheet" type="text/css" th:href="@{/material/plugins/grid/gridstack.min.css}"/>
+	    
+	</head>
+
+	<section layout:fragment="conteudo">
+		
+		<div class="row">
+		
+			<!-- CONTAINER - Conteiner principal da aplicação -->
+			
+		    <div class="col s10 offset-s1">
+		    	<!-- Conteúdo da página ... -->
+		    	
+		    	<div class="index__card-container grid-stack grid-stack-12">
+		    		
+		    		<div class="index__card-reference grid-stack-item"
+				        data-gs-auto-position="false"
+				        data-gs-no-drag="true"
+				        data-gs-no-resize="true"
+				        data-gs-width="4" data-gs-height="4">
+				        
+				        <div class="grid-stack-item-content">
+				    		<div class="card">
+				    		
+				    			<a class="card__menu btn-floating transparent z-depth-0 waves-effect waves-light dropdown-button"
+				    				data-activates="card-menu"
+				    				data-beloworigin="false"
+				    				data-alignment="right">
+				    				<i class="material-icons">more_vert</i>
+				    			</a>
+				    			<ul id="card-menu" class="dropdown-content card__menu-drop-down">
+									<li><a class="card__size-large">Grande</a></li>
+									<li><a class="card__size-medium">Médio</a></li>
+									<li><a class="card__size-small">Pequeno</a></li>
+								</ul>
+				    			
+					    		<a class="index__card-image-link card-image lighten-1 waves-effect waves-block waves-light">
+					    			<span class="index__card-title card-title"></span>
+					    			<i class="index__card-icon material-icons card-image-icon"></i>
+					    		</a>
+					    		<div class="index__card-action card-action left-align">
+					    			<a class="index__card-action-link-reference btn-flat waves-effect"></a>
+					    		</div>
+					    	</div>
+				    		
+				    	</div>
+				    	
+				    </div>
+		    		
+		    		<!-- Dados para criação dos cards baseados no de referência -->
+		    		<div sec:authorize="hasAuthority('ADMINISTRACAO')" class="index__card"
+		    			data-title="Alunos" data-color="red" data-icon="account-multiple" data-size="medium">
+		    			<a th:href="@{/aluno/listar}">Listar</a>
+		    			<a th:href="@{/aluno/adicionar}">Adicionar</a>
+		    		</div>
+		    		
+		    		<div sec:authorize="hasAuthority('ADMINISTRACAO') OR hasAuthority('PROFESSOR')" class="index__card"
+		    			data-title="Disciplinas" data-color="pink" data-icon="library" data-size="medium">
+		    			<a th:href="@{/disciplina/listar/}">Listar</a>
+		    			<a sec:authorize="hasAuthority('ADMINISTRACAO')" th:href="@{/disciplina/adicionar}">Adicionar</a>
+		    		</div>
+		    		
+		    		<div sec:authorize="hasAuthority('ADMINISTRACAO') OR hasAuthority('PROFESSOR')" class="index__card"
+		    			data-title="Turmas" data-color="blue" data-icon="book-multiple" data-size="medium">
+		    			<a th:href="@{/turma/listar/}">Listar</a>
+		    			<a sec:authorize="hasAuthority('ADMINISTRACAO')" th:href="@{/turma/adicionar}">Adicionar</a>
+		    		</div>
+		    		
+		    		<div sec:authorize="hasAuthority('ADMINISTRACAO')" class="index__card"
+		    			data-title="Servidores" data-color="teal" data-icon="school" data-size="medium">
+		    			<a th:href="@{/professor/listar}">Listar</a>
+		    			<a th:href="@{/professor/cadastrar}">Adicionar</a>
+		    		</div>
+		    		
+		    		<div class="index__card"
+		    			data-title="Anamneses" data-color="orange" data-icon="clipboard-text" data-size="medium">
+		    			<a th:href="@{/anamnese/}">Listar</a>
+		    			<a sec:authorize="hasAuthority('ADMINISTRACAO')" th:href="@{/anamnese/cadastrar-anamnese}">Adicionar</a>
+		    		</div>
+		    		
+		    		<div class="index__card"
+		    			data-title="Pacientes" data-color="green" data-icon="seat-flat" data-size="medium">
+		    			<a th:href="@{/paciente/}">Listar</a>
+		    			<a th:href="@{/paciente/cadastrar}">Adicionar</a>
+		    		</div>
+		    		
+		    		<div class="index__card"
+		    			data-title="Patologias" data-color="purple" data-icon="tooth" data-size="medium">
+		    			<a th:href="@{/tipo-patologia/listar}">Listar</a>
+		    		</div>
+		    		
+		    		<div class="index__card"
+		    			data-title="Procedimentos" data-color="blue-grey" data-icon="stethoscope" data-size="medium">
+		    			<a th:href="@{/tipo-procedimento/listar}">Listar</a>
+		    		</div>
+		    		
+		    		<div sec:authorize="hasAuthority('ADMINISTRACAO')" class="index__card"
+		    			data-title="Triagem" data-color="indigo" data-icon="seat-flat" data-size="medium">
+		    			<a th:href="@{/plano-tratamento/aguardando-tratamento}">Listar</a>
+		    		</div>
+		    		
+		    		<div sec:authorize="hasAuthority('ADMINISTRACAO')" class="index__card"
+		    			data-title="Avaliações" data-color="amber" data-icon="clipboard-text" data-size="medium">
+		    			<a th:href="@{/avaliacao}">Listar</a>
+		    			<a th:href="@{/avaliacao/cadastrar}">Adicionar</a>
+		    		</div>
+		    		
+		    	</div>
+		    	
+		    </div>
+		    	        	   
+		    <!-- CONTAINER -->
+		    
+		</div>
+		
+	</section>
+
+	<section layout:fragment="js">
+	
+		<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+		<script type="text/javascript" th:src="@{/material/plugins/jquery/jquery-ui.min.js}"></script>
+		<script type="text/javascript" th:src="@{/material/plugins/jquery/jquery.ui.touch-punch.min.js}"></script>
+		<script type="text/javascript" th:src="@{/material/plugins/grid/lodash.js}"></script>
+		<script type="text/javascript" th:src="@{/material/plugins/grid/gridstack.min.js}"></script>
+		<script type="text/javascript" th:src="@{/material/plugins/grid/gridstack.jQueryUI.min.js}"></script>
+		<script type="text/javascript" th:src="@{/js/index/index.js}"></script>
+			
+	</section>
+
+</html>

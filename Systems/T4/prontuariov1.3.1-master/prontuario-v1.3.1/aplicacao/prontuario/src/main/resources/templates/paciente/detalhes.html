@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Prontuário - Detalhes paciente</title>
+</head>
+    <body>
+	<div>
+		<a th:href="@{/paciente/} + ${paciente.id} + @{/anamneses}">Listar anamneses</a>
+	</div>
+	
+	<div>
+		<a th:href="@{/paciente/} + ${paciente.id} + @{/atendimentos}">Listar atendimentos</a>
+	</div>
+
+    <div>
+        <label>Código</label>
+        <p th:text="${paciente.id}" />
+    </div>
+    <div>
+        <label>Nome</label>
+        <p th:text="${paciente.nome}" />
+    </div>
+    <div>
+        <label>Data de nascimento</label>
+        <p th:text="${#dates.format(paciente.nascimento, 'dd/MM/yyyy')}" />
+    </div>
+    <div>
+        <label>Sexo</label>
+        <p th:text="${paciente.sexo.descricao}" />
+    </div>
+
+    <div>
+        <label>Raça</label>
+        <p th:text="${paciente.raca.descricao}" />
+    </div>
+
+    <div>
+        <label>Nome da Mãe</label>
+        <p th:text="${paciente.nomeDaMae}" />
+    </div>
+
+    <div>
+        <label>Naturalidade</label>
+        <p th:text="${paciente.naturalidade}" />
+    </div>
+
+    <div>
+        <label>Nacionalidade</label>
+        <p th:text="${paciente.nacionalidade}" />
+    </div>
+    <div>
+        <label>CPF</label>
+        <p th:text="${paciente.cpf}" />
+    </div>
+
+    <div>
+        <label>Cartão Nacional do SUS</label>
+        <p th:text="${paciente.cns}" />
+    </div>
+
+    <div>
+        <label>Profissão</label>
+        <p th:text="${paciente.profissao}" />
+    </div>
+    <div>
+        <label>Estado Civil</label>
+        <p th:text="${paciente.estadoCivil.descricao}" />
+    </div>
+    <div>
+        <label>Responsável</label>
+        <p th:text="${paciente.responsavel}" />
+    </div>
+    <div>
+        <label>Telefone</label>
+        <p th:text="${paciente.telefone}" />
+    </div>
+
+    <div>
+        <label>Telefone 2</label>
+        <p th:text="${paciente.segundoTelefone}" />
+    </div>
+
+    <div>
+        <label>Endereço</label>
+        <p th:text="${paciente.endereco}" />
+    </div>
+    <div>
+        <label>Bairro</label>
+        <p th:text="${paciente.bairro}" />
+    </div>
+    <div>
+        <label>País</label>
+        <p th:text="${paciente.pais}" />
+    </div>
+    <div>
+        <label>Cidade</label>
+        <p th:text="${paciente.cidade}" />
+    </div>
+    <div>
+        <label>Estado</label>
+        <p th:text="${paciente.estado.descricao}" />
+    </div>
+    </body>
+</html>

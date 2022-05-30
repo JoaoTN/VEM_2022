@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<p>Voçê pode alterar sua senha no link a seguir: <a th:href="${link} + '/usuario/senha?token=' + ${token}">Recuperar senha</a></p>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="paciente/detalhes-base"
+    th:with="currentPage='pacientes',currentSubPage='anamneses'">
+
+	<section layout:fragment="tab-content">
+		<div class="card">
+			
+			<div class="card-content">
+			
+				<div class="row">
+					<div class="col s6 no-padding">
+						<span class="bold-text grey-text text-darken-3">Responsável: </span>
+						<span class="light-text text-18 truncate">
+							<span th:text="${anamnese.responsavel.nome}"></span>
+						</span>
+					</div>
+					<div class="col s6 no-padding">
+						<span class="bold-text grey-text text-darken-3">Data: </span>
+						<span class="light-text text-18 truncate">
+							<span th:text="${#dates.format(anamnese.data, 'dd/MM/yyyy')}"></span>
+						</span>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col s12 no-padding">
+						<span class="bold-text grey-text text-darken-3">Descrição: </span>
+						<span class="light-text text-18 truncate">
+							<span th:text="${anamnese.descricao}"></span>
+						</span>
+					</div>
+				</div>
+			
+				<div class="row no-margin grey lighten-4">
+					<div class="col s12 no-padding">
+						<div class="card-content">
+							<span class="bold-text grey-text text-darken-3">Perguntas</span>
+							
+							<div class="card no-margin">
+								<div th:each="resposta : ${anamnese.respostas}">
+									<div th:switch="${resposta.pergunta.tipo.toString()}">
+										<div th:case="TEXTO" th:classappend="${respostaStat.index} == 0? 'card-content': 'card-action'">
+											<span class="bold-text grey-text text-darken-3" th:text="${resposta.pergunta.ordem + ' - ' + resposta.pergunta.texto}"></span>
+											<span class="light-text text-18 truncate">
+												<span th:text="${resposta.texto}"></span>
+												<span th:text="${respostaStat.index}"></span>
+											</span>
+										</div>
+										
+										<div th:case="SIM_OU_NAO" th:classappend="${respostaStat.index} == 0? 'card-content': 'card-action'">
+											<span class="bold-text grey-text text-darken-3" th:text="${resposta.pergunta.ordem + ' - ' + resposta.pergunta.texto}"></span>
+											<span class="light-text text-18 truncate">
+												<span th:text="${resposta.opcao}? 'SIM' : 'NAO'"></span>
+											</span>
+										</div>
+										<div th:case="TEXTO_E_SIM_OU_NAO" th:classappend="${respostaStat.index} == 0? 'card-content': 'card-action'">
+											<span class="bold-text grey-text text-darken-3" th:text="${resposta.pergunta.ordem + ' - ' + resposta.pergunta.texto}"></span>
+											<span class="light-text text-18 truncate">
+												<span th:text="${resposta.opcao}? 'SIM' : 'NAO'"></span>:
+												<span th:text="${resposta.texto}"></span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				  					
+			</div>
+		</div>
+	</section>
+	
+</html>

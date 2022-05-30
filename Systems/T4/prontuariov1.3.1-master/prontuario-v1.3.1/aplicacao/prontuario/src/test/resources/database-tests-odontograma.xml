@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	
+	<!-- Odontograma dos Pacientes -->
+	<odontograma id="1" />
+	
+	<!-- Pacientes -->
+	<paciente id="1" nome="Paciente Um" cpf="12345678900" odontograma_id="1"/>
+	
+</dataset>

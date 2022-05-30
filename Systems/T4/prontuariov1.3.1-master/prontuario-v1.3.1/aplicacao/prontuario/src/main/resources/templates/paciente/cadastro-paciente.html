@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html layout:decorator="base/base"
+      th:with="currentPage='pacientes'"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Prontuário - Página Modelo</title>
+
+</head>
+
+<section layout:fragment="conteudo">
+
+    <div class="row">
+
+        <!-- BREADCRUMBS - Mostra o caminho até a página atual -->
+
+        <div class="col s12 breadcrumbs valign-wrapper">
+
+            <a class="breadcrumb blue-grey-text" th:href="@{/}"> <i
+                    class="material-icons left">home</i>
+            </a> <a class="breadcrumb blue-grey-text" th:href="@{/paciente/}">Pacientes</a>
+
+            <a class="breadcrumb blue-grey-text"
+               th:text="${paciente.id==null} ? Cadastrar : Editar"></a>
+
+        </div>
+
+        <!-- BREADCRUMBS -->
+
+
+        <!-- CONTAINER - Conteiner principal da aplicação -->
+
+        <div class="col s12">
+            <!-- Conteúdo da página ... -->
+
+            <form id="formulario" method="post" th:action="@{/paciente/__${action}__}"
+                  th:object="${paciente}" onsubmit="return validarCNS()">
+
+                <input th:field="*{id}" type="hidden"/>
+                <input hidden="hidden" th:field="*{odontograma.id}" th:if="${paciente.odontograma} != null"/>
+
+                <div class="card row col s12">
+                    <div class="row col s12 input-field">
+                        <span class="grey-text">Dados Pessoais:</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col l12 m12 s12">
+                                <div class="input-field">
+                                    <label for="nome">* Nome</label>
+                                    <input id="nome" required="required" th:field="*{nome}" type="text"/>
+                                </div>
+                            </div>
+
+                            <div class="col l12 m12 s12">
+                                <div class="input-field">
+                                    <label id="nomeDaMae_label" for="nomeDaMae">Nome da mãe</label>
+                                    <input id="nomeDaMae" th:field="*{nomeDaMae}" type="text"/>
+                                </div>
+                            </div>
+
+                            <div class="col l12 m12 s12">
+                                <div class="input-field">
+                                    <label for="responsavel">Responsável</label>
+                                    <input id="responsavel" th:field="*{responsavel}" type="text"/>
+                                </div>
+                            </div>
+
+                            <div class="col l4 m4 s12">
+                                <div class="input-field">
+                                    <label for="data-nascimento">* Data de nascimento</label>
+                                    <input autocomplete="off" class="form-control" data-mask="99/99/9999"
+                                           id="data-nascimento"
+                                           pattern="\d{1,2}/\d{1,2}/\d{4}" required="required" th:field="*{nascimento}"
+                                           type="text"/>
+                                </div>
+                                <span class="no-display" id="error-data-nascimento"></span>
+                            </div>
+
+                            <div class="col l4 m4 s12">
+                                <div class="input-field">
+                                    <select id="sexo" required="required" th:field="*{sexo}">
+                                        <option selected="selected" value="">Selecione...</option>
+                                        <option th:each="s : ${sexo}" th:text="${s.descricao}"
+                                                th:value="${s}"/>
+                                    </select> <label for="sexo">* Sexo</label>
+                                </div>
+                            </div>
+
+                            <div class="col l4 m4 s12">
+                                <div class="input-field">
+                                    <select id="raca" th:field="*{raca}">
+                                        <option selected="selected" value="">Selecione...</option>
+                                        <option th:each="s : ${raca}" th:text="${s.descricao}"
+                                                th:value="${s}"/>
+                                    </select> <label for="raca" id="raca_label">Raça</label>
+                                </div>
+                            </div>
+
+                            <div class="col l4 m4 s12">
+                                <div class="input-field">
+                                    <label for="nacionalidade" id="nacionalidade_label">Nacionalidade</label>
+                                    <input id="nacionalidade" th:field="*{nacionalidade}" type="text"/>
+                                </div>
+                            </div>
+
+                            <div class="col l4 m4 s12">
+                                <div class="input-field">
+                                    <label for="naturalidade" id="naturalidade_label">Naturalidade</label>
+                                    <input id="naturalidade" th:field="*{naturalidade}" type="text"/>
+                                </div>
+                            </div>
+
+                            <div class="col l4 m4 s12">
+                                <div class="input-field">
+                                    <label for="cpf">CPF</label>
+                                    <input class="cpf" id="cpf" th:field="*{cpf}" type="text"/>
+                                </div>
+                            </div>
+
+                            <div class="col l4 m4 s12">
+                                <div class="input-field">
+                                    <label for="cns" id="cns_label">Cartão Nacional do SUS</label>
+                                    <input class="cns" id="cns" maxlength="15" name="cns"
+                                           size="15" th:field="*{cns}" title="cns"
+                                           type="text" value="cns"/>
+                                </div>
+                            </div>
+
+                            <div class="col l4 m4 s12">
+                                <div class="input-field">
+                                    <label for="profissao">Profissão</label>
+                                    <input id="profissao" th:field="*{profissao}" type="text"/>
+                                </div>
+                            </div>
+
+                            <div class="col l4 m4 s12">
+                                <div class="input-field">
+                                    <select id="estado-civil" th:field="*{estadoCivil}">
+                                        <option selected="selected" value="">Selecione...</option>
+                                        <option th:each="ec : ${estadoCivil}" th:text="${ec.descricao}"
+                                                th:value="${ec}"/>
+                                    </select> <label for="estado-civil">Estado civil</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <span class="grey-text">* Campos obrigatórios</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card row col s12">
+                    <div class="row col s12 input-field">
+                        <span class="grey-text">Dados de Contato:</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col l4 m4 s12">
+                                <div class="input-field">
+                                    <label for="telefone">Telefone</label>
+                                    <input class="phone" id="telefone" th:field="*{telefone}" type="text"/>
+                                </div>
+                            </div>
+
+                            <div class="col l4 m4 s12">
+                                <div class="input-field">
+                                    <label for="telefone">Telefone 2</label>
+                                    <input class="phone" id="segundo-telefone" th:field="*{segundoTelefone}"
+                                           type="text"/>
+                                </div>
+                            </div>
+
+                            <div class="col l4 m4 s12">
+                                <div class="input-field">
+                                    <label for="endereco">Endereço</label>
+                                    <input id="endereco" th:field="*{endereco}" type="text"/>
+                                </div>
+                            </div>
+
+                            <div class="col l4 m4 s12">
+                                <div class="input-field">
+                                    <label for="cep" id="cep_label">CEP</label>
+                                    <input class="cep" id="cep" th:field="*{cep}" type="text"/>
+                                </div>
+                            </div>
+
+                            <div class="col l4 m4 s12">
+                                <div class="input-field">
+                                    <label for="bairro">Bairro</label>
+                                    <input id="bairro" th:field="*{bairro}" type="text"/>
+                                </div>
+                            </div>
+
+                            <div class="col l4 m4 s12">
+                                <div class="input-field">
+                                    <label for="cidade" id="cidade_label">Cidade</label>
+                                    <input id="cidade" th:field="*{cidade}" type="text"/>
+                                </div>
+                            </div>
+
+                            <div class="col l4 m4 s12">
+                                <div class="input-field">
+                                    <select id="estado" th:field="*{estado}">
+                                        <option selected="selected" value="">Selecione...</option>
+                                        <option th:each="e : ${estado}" th:text="${e.descricao}"
+                                                th:value="${e}"/>
+                                    </select> <label for="estado" id="estado_label">Estado</label>
+                                </div>
+                            </div>
+
+                            <div class="col l4 m4 s12">
+                                <div class="input-field">
+                                    <label for="pais" id="pais_label">País</label>
+                                    <input id="pais" th:field="*{pais}" type="text"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l12 m12 s12">
+                        <div class="card-action right-align">
+
+                            <a class="btn btn-flat waves-effect" th:href="@{/paciente/}">Cancelar</a>
+                            <button class="btn waves-effect waves-light" type="submit">Salvar</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- CONTAINER -->
+    </div>
+</section>
+<section layout:fragment="js">
+
+    <!-- SCRIPTS - Coloque aqui os scripts desta página -->
+
+    <script>
+        $('#data-nascimento').focusout(function () {
+            validar($('#data-nascimento'), $('#error-data-nascimento'));
+        });
+    </script>
+
+    <script th:src="@{/js/paciente/cadastroPaciente.js}" type="text/javascript"></script>
+
+</section>
+
+</html>

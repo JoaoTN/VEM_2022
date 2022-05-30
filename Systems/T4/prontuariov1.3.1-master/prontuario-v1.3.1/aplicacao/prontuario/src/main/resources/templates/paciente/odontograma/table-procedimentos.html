@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+</head>
+
+<body>
+    
+	<div th:fragment="procedimentosList" class="">
+		<table id="table-procedimentos" class="mf-table">
+			<thead>
+				<tr>
+					<th>Data</th>
+					<th>Nome</th>
+					<th>Dente</th>
+					<th>Face</th>
+					<th>Descrição</th>
+					<th>Responsável</th>
+					<th>Tipo</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="procedimento: ${procedimentos}">
+					<td th:text="${#dates.format(procedimento.atendimento.data, 'dd/MM/yyyy')}"></td>
+					<td th:text="${procedimento.tipoProcedimento.nome}"></td>
+					<td th:text="${procedimento.dente} ? ${procedimento.dente.numero} : '-'"></td>
+					<td th:text="${procedimento.face} ? ${procedimento.face.descricao} : '-'"></td>
+					<td th:text="${procedimento.descricao}"></td>
+					<td th:text="${procedimento.atendimento.responsavel.nome}"></td>
+					<td th:text="${procedimento.preExistente} ? 'Pré-existente' : 'Realizado'"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

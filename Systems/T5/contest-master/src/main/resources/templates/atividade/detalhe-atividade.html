@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="fragments/base"
+>
+<title>Atividade - Detalhes</title>
+
+<section layout:fragment="conteudo">
+	<input type="hidden" id="id" th:value="${atividade.id}"/>
+	<div class="row">
+		<div class="col s12">
+			<div class="card">
+				<div class="card-content">
+					<div class="row">
+						<div class="col s8">
+							<h4 class="header" th:text="'Atividade - __${atividade.nome}__'"></h4>
+							<h5 th:text="${atividade.evento.nome}"></h5>
+						</div>
+						<div class="col s4 right-align">
+							<a title="sorteio" th:href="@{'/atividade/__${atividade.id}__/sorteio'}" class="btn waves-effect teal modal-trigger">Sortear</a>
+							<a title="Editar Atividade" class="btn waves-effect purple darken-4 modal-trigger" href="#editar-atividade">Editar</a>
+							<a title="Gerar novo código" class="btn waves-effect purple darken-4" th:href="@{'/atividade/gerar-codigo/__${atividade.id}__'}">Gerar novo código</a>
+							<a th:if="${atividade.evento.isOrganizador(#authentication.getPrincipal())}" th:href="@{'/atividade/__${atividade.id}__/excluir'}" title="Excluir" class="btn waves-effect red">Excluir</a>
+							<a onClick="window.history.back()" title="Voltar" class="btn waves-effect grey">Voltar</a>
+						</div>
+					</div>
+					<div class="row" th:if="${sorteado}">
+						<div id="sorteado" class="card-panel green lighten-5 center-align">
+							<img th:src="@{'/img/gifs/__${gif}__.gif'}"/>
+							<h1 th:text="${sorteado.nome}"></h1>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<p>Descrição</p>
+							<h5 th:text="${atividade.descricao}"></h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s3">
+							<p>Carga Horária</p>
+							<h5 th:text="'__${atividade.cargaHoraria}__h'"></h5>
+						</div>
+						<div class="col s3">
+							<p>Início</p>
+							<h5 th:text="${atividade.inicio != null ? #dates.format(atividade.inicio, 'dd/MM/yyyy - HH:mm') : '-'}"></h5>
+						</div>
+						<div class="col s3">
+							<p>Término</p>
+							<h5 th:text="${atividade.termino != null ? #dates.format(atividade.termino, 'dd/MM/yyyy - HH:mm') : '-'}"></h5>
+						</div>
+						<div class="col s3">
+							<p>Local</p>
+							<h5 th:text="${atividade.local}"></h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s3">
+							<p>Pontuação</p>
+							<h5 th:text="${atividade.pontuacao}"></h5>
+						</div>
+						<div class="col s3">
+							<p>Código</p>
+							<h5 th:text="${atividade.codigo}"></h5>
+						</div>
+						<div class="col s3">
+							<p>Permitindo presença após o período?</p>
+							<div class="switch">
+								<label>
+									NÃO
+									<input id="presenca" type="checkbox"/>
+									<span class="lever"></span>
+									SIM
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="row" th:if="${successes != null and !successes.isEmpty()}">
+						<div class="card-panel green lighten-5">
+							<b>Os seguintes participantes foram registrados com sucesso:</b>
+							<ul>
+								<li th:each="success : ${successes}" th:text="${success}"></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="row" th:if="${warnings != null and !warnings.isEmpty()}">
+						<div class="card-panel orange lighten-5">
+							<b>Ocorreram os seguintes problemas:</b>
+							<ul>
+								<li th:each="warning : ${warnings}" th:text="${warning}"></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="row">
+						<form th:action="@{/atividade/participacao/__${atividade.id}__}" method="post">
+							<div class="col m12">
+								<select name="participantes" multiple="multiple" class="js-data-example-ajax browser-default" required="required"></select>
+							</div>
+							<div class="col m12 right-align">
+								<button type="submit" class="btn waves-effect waves-light purple darken-4">Registrar participação</button>
+							</div>
+						</form>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<table id="tb-participacoes" class="display">
+								<thead>
+									<tr>
+										<th>Participante</th>
+										<th>Registro</th>
+										<th>Responsável</th>
+										<th>Válida</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="participacao : ${participacoes}">
+										<td><a th:href="@{'/evento/__${atividade.evento.id}__/participante/__${participacao.participante.id}__'}" th:text="${participacao.participante.nome}"></a></td>
+										<td th:text="${#dates.format(participacao.data, 'dd/MM/yyyy - HH:mm')}"></td>
+										<td th:text="${participacao.responsavel?.nome}"></td>
+										<td>
+											<div class="switch">
+												<label>
+													<input th:id="${participacao.id}" type="checkbox" class="validacao" th:checked="${participacao.valida}"/>
+													<span class="lever"></span>
+												</label>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<!-- Modal Structure -->
+	<div id="editar-atividade" class="modal modal-fixed-footer">
+		<form id="form-editar-atividade" class="col s12" th:action="@{'/atividade/__${atividade.id}__/editar/'}" method="post">
+			<div class="modal-content">
+				<h4>Nova Atividade</h4>
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="nome" type="text" required="required" th:name="nome" th:value="${atividade.nome}" />
+						<label for="nome">* Nome</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<textarea id="descricao" name="descricao" class="materialize-textarea" th:value="${atividade.descricao}"></textarea>
+						<label for="descricao">* Descrição</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s4">
+						<input id="local" type="text" required="required" name="local" th:value="${atividade.local}"/>
+						<label for="local">* Local</label>
+					</div>
+					<div class="input-field col s4">
+						<input id="pontuacao" type="text" required="required" name="pontuacao" th:value="${atividade.pontuacao}"/>
+						<label for="pontuacao">* Pontuação</label>
+					</div>
+					<div class="input-field col s4">
+						<input id="cargaHoraria" type="text" name="cargaHoraria" required="required" th:value="${atividade.cargaHoraria}"/>
+						<label for="cargaHoraria">* Carga Horária</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s6">
+						<input id="inicio" type="text" data-mask="00/00/0000 00:00" name="inicio" th:value="${atividade.inicio != null ? #dates.format(atividade.inicio, 'dd/MM/yyyy - HH:mm') : ''}"/>
+						<label for="inicio">Início</label>
+					</div>
+					<div class="input-field col s6">
+						<input id="termino" type="text" data-mask="00/00/0000 00:00" name="termino" th:value="${atividade.termino != null ? #dates.format(atividade.termino, 'dd/MM/yyyy - HH:mm') : ''}"/>
+						<label for="termino">Término</label>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" class="btn waves-effect waves-light purple darken-4">Salvar Alterações</button>
+				<a href="#!" class="modal-close btn-flat">Cancelar</a>
+			</div>
+		</form>
+	</div>
+</section>
+
+<section layout:fragment="js">
+	<script type="text/javascript">
+		$(document).ready(function(){
+				$('.modal').modal({
+					dismissible: false,
+					onCloseEnd: function () {
+						$('#form-editar-atividade').trigger("reset");
+					}
+				});
+
+			
+			$('#tb-participacoes').DataTable({
+				"language" : {
+					url : _context + '/js/Portuguese-Brasil.json'
+				},
+				"order": [[ 0, 'asc' ]],
+				"pageLength": 100,
+
+
+			});
+
+			$('.js-data-example-ajax').select2({
+				allowClear: true,
+				minimumInputLength: 5,
+				placeholder: 'Nomes dos participantes...',
+				language: {
+					"noResults": function () {
+						return "Nenhum resultado encontrado";
+					},
+					"inputTooShort": function () {
+						return "Digite pelo menos 5 caracteres..."
+					}
+				},
+				ajax: {
+					url: _context + '/api/users/findByNome',
+					dataType: 'json',
+					data: function (params) {
+						var query = {
+							search: params.term
+						}
+						return query;
+					},
+					processResults: function (data) {
+						// Transforms the top-level key of the response object from 'items' to 'results'
+						var result = $.map(data, function (obj) {
+							obj.id = obj.id || obj.id; // replace pk with your identifier
+							obj.text = obj.text || obj.nome;
+							return obj;
+						});
+						return {
+							results: result
+						};
+					},
+				},
+			});
+
+			$("#presenca").change(function() {
+				$.ajax({
+					type: "GET",
+					contentType: "application/json",
+					url: "/api/atividades/status/" + $('#id').val(),
+					data: {ativo: $(this).is(":checked")},
+					dataType: 'json'
+				});
+			});
+
+			$(".validacao").change(function() {
+				$.ajax({
+					type: "GET",
+					contentType: "application/json",
+					url: "/api/atividades/participacao/" + $(this).attr('id'),
+					data: {valido: $(this).is(":checked")},
+					dataType: 'json'
+				});
+			})
+		});
+
+	</script>
+</section>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="fragments/base"
+>
+  <title>Página não encontrada</title>
+  <section layout:fragment="conteudo">
+      <h1 class="center">Arquivo ou recurso não encontrado</h1>
+      <div class="row ">
+        <center>
+          <a th:href="@{/}" class="waves-effect waves-light btn white-text">Página inicial</a>
+        </center>
+      </div>
+  </section>
+</html>

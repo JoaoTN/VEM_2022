@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="base/base" th:with="currentPage='avaliacao'">
+
+<head>
+
+<title>Prontuário - Avaliações</title>
+
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/anamnese/anamnese.css}" />
+
+</head>
+
+<body>
+
+	<section layout:fragment="conteudo">
+
+		<div class="row">
+
+			<!-- BREADCRUMBS - Mostra o caminho até a página atual -->
+
+			<div class="col s12 breadcrumbs valign-wrapper">
+
+				<a th:href="@{/}" class="breadcrumb blue-grey-text"> <i
+					class="material-icons left">home</i>
+				</a> <a class="breadcrumb blue-grey-text">Avaliações</a>
+
+			</div>
+
+			<!-- BREADCRUMBS -->
+
+
+			<!-- CONTAINER - Conteiner principal da aplicação -->
+
+			<div class="col s12">
+
+				<div class="card">
+
+					<div class="card-content">
+						<a sec:authorize="hasAuthority('ADMINISTRACAO')"
+							th:href="@{/avaliacao/cadastrar}"
+							class="listar-anamnese__add-button login__card-submit-button-hided btn-floating btn-large tooltipped"
+							data-tooltip="Adicionar Avaliação"> <i
+							class="material-icons white-text waves-effect waves-light">add</i>
+						</a>
+
+						<p th:if="${#lists.isEmpty(avaliacoes)}">Nenhuma avaliação cadastrada!</p>
+						<table class="mf-table striped" id="table-avaliacao" th:unless="${#lists.isEmpty(avaliacoes)}">
+							<thead>
+								<tr>
+									<th>Nome</th>
+									<th>Status</th>
+									<th>Ativa</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="avaliacao : ${avaliacoes}">
+									<td>
+										<a class="deep-orange-text waves-effect tooltipped" th:href="@{/avaliacao/detalhes/} + ${avaliacao.id}"
+										th:text="${avaliacao.nome}" data-tooltip="Vizualizar"> </a>
+									</td>
+									<td th:text="${avaliacao.status.descricao}" class="bold-text" th:classappend="${avaliacao.status.descricao} == 'Finalizada'? grey-text: 'blue-text'" />
+									<td th:text="${avaliacao.ativa ? 'SIM' : 'NÃO'}" />
+									<td>
+										<div class="valign-wrapper">
+											<a th:if="${avaliacao.ativa and avaliacao.status.descricao eq 'Finalizada'}" class="btn-floating z-depth-0 transparent waves-effect tooltipped"
+												data-tooltip="Desativar"
+												th:href="@{/avaliacao/ativar-desativar/} + ${avaliacao.id}">
+												<i class="material-icons red-text">cancel</i>
+											</a>
+											<a th:if="${!avaliacao.ativa and avaliacao.status.descricao eq 'Finalizada'}" class="btn-floating z-depth-0 transparent waves-effect tooltipped"
+												data-tooltip="Ativar"
+												th:href="@{/avaliacao/ativar-desativar/} + ${avaliacao.id}">
+												<i  class="material-icons green-text">done</i>
+											</a>
+											<a th:if="${avaliacao.status.descricao != 'Finalizada'}" class="btn-floating z-depth-0 transparent waves-effect tooltipped"
+												data-tooltip="Excluir" th:href="@{/avaliacao/excluir/} + ${avaliacao.id}">
+												<i class="material-icons red-text">delete</i>
+											</a>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</section>
+
+	<section layout:fragment="js">
+
+		<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+
+	</section>
+</body>
+</html>

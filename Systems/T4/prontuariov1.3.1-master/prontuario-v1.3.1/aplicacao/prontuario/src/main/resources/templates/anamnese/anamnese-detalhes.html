@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="base/base" th:with="currentPage='anamneses'">
+
+<head>
+
+<title>Anamnese Detalhes</title>
+
+<link rel="stylesheet" type="text/css" th:href="@{/css/anamnese/detalhes.css}" />
+
+</head>
+
+<body th:attr="anamnese = ${anamnese.id}, status = ${anamnese.status}, administrador = ${#strings.contains(#authentication.principal.authorities,'ADMINISTRACAO')}">
+
+	<section layout:fragment="conteudo">
+
+		<div class="row">
+
+			<!-- BREADCRUMBS - Mostra o caminho até a página atual -->
+
+			<div class="col s12 breadcrumbs valign-wrapper">
+				<a th:href="@{/}" class="breadcrumb blue-grey-text">
+					<i class="material-icons left">home</i>
+				</a>
+				<a th:href="@{/anamnese}" class="breadcrumb blue-grey-text">Anamneses</a>
+				<a class="breadcrumb blue-grey-text">Detalhes</a>
+			</div>
+
+			<!-- BREADCRUMBS -->
+
+			<!-- CONTAINER - Conteiner principal da aplicação -->
+
+			<div class="col s12">
+				<div class="card">
+					<div class="card-content">
+						<div class="row no-margin">
+							<div class="col l6">
+								<span class="bold-text grey-text text-darken-3">Nome: </span>
+								<span class="paciente-nome light-text text-18 truncate" th:text="${anamnese.nome}"> </span>
+							</div>
+							<div class="col l6">
+								<span class="bold-text grey-text text-darken-3">Status: </span>
+								<span class="paciente-nome light-text text-18 truncate" th:text="${anamnese.status.descricao}"> </span>
+							</div>
+						</div>
+
+						<div class="row no-margin">
+							<div class="col l12">
+								<span class="bold-text grey-text text-darken-3">Descrição:</span>
+								<p class="paciente-nome light-text text-18" th:text="${anamnese.descricao} ? ${anamnese.descricao} : '-'"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col s12" sec:authorize="hasAuthority('ADMINISTRACAO')" th:if="${anamnese.status.descricao != 'Finalizada'}">
+				<div class="card">
+					<div class="card-content">
+						<form class="" th:action="@{/anamnese/salvar-pergunta}" method="post" th:object="${pergunta}">
+							<div class="row">
+								<div class="col l3 m3 s12">
+									<div class="input-field">
+										<select id="tipoPergunta" th:field="*{tipo}" class="form-control" required="required">
+											<option th:each="tipo : ${tiposPerguntas}" th:value="${tipo}" th:text="${tipo.descricao}"></option>
+										</select>
+										<label for="tipoPergunta">Tipo</label>
+									</div>
+								</div>
+								<div class="col l9 m9 s12">
+									<div>
+										<input type="hidden" name="idAnamnese" th:value="${anamnese.id}" />
+									</div>
+									<div class="input-field">
+										<label for="pergunta">* Pergunta</label>
+										<input type="text" id="pergunta" name="pergunta" th:field="*{texto}" required="required" />
+									</div>
+								</div>
+								<div class="row">
+									<span class="grey-text">* Campos obrigatórios</span>
+									<button type="submit" class="btn waves-effect z-depth-0 right col l2 m2 s12">Adicionar</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col s12">
+				<div class="card">
+					<div class="card-content">
+						<div id="table-fragment-anamnese" class="tabela-perguntas">
+							<div class="row no-margin">
+								<div class="col s12">
+									<span th:if="${anamnese.status.descricao != 'Finalizada'}" class="grey-text">Arraste para reordenar as perguntas</span>
+									<p th:if="${anamnese.perguntas.isEmpty()}">Nenhuma pergunta cadastrada!</p>
+									<table th:if="${!anamnese.perguntas.isEmpty() }"
+										id="table-detalhes-anamnese"
+										class="table table-bordered mdl-data-table">
+										<thead>
+											<tr>
+												<th>#</th>
+												<th class="test">Pergunta</th>
+												<th>Tipo</th>
+												<th sec:authorize="hasAuthority('ADMINISTRACAO')"
+													th:if="${anamnese.status.descricao} != 'Finalizada'">Excluir</th>
+											</tr>
+										</thead>
+										<caption id=""></caption>
+										<tbody id="tbody-table-detalhes-anamnese">
+											<tr class="drag tabela"
+												th:each="pergunta, row : ${anamnese.perguntas}"
+												th:id="${pergunta.id}" th:attr="id = ${pergunta.id}">
+												<td th:text="${row.count}" class="ordem"></td>
+												<td th:text="${pergunta.texto} ? ${pergunta.texto} : '-'"></td>
+												<td
+													th:text="${pergunta.tipo} ? ${pergunta.tipo.descricao} : '-'"></td>
+												<td sec:authorize="hasAuthority('ADMINISTRACAO')"
+													th:if="${anamnese.status.descricao} != 'Finalizada'"><a
+													th:href="|@{/anamnese/excluir-pergunta/}${anamnese.id}/${pergunta.id}|"
+													class="tooltipped" data-position="bottom" data-delay="50"
+													data-tooltip="Excluir"><i
+														class="material-icons red-text">delete</i></a></td>
+											</tr>
+										</tbody>
+									</table>
+									<br />
+								</div>
+							</div>
+						</div>
+						<div sec:authorize="hasAuthority('ADMINISTRACAO')"
+							th:if="${anamnese.status.descricao != 'Finalizada'}"
+							class="card-action right-align">
+							<form
+								th:action="@{/anamnese/finalizar-anamnese/} + ${anamnese.id}"
+								method="post">
+								<input type="hidden" id="id" th:value="${anamnese.id}" /> <a
+									th:href="@{/anamnese/}" type="button"
+									class="btn-flat waves-effect z-depth-0"> Continuar mais
+									tarde </a>
+	
+								<button type="submit" class="btn waves-effect z-depth-0">
+									Finalizar</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section layout:fragment="js">
+		<script type="text/javascript" th:src="@{/js/anamnese/detalhes.js}"></script>
+		<script type="text/javascript">
+			var status = $('body').attr("status");
+			var administrador = $('body').attr("administrador");
+
+			if (administrador == "true") {
+				if (status == 'EM_ANDAMENTO') {
+					$("#tbody-table-detalhes-anamnese").sortable({
+						containment : "#tbody-table-detalhes-anamnese"
+					});
+					$("#tbody-table-detalhes-anamnese").disableSelection();
+					$("#tbody-table-detalhes-anamnese").draggable();
+					$("#tbody-table-detalhes-anamnese").droppable({
+						containment : "#table-fragment-anamnese"
+					});
+				}
+			}
+		</script>
+	</section>
+</body>
+</html>

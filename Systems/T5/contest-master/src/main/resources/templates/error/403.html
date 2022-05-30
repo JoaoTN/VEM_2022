@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="fragments/base"
+>
+	<title>Permissão negada</title>
+	<section layout:fragment="conteudo">
+		<h1 class="center">Acesso Negado</h1>
+		<h5 class="center">Você não possui permissão para acessar esta área</h5>
+		<div class="row ">
+			<center>
+				<a class="waves-effect waves-light btn white-text" th:href="@{/}">Página Inicial</a>
+			</center>
+		</div>
+	</section>
+</html>

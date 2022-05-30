@@ -1,0 +1,94 @@
+
+.login__background-top {
+	
+	background: url('../../img/back.jpg') center / cover;
+	position: absolute;
+	top: 0; bottom: calc(100% / 1.618);
+	left: 0; right: 0;
+	
+}
+
+.login__card-wrapper {
+	
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	
+	justify-content: center;
+	
+}
+
+.login__card {
+	
+	width: 400px;
+	height: calc(300px * 1.618);
+	
+	
+}
+
+.login__card-image {
+	
+	height: calc(300px / 1.61);
+	
+}
+
+.login__card-image-icon {
+	
+	width: 100%;
+	
+	text-align: center;
+	font-size: 128px;
+	line-height: calc(300px / 1.618);
+	
+}
+
+.login__card-submit-button {
+	
+	position: absolute;
+	bottom: -26px;
+	right: 26px;
+	
+	transition: all 0.2s ease-out;
+	
+	transform: scale(1, 1) rotate(0);
+	
+}
+
+.login__card-submit-button-hided {
+	
+	transform: scale(0, 0) rotate(180deg);	
+
+}
+
+.login__card-content {
+	
+	height: calc(300px - 77px);
+	margin-top: 20px;
+	
+}
+
+input {
+	font-weight: 300;
+	letter-spacing: .1rem;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+
+.login-error, .login-msg {
+	margin-top: 50px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.login-error label {
+	font-size: 15px;
+	color: red;
+}
+
+.login-msg label {
+	font-size: 15px;
+	color: darkblue;
+}
+	

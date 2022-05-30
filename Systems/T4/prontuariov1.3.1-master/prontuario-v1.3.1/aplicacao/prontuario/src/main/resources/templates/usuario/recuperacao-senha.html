@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+	<title>Prontuário - Login</title>
+
+	<!-- BEGIN META -->
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Prontuário Eletrônico das Clínicas de Odontologia da UFC" />
+
+	<!-- END META -->
+
+
+	<!-- BEGIN STYLESHEETS -->
+
+	<link rel="stylesheet" th:href="@{/material/materialize/fonts/icons/material-icons.css}"/>
+	<link rel="stylesheet" th:href="@{/material/materialize/fonts/icons/material-icons-google.css}"/>
+	<link rel="stylesheet" type="text/css" th:href="@{/material/materialize/css/materialize.css}"/>
+	<link rel="stylesheet" type="text/css" th:href="@{/material/plugins/data_tables/css/dataTables.materialize.css}"/>
+	<link rel="stylesheet" type="text/css" th:href="@{/material/css/mf.css}"/>
+
+	<link rel="stylesheet" type="text/css" th:href="@{/css/login/login.css}"/>
+
+	<!-- END STYLESHEETS -->
+
+
+</head>
+
+<body class="grey lighten-3">
+
+<div class="login__background-top teal darken-2"></div>
+
+<!-- BEGIN LOGIN SECTION -->
+
+<div class="login__card-wrapper valign-wrapper">
+
+	<form class="login__card card" th:action="@{/usuario/recuperar-senha}" method="post">
+		<div class="login__card-image card-image teal">
+			<i class="login__card-image-icon material-icons teal-text text-lighten-3">person</i>
+		</div>
+
+		<div class="login__card-content card-content valign-wrapper">
+			<div class="row">
+				<!-- INPUT USERNAME -->
+				<div class="input-field col s12">
+					<input id="email" name="email" type="text" class="validate" required="required"/>
+					<label for="email">Email</label>
+				</div>
+
+				<!-- SIBMIT BUTTON -->
+				<button class="btn btn-large col s12 waves-effect waves-light deep-orange">
+					Recuperar senha
+				</button>
+
+			</div>
+
+		</div>
+	</form>
+
+</div>
+<!--end .card -->
+
+<!-- END LOGIN SECTION -->
+
+<div class="mf-foreground white" ></div>
+
+<!-- BEGIN JAVASCRIPT -->
+
+<script type="text/javascript" th:src="@{/material/plugins/jquery/jquery-2.1.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/material/plugins/data_tables/js/jquery.dataTables.min.js}"></script>
+<script type="text/javascript" th:src="@{/material/plugins/data_tables/js/dataTables.materialize.js}"></script>
+<script type="text/javascript" th:src="@{/material/plugins/chart/chart.js}"></script>
+<script type="text/javascript" th:src="@{/material/plugins/cookie/cookie.js}"></script>
+
+<script type="text/javascript" th:src="@{/material/materialize/js/bin/materialize.js}"></script>
+<script type="text/javascript" th:src="@{/material/js/mf.js}"></script>
+
+<section layout:fragment="js">
+
+	<script type="text/javascript" th:src="@{/js/login/login.js}"></script>
+
+</section>
+
+<!-- END JAVASCRIPT -->
+
+</body>
+</html>
+
+<!--
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Prontuário - Recuperação de senha</title>
+</head>
+<body>
+	
+	<p>Digite o email cadastrado no sistema</p>
+	
+	<form th:action="@{/usuario/recuperar-senha}" method="post">
+		<label for="email">Email:</label>
+		<input type="email" name="email" id="email" required="required" />
+		<button type="submit">Recuperar</button>
+	</form>
+	
+</body>
+</html>-->

@@ -1,0 +1,36 @@
+# Registro de mudanças
+
+Todas as mudanças importantes no projeto do Prontuário Eletrônico serão documentadas neste arquivo.
+
+## [1.2.0] - 2018-10-02
+
+### Modificado
+- Confirmação de finalização de atendimento.
+- Alteração da listagem de atendimentos no perfil do professor
+- Ordenação da listagem de turmas no perfil do professor
+
+## [1.1] - 2017-07-18
+
+### Adicionado
+- Inclusão de avaliação de atendimento
+- Inclusão de triagem
+
+### Modificado
+- Melhorias de usabilidade
+
+## [1.0] - 2017-04-24
+
+### Adicionado
+- Gerenciamento de usuários
+- Criação de atendimento
+- Registro de patologias e procedimentos no odontograma
+- Cadastro do plano de tratamento
+- Cadastro de anamnese do paciente
+- Triagem
+- Modelo de anamnese
+- Modelo de avaliação
+- Gerenciamento de disciplinas e turmas
+- Upload de arquivos
+
+### Modificado
+- Melhoria na página de login

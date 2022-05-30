@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+
+<title>Prontuário - Bem Vindo</title>
+
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Muli:600" rel="stylesheet"/>
+<link rel="stylesheet" th:href="@{/material/materialize/fonts/icons/material-icons.css}"/>
+		<link rel="stylesheet" th:href="@{/material/materialize/fonts/icons/material-icons-google.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/material/materialize/css/materialize.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/material/plugins/data_tables/css/dataTables.materialize.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/material/css/mf.css}"/>
+		
+		
+		<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+
+</head>
+
+<body class="blue-grey lighten-5">
+
+	<div class="row">
+		<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+          <a th:href="@{/}" class="btn-floating btn-large">
+            <i class="material-icons">reply</i>
+          </a>
+        </div>
+		
+		<div class="sobre-background-top teal darken-2"></div>
+		
+		<div class="container">
+			<div class="col s12">
+				<div class="card-custom teal">
+					<div class="card-content">
+						<div class="row">
+							<div class="col s12">
+								<h5 class="sobre-text title">Sistema de Prontuário Eletrônico das
+									Clínicas de Odontologia da UFC</h5>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12">
+								<h6 class="sobre-text conteudo">Destinado as clínicas odontológicas do
+									curso de Odontologia da Faculdade de Farmácia, Odontologia e
+									Enfermagem (FFOE) da UFC, o sistema visa evitar a perda de
+									informações do histórico do paciente, a dificuldade de
+									acompanhamento acadêmico da atuação dos alunos e a dificuldade
+									de levantar informações gerenciais. O sistema também facilita o
+									acompanhamento dos pacientes e dos atendimentos realizados nas
+									clínicas.</h6>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12">
+								<h6 class="sobre-text conteudo">O desenvolvimento foi uma parceria entre a
+									Diretoria do FFOE e o Núcleo de Práticas em Informática da
+									Universidade Federal do Ceará Campus Quixadá.</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row sobre-equipe">
+				<div class="col s4">
+					<div class="card-custom card-spacing">
+						<div class="card-content">
+							<h6 align="center"><b>Cayk Lima</b></h6>
+							<h6 align="center"><label>Desenvolvedor</label></h6>
+							<div class="row-icon" align="center">
+								<a href="https://github.com/Cayk" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_github.png}" /></a>
+								<a href="https://www.linkedin.com/in/cayk-gomes-lima-barreto/" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_linkedin.png}" /></a>
+								<a href="https://www.facebook.com/cayk.lima" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_facebook.png}" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s4">
+					<div class="card-custom card-spacing">
+						<div class="card-content">
+							<h6 align="center"><b>Ederson Abreu</b></h6>
+							<h6 align="center"><label>Desenvolvedor</label></h6>
+							<div class="row-icon" align="center">
+								<a href="https://github.com/nosered" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_github.png}" /></a>
+								<a href="#" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_linkedin.png}" /></a>
+								<a href="https://www.facebook.com/edersonabreu" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_facebook.png}" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s4">
+					<div class="card-custom card-spacing">
+						<div class="card-content">
+							<h6 align="center"><b>Felipe Pinho</b></h6>
+							<h6 align="center"><label>Desenvolvedor</label></h6>
+							<div class="row-icon" align="center">
+								<a href="https://github.com/FelipePinhoUFC" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_github.png}" /></a>
+								<a href="https://www.linkedin.com/in/felipe-da-silva-pinho-13296371/" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_linkedin.png}" /></a>
+								<a href="https://www.facebook.com/beozito" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_facebook.png}" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s4">
+					<div class="card-custom card-spacing">
+						<div class="card-content">
+							<h6 align="center"><b>Gardheam Santos</b></h6>
+							<h6 align="center"><label>Desenvolvedor</label></h6>
+							<div class="row-icon" align="center">
+								<a href="https://github.com/gardheamsantos00" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_github.png}" /></a>
+								<a href="https://www.linkedin.com/in/gardheam-santos-42988b108/" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_linkedin.png}" /></a>
+								<a href="https://www.facebook.com/gardheam.santos" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_facebook.png}" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s4">
+					<div class="card-custom card-spacing">
+						<div class="card-content">
+							<h6 align="center"><b>Gelderson Alves</b></h6>
+							<h6 align="center"><label>Desenvolvedor</label></h6>
+							<div class="row-icon" align="center">
+								<a href="https://github.com/Gelderson" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_github.png}" /></a>
+								<a href="#" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_linkedin.png}" /></a>
+								<a href="https://www.facebook.com/gelderson.alves" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_facebook.png}" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s4">
+					<div class="card-custom card-spacing">
+						<div class="card-content">
+							<h6 align="center"><b>Gustavo Aires</b></h6>
+							<h6 align="center"><label>Desenvolvedor</label></h6>
+							<div class="row-icon" align="center">
+								<a href="https://github.com/gustavoaires" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_github.png}" /></a>
+								<a href="https://www.linkedin.com/in/gustavo-aires-2708b973/" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_linkedin.png}" /></a>
+								<a href="https://www.facebook.com/gustavoairesmatos" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_facebook.png}" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s4">
+					<div class="card-custom card-spacing">
+						<div class="card-content">
+							<h6 align="center"><b>Julio Serafim</b></h6>
+							<h6 align="center"><label>Desenvolvedor</label></h6>
+							<div class="row-icon" align="center">
+								<a href="https://github.com/julioserafim" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_github.png}" /></a>
+								<a href="https://www.linkedin.com/in/j%C3%BAlio-serafim-martins-b327439b/" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_linkedin.png}" /></a>
+								<a href="https://www.facebook.com/julioserafim.martins" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_facebook.png}" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s4">
+					<div class="card-custom card-spacing">
+						<div class="card-content">
+							<h6 align="center"><b>Letícia Aguiar</b></h6>
+							<h6 align="center"><label>Desenvolvedora</label></h6>
+							<div class="row-icon" align="center">
+								<a href="https://github.com/leh-aad" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_github.png}" /></a>
+								<a href="#" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_linkedin.png}" /></a>
+								<a href="https://www.facebook.com/aad.lehchan" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_facebook.png}" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s4">
+					<div class="card-custom card-spacing">
+						<div class="card-content">
+							<h6 align="center"><b>Lucas Vieira</b></h6>
+							<h6 align="center"><label>Testador</label></h6>
+							<div class="row-icon" align="center">
+								<a href="https://github.com/lucasvss" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_github.png}" /></a>
+								<a href="https://www.linkedin.com/in/lucas-vieira-825872123" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_linkedin.png}" /></a>
+								<a href="https://www.facebook.com/luca.vss" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_facebook.png}" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s4">
+					<div class="card-custom card-spacing">
+						<div class="card-content">
+							<h6 align="center"><b>Marcelo Henrique</b></h6>
+							<h6 align="center"><label>Desenvolvedor</label></h6>
+							<div class="row-icon" align="center">
+								<a href="https://github.com/mar-celohenrique" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_github.png}" /></a>
+								<a href="https://www.linkedin.com/in/marcelo-henrique-pereira-41a830b8/" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_linkedin.png}" /></a>
+								<a href="https://www.facebook.com/marcelo.hen.pereira" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_facebook.png}" /></a>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s4">
+					<div class="card-custom card-spacing">
+						<div class="card-content">
+							<h6 align="center"><b>Murilo Oliveira</b></h6>
+							<h6 align="center"><label>Desenvolvedor</label></h6>
+							<div class="row-icon" align="center">
+								<a href="https://github.com/MuriloOJr" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_github.png}" /></a>
+								<a href="https://www.linkedin.com/in/jos%C3%A9-murilo-de-oliveira-j%C3%BAnior-16916270/" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_linkedin.png}" /></a>
+								<a href="https://www.facebook.com/profile.php?id=100010330394395" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_facebook.png}" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s4">
+					<div class="card-custom card-spacing">
+						<div class="card-content">
+							<h6 align="center"><b>Paulo Nobre</b></h6>
+							<h6 align="center"><label>Desenvolvedor</label></h6>
+							<div class="row-icon" align="center">
+								<a href="https://github.com/PauloNobre" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_github.png}" /></a>
+								<a href="https://www.linkedin.com/in/paulo-henrique-nobre-4aaa65ba/" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_linkedin.png}" /></a>
+								<a href="https://www.facebook.com/paulohenrique.nobre.5" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_facebook.png}" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s4">
+					<div class="card-custom card-spacing">
+						<div class="card-content">
+							<h6 align="center"><b>Ruben Silva</b></h6>
+							<h6 align="center"><label>Desenvolvedor</label></h6>
+							<div class="row-icon" align="center">
+								<a href="https://github.com/ruben-silva-dev" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_github.png}" /></a>
+								<a href="#" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_linkedin.png}" /></a>
+								<a href="https://www.facebook.com/rubenblenicio.tavaressilva" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_facebook.png}" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s4">
+					<div class="card-custom card-spacing">
+						<div class="card-content">
+							<h6 align="center"><b>Thalita Moura</b></h6>
+							<h6 align="center"><label>Supervisora</label></h6>
+							<div class="row-icon" align="center">
+								<a href="https://github.com/thalita-moura" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_github.png}" /></a>
+								<a href="https://www.linkedin.com/in/thalita-maria-0264932b" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_linkedin.png}" /></a>
+								<a href="https://www.facebook.com/thalitamfm" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_facebook.png}" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s4">
+					<div class="card-custom card-spacing">
+						<div class="card-content">
+							<h6 align="center"><b>Virginia Farias</b></h6>
+							<h6 align="center"><label>Supervisora</label></h6>
+							<div class="row-icon" align="center">
+								<a href="https://github.com/virginiafarias" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_github.png}" /></a>
+								<a href="https://www.linkedin.com/in/virginia-farias-55152a8b" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_linkedin.png}" /></a>
+								<a href="https://www.facebook.com/virginia.farias.21" target="_blank" class="btn-floating white"><img class="img-icon" th:src="@{/img/icon_facebook.png}" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+<section layout:fragment="js">
+
+	<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+	<script type="text/javascript"
+		th:src="@{/material/plugins/jquery/jquery-ui.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/material/plugins/jquery/jquery.ui.touch-punch.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/material/plugins/grid/lodash.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/material/plugins/grid/gridstack.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/material/plugins/grid/gridstack.jQueryUI.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/index/index.js}"></script>
+
+</section>
+</body>
+</html>

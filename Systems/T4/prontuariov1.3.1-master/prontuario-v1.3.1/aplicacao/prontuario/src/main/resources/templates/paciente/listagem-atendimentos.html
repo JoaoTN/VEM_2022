@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="paciente/detalhes-base"
+	th:with="currentPage='pacientes',currentSubPage='atendimentos'">
+
+<section layout:fragment="tab-content">
+	<div th:fragment="atendimentosList">
+		<div class="card">
+			<div class="card-content relative-position">
+				<a sec:authorize="hasAuthority('ESTUDANTE')"
+					th:href="@{/atendimento/__${paciente.id}__/cadastrar}"
+					class="paciente__edit-button login__card-submit-button-hided btn-floating btn-large tooltipped"
+					data-tooltip="Realizar Atendimento"> <i
+					class="material-icons white-text waves-effect waves-light">add</i>
+				</a>
+				<p th:if="${#lists.isEmpty(atendimentos)}">Este paciente não
+					possui atendimentos!</p>
+
+				<table th:unless="${#lists.isEmpty(atendimentos)}"
+					class="pacientes_detalhe-atendimentos-table mf-table">
+					<thead>
+						<tr>
+							<th>Data</th>
+							<th>Responsável</th>
+							<th>Turma</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="atendimento : ${atendimentos}"
+							th:if="(${atendimento.status.name() EQ 'VALIDADO'}) OR 
+									(${atendimento.professor.id EQ #authentication.principal.id} OR 
+										${atendimento.responsavel.id EQ #authentication.principal.id}) OR 
+										 ((${atendimento.ajudante}) AND (${atendimento.ajudante.id EQ #authentication.principal.id})) OR
+										    ${#strings.contains(#authentication.principal.authorities,'ADMINISTRACAO')}">
+										
+							<td><a class="waves-effect deep-orange-text"
+								th:text="${#dates.format(atendimento.data, 'dd/MM/yyyy')}"
+								th:href="@{/atendimento/} + ${atendimento.id}"></a></td>
+							<td th:text="${atendimento.responsavel.nome}" />
+							<td th:text="${atendimento.turma.disciplina.nome} + ' - ' + ${atendimento.turma.nome}" />
+							<td th:text="${atendimento.status.descricao}" />
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</section>
+<section layout:fragment="js">
+
+</section>
+
+</html>

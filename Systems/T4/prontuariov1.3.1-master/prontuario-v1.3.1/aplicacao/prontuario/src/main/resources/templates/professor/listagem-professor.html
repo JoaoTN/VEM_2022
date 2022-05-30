@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="base/base"
+    th:with="currentPage='servidores'">
+
+	<head>
+	
+	    <title>Prontuário - Servidor</title>
+	    
+	    <link rel="stylesheet" type="text/css" th:href="@{/css/professor/listagem.css}"/>
+	    
+	</head>
+
+	<section layout:fragment="conteudo">
+		
+		<div class="row">
+		
+			<!-- BREADCRUMBS - Mostra o caminho até a página atual -->
+			
+			<div class="col s12 breadcrumbs valign-wrapper">
+	            
+	            <a th:href="@{/}" class="breadcrumb blue-grey-text">
+	                <i class="material-icons left">home</i>
+	            </a>
+	            
+	            <a class="breadcrumb blue-grey-text">Servidores</a>
+	            
+	        </div>
+	        
+	        <!-- BREADCRUMBS -->
+		
+		
+			<!-- CONTAINER - Conteiner principal da aplicação -->
+			
+		    <div class="col s12">
+		    	<!-- Conteúdo da página ... -->
+		    	
+		    	<div class="card">
+		    	
+		    		<div class="card-content">
+		    		
+		    			<a th:href="@{/professor/cadastrar}"
+		    				class="listar-professor__add-button login__card-submit-button-hided btn-floating btn-large tooltipped"
+		    				data-tooltip="Adicionar Professor">
+							<i class="material-icons white-text waves-effect waves-light">add</i>
+						</a>
+		    		
+		    			<div th:if="${#lists.isEmpty(professores)}">
+		    				Nenhum professor encontrado!
+		    			</div>
+						
+						<table id="professores" class="mf-table striped" th:unless="${#lists.isEmpty(professores)}">
+						
+							<thead>
+								<tr>
+									<th>Nome</th>
+									<th>Email</th>
+									<th>Matrícula</th>
+									<th>Papéis</th>
+									<th/>
+								</tr>
+							</thead>
+							
+							<tbody>
+								<tr th:each="professor :${professores}">
+									<td>
+										<a th:text="${professor.nome}" th:href="@{/professor/detalhes/} + ${professor.id}"
+											data-tooltip="Vizualizar" class="waves-effect deep-orange-text tooltipped"></a>
+									</td>
+									<td th:text="${professor.email}"></td>
+									<td th:text="${professor.matricula}"></td>
+									<td th:text="${professor.papeis}"> </td>
+									<td>
+										<div class="valign-wrapper">
+											<a data-tooltip="Editar" class="btn-floating z-depth-0 transparent waves-effect tooltipped" th:href="@{/professor/editar/} + ${professor.id}"><i class="material-icons teal-text">edit</i></a>
+											<a class="btn-floating z-depth-0 transparent waves-effect tooltipped" data-tooltip="Excluir" th:href="@{/professor/remover/} + ${professor.id}">
+												<i class="material-icons red-text">delete</i>
+											</a>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+							
+						</table>
+					</div>
+		    		
+		    	</div>
+		    	
+		    </div>
+		    	        	   
+		    <!-- CONTAINER -->
+		    
+		</div>
+		
+	</section>
+
+	<section layout:fragment="js">
+	
+		<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+		<script type="text/javascript" th:src="@{/js/professor/listagem.js}"></script>
+			
+	</section>
+
+</html>

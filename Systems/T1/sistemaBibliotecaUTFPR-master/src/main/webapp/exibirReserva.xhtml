@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <h:head>
+        <title>Exibir Reserva</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <f:metadata>
+            <f:viewParam name="idReserva" value="#{exibirReservaMB.idReserva}" />
+        </f:metadata>
+        <ui:include src="header.xhtml"/>
+    </h:head>
+    <h:body>
+        <p:panel header="Detalhes da Reserva">
+            <h:panelGrid id="confirmation" columns="1" columnClasses="grid,grid,grid">
+                <h:panelGrid columns="1" columnClasses="value">
+                    <h:form>
+                        <h:form>
+                            <h:outputText value="Nome: " rendered="#{exibirReservaMB.canCancelReserva()}" />
+                            <h:outputText value="#{exibirReservaMB.reserva.usuario.nome}" rendered="#{exibirReservaMB.canCancelReserva()}" styleClass="outputLabel"/>
+                            <br/>
+                            <h:outputText value="Email: " rendered="#{exibirReservaMB.canCancelReserva()}" />
+                            <h:outputText value="#{exibirReservaMB.reserva.usuario.email}" rendered="#{exibirReservaMB.canCancelReserva()}" styleClass="outputLabel"/>
+                        </h:form>
+                        <h:outputText value="Data: " />
+                        <h:outputText value="#{exibirReservaMB.diaMesReserva}" styleClass="outputLabel"/>
+                            <br/>
+                        <h:outputText value="Horário: " />
+                        <h:outputText value="#{exibirReservaMB.hora}" styleClass="outputLabel"/>
+                            <br/>
+                        <h:outputText value="Sala: " />
+                        <h:outputText value="#{exibirReservaMB.reserva.sala.id}" styleClass="outputLabel"/>
+                            <br/>
+                        <h:outputText value="Alunos: " />
+                        <h:outputText value="#{exibirReservaMB.reserva.quantidadeAlunos}" styleClass="outputLabel"/>
+                            <br/><br/>
+                        <h:form>
+                            <p:growl id="growl" sticky="true" showDetail="true"/>
+                            <p:commandButton value="Cancelar Reserva" update="growl" actionListener="#{exibirReservaMB.cancelarReserva()}" process="@this"/>
+                        </h:form>
+                    </h:form>
+                </h:panelGrid>                
+            </h:panelGrid>
+        </p:panel>
+        <ui:include src="footer.xhtml"/>
+    </h:body>
+</html>

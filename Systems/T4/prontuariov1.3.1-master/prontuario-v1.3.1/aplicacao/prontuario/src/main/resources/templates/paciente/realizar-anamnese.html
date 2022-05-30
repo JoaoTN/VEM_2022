@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="paciente/detalhes-base"
+    th:with="currentPage='pacientes',currentSubPage='anamneses'">
+
+	<section layout:fragment="tab-content">
+	
+		<div class="card paciente__view-right-container">
+			<div class="card-content white z-depth-1-2">
+				<div class="row no-margin">
+					<div class="col l12 no-padding">
+						<span class="light-text text-24 grey-text text-darken-3" th:text="${'Realizar Anamnese - ' + anamnese.nome}"></span>
+		
+						<form th:action="@{/paciente/__${paciente.id}__/anamnese}"
+							method="post" th:object="${pacienteAnamnese}"
+							class="relative-position">
+							<input type="hidden" th:value="${paciente.id}" name="paciente" />
+							<input type="hidden" th:value="${anamnese.id}" name="anamnese" />
+				
+							<div class="card-content">
+				
+								<div class="row">
+									<div class="col s12 input-field">
+										<span class="light-text text-20 grey-text text-darken-3 truncate">Descrição</span>
+										<textarea class="materialize-textarea" th:field="*{descricao}" placeholder="Digite uma descrição"></textarea>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col s12 input-field">
+										<span class="light-text text-20 grey-text text-darken-3 truncate">Data</span>
+										<input id="data-anamnese" required="required" type="text" 
+										th:field="*{data}" placeholder="Selecione a data" 
+										pattern="\d{1,2}/\d{1,2}/\d{4}" class="form-control date" autocomplete="off" data-mask="99/99/9999"/>
+									</div>
+									  <span id="error-data-anamnese" class="no-display"></span>
+									
+								</div>
+					
+								<div th:each="pergunta, stat : ${anamnese.perguntas}">
+					
+									<div th:switch="${pergunta.tipo.toString()}">
+									
+										<input type="hidden" th:value="${pergunta.id}" th:name="'respostas[' + ${stat.index} + '].pergunta'" />
+					
+										<div th:case="TEXTO" class="row">
+											<div class="col s12 input-field">
+												<span class="light-text text-20 grey-text text-darken-3 truncate" th:text="${pergunta.ordem + ' - ' + pergunta.texto}"></span>
+												<input type="text" th:field="*{respostas[__${stat.index}__].texto}" placeholder="Digite a resposta" />
+											</div>
+										</div>
+					
+										<div th:case="SIM_OU_NAO" class="row">
+											<div class="col s12">							
+												<span th:text="${pergunta.ordem + ' - ' + pergunta.texto}" class="light-text text-20 grey-text text-darken-3 truncate"></span>
+															
+												<input type="radio" value="true" th:field="*{respostas[__${stat.index}__].opcao}" />
+												<label class="right-space" th:for="|respostas${stat.index}.opcao1|">SIM</label>
+												
+												<input type="radio" value="false" th:field="*{respostas[__${stat.index}__].opcao}" />
+												<label th:for="|respostas${stat.index}.opcao2|">NÃO</label>
+											</div>
+										</div>
+										
+										<div th:case="TEXTO_E_SIM_OU_NAO" class="row">
+											<div class="col s12">
+												<span th:text="${pergunta.ordem + ' - ' + pergunta.texto}" class="light-text text-20 grey-text text-darken-3 truncate"></span>
+																						
+												<input type="radio" value="true" th:field="*{respostas[__${stat.index}__].opcao}" />
+												<label class="right-space" th:for="|respostas${stat.index}.opcao1|">SIM</label>
+												
+												<input type="radio" value="false" th:field="*{respostas[__${stat.index}__].opcao}" />
+												<label th:for="|respostas${stat.index}.opcao2|">NÃO</label>
+											</div>
+											
+											<div class="col s12 input-field">
+												<input type="text" th:field="*{respostas[__${stat.index}__].texto}" placeholder="Complemente a resposta" />
+											</div>
+											
+										</div>
+									</div>
+					
+								</div>
+							</div>
+				
+							<div class="card-action right-align">
+								<a th:href="@{/paciente/} + ${paciente.id} + @{/anamneses}" class="btn btn-flat waves-effect">Cancelar</a>
+								<button class="btn waves-effect waves-light" type="submit">Salvar</button>
+							</div>
+							
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</section>
+	
+	<section layout:fragment="js-paciente">
+
+	<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+	
+		<script>
+	   		$('#data-anamnese').focusout(function() {
+			validar($('#data-anamnese'), $('#error-data-anamnese'));
+			});
+	
+   		</script>
+	
+
+</section>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="base/base">
+
+	<head>
+	
+	    <title>Prontuário - Detalhes usuário</title>
+	    
+	</head>
+
+	<section layout:fragment="conteudo">
+		
+		<div class="row">
+		
+			<!-- BREADCRUMBS - Mostra o caminho até a página atual -->
+			
+			<div class="col s12 breadcrumbs valign-wrapper">
+	            
+	            <a th:href="@{/}" class="breadcrumb blue-grey-text">
+	                <i class="material-icons left">home</i>
+	            </a>
+	            
+	            <a class="breadcrumb blue-grey-text">Detalhes usuario</a>
+	            
+	        </div>
+	        
+	        <!-- BREADCRUMBS -->
+		
+		
+			<!-- CONTAINER - Conteiner principal da aplicação -->
+			
+		    <div class="col s12">
+		    	<!-- Conteúdo da página ... -->
+		    	
+		    	<div class="card">
+		    		<div class="card-content">
+		    		
+		    			<div class="row">
+		    				<div class="col l4 m4 s12 no-padding">
+		    					<span class="bold-text grey-text text-darken-3">Nome:</span>
+		    					<span class="light-text text-18 truncate" th:text="${usuario.nome}"></span>
+		    				</div>
+		    				<div class="col l4 m4 s12 no-padding">
+		    					<span class="bold-text grey-text text-darken-3">E-mail:</span>
+		    					<span class="light-text text-18 truncate" th:text="${usuario.email}"></span>
+		    				</div>
+		    				<div class="col l4 m4 s12 no-padding">
+		    					<span class="bold-text grey-text text-darken-3">Matricula/Siape:</span>
+		    					<span class="light-text text-18 truncate" th:text="${usuario.matricula}"></span>
+		    				</div>
+		    			</div>
+		    			<div id="opcoes-div" class="row no-margin right-align">
+		    				<button id="alterar-dados-button" class="btn waves-effect z-depth-0 tooltipped" data-tooltip="Alterar dados pessoais">Alterar dados</button>
+		    				<button id="mudar-senha-button" class="btn waves-effect z-depth-0 tooltipped" data-tooltip="Mudar sua senha">Mudar senha</button>
+		    			</div>
+		    			
+		    			<div id="form-dados" class="row no-margin">
+							<form th:action="@{/usuario/alterar-dados}" method="post">
+								
+								<input type="hidden" th:value="${#authentication.principal.id}" name="usuarioId" />
+								
+								<div class="row">
+									<div class="col l4 m4 s12">
+										<div class="input-field">
+											<label for="nome-input">Nome</label>
+											<input type="text" class="form-control" th:value="${usuario.nome}" required="required" name="nome" />
+										</div>
+									</div>
+									<div class="col l4 m4 s12">
+										<div class="input-field">
+											<label for="email-input">E-mail</label>
+											<input type="email" class="form-control" th:value="${usuario.email}" required="required" name="email" />
+										</div>
+									</div>
+									<div class="col l4 m4 s12">
+										<div class="input-field">
+											<label for="matricula-input">Matricula/Siape</label>
+											<input type="number" class="form-control" th:value="${usuario.matricula}" required="required" name="matricula" />
+										</div>
+									</div>
+								</div>
+								<div class="right-align">
+									<button id="cancelar-salvar-dados-button" class="btn btn-flat waves-effect" type="button">Cancelar</button>
+									<button id="salvar-dados-button" class="btn waves-effect waves-light" type="submit">Salvar</button>
+								</div>
+							</form>
+						</div>
+						
+		    			<div id="form-senha" class="row no-margin" th:fragment="alterar-senha">
+		    				<div id="mensagem" class="row card red lighten-5" th:if="${mensagem}">
+								<div class="card-content red-text">
+									<strong>Erro!</strong> <span th:text="${mensagem}"></span>
+								</div>
+							</div>
+		    			
+							<form id="form-alterar-senha">
+								
+								<input type="hidden" th:value="${#authentication.principal.id}" id="id-usuario" />
+								
+								<div class="row">
+									<div class="col l4 m4 s12">
+										<div class="input-field">
+											<label for="senha-atual">Senha atual</label>
+											<input type="password" class="form-control" id="senha-atual" name="senhaAtual" />
+										</div>
+									</div>
+									<div class="col l4 m4 s12">
+										<div class="input-field">
+											<label for="nova-senha">Nova senha</label>
+											<input type="password" class="form-control" id="nova-senha" name="novaSenha" />
+										</div>
+									</div>
+									<div class="col l4 m4 s12">
+										<div class="input-field">
+											<label for="nova-senha-confirm">Confirme a nova senha</label>
+											<input type="password" class="form-control" id="nova-senha-confirm" name="novaSenhaConfirm" />
+										</div>
+									</div>
+								</div>
+							</form>
+							<div class="right-align">
+									<button id="cancelar-salvar-senha-button" class="btn btn-flat waves-effect">Cancelar</button>
+									<button id="salvar-senha-button" class="btn waves-effect waves-light">Salvar</button>
+							</div>
+						</div>
+		    		</div>
+		    	</div>
+		    	
+		    </div>
+		    	        	   
+		    <!-- CONTAINER -->
+		    
+		</div>
+		
+	</section>
+
+	<section layout:fragment="js">
+	
+		<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+		<script type="text/javascript" th:src="@{/js/libs/jquery/jquery.validate.min.js}"></script>
+		<script type="text/javascript" th:src="@{/js/usuario/detalhes.js}"></script>
+			
+	</section>
+
+</html>

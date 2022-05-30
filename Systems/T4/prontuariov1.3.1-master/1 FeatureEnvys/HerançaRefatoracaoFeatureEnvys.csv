@@ -1,0 +1,164 @@
+Kind,Name,MaxInheritanceTree,CountClassDerived,CountClassBase,CountClassCoupled
+Public Class,"ufc.npi.prontuario.ProntuarioApplication",1,0,1,0
+Public Class,"ufc.npi.prontuario.ProntuarioApplicationTests",1,0,1,0
+Public Class,"ufc.npi.prontuario.ServletInitializer",2,0,1,1
+Public Class,"ufc.npi.prontuario.config.MvcConfig",2,0,1,0
+Public Class,"ufc.npi.prontuario.config.SecurityConfig",2,0,1,0
+Public Class,"ufc.npi.prontuario.controller.AlunoController",1,0,1,9
+Public Class,"ufc.npi.prontuario.controller.AlunoTurmaController",1,0,1,9
+Public Class,"ufc.npi.prontuario.controller.AnamneseController",1,0,1,10
+Public Class,"ufc.npi.prontuario.controller.AtendimentoController",1,0,1,11
+Public Class,"ufc.npi.prontuario.controller.AtendimentoPatologiaController",1,0,1,6
+Public Class,"ufc.npi.prontuario.controller.AtendimentoProcedimentoController",1,0,1,6
+Public Class,"ufc.npi.prontuario.controller.AvaliacaoController",1,0,1,7
+Public Class,"ufc.npi.prontuario.controller.DisciplinaController",1,0,1,7
+Public Class,"ufc.npi.prontuario.controller.DocumentoController",1,0,1,7
+Public Class,"ufc.npi.prontuario.controller.FormularioAtendimentoController",1,0,1,8
+Public Class,"ufc.npi.prontuario.controller.OdontogramaController",1,0,1,15
+Public Class,"ufc.npi.prontuario.controller.OdontogramaPatologiasController",1,0,1,13
+Public Class,"ufc.npi.prontuario.controller.PacienteAnamneseController",1,0,1,10
+Public Class,"ufc.npi.prontuario.controller.PacienteAtendimentoController",1,0,1,5
+Public Class,"ufc.npi.prontuario.controller.PacienteController",1,0,1,5
+Public Class,"ufc.npi.prontuario.controller.PacienteFormularioController",1,0,1,3
+Public Class,"ufc.npi.prontuario.controller.PacienteListController",1,0,1,7
+Public Class,"ufc.npi.prontuario.controller.PacienteTratamentoController",1,0,1,9
+Public Class,"ufc.npi.prontuario.controller.PlanoTratamentoController",1,0,1,12
+Public Class,"ufc.npi.prontuario.controller.ProfessorController",1,0,1,8
+Public Class,"ufc.npi.prontuario.controller.ProfessorFormularioController",1,0,1,7
+Public Class,"ufc.npi.prontuario.controller.ProfessorTurmaController",1,0,1,11
+Public Class,"ufc.npi.prontuario.controller.ProntuarioController",1,0,1,0
+Public Class,"ufc.npi.prontuario.controller.TipoPatologiaController",1,0,1,7
+Public Class,"ufc.npi.prontuario.controller.TipoProcedimentoController",1,0,1,7
+Public Class,"ufc.npi.prontuario.controller.TurmaAlunoController",1,0,1,6
+Public Class,"ufc.npi.prontuario.controller.TurmaController",1,0,1,10
+Public Class,"ufc.npi.prontuario.controller.TurmaProfessorController",1,0,1,6
+Public Class,"ufc.npi.prontuario.controller.UsuarioController",1,0,1,8
+Public Class,"ufc.npi.prontuario.exception.ProntuarioException",2,0,1,0
+Public Class,"ufc.npi.prontuario.model.Aluno",2,0,1,0
+Public Class,"ufc.npi.prontuario.model.AlunoTurma",1,0,1,3
+Public Class,"ufc.npi.prontuario.model.AlunoTurmaId",1,0,2,3
+Public Class,"ufc.npi.prontuario.model.Anamnese",1,0,1,3
+Public Enum Type,"ufc.npi.prontuario.model.Anamnese.Status",1,0,1,1
+Public Class,"ufc.npi.prontuario.model.Atendimento",1,0,2,8
+Public Enum Type,"ufc.npi.prontuario.model.Atendimento.Status",1,0,1,1
+Public Class,"ufc.npi.prontuario.model.Avaliacao",1,0,1,5
+Public Enum Type,"ufc.npi.prontuario.model.Avaliacao.Status",1,0,1,1
+Public Class,"ufc.npi.prontuario.model.AvaliacaoAtendimento",1,0,1,4
+Public Enum Type,"ufc.npi.prontuario.model.Dente",1,0,1,1
+Public Class,"ufc.npi.prontuario.model.Disciplina",1,0,1,0
+Public Class,"ufc.npi.prontuario.model.Documento",1,0,1,1
+Public Enum Type,"ufc.npi.prontuario.model.Documento.TipoDocumento",1,0,1,1
+Public Class,"ufc.npi.prontuario.model.DocumentoDownload",2,0,1,0
+Public Enum Type,"ufc.npi.prontuario.model.Estado",1,0,1,1
+Public Enum Type,"ufc.npi.prontuario.model.EstadoCivil",1,0,1,1
+Public Enum Type,"ufc.npi.prontuario.model.FaceDente",1,0,1,1
+Public Class,"ufc.npi.prontuario.model.ItemAvaliacao",1,0,1,1
+Public Class,"ufc.npi.prontuario.model.ItemAvaliacaoAtendimento",1,0,1,2
+Public Enum Type,"ufc.npi.prontuario.model.Local",1,0,1,1
+Public Class,"ufc.npi.prontuario.model.Odontograma",1,0,1,1
+Public Class,"ufc.npi.prontuario.model.Paciente",2,0,1,7
+Public Class,"ufc.npi.prontuario.model.PacienteAnamnese",1,0,1,4
+Public Abstract Class,"ufc.npi.prontuario.model.PacienteDocumento",1,1,1,1
+Public Enum Type,"ufc.npi.prontuario.model.Papel",1,0,2,1
+Public Class,"ufc.npi.prontuario.model.Patologia",1,0,2,8
+Public Class,"ufc.npi.prontuario.model.Pergunta",1,0,2,2
+Public Enum Type,"ufc.npi.prontuario.model.Pergunta.TiposPerguntas",1,0,1,1
+Public Class,"ufc.npi.prontuario.model.PlanoTratamento",1,0,1,5
+Public Enum Type,"ufc.npi.prontuario.model.PlanoTratamento.Status",1,0,1,1
+Public Class,"ufc.npi.prontuario.model.Procedimento",1,0,2,6
+Public Enum Type,"ufc.npi.prontuario.model.Raca",1,0,1,1
+Public Class,"ufc.npi.prontuario.model.Resposta",1,0,1,2
+Public Class,"ufc.npi.prontuario.model.Servidor",2,0,1,0
+Public Enum Type,"ufc.npi.prontuario.model.Sexo",1,0,1,1
+Public Class,"ufc.npi.prontuario.model.TipoPatologia",1,0,1,0
+Public Class,"ufc.npi.prontuario.model.TipoProcedimento",1,0,1,0
+Public Class,"ufc.npi.prontuario.model.Token",1,0,1,1
+Public Class,"ufc.npi.prontuario.model.Tratamento",1,0,1,3
+Public Class,"ufc.npi.prontuario.model.Turma",1,0,1,2
+Public Abstract Class,"ufc.npi.prontuario.model.Usuario",1,2,2,1
+Public Interface,"ufc.npi.prontuario.repository.AlunoRepository",2,0,1,1
+Public Interface,"ufc.npi.prontuario.repository.AlunoTurmaRepository",2,0,1,0
+Public Interface,"ufc.npi.prontuario.repository.AnamneseRepository",2,0,1,2
+Public Interface,"ufc.npi.prontuario.repository.AtendimentoRepository",2,0,1,6
+Public Interface,"ufc.npi.prontuario.repository.AvaliacaoAtendimentoRepository",2,0,1,0
+Public Interface,"ufc.npi.prontuario.repository.AvaliacaoRepository",2,0,1,1
+Public Interface,"ufc.npi.prontuario.repository.DisciplinaRepository",2,0,1,1
+Public Interface,"ufc.npi.prontuario.repository.DocumentoRepository",2,0,1,0
+Public Interface,"ufc.npi.prontuario.repository.ItemAvaliacaoAtendimentoRepository",2,0,1,0
+Public Interface,"ufc.npi.prontuario.repository.ItemAvaliacaoRepository",2,0,1,0
+Public Interface,"ufc.npi.prontuario.repository.OdontogramaRepository",2,0,1,1
+Public Interface,"ufc.npi.prontuario.repository.PacienteAnamneseRepository",2,0,1,0
+Public Interface,"ufc.npi.prontuario.repository.PacienteRepository",2,0,1,1
+Public Interface,"ufc.npi.prontuario.repository.PatologiaRepository",2,0,1,4
+Public Interface,"ufc.npi.prontuario.repository.PerguntaRepository",2,0,1,0
+Public Interface,"ufc.npi.prontuario.repository.PlanoTratamentoRepository",2,0,1,3
+Public Interface,"ufc.npi.prontuario.repository.ProcedimentoRepository",2,0,1,4
+Public Interface,"ufc.npi.prontuario.repository.ServidorRepository",2,0,1,0
+Public Interface,"ufc.npi.prontuario.repository.TipoPatologiaRepository",2,0,1,1
+Public Interface,"ufc.npi.prontuario.repository.TipoProcedimentoRepository",2,0,1,1
+Public Interface,"ufc.npi.prontuario.repository.TokenRepository",2,0,1,2
+Public Interface,"ufc.npi.prontuario.repository.TurmaRepository",2,0,1,4
+Public Interface,"ufc.npi.prontuario.repository.UsuarioRepository",2,0,1,2
+Public Abstract Class,"ufc.npi.prontuario.service.AbstractServiceTest",2,14,1,0
+Public Interface,"ufc.npi.prontuario.service.AlunoService",0,1,0,2
+Public Class,"ufc.npi.prontuario.service.AlunoServiceTest",3,0,1,4
+Public Interface,"ufc.npi.prontuario.service.AnamneseService",0,1,0,3
+Public Class,"ufc.npi.prontuario.service.AnamneseServiceTest",3,0,1,7
+Public Interface,"ufc.npi.prontuario.service.AtendimentoService",0,1,0,5
+Public Class,"ufc.npi.prontuario.service.AtendimentoServiceTest",3,0,1,10
+Public Interface,"ufc.npi.prontuario.service.AvaliacaoService",0,1,0,3
+Public Interface,"ufc.npi.prontuario.service.DisciplinaService",0,1,0,2
+Public Class,"ufc.npi.prontuario.service.DisciplinaServiceTest",3,0,1,3
+Public Interface,"ufc.npi.prontuario.service.DocumentoService",0,1,0,4
+Public Interface,"ufc.npi.prontuario.service.EmailService",0,1,0,1
+Public Interface,"ufc.npi.prontuario.service.OdontogramaService",0,1,0,1
+Public Class,"ufc.npi.prontuario.service.OdontogramaServiceTest",3,0,1,2
+Public Interface,"ufc.npi.prontuario.service.PacienteFormularioService",0,1,0,0
+Public Interface,"ufc.npi.prontuario.service.PacienteService",0,1,0,3
+Public Class,"ufc.npi.prontuario.service.PacienteServiceTest",3,0,1,5
+Public Interface,"ufc.npi.prontuario.service.PatologiaService",0,1,0,5
+Public Class,"ufc.npi.prontuario.service.PatologiaServiceTest",3,0,1,6
+Public Interface,"ufc.npi.prontuario.service.PlanoTratamentoService",0,1,0,5
+Public Interface,"ufc.npi.prontuario.service.ProcedimentoService",0,1,0,4
+Public Class,"ufc.npi.prontuario.service.ProcedimentoServiceTest",3,0,1,3
+Public Interface,"ufc.npi.prontuario.service.ServidorService",0,1,0,2
+Public Class,"ufc.npi.prontuario.service.ServidorServiceTest",3,0,1,4
+Public Interface,"ufc.npi.prontuario.service.TipoPatologiaService",0,1,0,2
+Public Class,"ufc.npi.prontuario.service.TipoPatologiaServiceTest",3,0,1,3
+Public Interface,"ufc.npi.prontuario.service.TipoProcedimentoService",0,1,0,2
+Public Class,"ufc.npi.prontuario.service.TipoProcedimentoServiceTest",3,0,1,3
+Public Interface,"ufc.npi.prontuario.service.TokenService",0,1,0,2
+Public Class,"ufc.npi.prontuario.service.TokenServiceTest",3,0,1,4
+Public Interface,"ufc.npi.prontuario.service.TurmaService",0,1,0,4
+Public Class,"ufc.npi.prontuario.service.TurmaServiceTest",3,0,1,8
+Public Interface,"ufc.npi.prontuario.service.UsuarioService",0,1,0,3
+Public Class,"ufc.npi.prontuario.service.UsuarioServiceTest",3,0,1,6
+Public Class,"ufc.npi.prontuario.service.impl.AlunoServiceImpl",1,0,2,6
+Public Class,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl",1,0,2,7
+Public Class,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl",1,0,2,20
+Public Class,"ufc.npi.prontuario.service.impl.AvaliacaoServiceImpl",1,0,2,8
+Public Class,"ufc.npi.prontuario.service.impl.DisciplinaServiceImpl",1,0,2,4
+Public Class,"ufc.npi.prontuario.service.impl.DocumentoServiceImpl",1,0,2,9
+Public Class,"ufc.npi.prontuario.service.impl.EmailServiceImpl",1,0,2,8
+Class,"ufc.npi.prontuario.service.impl.EmailServiceImpl.emailRecuperacaoSenha.(Anon_1)",1,0,2,4
+Public Class,"ufc.npi.prontuario.service.impl.OdontogramaServiceImpl",1,0,2,2
+Public Class,"ufc.npi.prontuario.service.impl.PacienteFormularioService",1,0,2,4
+Public Class,"ufc.npi.prontuario.service.impl.PacienteServiceImpl",1,0,2,6
+Public Class,"ufc.npi.prontuario.service.impl.PatologiaServiceImpl",1,0,2,20
+Public Class,"ufc.npi.prontuario.service.impl.PlanoTratamentoServiceImpl",1,0,2,8
+Public Class,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl",1,0,2,22
+Public Class,"ufc.npi.prontuario.service.impl.ServidorServiceImpl",1,0,2,8
+Public Class,"ufc.npi.prontuario.service.impl.TipoPatologiaServiceImpl",1,0,2,4
+Public Class,"ufc.npi.prontuario.service.impl.TipoProcedimentoServiceImpl",1,0,2,4
+Public Class,"ufc.npi.prontuario.service.impl.TokenServiceImpl",1,0,2,4
+Public Class,"ufc.npi.prontuario.service.impl.TurmaServiceImpl",1,0,2,14
+Public Class,"ufc.npi.prontuario.service.impl.UserDetailsService",1,0,2,3
+Public Class,"ufc.npi.prontuario.service.impl.UsuarioServiceImpl",1,0,2,6
+Public Class,"ufc.npi.prontuario.task.EmailTask",1,0,1,1
+Public Class,"ufc.npi.prontuario.util.ConfigurationConstants",1,0,1,0
+Public Class,"ufc.npi.prontuario.util.EmailConstants",1,0,1,0
+Public Class,"ufc.npi.prontuario.util.ExceptionSuccessConstants",1,0,1,0
+Public Class,"ufc.npi.prontuario.util.FragmentsConstants",1,0,1,0
+Public Class,"ufc.npi.prontuario.util.MessagesConstants",1,0,1,0
+Public Class,"ufc.npi.prontuario.util.PagesConstants",1,0,1,0
+Public Class,"ufc.npi.prontuario.util.RedirectConstants",1,0,1,0

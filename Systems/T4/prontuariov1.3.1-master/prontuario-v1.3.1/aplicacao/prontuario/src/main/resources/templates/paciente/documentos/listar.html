@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="paciente/detalhes-base" th:with="currentPage='pacientes',currentSubPage='documentos'">
+
+<head>
+
+<title>Prontuário - Página Modelo</title>
+
+</head>
+
+<section layout:fragment="tab-content">
+
+	<form class="card" th:action="|@{/documento/upload/} ${paciente.id}|" enctype="multipart/form-data" method="post">
+		<div class="card-content">
+			<div class="file-field input-field">
+				<div class="btn">
+					<span>Upload</span> 
+					<input type="file" multiple="multiple" name="files" accept=".pdf, image/*" th:value="Upload" required="required" />
+				</div>
+				<div class="file-path-wrapper">
+					<input class="file-path validate" type="text" placeholder="Upload file" />
+				</div>
+			</div>
+		</div>
+		<div class="card-action right-align">
+			<button type="submit" class="btn waves-effect waves-light">Salvar</button>
+		</div>
+	</form>
+	<div class="card">
+		<table class="table-reponsive">
+			<tbody>
+				<tr th:each="documento : ${paciente.documentos}" class="collection">
+					<td th:if="${documento.tipo.descricao} != 'pdf'">
+						<a th:href="|@{/documento/visualizar/}${documento.id}|" target="_blank" class="collection-item">
+							<img alt="" th:src="|@{/documento/visualizar/}${documento.id}|" width="200" height="125"/>
+						</a>
+					</td>
+					<td th:if="${documento.tipo.descricao} == 'pdf'">
+						<a th:text="${documento.nome}" th:href="|@{/documento/visualizar/}${documento.id}|" target="_blank" class="deep-orange-text collection-item"></a>
+					</td>
+					<td><a th:href="|@{/documento/download/}${documento.id}|" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Baixar"><i class="material-icons">system_update_alt</i></a></td>
+					<td><a th:href="|@{/documento/deletar/}${paciente.id}/${documento.id}|" class="tooltipped red-text" data-position="bottom" data-delay="50" data-tooltip="Excluir"><i class="material-icons">delete</i></a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</section>
+
+<section layout:fragment="js">
+
+	<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+
+</section>
+
+</html>

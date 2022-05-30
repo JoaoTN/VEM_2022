@@ -1,0 +1,1425 @@
+Kind,Name,AvgCyclomatic,SumCyclomatic,MaxEssential,MaxNesting
+File,"AbstractServiceTest.java",0,0,0,0
+File,"Aluno.java",1,10,1,0
+File,"AlunoController.java",1,10,1,1
+File,"AlunoRepository.java",0,0,0,0
+File,"AlunoService.java",0,0,0,0
+File,"AlunoServiceImpl.java",1,18,1,1
+File,"AlunoServiceTest.java",1,8,1,1
+File,"AlunoTurma.java",2,19,10,2
+File,"AlunoTurmaController.java",2,6,1,1
+File,"AlunoTurmaId.java",2,17,10,2
+File,"AlunoTurmaRepository.java",0,0,0,0
+File,"Anamnese.java",1,28,7,2
+File,"AnamneseController.java",1,14,1,1
+File,"AnamneseRepository.java",0,0,0,0
+File,"AnamneseService.java",0,0,0,0
+File,"AnamneseServiceImpl.java",1,36,1,2
+File,"AnamneseServiceTest.java",1,7,1,1
+File,"Atendimento.java",1,40,7,2
+File,"AtendimentoController.java",1,13,1,1
+File,"AtendimentoPatologiaController.java",1,1,1,0
+File,"AtendimentoProcedimentoController.java",1,1,1,0
+File,"AtendimentoRepository.java",0,0,0,0
+File,"AtendimentoService.java",0,0,0,0
+File,"AtendimentoServiceImpl.java",1,41,1,2
+File,"AtendimentoServiceTest.java",1,9,1,1
+File,"Avaliacao.java",1,32,7,2
+File,"AvaliacaoAtendimento.java",1,32,7,2
+File,"AvaliacaoAtendimentoRepository.java",0,0,0,0
+File,"AvaliacaoController.java",1,13,1,1
+File,"AvaliacaoRepository.java",0,0,0,0
+File,"AvaliacaoService.java",0,0,0,0
+File,"AvaliacaoServiceImpl.java",1,13,1,2
+File,"ConfigurationConstants.java",0,0,0,0
+File,"Dente.java",1,4,1,0
+File,"Disciplina.java",1,18,7,2
+File,"DisciplinaController.java",1,9,1,2
+File,"DisciplinaRepository.java",0,0,0,0
+File,"DisciplinaService.java",0,0,0,0
+File,"DisciplinaServiceImpl.java",1,13,1,1
+File,"DisciplinaServiceTest.java",2,6,1,1
+File,"Documento.java",1,17,1,0
+File,"DocumentoController.java",1,9,1,2
+File,"DocumentoDownload.java",1,7,1,0
+File,"DocumentoRepository.java",0,0,0,0
+File,"DocumentoService.java",0,0,0,0
+File,"DocumentoServiceImpl.java",1,25,1,5
+File,"EmailConstants.java",0,0,0,0
+File,"EmailService.java",0,0,0,0
+File,"EmailServiceImpl.java",1,21,4,3
+File,"EmailTask.java",1,1,1,0
+File,"Estado.java",1,4,1,0
+File,"EstadoCivil.java",1,4,1,0
+File,"ExceptionSuccessConstants.java",0,0,0,0
+File,"FaceDente.java",1,4,1,0
+File,"FormularioAtendimentoController.java",1,2,1,0
+File,"FragmentsConstants.java",0,0,0,0
+File,"ItemAvaliacao.java",2,21,10,2
+File,"ItemAvaliacaoAtendimento.java",1,24,10,2
+File,"ItemAvaliacaoAtendimentoRepository.java",0,0,0,0
+File,"ItemAvaliacaoRepository.java",0,0,0,0
+File,"Local.java",1,2,1,0
+File,"MessagesConstants.java",0,0,0,0
+File,"MvcConfig.java",1,1,1,0
+File,"Odontograma.java",1,17,7,2
+File,"OdontogramaController.java",1,7,1,1
+File,"OdontogramaPatologiasController.java",1,9,1,1
+File,"OdontogramaRepository.java",0,0,0,0
+File,"OdontogramaService.java",0,0,0,0
+File,"OdontogramaServiceImpl.java",1,2,1,0
+File,"OdontogramaServiceTest.java",1,1,1,0
+File,"Paciente.java",1,62,5,1
+File,"PacienteAnamnese.java",1,23,7,2
+File,"PacienteAnamneseController.java",1,4,1,0
+File,"PacienteAnamneseRepository.java",0,0,0,0
+File,"PacienteAtendimentoController.java",1,2,1,0
+File,"PacienteController.java",1,2,1,0
+File,"PacienteDocumento.java",1,4,1,1
+File,"PacienteFormularioController.java",1,2,1,0
+File,"PacienteFormularioService.java",1,3,1,0
+File,"PacienteFormularioService.java",0,0,0,0
+File,"PacienteListController.java",1,6,1,1
+File,"PacienteRepository.java",0,0,0,0
+File,"PacienteService.java",0,0,0,0
+File,"PacienteServiceImpl.java",1,24,1,2
+File,"PacienteServiceTest.java",1,6,1,1
+File,"PacienteTratamentoController.java",1,6,1,1
+File,"PagesConstants.java",0,0,0,0
+File,"Papel.java",1,5,1,0
+File,"Patologia.java",1,32,7,2
+File,"PatologiaRepository.java",0,0,0,0
+File,"PatologiaService.java",0,0,0,0
+File,"PatologiaServiceImpl.java",2,27,1,2
+File,"PatologiaServiceTest.java",1,4,1,0
+File,"Pergunta.java",1,26,7,2
+File,"PerguntaRepository.java",0,0,0,0
+File,"PlanoTratamento.java",1,30,7,2
+File,"PlanoTratamentoController.java",1,7,1,1
+File,"PlanoTratamentoRepository.java",0,0,0,0
+File,"PlanoTratamentoService.java",0,0,0,0
+File,"PlanoTratamentoServiceImpl.java",1,20,1,1
+File,"Procedimento.java",1,30,7,2
+File,"ProcedimentoRepository.java",0,0,0,0
+File,"ProcedimentoService.java",0,0,0,0
+File,"ProcedimentoServiceImpl.java",1,36,1,2
+File,"ProcedimentoServiceTest.java",1,1,1,0
+File,"ProfessorController.java",2,8,1,2
+File,"ProfessorFormularioController.java",1,4,1,1
+File,"ProfessorTurmaController.java",1,7,1,1
+File,"ProntuarioApplication.java",1,1,1,0
+File,"ProntuarioApplicationTests.java",1,1,1,0
+File,"ProntuarioController.java",1,2,1,0
+File,"ProntuarioException.java",1,2,1,0
+File,"Raca.java",1,4,1,0
+File,"RedirectConstants.java",0,0,0,0
+File,"Resposta.java",1,19,7,2
+File,"SecurityConfig.java",1,2,1,0
+File,"Servidor.java",0,0,0,0
+File,"ServidorRepository.java",0,0,0,0
+File,"ServidorService.java",0,0,0,0
+File,"ServidorServiceImpl.java",2,17,1,1
+File,"ServidorServiceTest.java",2,6,1,1
+File,"ServletInitializer.java",1,1,1,0
+File,"Sexo.java",1,4,1,0
+File,"TipoPatologia.java",1,17,7,2
+File,"TipoPatologiaController.java",1,9,1,3
+File,"TipoPatologiaRepository.java",0,0,0,0
+File,"TipoPatologiaService.java",0,0,0,0
+File,"TipoPatologiaServiceImpl.java",1,16,1,1
+File,"TipoPatologiaServiceTest.java",1,4,1,1
+File,"TipoProcedimento.java",1,17,7,2
+File,"TipoProcedimentoController.java",1,9,1,3
+File,"TipoProcedimentoRepository.java",0,0,0,0
+File,"TipoProcedimentoService.java",0,0,0,0
+File,"TipoProcedimentoServiceImpl.java",1,14,1,1
+File,"TipoProcedimentoServiceTest.java",1,4,1,1
+File,"Token.java",2,13,7,2
+File,"TokenRepository.java",0,0,0,0
+File,"TokenService.java",0,0,0,0
+File,"TokenServiceImpl.java",1,8,1,2
+File,"TokenServiceTest.java",1,5,1,0
+File,"Tratamento.java",1,21,7,2
+File,"Turma.java",1,30,7,2
+File,"TurmaAlunoController.java",2,2,1,1
+File,"TurmaController.java",1,7,1,1
+File,"TurmaProfessorController.java",1,5,1,1
+File,"TurmaRepository.java",0,0,0,0
+File,"TurmaService.java",0,0,0,0
+File,"TurmaServiceImpl.java",2,28,1,2
+File,"TurmaServiceTest.java",1,18,1,1
+File,"UserDetailsService.java",2,2,1,1
+File,"Usuario.java",1,34,7,2
+File,"UsuarioController.java",1,8,1,1
+File,"UsuarioRepository.java",0,0,0,0
+File,"UsuarioService.java",0,0,0,0
+File,"UsuarioServiceImpl.java",1,8,1,1
+File,"UsuarioServiceTest.java",1,8,1,1
+Package,"ufc",0,0,0,0
+Package,"ufc.npi",0,0,0,0
+Package,"ufc.npi.prontuario",1,3,1,0
+Public Class,"ufc.npi.prontuario.ProntuarioApplication",1,1,1,0
+Public Static Method,"ufc.npi.prontuario.ProntuarioApplication.main",,1,,0
+Public Class,"ufc.npi.prontuario.ProntuarioApplicationTests",1,1,1,0
+Public Method,"ufc.npi.prontuario.ProntuarioApplicationTests.contextLoads",,1,,0
+Public Class,"ufc.npi.prontuario.ServletInitializer",1,1,1,0
+Protected Method,"ufc.npi.prontuario.ServletInitializer.configure",,1,,0
+Package,"ufc.npi.prontuario.config",1,3,1,0
+Public Class,"ufc.npi.prontuario.config.MvcConfig",1,1,1,0
+Public Method,"ufc.npi.prontuario.config.MvcConfig.addViewControllers",,1,,0
+Public Class,"ufc.npi.prontuario.config.SecurityConfig",1,2,1,0
+Protected Method,"ufc.npi.prontuario.config.SecurityConfig.configure",,1,,0
+Protected Method,"ufc.npi.prontuario.config.SecurityConfig.configure",,1,,0
+Package,"ufc.npi.prontuario.controller",1,184,1,3
+Public Class,"ufc.npi.prontuario.controller.AlunoController",1,10,1,1
+Public Method,"ufc.npi.prontuario.controller.AlunoController.adicionarAluno",,2,,1
+Public Method,"ufc.npi.prontuario.controller.AlunoController.editarAluno",,1,,0
+Public Method,"ufc.npi.prontuario.controller.AlunoController.excluirAluno",,2,,1
+Public Method,"ufc.npi.prontuario.controller.AlunoController.formularioAdicionarAluno",,1,,0
+Public Method,"ufc.npi.prontuario.controller.AlunoController.listarAlunos",,1,,0
+Private Method,"ufc.npi.prontuario.controller.AlunoController.salvarOuAtualizarAluno",,2,,1
+Public Method,"ufc.npi.prontuario.controller.AlunoController.visualizarDetalhesAluno",,1,,0
+Public Class,"ufc.npi.prontuario.controller.AlunoTurmaController",2,6,1,1
+Public Method,"ufc.npi.prontuario.controller.AlunoTurmaController.carregarAjudantes",,2,,0
+Public Method,"ufc.npi.prontuario.controller.AlunoTurmaController.inscreverAluno",,2,,1
+Public Method,"ufc.npi.prontuario.controller.AlunoTurmaController.removerInscricaoDeAluno",,2,,1
+Public Class,"ufc.npi.prontuario.controller.AnamneseController",1,14,1,1
+Public Method,"ufc.npi.prontuario.controller.AnamneseController.alteraOrdemPerguntaDaAnamnese",,1,,0
+Public Method,"ufc.npi.prontuario.controller.AnamneseController.cadastrarAnamnese",,2,,1
+Public Method,"ufc.npi.prontuario.controller.AnamneseController.detalhesAnamnese",,2,,1
+Public Method,"ufc.npi.prontuario.controller.AnamneseController.excluirAnamnese",,2,,1
+Public Method,"ufc.npi.prontuario.controller.AnamneseController.excluirPergunta",,1,,0
+Public Method,"ufc.npi.prontuario.controller.AnamneseController.finalizarAnamnese",,1,,0
+Public Method,"ufc.npi.prontuario.controller.AnamneseController.formCadastrarAnamnese",,1,,0
+Public Method,"ufc.npi.prontuario.controller.AnamneseController.listarAnamneses",,1,,0
+Public Method,"ufc.npi.prontuario.controller.AnamneseController.salvarPergunta",,2,,1
+Public Method,"ufc.npi.prontuario.controller.AnamneseController.tabelaAnamneses",,1,,0
+Public Class,"ufc.npi.prontuario.controller.AtendimentoController",1,13,1,1
+Public Method,"ufc.npi.prontuario.controller.AtendimentoController.avaliarAtendimento",,2,,1
+Public Method,"ufc.npi.prontuario.controller.AtendimentoController.cadastrarAtendimento",,2,,1
+Public Method,"ufc.npi.prontuario.controller.AtendimentoController.editarAtendimento",,2,,1
+Public Method,"ufc.npi.prontuario.controller.AtendimentoController.finalizarAtendimento",,2,,1
+Public Method,"ufc.npi.prontuario.controller.AtendimentoController.getDetalhesAtendimento",,2,,1
+Public Method,"ufc.npi.prontuario.controller.AtendimentoController.removerAtendimento",,2,,1
+Public Method,"ufc.npi.prontuario.controller.AtendimentoController.validarAtendimento",,1,,0
+Public Class,"ufc.npi.prontuario.controller.AtendimentoPatologiaController",1,1,1,0
+Public Method,"ufc.npi.prontuario.controller.AtendimentoPatologiaController.removerPatologia",,1,,0
+Public Class,"ufc.npi.prontuario.controller.AtendimentoProcedimentoController",1,1,1,0
+Public Method,"ufc.npi.prontuario.controller.AtendimentoProcedimentoController.removerProcedimento",,1,,0
+Public Class,"ufc.npi.prontuario.controller.AvaliacaoController",1,13,1,1
+Public Method,"ufc.npi.prontuario.controller.AvaliacaoController.adicionarCriterio",,2,,1
+Public Method,"ufc.npi.prontuario.controller.AvaliacaoController.ativarDesativarAvaliacao",,2,,1
+Public Method,"ufc.npi.prontuario.controller.AvaliacaoController.cadastrarAvaliacao",,1,,0
+Public Method,"ufc.npi.prontuario.controller.AvaliacaoController.deleteItemAvaliacao",,1,,0
+Public Method,"ufc.npi.prontuario.controller.AvaliacaoController.excluirAvaliacao",,2,,1
+Public Method,"ufc.npi.prontuario.controller.AvaliacaoController.finalizarAvaliacao",,1,,0
+Public Method,"ufc.npi.prontuario.controller.AvaliacaoController.formularioCadastrarValidacao",,1,,0
+Public Method,"ufc.npi.prontuario.controller.AvaliacaoController.listarAvaliacoes",,1,,0
+Public Method,"ufc.npi.prontuario.controller.AvaliacaoController.visualizarDetalhes",,2,,1
+Public Class,"ufc.npi.prontuario.controller.DisciplinaController",1,9,1,2
+Public Method,"ufc.npi.prontuario.controller.DisciplinaController.adicionarDisciplina",,3,,2
+Public Method,"ufc.npi.prontuario.controller.DisciplinaController.detalhesDisciplina",,1,,0
+Public Method,"ufc.npi.prontuario.controller.DisciplinaController.excluirDisciplina",,2,,1
+Public Method,"ufc.npi.prontuario.controller.DisciplinaController.formularioAdicionarDisciplina",,1,,0
+Public Method,"ufc.npi.prontuario.controller.DisciplinaController.formularioEditarDisciplina",,1,,0
+Public Method,"ufc.npi.prontuario.controller.DisciplinaController.listagemDisciplina",,1,,0
+Public Class,"ufc.npi.prontuario.controller.DocumentoController",1,9,1,2
+Public Method,"ufc.npi.prontuario.controller.DocumentoController.deletar",,1,,0
+Public Method,"ufc.npi.prontuario.controller.DocumentoController.download",,2,,1
+Public Method,"ufc.npi.prontuario.controller.DocumentoController.listarDocumentos",,1,,0
+Public Method,"ufc.npi.prontuario.controller.DocumentoController.upload",,3,,2
+Public Method,"ufc.npi.prontuario.controller.DocumentoController.visualizar",,2,,1
+Public Class,"ufc.npi.prontuario.controller.FormularioAtendimentoController",1,2,1,0
+Public Method,"ufc.npi.prontuario.controller.FormularioAtendimentoController.formularioCadastrarAtendimento",,1,,0
+Public Method,"ufc.npi.prontuario.controller.FormularioAtendimentoController.formularioEditarAtendimento",,1,,0
+Public Class,"ufc.npi.prontuario.controller.OdontogramaController",1,7,1,1
+Public Method,"ufc.npi.prontuario.controller.OdontogramaController.adicionarProcedimento",,1,,0
+Public Method,"ufc.npi.prontuario.controller.OdontogramaController.buscaProcedimento",,1,,0
+Public Method,"ufc.npi.prontuario.controller.OdontogramaController.buscarProcedimentos",,1,,0
+Public Method,"ufc.npi.prontuario.controller.OdontogramaController.buscarProcedimentosExistentes",,1,,0
+Public Method,"ufc.npi.prontuario.controller.OdontogramaController.novoOdontogramaPatologias",,2,,1
+Public Method,"ufc.npi.prontuario.controller.OdontogramaController.tableProcedimentos",,1,,0
+Public Class,"ufc.npi.prontuario.controller.OdontogramaPatologiasController",1,9,1,1
+Public Method,"ufc.npi.prontuario.controller.OdontogramaPatologiasController.DefinirResponsavelTratamento",,1,,0
+Public Method,"ufc.npi.prontuario.controller.OdontogramaPatologiasController.adicionarPatologia",,1,,0
+Public Method,"ufc.npi.prontuario.controller.OdontogramaPatologiasController.buscaPatologia",,1,,0
+Public Method,"ufc.npi.prontuario.controller.OdontogramaPatologiasController.buscaPatologiasProcedimento",,1,,0
+Public Method,"ufc.npi.prontuario.controller.OdontogramaPatologiasController.buscarPatologia",,1,,0
+Public Method,"ufc.npi.prontuario.controller.OdontogramaPatologiasController.buscarPatologias",,1,,0
+Public Method,"ufc.npi.prontuario.controller.OdontogramaPatologiasController.tablePatologias",,2,,1
+Public Method,"ufc.npi.prontuario.controller.OdontogramaPatologiasController.tratarPatologia",,1,,0
+Public Class,"ufc.npi.prontuario.controller.PacienteAnamneseController",1,4,1,0
+Public Method,"ufc.npi.prontuario.controller.PacienteAnamneseController.listarAnamneses",,1,,0
+Public Method,"ufc.npi.prontuario.controller.PacienteAnamneseController.realizarAnamnese",,1,,0
+Public Method,"ufc.npi.prontuario.controller.PacienteAnamneseController.realizarAnamneseForm",,1,,0
+Public Method,"ufc.npi.prontuario.controller.PacienteAnamneseController.visualizarDetalhesAnamnese",,1,,0
+Public Class,"ufc.npi.prontuario.controller.PacienteAtendimentoController",1,2,1,0
+Public Method,"ufc.npi.prontuario.controller.PacienteAtendimentoController.getTableAtendimentos",,1,,0
+Public Method,"ufc.npi.prontuario.controller.PacienteAtendimentoController.listarAtendimentos",,1,,0
+Public Class,"ufc.npi.prontuario.controller.PacienteController",1,2,1,0
+Public Method,"ufc.npi.prontuario.controller.PacienteController.paginaCadastro",,1,,0
+Public Method,"ufc.npi.prontuario.controller.PacienteController.visualizarDetalhes",,1,,0
+Public Class,"ufc.npi.prontuario.controller.PacienteFormularioController",1,2,1,0
+Public Method,"ufc.npi.prontuario.controller.PacienteFormularioController.editarPaciente",,1,,0
+Public Method,"ufc.npi.prontuario.controller.PacienteFormularioController.paginaCadastroPaciente",,1,,0
+Public Class,"ufc.npi.prontuario.controller.PacienteListController",1,6,1,1
+Private Method,"ufc.npi.prontuario.controller.PacienteListController.addErrorModel",,1,,0
+Public Method,"ufc.npi.prontuario.controller.PacienteListController.cadastrarPaciente",,2,,1
+Public Method,"ufc.npi.prontuario.controller.PacienteListController.editarPaciente",,2,,1
+Public Method,"ufc.npi.prontuario.controller.PacienteListController.listagemPacientes",,1,,0
+Public Class,"ufc.npi.prontuario.controller.PacienteTratamentoController",1,6,1,1
+Public Method,"ufc.npi.prontuario.controller.PacienteTratamentoController.cadastrar",,1,,0
+Public Method,"ufc.npi.prontuario.controller.PacienteTratamentoController.excluir",,2,,1
+Public Method,"ufc.npi.prontuario.controller.PacienteTratamentoController.listarTratamentos",,1,,0
+Private Method,"ufc.npi.prontuario.controller.PacienteTratamentoController.salvarPlanoTratamento",,2,,1
+Public Class,"ufc.npi.prontuario.controller.PlanoTratamentoController",1,7,1,1
+Public Method,"ufc.npi.prontuario.controller.PlanoTratamentoController.cadastrar",,2,,1
+Public Method,"ufc.npi.prontuario.controller.PlanoTratamentoController.editar",,2,,1
+Public Method,"ufc.npi.prontuario.controller.PlanoTratamentoController.finalizar",,1,,0
+Public Method,"ufc.npi.prontuario.controller.PlanoTratamentoController.parcientesAguardandoTratamento",,1,,0
+Public Method,"ufc.npi.prontuario.controller.PlanoTratamentoController.visualizarParcientesAguardandoTratamento",,1,,0
+Public Class,"ufc.npi.prontuario.controller.ProfessorController",2,8,1,2
+Public Method,"ufc.npi.prontuario.controller.ProfessorController.adicionarProfessor",,5,,2
+Public Method,"ufc.npi.prontuario.controller.ProfessorController.excluirServidor",,2,,1
+Public Method,"ufc.npi.prontuario.controller.ProfessorController.listarProfessores",,1,,0
+Public Class,"ufc.npi.prontuario.controller.ProfessorFormularioController",1,4,1,1
+Public Method,"ufc.npi.prontuario.controller.ProfessorFormularioController.detalhes",,2,,1
+Public Method,"ufc.npi.prontuario.controller.ProfessorFormularioController.formAdicionarProfessor",,1,,0
+Public Method,"ufc.npi.prontuario.controller.ProfessorFormularioController.formEditarProfessor",,1,,0
+Public Class,"ufc.npi.prontuario.controller.ProfessorTurmaController",1,7,1,1
+Public Method,"ufc.npi.prontuario.controller.ProfessorTurmaController.adicionarProfessor",,2,,1
+Public Method,"ufc.npi.prontuario.controller.ProfessorTurmaController.carregarProfessores",,2,,0
+Public Method,"ufc.npi.prontuario.controller.ProfessorTurmaController.formularioAdicionarTurma",,1,,0
+Public Method,"ufc.npi.prontuario.controller.ProfessorTurmaController.removerProfessor",,2,,1
+Public Class,"ufc.npi.prontuario.controller.ProntuarioController",1,2,1,0
+Public Method,"ufc.npi.prontuario.controller.ProntuarioController.getIndex",,1,,0
+Public Method,"ufc.npi.prontuario.controller.ProntuarioController.getSobre",,1,,0
+Public Class,"ufc.npi.prontuario.controller.TipoPatologiaController",1,9,1,3
+Public Method,"ufc.npi.prontuario.controller.TipoPatologiaController.adicionarTipoPatologia",,4,,3
+Public Method,"ufc.npi.prontuario.controller.TipoPatologiaController.adicionarTipoPatologiaFormulario",,1,,0
+Public Method,"ufc.npi.prontuario.controller.TipoPatologiaController.excluirTipoPatologia",,2,,1
+Public Method,"ufc.npi.prontuario.controller.TipoPatologiaController.formularioEditarTipoPatologia",,1,,0
+Public Method,"ufc.npi.prontuario.controller.TipoPatologiaController.listarTiposPatologia",,1,,0
+Public Class,"ufc.npi.prontuario.controller.TipoProcedimentoController",1,9,1,3
+Public Method,"ufc.npi.prontuario.controller.TipoProcedimentoController.adicionarTipoProcedimento",,4,,3
+Public Method,"ufc.npi.prontuario.controller.TipoProcedimentoController.editarTipoProcedimento",,1,,0
+Public Method,"ufc.npi.prontuario.controller.TipoProcedimentoController.excluirTipoProcedimento",,2,,1
+Public Method,"ufc.npi.prontuario.controller.TipoProcedimentoController.formularioAdicionarTipoProcedimento",,1,,0
+Public Method,"ufc.npi.prontuario.controller.TipoProcedimentoController.listarTiposProcedimento",,1,,0
+Public Class,"ufc.npi.prontuario.controller.TurmaAlunoController",2,2,1,1
+Public Method,"ufc.npi.prontuario.controller.TurmaAlunoController.inscreverAluno",,2,,1
+Public Class,"ufc.npi.prontuario.controller.TurmaController",1,7,1,1
+Public Method,"ufc.npi.prontuario.controller.TurmaController.adicionarTurma",,3,,1
+Public Method,"ufc.npi.prontuario.controller.TurmaController.alterarStatus",,1,,0
+Public Method,"ufc.npi.prontuario.controller.TurmaController.excluirTurma",,2,,1
+Public Method,"ufc.npi.prontuario.controller.TurmaController.listarTurmas",,1,,0
+Public Class,"ufc.npi.prontuario.controller.TurmaProfessorController",1,5,1,1
+Private Method,"ufc.npi.prontuario.controller.TurmaProfessorController.addMensagemSucesso",,1,,0
+Public Method,"ufc.npi.prontuario.controller.TurmaProfessorController.adicionarProfessor",,2,,1
+Private Method,"ufc.npi.prontuario.controller.TurmaProfessorController.existProfessoresTurma",,1,,0
+Public Method,"ufc.npi.prontuario.controller.TurmaProfessorController.visualizarDetalhes",,1,,0
+Public Class,"ufc.npi.prontuario.controller.UsuarioController",1,8,1,1
+Public Method,"ufc.npi.prontuario.controller.UsuarioController.alteracaoSenha",,1,,0
+Public Method,"ufc.npi.prontuario.controller.UsuarioController.alteracaoSenhaForm",,1,,0
+Public Method,"ufc.npi.prontuario.controller.UsuarioController.alterarDados",,1,,0
+Public Method,"ufc.npi.prontuario.controller.UsuarioController.alterarSenha",,2,,1
+Public Method,"ufc.npi.prontuario.controller.UsuarioController.detalhesUsuario",,1,,0
+Public Method,"ufc.npi.prontuario.controller.UsuarioController.formRecuperacaoSenha",,1,,0
+Public Method,"ufc.npi.prontuario.controller.UsuarioController.recuperacaoSenha",,1,,0
+Package,"ufc.npi.prontuario.exception",1,2,1,0
+Public Class,"ufc.npi.prontuario.exception.ProntuarioException",1,2,1,0
+Public Constructor,"ufc.npi.prontuario.exception.ProntuarioException.ProntuarioException",,1,,0
+Public Method,"ufc.npi.prontuario.exception.ProntuarioException.getMessage",,1,,0
+Package,"ufc.npi.prontuario.model",1,671,10,2
+Public Class,"ufc.npi.prontuario.model.Aluno",1,10,1,0
+Public Method,"ufc.npi.prontuario.model.Aluno.getAlunoTurmas",,1,,0
+Public Method,"ufc.npi.prontuario.model.Aluno.getAnoIngresso",,1,,0
+Public Method,"ufc.npi.prontuario.model.Aluno.getAtendimentos",,1,,0
+Public Method,"ufc.npi.prontuario.model.Aluno.getPacienteAnamneses",,1,,0
+Public Method,"ufc.npi.prontuario.model.Aluno.getSemestreIngresso",,1,,0
+Public Method,"ufc.npi.prontuario.model.Aluno.setAlunoTurmas",,1,,0
+Public Method,"ufc.npi.prontuario.model.Aluno.setAnoIngresso",,1,,0
+Public Method,"ufc.npi.prontuario.model.Aluno.setAtendimentos",,1,,0
+Public Method,"ufc.npi.prontuario.model.Aluno.setPacienteAnamneses",,1,,0
+Public Method,"ufc.npi.prontuario.model.Aluno.setSemestreIngresso",,1,,0
+Public Class,"ufc.npi.prontuario.model.AlunoTurma",2,19,10,2
+Public Method,"ufc.npi.prontuario.model.AlunoTurma.equals",,10,,2
+Public Method,"ufc.npi.prontuario.model.AlunoTurma.getAluno",,1,,0
+Public Method,"ufc.npi.prontuario.model.AlunoTurma.getAtivo",,1,,0
+Public Method,"ufc.npi.prontuario.model.AlunoTurma.getTurma",,1,,0
+Public Method,"ufc.npi.prontuario.model.AlunoTurma.hashCode",,3,,0
+Public Method,"ufc.npi.prontuario.model.AlunoTurma.setAluno",,1,,0
+Public Method,"ufc.npi.prontuario.model.AlunoTurma.setAtivo",,1,,0
+Public Method,"ufc.npi.prontuario.model.AlunoTurma.setTurma",,1,,0
+Public Class,"ufc.npi.prontuario.model.AlunoTurmaId",2,17,10,2
+Public Method,"ufc.npi.prontuario.model.AlunoTurmaId.equals",,10,,2
+Public Method,"ufc.npi.prontuario.model.AlunoTurmaId.getAluno",,1,,0
+Public Method,"ufc.npi.prontuario.model.AlunoTurmaId.getTurma",,1,,0
+Public Method,"ufc.npi.prontuario.model.AlunoTurmaId.hashCode",,3,,0
+Public Method,"ufc.npi.prontuario.model.AlunoTurmaId.setAluno",,1,,0
+Public Method,"ufc.npi.prontuario.model.AlunoTurmaId.setTurma",,1,,0
+Public Class,"ufc.npi.prontuario.model.Anamnese",1,24,7,2
+Public Enum Type,"ufc.npi.prontuario.model.Anamnese.Status",1,4,1,0
+Private Constructor,"ufc.npi.prontuario.model.Anamnese.Status.Status",,1,,0
+Public Method,"ufc.npi.prontuario.model.Anamnese.Status.getDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Anamnese.Status.valueOf",,1,,0
+Public Method,"ufc.npi.prontuario.model.Anamnese.Status.values",,1,,0
+Public Method,"ufc.npi.prontuario.model.Anamnese.addPergunta",,2,,1
+Public Method,"ufc.npi.prontuario.model.Anamnese.equals",,7,,2
+Public Method,"ufc.npi.prontuario.model.Anamnese.findNameInRepository",,1,,0
+Public Method,"ufc.npi.prontuario.model.Anamnese.getDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Anamnese.getId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Anamnese.getNome",,1,,0
+Public Method,"ufc.npi.prontuario.model.Anamnese.getPerguntas",,2,,1
+Public Method,"ufc.npi.prontuario.model.Anamnese.getStatus",,1,,0
+Public Method,"ufc.npi.prontuario.model.Anamnese.hashCode",,2,,0
+Public Method,"ufc.npi.prontuario.model.Anamnese.setDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Anamnese.setId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Anamnese.setNome",,1,,0
+Public Method,"ufc.npi.prontuario.model.Anamnese.setPerguntas",,1,,0
+Public Method,"ufc.npi.prontuario.model.Anamnese.setStatus",,1,,0
+Public Method,"ufc.npi.prontuario.model.Anamnese.verificarNomeDescricao",,1,,0
+Public Class,"ufc.npi.prontuario.model.Atendimento",1,36,7,2
+Public Enum Type,"ufc.npi.prontuario.model.Atendimento.Status",1,4,1,0
+Private Constructor,"ufc.npi.prontuario.model.Atendimento.Status.Status",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.Status.getDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.Status.valueOf",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.Status.values",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.ajudanteIgualEmail",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.compararEmailResponsavel",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.compareTo",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.equals",,7,,2
+Public Method,"ufc.npi.prontuario.model.Atendimento.getAjudante",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.getAvaliacao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.getData",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.getId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.getPaciente",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.getPatologias",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.getProcedimentos",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.getProfessor",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.getResponsavel",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.getStatus",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.getTurma",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.hashCode",,2,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.isValidado",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.isVisivel",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.setAjudante",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.setAvaliacao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.setData",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.setId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.setPaciente",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.setPatologias",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.setProcedimentos",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.setProfessor",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.setResponsavel",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.setStatus",,1,,0
+Public Method,"ufc.npi.prontuario.model.Atendimento.setTurma",,1,,0
+Public Class,"ufc.npi.prontuario.model.Avaliacao",1,28,7,2
+Public Constructor,"ufc.npi.prontuario.model.Avaliacao.Avaliacao",,1,,0
+Public Enum Type,"ufc.npi.prontuario.model.Avaliacao.Status",1,4,1,0
+Private Constructor,"ufc.npi.prontuario.model.Avaliacao.Status.Status",,1,,0
+Public Method,"ufc.npi.prontuario.model.Avaliacao.Status.getDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Avaliacao.Status.valueOf",,1,,0
+Public Method,"ufc.npi.prontuario.model.Avaliacao.Status.values",,1,,0
+Public Method,"ufc.npi.prontuario.model.Avaliacao.addItem",,3,,1
+Public Method,"ufc.npi.prontuario.model.Avaliacao.equals",,7,,2
+Public Method,"ufc.npi.prontuario.model.Avaliacao.getId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Avaliacao.getItens",,1,,0
+Public Method,"ufc.npi.prontuario.model.Avaliacao.getNome",,1,,0
+Public Method,"ufc.npi.prontuario.model.Avaliacao.getStatus",,1,,0
+Public Method,"ufc.npi.prontuario.model.Avaliacao.hashCode",,2,,0
+Public Method,"ufc.npi.prontuario.model.Avaliacao.isAtiva",,1,,0
+Public Method,"ufc.npi.prontuario.model.Avaliacao.itensNaoAvaliados",,3,,2
+Public Method,"ufc.npi.prontuario.model.Avaliacao.removeItem",,2,,1
+Public Method,"ufc.npi.prontuario.model.Avaliacao.setAtiva",,1,,0
+Public Method,"ufc.npi.prontuario.model.Avaliacao.setId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Avaliacao.setItens",,1,,0
+Public Method,"ufc.npi.prontuario.model.Avaliacao.setNome",,1,,0
+Public Method,"ufc.npi.prontuario.model.Avaliacao.setStatus",,1,,0
+Public Class,"ufc.npi.prontuario.model.AvaliacaoAtendimento",1,32,7,2
+Public Constructor,"ufc.npi.prontuario.model.AvaliacaoAtendimento.AvaliacaoAtendimento",,1,,0
+Public Constructor,"ufc.npi.prontuario.model.AvaliacaoAtendimento.AvaliacaoAtendimento",,1,,0
+Public Method,"ufc.npi.prontuario.model.AvaliacaoAtendimento.addItem",,3,,1
+Public Method,"ufc.npi.prontuario.model.AvaliacaoAtendimento.avaliacaoPesoItem",,1,,0
+Public Method,"ufc.npi.prontuario.model.AvaliacaoAtendimento.calculoNotaPesoItem",,1,,0
+Public Method,"ufc.npi.prontuario.model.AvaliacaoAtendimento.equals",,7,,2
+Public Method,"ufc.npi.prontuario.model.AvaliacaoAtendimento.getAvaliacao",,1,,0
+Public Method,"ufc.npi.prontuario.model.AvaliacaoAtendimento.getData",,1,,0
+Public Method,"ufc.npi.prontuario.model.AvaliacaoAtendimento.getId",,1,,0
+Public Method,"ufc.npi.prontuario.model.AvaliacaoAtendimento.getItens",,2,,1
+Public Method,"ufc.npi.prontuario.model.AvaliacaoAtendimento.getMedia",,3,,2
+Public Method,"ufc.npi.prontuario.model.AvaliacaoAtendimento.getObservacao",,1,,0
+Public Method,"ufc.npi.prontuario.model.AvaliacaoAtendimento.hashCode",,2,,0
+Public Method,"ufc.npi.prontuario.model.AvaliacaoAtendimento.removeItem",,2,,1
+Public Method,"ufc.npi.prontuario.model.AvaliacaoAtendimento.setAvaliacao",,1,,0
+Public Method,"ufc.npi.prontuario.model.AvaliacaoAtendimento.setData",,1,,0
+Public Method,"ufc.npi.prontuario.model.AvaliacaoAtendimento.setId",,1,,0
+Public Method,"ufc.npi.prontuario.model.AvaliacaoAtendimento.setItens",,1,,0
+Public Method,"ufc.npi.prontuario.model.AvaliacaoAtendimento.setObservacao",,1,,0
+Public Enum Type,"ufc.npi.prontuario.model.Dente",1,4,1,0
+Private Constructor,"ufc.npi.prontuario.model.Dente.Dente",,1,,0
+Public Method,"ufc.npi.prontuario.model.Dente.getNumero",,1,,0
+Public Method,"ufc.npi.prontuario.model.Dente.valueOf",,1,,0
+Public Method,"ufc.npi.prontuario.model.Dente.values",,1,,0
+Public Class,"ufc.npi.prontuario.model.Disciplina",1,18,7,2
+Public Method,"ufc.npi.prontuario.model.Disciplina.equals",,7,,2
+Public Method,"ufc.npi.prontuario.model.Disciplina.getCodigo",,1,,0
+Public Method,"ufc.npi.prontuario.model.Disciplina.getId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Disciplina.getNome",,1,,0
+Public Method,"ufc.npi.prontuario.model.Disciplina.getTurmas",,1,,0
+Public Method,"ufc.npi.prontuario.model.Disciplina.hashCode",,2,,0
+Public Method,"ufc.npi.prontuario.model.Disciplina.setCodigo",,1,,0
+Public Method,"ufc.npi.prontuario.model.Disciplina.setId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Disciplina.setNome",,1,,0
+Public Method,"ufc.npi.prontuario.model.Disciplina.setTurmas",,1,,0
+Public Method,"ufc.npi.prontuario.model.Disciplina.verificarCamposObrigatorios",,1,,0
+Public Class,"ufc.npi.prontuario.model.Documento",1,13,1,0
+Public Constructor,"ufc.npi.prontuario.model.Documento.Documento",,1,,0
+Public Constructor,"ufc.npi.prontuario.model.Documento.Documento",,1,,0
+Public Enum Type,"ufc.npi.prontuario.model.Documento.TipoDocumento",1,4,1,0
+Private Constructor,"ufc.npi.prontuario.model.Documento.TipoDocumento.TipoDocumento",,1,,0
+Public Method,"ufc.npi.prontuario.model.Documento.TipoDocumento.getDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Documento.TipoDocumento.valueOf",,1,,0
+Public Method,"ufc.npi.prontuario.model.Documento.TipoDocumento.values",,1,,0
+Public Method,"ufc.npi.prontuario.model.Documento.getArquivo",,1,,0
+Public Method,"ufc.npi.prontuario.model.Documento.getCaminho",,1,,0
+Public Method,"ufc.npi.prontuario.model.Documento.getId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Documento.getNome",,1,,0
+Public Method,"ufc.npi.prontuario.model.Documento.getTipo",,1,,0
+Public Method,"ufc.npi.prontuario.model.Documento.setArquivo",,1,,0
+Public Method,"ufc.npi.prontuario.model.Documento.setCaminho",,1,,0
+Public Method,"ufc.npi.prontuario.model.Documento.setId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Documento.setNome",,1,,0
+Public Method,"ufc.npi.prontuario.model.Documento.setNomeArqCam",,1,,0
+Public Method,"ufc.npi.prontuario.model.Documento.setTipo",,1,,0
+Public Class,"ufc.npi.prontuario.model.DocumentoDownload",1,7,1,0
+Public Constructor,"ufc.npi.prontuario.model.DocumentoDownload.DocumentoDownload",,1,,0
+Public Method,"ufc.npi.prontuario.model.DocumentoDownload.equals",,1,,0
+Public Method,"ufc.npi.prontuario.model.DocumentoDownload.getBody",,1,,0
+Public Method,"ufc.npi.prontuario.model.DocumentoDownload.getHeaders",,1,,0
+Public Method,"ufc.npi.prontuario.model.DocumentoDownload.hasBody",,1,,0
+Public Method,"ufc.npi.prontuario.model.DocumentoDownload.hashCode",,1,,0
+Public Method,"ufc.npi.prontuario.model.DocumentoDownload.toString",,1,,0
+Public Enum Type,"ufc.npi.prontuario.model.Estado",1,4,1,0
+Private Constructor,"ufc.npi.prontuario.model.Estado.Estado",,1,,0
+Public Method,"ufc.npi.prontuario.model.Estado.getDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Estado.valueOf",,1,,0
+Public Method,"ufc.npi.prontuario.model.Estado.values",,1,,0
+Public Enum Type,"ufc.npi.prontuario.model.EstadoCivil",1,4,1,0
+Private Constructor,"ufc.npi.prontuario.model.EstadoCivil.EstadoCivil",,1,,0
+Public Method,"ufc.npi.prontuario.model.EstadoCivil.getDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.EstadoCivil.valueOf",,1,,0
+Public Method,"ufc.npi.prontuario.model.EstadoCivil.values",,1,,0
+Public Enum Type,"ufc.npi.prontuario.model.FaceDente",1,4,1,0
+Private Constructor,"ufc.npi.prontuario.model.FaceDente.FaceDente",,1,,0
+Public Method,"ufc.npi.prontuario.model.FaceDente.getDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.FaceDente.valueOf",,1,,0
+Public Method,"ufc.npi.prontuario.model.FaceDente.values",,1,,0
+Public Class,"ufc.npi.prontuario.model.ItemAvaliacao",2,21,10,2
+Public Method,"ufc.npi.prontuario.model.ItemAvaliacao.equals",,10,,2
+Public Method,"ufc.npi.prontuario.model.ItemAvaliacao.getAvaliacao",,1,,0
+Public Method,"ufc.npi.prontuario.model.ItemAvaliacao.getId",,1,,0
+Public Method,"ufc.npi.prontuario.model.ItemAvaliacao.getNome",,1,,0
+Public Method,"ufc.npi.prontuario.model.ItemAvaliacao.getPeso",,1,,0
+Public Method,"ufc.npi.prontuario.model.ItemAvaliacao.hashCode",,3,,0
+Public Method,"ufc.npi.prontuario.model.ItemAvaliacao.setAvaliacao",,1,,0
+Public Method,"ufc.npi.prontuario.model.ItemAvaliacao.setId",,1,,0
+Public Method,"ufc.npi.prontuario.model.ItemAvaliacao.setNome",,1,,0
+Public Method,"ufc.npi.prontuario.model.ItemAvaliacao.setPeso",,1,,0
+Public Class,"ufc.npi.prontuario.model.ItemAvaliacaoAtendimento",1,24,10,2
+Public Constructor,"ufc.npi.prontuario.model.ItemAvaliacaoAtendimento.ItemAvaliacaoAtendimento",,1,,0
+Public Constructor,"ufc.npi.prontuario.model.ItemAvaliacaoAtendimento.ItemAvaliacaoAtendimento",,1,,0
+Public Method,"ufc.npi.prontuario.model.ItemAvaliacaoAtendimento.equals",,10,,2
+Public Method,"ufc.npi.prontuario.model.ItemAvaliacaoAtendimento.getAvaliacaoAtendimento",,1,,0
+Public Method,"ufc.npi.prontuario.model.ItemAvaliacaoAtendimento.getId",,1,,0
+Public Method,"ufc.npi.prontuario.model.ItemAvaliacaoAtendimento.getItemAvaliacao",,1,,0
+Public Method,"ufc.npi.prontuario.model.ItemAvaliacaoAtendimento.getNota",,1,,0
+Public Method,"ufc.npi.prontuario.model.ItemAvaliacaoAtendimento.getPesoItemAvaliacao",,1,,0
+Public Method,"ufc.npi.prontuario.model.ItemAvaliacaoAtendimento.hashCode",,3,,0
+Public Method,"ufc.npi.prontuario.model.ItemAvaliacaoAtendimento.setAvaliacaoAtendimento",,1,,0
+Public Method,"ufc.npi.prontuario.model.ItemAvaliacaoAtendimento.setId",,1,,0
+Public Method,"ufc.npi.prontuario.model.ItemAvaliacaoAtendimento.setItemAvaliacao",,1,,0
+Public Method,"ufc.npi.prontuario.model.ItemAvaliacaoAtendimento.setNota",,1,,0
+Public Enum Type,"ufc.npi.prontuario.model.Local",1,2,1,0
+Public Method,"ufc.npi.prontuario.model.Local.valueOf",,1,,0
+Public Method,"ufc.npi.prontuario.model.Local.values",,1,,0
+Public Class,"ufc.npi.prontuario.model.Odontograma",1,17,7,2
+Public Method,"ufc.npi.prontuario.model.Odontograma.equals",,7,,2
+Public Method,"ufc.npi.prontuario.model.Odontograma.getId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Odontograma.getPaciente",,1,,0
+Public Method,"ufc.npi.prontuario.model.Odontograma.getPatologias",,1,,0
+Public Method,"ufc.npi.prontuario.model.Odontograma.getProcedimentos",,1,,0
+Public Method,"ufc.npi.prontuario.model.Odontograma.hashCode",,2,,0
+Public Method,"ufc.npi.prontuario.model.Odontograma.setId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Odontograma.setPaciente",,1,,0
+Public Method,"ufc.npi.prontuario.model.Odontograma.setPatologias",,1,,0
+Public Method,"ufc.npi.prontuario.model.Odontograma.setProcedimentos",,1,,0
+Public Class,"ufc.npi.prontuario.model.Paciente",1,62,5,1
+Public Method,"ufc.npi.prontuario.model.Paciente.addPacienteAnamnese",,2,,1
+Public Method,"ufc.npi.prontuario.model.Paciente.equals",,5,,1
+Public Method,"ufc.npi.prontuario.model.Paciente.getAtendimentos",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getBairro",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getCep",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getCidade",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getCns",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getCpf",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getEndereco",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getEstado",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getEstadoCivil",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getNacionalidade",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getNascimento",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getNaturalidade",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getNome",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getNomeDaMae",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getOdontograma",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getPacienteAnamneses",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getPais",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getProfissao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getRaca",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getResponsavel",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getSegundoTelefone",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getSexo",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getTelefone",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.getTratamentos",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.hashCode",,2,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setAtendimentos",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setBairro",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setCep",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setCidade",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setCns",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setCpf",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setEndereco",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setEstado",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setEstadoCivil",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setNacionalidade",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setNascimento",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setNaturalidade",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setNome",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setNomeDaMae",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setOdontograma",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setPacienteAnamneses",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setPais",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setProfissao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setRaca",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setResponsavel",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setSegundoTelefone",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setSexo",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setTelefone",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.setTratamentos",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.temEstado",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.temEstadoCivil",,1,,0
+Public Method,"ufc.npi.prontuario.model.Paciente.temSexo",,1,,0
+Public Class,"ufc.npi.prontuario.model.PacienteAnamnese",1,23,7,2
+Public Method,"ufc.npi.prontuario.model.PacienteAnamnese.equals",,7,,2
+Public Method,"ufc.npi.prontuario.model.PacienteAnamnese.getAnamnese",,1,,0
+Public Method,"ufc.npi.prontuario.model.PacienteAnamnese.getData",,1,,0
+Public Method,"ufc.npi.prontuario.model.PacienteAnamnese.getDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.PacienteAnamnese.getId",,1,,0
+Public Method,"ufc.npi.prontuario.model.PacienteAnamnese.getPaciente",,1,,0
+Public Method,"ufc.npi.prontuario.model.PacienteAnamnese.getResponsavel",,1,,0
+Public Method,"ufc.npi.prontuario.model.PacienteAnamnese.getRespostas",,1,,0
+Public Method,"ufc.npi.prontuario.model.PacienteAnamnese.hashCode",,2,,0
+Public Method,"ufc.npi.prontuario.model.PacienteAnamnese.setAnamnese",,1,,0
+Public Method,"ufc.npi.prontuario.model.PacienteAnamnese.setData",,1,,0
+Public Method,"ufc.npi.prontuario.model.PacienteAnamnese.setDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.PacienteAnamnese.setId",,1,,0
+Public Method,"ufc.npi.prontuario.model.PacienteAnamnese.setPaciente",,1,,0
+Public Method,"ufc.npi.prontuario.model.PacienteAnamnese.setResponsavel",,1,,0
+Public Method,"ufc.npi.prontuario.model.PacienteAnamnese.setRespostas",,1,,0
+Public Abstract Class,"ufc.npi.prontuario.model.PacienteDocumento",1,4,1,1
+Public Method,"ufc.npi.prontuario.model.PacienteDocumento.addDocumento",,2,,1
+Public Method,"ufc.npi.prontuario.model.PacienteDocumento.getDocumentos",,1,,0
+Public Method,"ufc.npi.prontuario.model.PacienteDocumento.removerDocumento",,1,,0
+Public Enum Type,"ufc.npi.prontuario.model.Papel",1,5,1,0
+Private Constructor,"ufc.npi.prontuario.model.Papel.Papel",,1,,0
+Public Method,"ufc.npi.prontuario.model.Papel.getAuthority",,1,,0
+Public Method,"ufc.npi.prontuario.model.Papel.getDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Papel.valueOf",,1,,0
+Public Method,"ufc.npi.prontuario.model.Papel.values",,1,,0
+Public Class,"ufc.npi.prontuario.model.Patologia",1,32,7,2
+Public Constructor,"ufc.npi.prontuario.model.Patologia.Patologia",,1,,0
+Public Constructor,"ufc.npi.prontuario.model.Patologia.Patologia",,1,,0
+Public Method,"ufc.npi.prontuario.model.Patologia.compareTo",,1,,0
+Public Method,"ufc.npi.prontuario.model.Patologia.equals",,7,,2
+Public Method,"ufc.npi.prontuario.model.Patologia.getAtendimento",,1,,0
+Public Method,"ufc.npi.prontuario.model.Patologia.getData",,1,,0
+Public Method,"ufc.npi.prontuario.model.Patologia.getDente",,1,,0
+Public Method,"ufc.npi.prontuario.model.Patologia.getDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Patologia.getFace",,1,,0
+Public Method,"ufc.npi.prontuario.model.Patologia.getId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Patologia.getLocal",,1,,0
+Public Method,"ufc.npi.prontuario.model.Patologia.getOdontograma",,1,,0
+Public Method,"ufc.npi.prontuario.model.Patologia.getTipo",,1,,0
+Public Method,"ufc.npi.prontuario.model.Patologia.getTratamento",,1,,0
+Public Method,"ufc.npi.prontuario.model.Patologia.hashCode",,2,,0
+Public Method,"ufc.npi.prontuario.model.Patologia.setAtendimento",,1,,0
+Public Method,"ufc.npi.prontuario.model.Patologia.setData",,1,,0
+Public Method,"ufc.npi.prontuario.model.Patologia.setDente",,1,,0
+Public Method,"ufc.npi.prontuario.model.Patologia.setDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Patologia.setFace",,1,,0
+Public Method,"ufc.npi.prontuario.model.Patologia.setId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Patologia.setLocal",,1,,0
+Public Method,"ufc.npi.prontuario.model.Patologia.setOdontograma",,1,,0
+Public Method,"ufc.npi.prontuario.model.Patologia.setTipo",,1,,0
+Public Method,"ufc.npi.prontuario.model.Patologia.setTratamento",,1,,0
+Public Class,"ufc.npi.prontuario.model.Pergunta",1,22,7,2
+Public Enum Type,"ufc.npi.prontuario.model.Pergunta.TiposPerguntas",1,4,1,0
+Constructor,"ufc.npi.prontuario.model.Pergunta.TiposPerguntas.TiposPerguntas",,1,,0
+Public Method,"ufc.npi.prontuario.model.Pergunta.TiposPerguntas.getDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Pergunta.TiposPerguntas.valueOf",,1,,0
+Public Method,"ufc.npi.prontuario.model.Pergunta.TiposPerguntas.values",,1,,0
+Public Method,"ufc.npi.prontuario.model.Pergunta.compareTo",,3,,1
+Public Method,"ufc.npi.prontuario.model.Pergunta.equals",,7,,2
+Public Method,"ufc.npi.prontuario.model.Pergunta.getAnamnese",,1,,0
+Public Method,"ufc.npi.prontuario.model.Pergunta.getId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Pergunta.getOrdem",,1,,0
+Public Method,"ufc.npi.prontuario.model.Pergunta.getTexto",,1,,0
+Public Method,"ufc.npi.prontuario.model.Pergunta.getTipo",,1,,0
+Public Method,"ufc.npi.prontuario.model.Pergunta.hashCode",,2,,0
+Public Method,"ufc.npi.prontuario.model.Pergunta.setAnamnese",,1,,0
+Public Method,"ufc.npi.prontuario.model.Pergunta.setId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Pergunta.setOrdem",,1,,0
+Public Method,"ufc.npi.prontuario.model.Pergunta.setTexto",,1,,0
+Public Method,"ufc.npi.prontuario.model.Pergunta.setTipo",,1,,0
+Public Class,"ufc.npi.prontuario.model.PlanoTratamento",1,25,7,2
+Public Constructor,"ufc.npi.prontuario.model.PlanoTratamento.PlanoTratamento",,1,,0
+Public Enum Type,"ufc.npi.prontuario.model.PlanoTratamento.Status",1,5,1,0
+Private Constructor,"ufc.npi.prontuario.model.PlanoTratamento.Status.Status",,1,,0
+Public Method,"ufc.npi.prontuario.model.PlanoTratamento.Status.getDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.PlanoTratamento.Status.isAtivo",,1,,0
+Public Method,"ufc.npi.prontuario.model.PlanoTratamento.Status.valueOf",,1,,0
+Public Method,"ufc.npi.prontuario.model.PlanoTratamento.Status.values",,1,,0
+Public Method,"ufc.npi.prontuario.model.PlanoTratamento.equals",,7,,2
+Public Method,"ufc.npi.prontuario.model.PlanoTratamento.getClinica",,1,,0
+Public Method,"ufc.npi.prontuario.model.PlanoTratamento.getData",,1,,0
+Public Method,"ufc.npi.prontuario.model.PlanoTratamento.getId",,1,,0
+Public Method,"ufc.npi.prontuario.model.PlanoTratamento.getPaciente",,1,,0
+Public Method,"ufc.npi.prontuario.model.PlanoTratamento.getPrioridade",,1,,0
+Public Method,"ufc.npi.prontuario.model.PlanoTratamento.getResponsavel",,1,,0
+Public Method,"ufc.npi.prontuario.model.PlanoTratamento.getStatus",,1,,0
+Public Method,"ufc.npi.prontuario.model.PlanoTratamento.hashCode",,2,,0
+Public Method,"ufc.npi.prontuario.model.PlanoTratamento.parseData",,1,,0
+Public Method,"ufc.npi.prontuario.model.PlanoTratamento.setClinica",,1,,0
+Public Method,"ufc.npi.prontuario.model.PlanoTratamento.setData",,1,,0
+Public Method,"ufc.npi.prontuario.model.PlanoTratamento.setId",,1,,0
+Public Method,"ufc.npi.prontuario.model.PlanoTratamento.setPaciente",,1,,0
+Public Method,"ufc.npi.prontuario.model.PlanoTratamento.setPrioridade",,1,,0
+Public Method,"ufc.npi.prontuario.model.PlanoTratamento.setResponsavel",,1,,0
+Public Method,"ufc.npi.prontuario.model.PlanoTratamento.setStatus",,1,,0
+Public Class,"ufc.npi.prontuario.model.Procedimento",1,30,7,2
+Public Constructor,"ufc.npi.prontuario.model.Procedimento.Procedimento",,1,,0
+Public Method,"ufc.npi.prontuario.model.Procedimento.compareTo",,1,,0
+Public Method,"ufc.npi.prontuario.model.Procedimento.equals",,7,,2
+Public Method,"ufc.npi.prontuario.model.Procedimento.getAtendimento",,1,,0
+Public Method,"ufc.npi.prontuario.model.Procedimento.getDataAtendimento",,1,,0
+Public Method,"ufc.npi.prontuario.model.Procedimento.getDente",,1,,0
+Public Method,"ufc.npi.prontuario.model.Procedimento.getDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Procedimento.getFace",,1,,0
+Public Method,"ufc.npi.prontuario.model.Procedimento.getId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Procedimento.getLocal",,1,,0
+Public Method,"ufc.npi.prontuario.model.Procedimento.getOdontograma",,1,,0
+Public Method,"ufc.npi.prontuario.model.Procedimento.getPreExistente",,1,,0
+Public Method,"ufc.npi.prontuario.model.Procedimento.getTipoProcedimento",,1,,0
+Public Method,"ufc.npi.prontuario.model.Procedimento.hashCode",,2,,0
+Public Method,"ufc.npi.prontuario.model.Procedimento.setAtendimento",,1,,0
+Public Method,"ufc.npi.prontuario.model.Procedimento.setDente",,1,,0
+Public Method,"ufc.npi.prontuario.model.Procedimento.setDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Procedimento.setFace",,1,,0
+Public Method,"ufc.npi.prontuario.model.Procedimento.setId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Procedimento.setLocal",,1,,0
+Public Method,"ufc.npi.prontuario.model.Procedimento.setOdontograma",,1,,0
+Public Method,"ufc.npi.prontuario.model.Procedimento.setPreExistente",,1,,0
+Public Method,"ufc.npi.prontuario.model.Procedimento.setTipoProcedimento",,1,,0
+Public Enum Type,"ufc.npi.prontuario.model.Raca",1,4,1,0
+Private Constructor,"ufc.npi.prontuario.model.Raca.Raca",,1,,0
+Public Method,"ufc.npi.prontuario.model.Raca.getDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Raca.valueOf",,1,,0
+Public Method,"ufc.npi.prontuario.model.Raca.values",,1,,0
+Public Class,"ufc.npi.prontuario.model.Resposta",1,19,7,2
+Public Method,"ufc.npi.prontuario.model.Resposta.equals",,7,,2
+Public Method,"ufc.npi.prontuario.model.Resposta.getId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Resposta.getOpcao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Resposta.getPacienteAnamnese",,1,,0
+Public Method,"ufc.npi.prontuario.model.Resposta.getPergunta",,1,,0
+Public Method,"ufc.npi.prontuario.model.Resposta.getTexto",,1,,0
+Public Method,"ufc.npi.prontuario.model.Resposta.hashCode",,2,,0
+Public Method,"ufc.npi.prontuario.model.Resposta.setId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Resposta.setOpcao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Resposta.setPacienteAnamnese",,1,,0
+Public Method,"ufc.npi.prontuario.model.Resposta.setPergunta",,1,,0
+Public Method,"ufc.npi.prontuario.model.Resposta.setTexto",,1,,0
+Public Class,"ufc.npi.prontuario.model.Servidor",0,0,0,0
+Public Enum Type,"ufc.npi.prontuario.model.Sexo",1,4,1,0
+Private Constructor,"ufc.npi.prontuario.model.Sexo.Sexo",,1,,0
+Public Method,"ufc.npi.prontuario.model.Sexo.getDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Sexo.valueOf",,1,,0
+Public Method,"ufc.npi.prontuario.model.Sexo.values",,1,,0
+Public Class,"ufc.npi.prontuario.model.TipoPatologia",1,17,7,2
+Public Method,"ufc.npi.prontuario.model.TipoPatologia.equals",,7,,2
+Public Method,"ufc.npi.prontuario.model.TipoPatologia.getCodigo",,1,,0
+Public Method,"ufc.npi.prontuario.model.TipoPatologia.getDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.TipoPatologia.getId",,1,,0
+Public Method,"ufc.npi.prontuario.model.TipoPatologia.getNome",,1,,0
+Public Method,"ufc.npi.prontuario.model.TipoPatologia.hashCode",,2,,0
+Public Method,"ufc.npi.prontuario.model.TipoPatologia.setCodigo",,1,,0
+Public Method,"ufc.npi.prontuario.model.TipoPatologia.setDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.TipoPatologia.setId",,1,,0
+Public Method,"ufc.npi.prontuario.model.TipoPatologia.setNome",,1,,0
+Public Class,"ufc.npi.prontuario.model.TipoProcedimento",1,17,7,2
+Public Method,"ufc.npi.prontuario.model.TipoProcedimento.equals",,7,,2
+Public Method,"ufc.npi.prontuario.model.TipoProcedimento.getCodigo",,1,,0
+Public Method,"ufc.npi.prontuario.model.TipoProcedimento.getDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.TipoProcedimento.getId",,1,,0
+Public Method,"ufc.npi.prontuario.model.TipoProcedimento.getNome",,1,,0
+Public Method,"ufc.npi.prontuario.model.TipoProcedimento.hashCode",,2,,0
+Public Method,"ufc.npi.prontuario.model.TipoProcedimento.setCodigo",,1,,0
+Public Method,"ufc.npi.prontuario.model.TipoProcedimento.setDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.TipoProcedimento.setId",,1,,0
+Public Method,"ufc.npi.prontuario.model.TipoProcedimento.setNome",,1,,0
+Public Class,"ufc.npi.prontuario.model.Token",2,13,7,2
+Public Method,"ufc.npi.prontuario.model.Token.equals",,7,,2
+Public Method,"ufc.npi.prontuario.model.Token.getToken",,1,,0
+Public Method,"ufc.npi.prontuario.model.Token.getUsuario",,1,,0
+Public Method,"ufc.npi.prontuario.model.Token.hashCode",,2,,0
+Public Method,"ufc.npi.prontuario.model.Token.setToken",,1,,0
+Public Method,"ufc.npi.prontuario.model.Token.setUsuario",,1,,0
+Public Class,"ufc.npi.prontuario.model.Tratamento",1,21,7,2
+Public Constructor,"ufc.npi.prontuario.model.Tratamento.Tratamento",,1,,0
+Public Constructor,"ufc.npi.prontuario.model.Tratamento.Tratamento",,1,,0
+Public Method,"ufc.npi.prontuario.model.Tratamento.equals",,7,,2
+Public Method,"ufc.npi.prontuario.model.Tratamento.getData",,1,,0
+Public Method,"ufc.npi.prontuario.model.Tratamento.getDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Tratamento.getId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Tratamento.getPatologia",,1,,0
+Public Method,"ufc.npi.prontuario.model.Tratamento.getResponsavel",,1,,0
+Public Method,"ufc.npi.prontuario.model.Tratamento.hashCode",,2,,0
+Public Method,"ufc.npi.prontuario.model.Tratamento.setData",,1,,0
+Public Method,"ufc.npi.prontuario.model.Tratamento.setDescricao",,1,,0
+Public Method,"ufc.npi.prontuario.model.Tratamento.setId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Tratamento.setPatologia",,1,,0
+Public Method,"ufc.npi.prontuario.model.Tratamento.setResponsavel",,1,,0
+Public Class,"ufc.npi.prontuario.model.Turma",1,30,7,2
+Public Constructor,"ufc.npi.prontuario.model.Turma.Turma",,1,,0
+Public Constructor,"ufc.npi.prontuario.model.Turma.Turma",,1,,0
+Public Method,"ufc.npi.prontuario.model.Turma.equals",,7,,2
+Public Method,"ufc.npi.prontuario.model.Turma.getAlunoTurmas",,1,,0
+Public Method,"ufc.npi.prontuario.model.Turma.getAno",,1,,0
+Public Method,"ufc.npi.prontuario.model.Turma.getAtendimentos",,1,,0
+Public Method,"ufc.npi.prontuario.model.Turma.getAtivo",,1,,0
+Public Method,"ufc.npi.prontuario.model.Turma.getDisciplina",,1,,0
+Public Method,"ufc.npi.prontuario.model.Turma.getId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Turma.getNome",,1,,0
+Public Method,"ufc.npi.prontuario.model.Turma.getProfessores",,1,,0
+Public Method,"ufc.npi.prontuario.model.Turma.getSemestre",,1,,0
+Public Method,"ufc.npi.prontuario.model.Turma.hashCode",,2,,0
+Public Method,"ufc.npi.prontuario.model.Turma.setAlunoTurmas",,1,,0
+Public Method,"ufc.npi.prontuario.model.Turma.setAno",,1,,0
+Public Method,"ufc.npi.prontuario.model.Turma.setAtendimentos",,1,,0
+Public Method,"ufc.npi.prontuario.model.Turma.setAtivo",,1,,0
+Public Method,"ufc.npi.prontuario.model.Turma.setDisciplina",,1,,0
+Public Method,"ufc.npi.prontuario.model.Turma.setId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Turma.setNome",,1,,0
+Public Method,"ufc.npi.prontuario.model.Turma.setProfessores",,1,,0
+Public Method,"ufc.npi.prontuario.model.Turma.setSemestre",,1,,0
+Public Method,"ufc.npi.prontuario.model.Turma.turmaExisteNoRepositorio",,1,,0
+Public Abstract Class,"ufc.npi.prontuario.model.Usuario",1,34,7,2
+Public Constructor,"ufc.npi.prontuario.model.Usuario.Usuario",,1,,0
+Public Constructor,"ufc.npi.prontuario.model.Usuario.Usuario",,1,,0
+Public Method,"ufc.npi.prontuario.model.Usuario.addPapel",,2,,1
+Public Method,"ufc.npi.prontuario.model.Usuario.encodePassword",,1,,0
+Public Method,"ufc.npi.prontuario.model.Usuario.equals",,7,,2
+Public Method,"ufc.npi.prontuario.model.Usuario.getAuthorities",,1,,0
+Public Method,"ufc.npi.prontuario.model.Usuario.getEmail",,1,,0
+Public Method,"ufc.npi.prontuario.model.Usuario.getId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Usuario.getMatricula",,1,,0
+Public Method,"ufc.npi.prontuario.model.Usuario.getNome",,1,,0
+Public Method,"ufc.npi.prontuario.model.Usuario.getPapeis",,1,,0
+Public Method,"ufc.npi.prontuario.model.Usuario.getPassword",,1,,0
+Public Method,"ufc.npi.prontuario.model.Usuario.getSenha",,1,,0
+Public Method,"ufc.npi.prontuario.model.Usuario.getUsername",,1,,0
+Public Method,"ufc.npi.prontuario.model.Usuario.hashCode",,2,,0
+Public Method,"ufc.npi.prontuario.model.Usuario.isAccountNonExpired",,1,,0
+Public Method,"ufc.npi.prontuario.model.Usuario.isAccountNonLocked",,1,,0
+Public Method,"ufc.npi.prontuario.model.Usuario.isAdmin",,1,,0
+Public Method,"ufc.npi.prontuario.model.Usuario.isCredentialsNonExpired",,1,,0
+Public Method,"ufc.npi.prontuario.model.Usuario.isEnabled",,1,,0
+Public Method,"ufc.npi.prontuario.model.Usuario.setEmail",,1,,0
+Public Method,"ufc.npi.prontuario.model.Usuario.setId",,1,,0
+Public Method,"ufc.npi.prontuario.model.Usuario.setMatricula",,1,,0
+Public Method,"ufc.npi.prontuario.model.Usuario.setNome",,1,,0
+Public Method,"ufc.npi.prontuario.model.Usuario.setPapeis",,1,,0
+Public Method,"ufc.npi.prontuario.model.Usuario.setSenha",,1,,0
+Package,"ufc.npi.prontuario.repository",0,0,0,0
+Public Interface,"ufc.npi.prontuario.repository.AlunoRepository",0,0,0,0
+Public Abstract Method,"ufc.npi.prontuario.repository.AlunoRepository.findAllByAlunoTurmasTurmaIdEqualsAndAlunoTurmasAtivoIsTrue",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.repository.AlunoRepository.findByEmail",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.repository.AlunoRepository.findByMatricula",,0,,0
+Public Interface,"ufc.npi.prontuario.repository.AlunoTurmaRepository",0,0,0,0
+Public Interface,"ufc.npi.prontuario.repository.AnamneseRepository",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.repository.AnamneseRepository.findAllByStatus",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.AnamneseRepository.findById",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.AnamneseRepository.findByNome",,0,,0
+Public Interface,"ufc.npi.prontuario.repository.AtendimentoRepository",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.repository.AtendimentoRepository.findAllByAvaliacao_avaliacao",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.AtendimentoRepository.findAllByPaciente",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.AtendimentoRepository.findAllByProfessor",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.AtendimentoRepository.findAllByProfessorAndPaciente",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.AtendimentoRepository.findAllByProfessorAndStatusNotIn",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.AtendimentoRepository.findAllByProfessorAndTurma",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.AtendimentoRepository.findAllByResponsavelAndPacienteOrAjudanteAndPaciente",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.AtendimentoRepository.findAllByResponsavelAndTurmaOrAjudanteAndTurma",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.AtendimentoRepository.findAllByResponsavelOrAjudanteExist",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.AtendimentoRepository.findAllByResponsavelOrAjudanteExist",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.AtendimentoRepository.findAllByResponsavelOrAjudanteOrderByDataDesc",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.AtendimentoRepository.findAllByStatus",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.AtendimentoRepository.findAllByStatusAndPaciente",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.AtendimentoRepository.findAllByStatusAndPacienteAndIdIsNotIn",,0,,0
+Public Interface,"ufc.npi.prontuario.repository.AvaliacaoAtendimentoRepository",0,0,0,0
+Public Interface,"ufc.npi.prontuario.repository.AvaliacaoRepository",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.repository.AvaliacaoRepository.findAllByOrderByAtivaDesc",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.AvaliacaoRepository.findAvaliacaoAtiva",,0,,0
+Public Interface,"ufc.npi.prontuario.repository.DisciplinaRepository",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.repository.DisciplinaRepository.findAllByOrderByNome",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.DisciplinaRepository.findByCodigo",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.DisciplinaRepository.findByNome",,0,,0
+Public Interface,"ufc.npi.prontuario.repository.DocumentoRepository",0,0,0,0
+Public Interface,"ufc.npi.prontuario.repository.ItemAvaliacaoAtendimentoRepository",0,0,0,0
+Public Interface,"ufc.npi.prontuario.repository.ItemAvaliacaoRepository",0,0,0,0
+Public Interface,"ufc.npi.prontuario.repository.OdontogramaRepository",0,0,0,0
+Public Abstract Method,"ufc.npi.prontuario.repository.OdontogramaRepository.findByPaciente_id",,0,,0
+Public Interface,"ufc.npi.prontuario.repository.PacienteAnamneseRepository",0,0,0,0
+Public Interface,"ufc.npi.prontuario.repository.PacienteRepository",0,0,0,0
+Public Abstract Method,"ufc.npi.prontuario.repository.PacienteRepository.findByCns",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.repository.PacienteRepository.findByCpf",,0,,0
+Public Interface,"ufc.npi.prontuario.repository.PatologiaRepository",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.repository.PatologiaRepository.findAllByOdontograma",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.PatologiaRepository.findAllByOdontogramaAndAtendimentoProfessor",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.PatologiaRepository.findAllByOdontogramaAndAtendimentoResponsavelOrOdontogramaAndAtendimentoAjudante",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.PatologiaRepository.findAllByOdontogramaAndAtendimentoStatus",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.PatologiaRepository.findAllByOdontogramaAndIdIsNotInAndAtendimentoStatus",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.PatologiaRepository.findByOdontogramaAndTratamentoIsNotNull",,0,,0
+Public Interface,"ufc.npi.prontuario.repository.PerguntaRepository",0,0,0,0
+Public Interface,"ufc.npi.prontuario.repository.PlanoTratamentoRepository",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.repository.PlanoTratamentoRepository.countByPacienteAndClinicaAndStatusIn",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.PlanoTratamentoRepository.findAllByPaciente",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.PlanoTratamentoRepository.findByClinica",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.PlanoTratamentoRepository.findByClinicaAndStatus",,0,,0
+Public Interface,"ufc.npi.prontuario.repository.ProcedimentoRepository",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.repository.ProcedimentoRepository.findAllByOdontogramaAndAtendimentoProfessorAndPreExistenteIsFalse",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.ProcedimentoRepository.findAllByOdontogramaAndAtendimentoProfessorAndPreExistenteIsTrue",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.ProcedimentoRepository.findAllByOdontogramaAndAtendimentoResponsavelAndPreExistenteIsFalseOrOdontogramaAndAtendimentoAjudanteAndPreExistenteIsFalse",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.ProcedimentoRepository.findAllByOdontogramaAndAtendimentoResponsavelAndPreExistenteIsTrueOrOdontogramaAndAtendimentoAjudanteAndPreExistenteIsTrue",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.ProcedimentoRepository.findAllByOdontogramaAndAtendimentoStatusAndPreExistenteIsFalse",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.ProcedimentoRepository.findAllByOdontogramaAndAtendimentoStatusAndPreExistenteIsTrue",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.ProcedimentoRepository.findAllByOdontogramaAndIdIsNotInAndAtendimentoStatusAndPreExistenteIsFalse",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.ProcedimentoRepository.findAllByOdontogramaAndIdIsNotInAndAtendimentoStatusAndPreExistenteIsTrue",,0,,0
+Public Interface,"ufc.npi.prontuario.repository.ServidorRepository",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.repository.ServidorRepository.findAllByOrderByNome",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.ServidorRepository.findByPapeisIn",,0,,0
+Public Interface,"ufc.npi.prontuario.repository.TipoPatologiaRepository",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.repository.TipoPatologiaRepository.findAll",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.TipoPatologiaRepository.findByCodigo",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.TipoPatologiaRepository.findByNome",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.TipoPatologiaRepository.findByNomeContainingIgnoreCase",,0,,0
+Public Interface,"ufc.npi.prontuario.repository.TipoProcedimentoRepository",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.repository.TipoProcedimentoRepository.findAll",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.TipoProcedimentoRepository.findByNome",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.TipoProcedimentoRepository.findByNomeContainingIgnoreCase",,0,,0
+Public Interface,"ufc.npi.prontuario.repository.TokenRepository",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.repository.TokenRepository.findByUsuario",,0,,0
+Public Interface,"ufc.npi.prontuario.repository.TurmaRepository",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.repository.TurmaRepository.findAllByProfessores",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.TurmaRepository.findByAlunoTurmasAlunoAndAtivoIsTrueOrderByNome",,0,,0
+Abstract Method,"ufc.npi.prontuario.repository.TurmaRepository.findByNomeAndAnoAndSemestreAndDisciplina",,0,,0
+Public Interface,"ufc.npi.prontuario.repository.UsuarioRepository",0,0,0,0
+Public Abstract Method,"ufc.npi.prontuario.repository.UsuarioRepository.findAllByEmail",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.repository.UsuarioRepository.findAllByMatricula",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.repository.UsuarioRepository.findByEmail",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.repository.UsuarioRepository.findByEmailOrMatricula",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.repository.UsuarioRepository.findByIdNotInAndPapeisOrderByNome",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.repository.UsuarioRepository.findByMatricula",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.repository.UsuarioRepository.findByPapeisOrderByNome",,0,,0
+Package,"ufc.npi.prontuario.service",1,87,1,1
+Public Abstract Class,"ufc.npi.prontuario.service.AbstractServiceTest",0,0,0,0
+Public Interface,"ufc.npi.prontuario.service.AlunoService",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.service.AlunoService.atualizar",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.AlunoService.buscarAjudantes",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.AlunoService.buscarPorId",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.AlunoService.buscarPorMatricula",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.AlunoService.buscarTudo",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.AlunoService.removerAluno",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.AlunoService.salvar",,0,,0
+Public Class,"ufc.npi.prontuario.service.AlunoServiceTest",1,8,1,1
+Public Method,"ufc.npi.prontuario.service.AlunoServiceTest.testBuscarAjudantes",,1,,0
+Public Method,"ufc.npi.prontuario.service.AlunoServiceTest.testBuscarPorId",,1,,0
+Public Method,"ufc.npi.prontuario.service.AlunoServiceTest.testBuscarPorMatricula",,1,,0
+Public Method,"ufc.npi.prontuario.service.AlunoServiceTest.testBuscarTudo",,1,,0
+Public Method,"ufc.npi.prontuario.service.AlunoServiceTest.testSalvar",,4,,1
+Public Interface,"ufc.npi.prontuario.service.AnamneseService",0,0,0,0
+Public Abstract Method,"ufc.npi.prontuario.service.AnamneseService.alterarOrdemAnamnese",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.service.AnamneseService.buscarPorId",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.service.AnamneseService.buscarTodasFinalizadas",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.service.AnamneseService.buscarTudo",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.service.AnamneseService.excluirPergunta",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.service.AnamneseService.finalizar",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.service.AnamneseService.remover",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.service.AnamneseService.salvar",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.service.AnamneseService.salvarPergunta",,0,,0
+Public Class,"ufc.npi.prontuario.service.AnamneseServiceTest",1,7,1,1
+Public Method,"ufc.npi.prontuario.service.AnamneseServiceTest.testBuscarPorId",,1,,0
+Public Method,"ufc.npi.prontuario.service.AnamneseServiceTest.testBuscarTodasFinalizadas",,1,,0
+Public Method,"ufc.npi.prontuario.service.AnamneseServiceTest.testBuscarTudo",,1,,0
+Public Method,"ufc.npi.prontuario.service.AnamneseServiceTest.testExcluirPergunta",,1,,0
+Public Method,"ufc.npi.prontuario.service.AnamneseServiceTest.testSalvar",,2,,1
+Public Method,"ufc.npi.prontuario.service.AnamneseServiceTest.testSalvarPergunta",,1,,0
+Public Interface,"ufc.npi.prontuario.service.AtendimentoService",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.service.AtendimentoService.adicionarAvaliacaoAtendimento",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.AtendimentoService.adicionarItemAvaliacaoAtendimento",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.AtendimentoService.adicionarObservacao",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.AtendimentoService.atualizar",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.AtendimentoService.buscarAtendimentoPorPaciente",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.AtendimentoService.buscarAtendimentosNaoFinalizadosPorProfessor",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.AtendimentoService.buscarAtendimentosPorUsuario",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.AtendimentoService.buscarPorId",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.AtendimentoService.buscarTudoPorAluno",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.AtendimentoService.existeAtendimentoAbertoAlunoPaciente",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.AtendimentoService.finalizarAtendimento",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.AtendimentoService.reavaliarItem",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.AtendimentoService.remover",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.AtendimentoService.salvar",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.AtendimentoService.ultimoAtendimentoAbertoAlunoPaciente",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.AtendimentoService.validarAtendimento",,0,,0
+Public Class,"ufc.npi.prontuario.service.AtendimentoServiceTest",1,9,1,1
+Public Method,"ufc.npi.prontuario.service.AtendimentoServiceTest.buscarTudoPorAluno",,1,,0
+Public Method,"ufc.npi.prontuario.service.AtendimentoServiceTest.salvarFluxoDeErro",,2,,1
+Public Method,"ufc.npi.prontuario.service.AtendimentoServiceTest.salvarFluxoNormalPacienteDiferente",,2,,1
+Public Method,"ufc.npi.prontuario.service.AtendimentoServiceTest.salvarFluxoNormalResponsavelDiferente",,2,,1
+Public Method,"ufc.npi.prontuario.service.AtendimentoServiceTest.salvarFluxoNormalTurmaDiferente",,2,,1
+Public Interface,"ufc.npi.prontuario.service.AvaliacaoService",0,0,0,0
+Public Abstract Method,"ufc.npi.prontuario.service.AvaliacaoService.addItem",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.service.AvaliacaoService.ativarDesativar",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.service.AvaliacaoService.deleteAvaliacao",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.service.AvaliacaoService.deleteItem",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.service.AvaliacaoService.finalizar",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.AvaliacaoService.getAvaliacaoAtiva",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.service.AvaliacaoService.getTodasAvaliacoes",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.service.AvaliacaoService.salvar",,0,,0
+Public Interface,"ufc.npi.prontuario.service.DisciplinaService",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.service.DisciplinaService.atualizar",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.DisciplinaService.buscarPorId",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.DisciplinaService.buscarTudo",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.DisciplinaService.removerDisciplina",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.DisciplinaService.salvar",,0,,0
+Public Class,"ufc.npi.prontuario.service.DisciplinaServiceTest",2,6,1,1
+Public Method,"ufc.npi.prontuario.service.DisciplinaServiceTest.testBuscarPorId",,1,,0
+Public Method,"ufc.npi.prontuario.service.DisciplinaServiceTest.testFindAll",,1,,0
+Public Method,"ufc.npi.prontuario.service.DisciplinaServiceTest.testSalvar",,4,,1
+Public Interface,"ufc.npi.prontuario.service.DocumentoService",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.service.DocumentoService.buscarArquivo",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.DocumentoService.deletar",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.DocumentoService.downloadDocumento",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.DocumentoService.salvar",,0,,0
+Public Interface,"ufc.npi.prontuario.service.EmailService",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.service.EmailService.emailRecuperacaoSenha",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.EmailService.notificarAtendimentoAndamento",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.EmailService.notificarAtendimentoAvaliacao",,0,,0
+Public Interface,"ufc.npi.prontuario.service.OdontogramaService",0,0,0,0
+Public Abstract Method,"ufc.npi.prontuario.service.OdontogramaService.buscarPorId",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.service.OdontogramaService.buscarPorPacienteId",,0,,0
+Public Class,"ufc.npi.prontuario.service.OdontogramaServiceTest",1,1,1,0
+Public Method,"ufc.npi.prontuario.service.OdontogramaServiceTest.buscarPorPacienteId",,1,,0
+Public Interface,"ufc.npi.prontuario.service.PacienteFormularioService",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.service.PacienteFormularioService.formularioCadastro",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.PacienteFormularioService.formularioEdicao",,0,,0
+Public Interface,"ufc.npi.prontuario.service.PacienteService",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.service.PacienteService.adicionarAnamnese",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.PacienteService.buscarByCns",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.PacienteService.buscarByCpf",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.PacienteService.buscarTudo",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.PacienteService.salvar",,0,,0
+Public Class,"ufc.npi.prontuario.service.PacienteServiceTest",1,6,1,1
+Public Method,"ufc.npi.prontuario.service.PacienteServiceTest.testAdicionarAnamnese",,1,,0
+Public Method,"ufc.npi.prontuario.service.PacienteServiceTest.testBuscarByCpf",,1,,0
+Public Method,"ufc.npi.prontuario.service.PacienteServiceTest.testFindAll",,1,,0
+Public Method,"ufc.npi.prontuario.service.PacienteServiceTest.testSalvar",,3,,1
+Public Interface,"ufc.npi.prontuario.service.PatologiaService",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.service.PatologiaService.buscarPatologiasDentePaciente",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.PatologiaService.buscarPatologiasOdontograma",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.PatologiaService.buscarPatologiasTratadas",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.PatologiaService.deletar",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.service.PatologiaService.salvar",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.PatologiaService.tratar",,0,,0
+Public Class,"ufc.npi.prontuario.service.PatologiaServiceTest",1,4,1,0
+Public Method,"ufc.npi.prontuario.service.PatologiaServiceTest.testBuscarPatologiasEmTratamento",,1,,0
+Public Method,"ufc.npi.prontuario.service.PatologiaServiceTest.testBuscarPatologiasTratadas",,1,,0
+Public Method,"ufc.npi.prontuario.service.PatologiaServiceTest.testSalvar",,1,,0
+Public Method,"ufc.npi.prontuario.service.PatologiaServiceTest.testTratar",,1,,0
+Public Interface,"ufc.npi.prontuario.service.PlanoTratamentoService",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.service.PlanoTratamentoService.buscarPlanoTratamentoPorClinicaEStatus",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.PlanoTratamentoService.buscarPlanoTratamentoPorPaciente",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.PlanoTratamentoService.editar",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.PlanoTratamentoService.excluirPlanoTratamento",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.PlanoTratamentoService.finalizar",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.PlanoTratamentoService.salvar",,0,,0
+Public Interface,"ufc.npi.prontuario.service.ProcedimentoService",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.service.ProcedimentoService.buscarProcedimentosExistentesOdontograma",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.ProcedimentoService.buscarProcedimentosOdontograma",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.ProcedimentoService.deletar",,0,,0
+Public Abstract Method,"ufc.npi.prontuario.service.ProcedimentoService.salvar",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.ProcedimentoService.tabelaProcedimentosOdontograma",,0,,0
+Public Class,"ufc.npi.prontuario.service.ProcedimentoServiceTest",1,1,1,0
+Public Method,"ufc.npi.prontuario.service.ProcedimentoServiceTest.testSalvar",,1,,0
+Public Interface,"ufc.npi.prontuario.service.ServidorService",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.service.ServidorService.atualizar",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.ServidorService.buscarPorId",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.ServidorService.buscarProfessores",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.ServidorService.removerServidor",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.ServidorService.salvar",,0,,0
+Public Class,"ufc.npi.prontuario.service.ServidorServiceTest",2,6,1,1
+Public Method,"ufc.npi.prontuario.service.ServidorServiceTest.testBuscarPorId",,1,,0
+Public Method,"ufc.npi.prontuario.service.ServidorServiceTest.testBuscarTudo",,1,,0
+Public Method,"ufc.npi.prontuario.service.ServidorServiceTest.testSalvar",,4,,1
+Public Interface,"ufc.npi.prontuario.service.TipoPatologiaService",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.service.TipoPatologiaService.atualizar",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TipoPatologiaService.buscarPorId",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TipoPatologiaService.buscarPorIds",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TipoPatologiaService.buscarPorNome",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TipoPatologiaService.buscarTudo",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TipoPatologiaService.remover",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TipoPatologiaService.salvar",,0,,0
+Public Class,"ufc.npi.prontuario.service.TipoPatologiaServiceTest",1,4,1,1
+Public Method,"ufc.npi.prontuario.service.TipoPatologiaServiceTest.testBuscarById",,1,,0
+Public Method,"ufc.npi.prontuario.service.TipoPatologiaServiceTest.testFindAll",,1,,0
+Public Method,"ufc.npi.prontuario.service.TipoPatologiaServiceTest.testSalvar",,2,,1
+Public Interface,"ufc.npi.prontuario.service.TipoProcedimentoService",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.service.TipoProcedimentoService.atualizar",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TipoProcedimentoService.buscarPorId",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TipoProcedimentoService.buscarPorNome",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TipoProcedimentoService.buscarTudo",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TipoProcedimentoService.remover",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TipoProcedimentoService.salvar",,0,,0
+Public Class,"ufc.npi.prontuario.service.TipoProcedimentoServiceTest",1,4,1,1
+Public Method,"ufc.npi.prontuario.service.TipoProcedimentoServiceTest.testBuscarById",,1,,0
+Public Method,"ufc.npi.prontuario.service.TipoProcedimentoServiceTest.testFindAll",,1,,0
+Public Method,"ufc.npi.prontuario.service.TipoProcedimentoServiceTest.testSalvar",,2,,1
+Public Interface,"ufc.npi.prontuario.service.TokenService",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.service.TokenService.buscar",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TokenService.buscarPorUsuario",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TokenService.deletar",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TokenService.enviarTokenDeRecuperacao",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TokenService.existe",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TokenService.salvar",,0,,0
+Public Class,"ufc.npi.prontuario.service.TokenServiceTest",1,5,1,0
+Public Method,"ufc.npi.prontuario.service.TokenServiceTest.buscar",,1,,0
+Public Method,"ufc.npi.prontuario.service.TokenServiceTest.buscarPorUsuario",,1,,0
+Public Method,"ufc.npi.prontuario.service.TokenServiceTest.deletar",,1,,0
+Public Method,"ufc.npi.prontuario.service.TokenServiceTest.existe",,1,,0
+Public Method,"ufc.npi.prontuario.service.TokenServiceTest.salvar",,1,,0
+Public Interface,"ufc.npi.prontuario.service.TurmaService",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.service.TurmaService.adicionarProfessorTurma",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TurmaService.alterarStatus",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TurmaService.buscarAtivasPorAluno",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TurmaService.buscarPorId",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TurmaService.buscarProfessores",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TurmaService.buscarTudo",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TurmaService.buscarTurmas",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TurmaService.buscarTurmasProfessor",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TurmaService.inscreverAluno",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TurmaService.removerInscricao",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TurmaService.removerProfessor",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TurmaService.removerTurma",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.TurmaService.salvar",,0,,0
+Public Class,"ufc.npi.prontuario.service.TurmaServiceTest",1,18,1,1
+Public Method,"ufc.npi.prontuario.service.TurmaServiceTest.iniciarVariaveis",,1,,0
+Private Method,"ufc.npi.prontuario.service.TurmaServiceTest.salvar",,2,,1
+Public Method,"ufc.npi.prontuario.service.TurmaServiceTest.testAdicionarProfessorTurma",,1,,0
+Public Method,"ufc.npi.prontuario.service.TurmaServiceTest.testAlterarStatus",,1,,0
+Public Method,"ufc.npi.prontuario.service.TurmaServiceTest.testBuscarAtivasPorAluno",,1,,0
+Public Method,"ufc.npi.prontuario.service.TurmaServiceTest.testBuscarPorId",,1,,0
+Public Method,"ufc.npi.prontuario.service.TurmaServiceTest.testBuscarProfessores",,1,,0
+Public Method,"ufc.npi.prontuario.service.TurmaServiceTest.testBuscarTudo",,1,,0
+Public Method,"ufc.npi.prontuario.service.TurmaServiceTest.testInscreverAluno",,4,,1
+Public Method,"ufc.npi.prontuario.service.TurmaServiceTest.testRemoverInscricao",,3,,1
+Public Method,"ufc.npi.prontuario.service.TurmaServiceTest.testSalvar",,1,,0
+Public Method,"ufc.npi.prontuario.service.TurmaServiceTest.testbuscarTurmasProfessor",,1,,0
+Public Interface,"ufc.npi.prontuario.service.UsuarioService",0,0,0,0
+Abstract Method,"ufc.npi.prontuario.service.UsuarioService.alterarDados",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.UsuarioService.alterarSenha",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.UsuarioService.buscarPorEmail",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.UsuarioService.novaSenha",,0,,0
+Abstract Method,"ufc.npi.prontuario.service.UsuarioService.recuperarSenha",,0,,0
+Public Class,"ufc.npi.prontuario.service.UsuarioServiceTest",1,8,1,1
+Public Method,"ufc.npi.prontuario.service.UsuarioServiceTest.alterarSenha",,3,,1
+Public Method,"ufc.npi.prontuario.service.UsuarioServiceTest.buscarPorEmail",,1,,0
+Public Method,"ufc.npi.prontuario.service.UsuarioServiceTest.novaSenha",,1,,0
+Public Method,"ufc.npi.prontuario.service.UsuarioServiceTest.recuperarSenhaUsuarioComSolicitacaoAtiva",,1,,0
+Public Method,"ufc.npi.prontuario.service.UsuarioServiceTest.recuperarSenhaUsuarioInvalido",,1,,0
+Public Method,"ufc.npi.prontuario.service.UsuarioServiceTest.recuperarSenhaUsuarioSemSolicitacaoAtiva",,1,,0
+Package,"ufc.npi.prontuario.service.impl",1,372,4,5
+Public Class,"ufc.npi.prontuario.service.impl.AlunoServiceImpl",1,18,1,1
+Public Method,"ufc.npi.prontuario.service.impl.AlunoServiceImpl.alunoExiste",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AlunoServiceImpl.atualizar",,3,,1
+Public Method,"ufc.npi.prontuario.service.impl.AlunoServiceImpl.buscarAjudantes",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.AlunoServiceImpl.buscarPorId",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AlunoServiceImpl.buscarPorMatricula",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AlunoServiceImpl.buscarTudo",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AlunoServiceImpl.getSenhaAluno",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AlunoServiceImpl.removerAluno",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.AlunoServiceImpl.salvar",,3,,1
+Public Method,"ufc.npi.prontuario.service.impl.AlunoServiceImpl.verificarAluno",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AlunoServiceImpl.verificarIngressoAluno",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AlunoServiceImpl.verificarMatriculaAluno",,1,,0
+Public Class,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl",1,36,1,2
+Private Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.addPerguntaEmAnamnese",,2,,1
+Private Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.adicionarPerguntaEmAnamneseESalvar",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.alterarOrdemAnamnese",,3,,2
+Private Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.alterarOrdemPergunta",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.anamneseEmAndamento",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.anamneseNaoFinalizada",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.buscarPorId",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.buscarTodasFinalizadas",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.buscarTudo",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.excluirPergunta",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.finalizar",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.ordemDaPergunta",,2,,0
+Private Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.pegarIndexPergunta",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.remover",,2,,1
+Private Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.removerPerguntaDaAnamnese",,2,,1
+Private Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.removerPerguntaDaLista",,3,,2
+Private Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.reodenarPerguntasAsc",,2,,1
+Private Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.reodenarPerguntasDesc",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.salvar",,3,,1
+Public Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.salvarPergunta",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.setOrdemPergunta",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.setPerguntaAnamnese",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.AnamneseServiceImpl.validarAnamnese",,1,,0
+Public Class,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl",1,41,1,2
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.addDataAvaliacao",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.addItemAvaliacao",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.adicionarAvaliacaoAtendimento",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.adicionarItemAvaliacaoAtendimento",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.adicionarObservacao",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.atualizar",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.buscarAtendimentoPorPaciente",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.buscarAtendimentosNaoFinalizadosPorProfessor",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.buscarAtendimentosPorUsuario",,6,,2
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.buscarPorId",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.buscarResponsavelOrAjustante",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.buscarTudoPorAluno",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.existeAtendimentoAbertoAlunoPaciente",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.finalizarAtendimento",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.getAvaliacaoAtendimento",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.getFindOneAtendimentoRepos",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.getFindOneAvaliacaoRepository",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.getFindOneItemAvaliacaoRepository",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.inserirData",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.inserirObservacao",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.reavaliarItem",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.remover",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.retornaAjudante",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.retornaAluno",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.retornaPaciente",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.salvar",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.ultimoAtendimentoAbertoAlunoPaciente",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.validarAtendimento",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.verificarAvaliacaoAtendimento",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AtendimentoServiceImpl.verificarObservacao",,1,,0
+Public Class,"ufc.npi.prontuario.service.impl.AvaliacaoServiceImpl",1,13,1,2
+Public Method,"ufc.npi.prontuario.service.impl.AvaliacaoServiceImpl.addItem",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.AvaliacaoServiceImpl.ativarDesativar",,3,,2
+Public Method,"ufc.npi.prontuario.service.impl.AvaliacaoServiceImpl.deleteAvaliacao",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.AvaliacaoServiceImpl.deleteItem",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AvaliacaoServiceImpl.finalizar",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AvaliacaoServiceImpl.getAvaliacaoAtiva",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AvaliacaoServiceImpl.getTodasAvaliacoes",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.AvaliacaoServiceImpl.itemAvaliacaoIsValid",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.AvaliacaoServiceImpl.salvar",,1,,0
+Public Class,"ufc.npi.prontuario.service.impl.DisciplinaServiceImpl",1,13,1,1
+Public Method,"ufc.npi.prontuario.service.impl.DisciplinaServiceImpl.atualizar",,4,,1
+Public Method,"ufc.npi.prontuario.service.impl.DisciplinaServiceImpl.buscarPorId",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.DisciplinaServiceImpl.buscarTudo",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.DisciplinaServiceImpl.removerDisciplina",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.DisciplinaServiceImpl.salvar",,3,,1
+Public Method,"ufc.npi.prontuario.service.impl.DisciplinaServiceImpl.verificarDiciplinaNomeECod",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.DisciplinaServiceImpl.verificarDisciplinaRepoFindNomeECodigo",,1,,0
+Public Class,"ufc.npi.prontuario.service.impl.DocumentoServiceImpl",1,25,1,5
+Public Method,"ufc.npi.prontuario.service.impl.DocumentoServiceImpl.buscarArquivo",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.DocumentoServiceImpl.compararDoc",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.DocumentoServiceImpl.criarArquivo",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.DocumentoServiceImpl.deletar",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.DocumentoServiceImpl.documentoPDF",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.DocumentoServiceImpl.downloadDocumento",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.DocumentoServiceImpl.getCaminhoFile",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.DocumentoServiceImpl.getDocumentoDescricao",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.DocumentoServiceImpl.getExtensaoDocumento",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.DocumentoServiceImpl.getOriginalFilename",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.DocumentoServiceImpl.returnBytesDoc",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.DocumentoServiceImpl.returnExtensaoUpperCase",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.DocumentoServiceImpl.returnLastIndexNomeDoc",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.DocumentoServiceImpl.returnSubstringNomeDoc",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.DocumentoServiceImpl.salvar",,6,,5
+Private Method,"ufc.npi.prontuario.service.impl.DocumentoServiceImpl.salvarArquivoLocal",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.DocumentoServiceImpl.verificarFile",,1,,0
+Public Class,"ufc.npi.prontuario.service.impl.EmailServiceImpl",1,19,4,3
+Private Method,"ufc.npi.prontuario.service.impl.EmailServiceImpl.configurarMensagem",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.EmailServiceImpl.construirEmails",,3,,2
+Private Method,"ufc.npi.prontuario.service.impl.EmailServiceImpl.criarMensagemAtendimento",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.EmailServiceImpl.emailRecuperacaoSenha",,1,,0
+Class,"ufc.npi.prontuario.service.impl.EmailServiceImpl.emailRecuperacaoSenha.(Anon_1)",2,2,1,1
+Public Method,"ufc.npi.prontuario.service.impl.EmailServiceImpl.emailRecuperacaoSenha.(Anon_1).run",,2,,1
+Private Method,"ufc.npi.prontuario.service.impl.EmailServiceImpl.enviarEmail",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.EmailServiceImpl.enviarEmails",,2,,1
+Private Method,"ufc.npi.prontuario.service.impl.EmailServiceImpl.formatDate",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.EmailServiceImpl.gerarTextoMensagem",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.EmailServiceImpl.notificarAtendimentoAndamento",,4,,3
+Public Method,"ufc.npi.prontuario.service.impl.EmailServiceImpl.notificarAtendimentoAvaliacao",,4,,3
+Public Class,"ufc.npi.prontuario.service.impl.OdontogramaServiceImpl",1,2,1,0
+Public Method,"ufc.npi.prontuario.service.impl.OdontogramaServiceImpl.buscarPorId",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.OdontogramaServiceImpl.buscarPorPacienteId",,1,,0
+Public Class,"ufc.npi.prontuario.service.impl.PacienteFormularioService",1,3,1,0
+Private Method,"ufc.npi.prontuario.service.impl.PacienteFormularioService.addCampos",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.PacienteFormularioService.formularioCadastro",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.PacienteFormularioService.formularioEdicao",,1,,0
+Public Class,"ufc.npi.prontuario.service.impl.PacienteServiceImpl",1,24,1,2
+Public Method,"ufc.npi.prontuario.service.impl.PacienteServiceImpl.adicionarAnamnese",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.PacienteServiceImpl.buscarByCns",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.PacienteServiceImpl.buscarByCpf",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.PacienteServiceImpl.buscarTudo",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.PacienteServiceImpl.criarOdontogramaEmPaciente",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.PacienteServiceImpl.inicializarOdontogramaPaciente",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.PacienteServiceImpl.pacienteCnsNull",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.PacienteServiceImpl.pacienteCpfVazio",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.PacienteServiceImpl.pacienteIdNull",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.PacienteServiceImpl.salvar",,4,,1
+Private Method,"ufc.npi.prontuario.service.impl.PacienteServiceImpl.verificarCnsDuplicado",,3,,2
+Private Method,"ufc.npi.prontuario.service.impl.PacienteServiceImpl.verificarCpfDuplicado",,3,,2
+Private Method,"ufc.npi.prontuario.service.impl.PacienteServiceImpl.verificarSePacienteTemCNS",,2,,1
+Private Method,"ufc.npi.prontuario.service.impl.PacienteServiceImpl.verificarSePacienteTemCPF",,2,,1
+Public Class,"ufc.npi.prontuario.service.impl.PatologiaServiceImpl",2,27,1,2
+Private Method,"ufc.npi.prontuario.service.impl.PatologiaServiceImpl.atendimentoEValidoOuPertenceAoAluno",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.PatologiaServiceImpl.buscarPatologiasDentePaciente",,3,,2
+Public Method,"ufc.npi.prontuario.service.impl.PatologiaServiceImpl.buscarPatologiasOdontograma",,6,,2
+Public Method,"ufc.npi.prontuario.service.impl.PatologiaServiceImpl.buscarPatologiasTratadas",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.PatologiaServiceImpl.deletar",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.PatologiaServiceImpl.obterDentePorString",,3,,1
+Private Method,"ufc.npi.prontuario.service.impl.PatologiaServiceImpl.obterFaceDentePorString",,2,,1
+Private Method,"ufc.npi.prontuario.service.impl.PatologiaServiceImpl.patologiaEValida",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.PatologiaServiceImpl.salvar",,4,,1
+Private Method,"ufc.npi.prontuario.service.impl.PatologiaServiceImpl.salvarPatologias",,2,,1
+Private Method,"ufc.npi.prontuario.service.impl.PatologiaServiceImpl.setarTiposPatologias",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.PatologiaServiceImpl.tratar",,1,,0
+Public Class,"ufc.npi.prontuario.service.impl.PlanoTratamentoServiceImpl",1,20,1,1
+Public Method,"ufc.npi.prontuario.service.impl.PlanoTratamentoServiceImpl.buscarPlanoTratamentoPorClinicaEStatus",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.PlanoTratamentoServiceImpl.buscarPlanoTratamentoPorPaciente",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.PlanoTratamentoServiceImpl.configurarStatus",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.PlanoTratamentoServiceImpl.editar",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.PlanoTratamentoServiceImpl.equalStatus",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.PlanoTratamentoServiceImpl.excluirPlanoTratamento",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.PlanoTratamentoServiceImpl.finalizar",,2,,1
+Private Method,"ufc.npi.prontuario.service.impl.PlanoTratamentoServiceImpl.pacienteNaoTemTratamento",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.PlanoTratamentoServiceImpl.pegarClinica",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.PlanoTratamentoServiceImpl.pegarPaciente",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.PlanoTratamentoServiceImpl.planoEmEspera",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.PlanoTratamentoServiceImpl.planoTratamentoConcluidoInterrompido",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.PlanoTratamentoServiceImpl.salvar",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.PlanoTratamentoServiceImpl.tratamentoConcluido",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.PlanoTratamentoServiceImpl.tratamentoInterrompido",,1,,0
+Public Class,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl",1,36,1,2
+Private Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.buscarAtendimentos",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.buscarProcedimentosExistentesOdontograma",,2,,0
+Lambda Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.buscarProcedimentosExistentesOdontograma.(lambda_expr_1)",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.buscarProcedimentosOdontograma",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.configurarProcedimentos",,3,,1
+Public Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.deletar",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.findProcedimentosByAluno",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.findProcedimentosByAtendimento",,2,,1
+Private Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.findProcedimentosByAtendimentoExistente",,2,,1
+Private Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.findProcedimentosByServidor",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.findProcedimentosByUsuario",,2,,1
+Private Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.findProcedimentosExistenteByAluno",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.findProcedimentosExistenteByServidor",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.findProcedimentosExistenteByUsuario",,2,,1
+Private Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.findProcedimentosNaoValidados",,2,,1
+Private Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.findProcedimentosValidados",,2,,1
+Private Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.getListTipoProcedimento",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.salvar",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.salvarPatologias",,3,,2
+Private Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.salvarProcedimentos",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.tabelaProcedimentosOdontograma",,2,,0
+Lambda Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.tabelaProcedimentosOdontograma.(lambda_expr_1)",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.ProcedimentoServiceImpl.verificarSeAtendimentoEstaAberto",,2,,1
+Public Class,"ufc.npi.prontuario.service.impl.ServidorServiceImpl",2,17,1,1
+Public Method,"ufc.npi.prontuario.service.impl.ServidorServiceImpl.atualizar",,6,,1
+Public Method,"ufc.npi.prontuario.service.impl.ServidorServiceImpl.buscarPorId",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.ServidorServiceImpl.buscarProfessores",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.ServidorServiceImpl.removerServidor",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.ServidorServiceImpl.salvar",,4,,1
+Private Method,"ufc.npi.prontuario.service.impl.ServidorServiceImpl.verificarEmailMatricula",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.ServidorServiceImpl.verificarServidorTemPapeis",,1,,0
+Private Method,"ufc.npi.prontuario.service.impl.ServidorServiceImpl.verificarValidadeDoServidor",,1,,0
+Public Class,"ufc.npi.prontuario.service.impl.TipoPatologiaServiceImpl",1,16,1,1
+Public Method,"ufc.npi.prontuario.service.impl.TipoPatologiaServiceImpl.atualizar",,3,,1
+Public Method,"ufc.npi.prontuario.service.impl.TipoPatologiaServiceImpl.buscarPorId",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TipoPatologiaServiceImpl.buscarPorIds",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.TipoPatologiaServiceImpl.buscarPorNome",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TipoPatologiaServiceImpl.buscarPorNomeTipoPatologia",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TipoPatologiaServiceImpl.buscarTudo",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TipoPatologiaServiceImpl.remover",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TipoPatologiaServiceImpl.salvar",,3,,1
+Public Method,"ufc.npi.prontuario.service.impl.TipoPatologiaServiceImpl.verificarTipoPatologia",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TipoPatologiaServiceImpl.verificarTipoPatologiaExistente",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TipoPatologiaServiceImpl.verificarTipoPatologiaNomeEDescricao",,1,,0
+Public Class,"ufc.npi.prontuario.service.impl.TipoProcedimentoServiceImpl",1,14,1,1
+Public Method,"ufc.npi.prontuario.service.impl.TipoProcedimentoServiceImpl.atualizar",,3,,1
+Public Method,"ufc.npi.prontuario.service.impl.TipoProcedimentoServiceImpl.buscarPorId",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TipoProcedimentoServiceImpl.buscarPorNome",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TipoProcedimentoServiceImpl.buscarPorNomeTipoProcedimento",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TipoProcedimentoServiceImpl.buscarTudo",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TipoProcedimentoServiceImpl.remover",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TipoProcedimentoServiceImpl.salvar",,3,,1
+Public Method,"ufc.npi.prontuario.service.impl.TipoProcedimentoServiceImpl.verificarTipoProcedimentoExistente",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TipoProcedimentoServiceImpl.verificarTipoProcedimentoIDENome",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TipoProcedimentoServiceImpl.verificarTipoProcedimentoNomeEDescricao",,1,,0
+Public Class,"ufc.npi.prontuario.service.impl.TokenServiceImpl",1,8,1,2
+Public Method,"ufc.npi.prontuario.service.impl.TokenServiceImpl.buscar",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TokenServiceImpl.buscarPorUsuario",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TokenServiceImpl.deletar",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TokenServiceImpl.enviarTokenDeRecuperacao",,3,,2
+Public Method,"ufc.npi.prontuario.service.impl.TokenServiceImpl.existe",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TokenServiceImpl.salvar",,1,,0
+Public Class,"ufc.npi.prontuario.service.impl.TurmaServiceImpl",2,28,1,2
+Public Method,"ufc.npi.prontuario.service.impl.TurmaServiceImpl.adicionarProfessorTurma",,3,,2
+Public Method,"ufc.npi.prontuario.service.impl.TurmaServiceImpl.alterarStatus",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TurmaServiceImpl.buscarAtivasPorAluno",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TurmaServiceImpl.buscarPorId",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TurmaServiceImpl.buscarProfessores",,2,,1
+Private Method,"ufc.npi.prontuario.service.impl.TurmaServiceImpl.buscarProfessoresPeloId",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.TurmaServiceImpl.buscarTudo",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TurmaServiceImpl.buscarTurmas",,2,,0
+Public Method,"ufc.npi.prontuario.service.impl.TurmaServiceImpl.buscarTurmasProfessor",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.TurmaServiceImpl.inscreverAluno",,4,,2
+Public Method,"ufc.npi.prontuario.service.impl.TurmaServiceImpl.removerInscricao",,3,,1
+Public Method,"ufc.npi.prontuario.service.impl.TurmaServiceImpl.removerProfessor",,3,,1
+Public Method,"ufc.npi.prontuario.service.impl.TurmaServiceImpl.removerTurma",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.TurmaServiceImpl.salvar",,2,,1
+Public Class,"ufc.npi.prontuario.service.impl.UserDetailsService",2,2,1,1
+Public Method,"ufc.npi.prontuario.service.impl.UserDetailsService.loadUserByUsername",,2,,1
+Public Class,"ufc.npi.prontuario.service.impl.UsuarioServiceImpl",1,8,1,1
+Public Method,"ufc.npi.prontuario.service.impl.UsuarioServiceImpl.alterarDados",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.UsuarioServiceImpl.alterarSenha",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.UsuarioServiceImpl.buscarPorEmail",,1,,0
+Public Method,"ufc.npi.prontuario.service.impl.UsuarioServiceImpl.novaSenha",,2,,1
+Public Method,"ufc.npi.prontuario.service.impl.UsuarioServiceImpl.recuperarSenha",,2,,1
+Package,"ufc.npi.prontuario.task",1,1,1,0
+Public Class,"ufc.npi.prontuario.task.EmailTask",1,1,1,0
+Public Method,"ufc.npi.prontuario.task.EmailTask.executarAs8DaManha",,1,,0
+Package,"ufc.npi.prontuario.util",0,0,0,0
+Public Class,"ufc.npi.prontuario.util.ConfigurationConstants",0,0,0,0
+Public Class,"ufc.npi.prontuario.util.EmailConstants",0,0,0,0
+Public Class,"ufc.npi.prontuario.util.ExceptionSuccessConstants",0,0,0,0
+Public Class,"ufc.npi.prontuario.util.FragmentsConstants",0,0,0,0
+Public Class,"ufc.npi.prontuario.util.MessagesConstants",0,0,0,0
+Public Class,"ufc.npi.prontuario.util.PagesConstants",0,0,0,0
+Public Class,"ufc.npi.prontuario.util.RedirectConstants",0,0,0,0

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="fragments/base"
+>
+<title>Eventos</title>
+
+<section layout:fragment="conteudo">
+	<div class="row">
+		<div class="col s12">
+			<div class="card">
+				<div class="card-content">
+					<div class="row">
+						<div class="col s6">
+							<h3 class="header">Eventos</h3>
+						</div>
+					</div>
+					<div class="row">
+						<table class="highlight">
+							<thead>
+								<tr>
+									<th>Evento</th>
+									<th>Período de Submissão</th>
+									<th>Notificação de Aceitação</th>
+									<th>Submissão Final</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr th:each="evento : ${eventos}">
+									<td><a th:href="@{/evento/__${evento.id}__}" th:text="${evento.nome}"></a></td>
+									<td th:text="'__${#dates.format(evento.inicioSubmissao,'dd/MM/yyyy')}__ a __${#dates.format(evento.terminoSubmissao,'dd/MM/yyyy')}__'"></td>
+									<td th:text="${#dates.format(evento.prazoNotificacao,'dd/MM/yyyy')}"></td>
+									<td th:text="${#dates.format(evento.cameraReady,'dd/MM/yyyy')}"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section layout:fragment="js">
+	<script type="text/javascript">
+
+	</script>
+</section>
+
+</html>

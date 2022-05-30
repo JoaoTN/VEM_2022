@@ -1,0 +1,186 @@
+Kind,Name,PercentLackOfCohesion
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.GestaoCompetenciaApplication",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.ServletInitializer",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.config.CorsFilter",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.config.JwtConfigurer",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.config.JwtTokenFilter",50
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.config.JwtTokenProvider",64
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.config.MinioConfig",55
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.config.MinioPorperties",80
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.config.UserDetailsCustom",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.config.WebMvcConfigurer",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.config.WebSecurityConfig",50
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.controller.AvaliacaoController",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.controller.ComportamentoController",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.controller.CursoCapacitacaoController",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.controller.DesempenhoController",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.controller.DiagnosticoController",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.controller.FormacaoAcademicaController",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.controller.ItemAvaliacaoController",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.controller.UsuarioController",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AreaCapacitacaoControllerImpl",19
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AreaPerfilControllerImpl",19
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ArquivoController",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AuthControllerImpl",77
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AuthenticationRequest",71
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AvaliacaoControllerImpl",82
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AvalicaoComportamentalImpl",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.CompetenciaControllerImpl",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl",60
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.CursoCapacitacaoControllerImpl",75
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.DesempenhoControllerImpl",53
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.DiagnosticoControllerImpl",33
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ExceptionHandlingController",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ExperienciaProfissionalControllerImpl",75
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.IdiomaControllerImpl",60
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ItemAvaliacaoControllerImpl",75
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ItemPreferenciaControllerImpl",19
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.MapeamentoControllerImpl",46
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.NivelEscolaridadeController",66
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilControllerImpl",57
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilIdiomaControllerImpl",66
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilPreferenciaControllerImpl",79
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PreferenciaControllerImpl",19
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl",82
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.UnidadeControllerImpl",88
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.UnidadeMapeadaControllerImpl",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.UsuarioControllerImpl",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.docs.CustomResponses",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.docs.CustomResponses.AuthResponse",50
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.docs.CustomResponses.InternalServerError",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.docs.CustomResponses.NotAlowedResponse",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.docs.SwaggerConfig",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.exception.ExceptionResponse",75
+Public Static Class,"br.ufc.quixada.npi.gestaocompetencia.exception.ExceptionResponse.ExceptionResponseBuilder",66
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.exception.FileUploadException",100
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.exception.GestaoCompetenciaException",100
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.exception.InvalidJwtAuthenticationException",100
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.exception.NotAllowedException",100
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.exception.ResourceAlreadyExistsException",100
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.exception.ResourceNotFoundException",62
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.exception.StandardError",73
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.AreaCapacitacao",80
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.AreaPerfil",75
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao",91
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.Perspectiva",100
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.TipoAvaliacao",100
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Comissao",50
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Competencia",84
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento",90
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSearch",75
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSpecification",71
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.CursoCapacitacao",86
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.DadosPessoais",85
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.DadosProfissionais",87
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico",92
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional",88
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.model.IPermissaoNormalizacao",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Idioma",66
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacao",85
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacaoSearch",78
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacaoSpecification",50
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.ItemPreferencia",59
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento",95
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Monitoramento",70
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.NivelEscolaridade",88
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil",93
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdioma",85
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdiomaKey",50
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilPreferencia",61
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilPreferenciaKey",50
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Preferencia",50
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade",96
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.ResponsabilidadeFilter",66
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.ResponsabilidadeSearch",62
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.ResponsabilidadeSpecification",50
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade",87
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.UnidadeMapeada",75
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario",89
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.dto.CompetenciaAutoAvaliacaoDTO",57
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.dto.CompetenciaDTO",40
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.dto.NotaDTO",41
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.CategoriaComportamento",100
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Dificuldade",85
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.EscalaAvaliacao",91
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Escolaridade",91
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Etapa",100
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.EtapaResponsabilidade",100
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Impacto",83
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Lotacao",100
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.NivelIdioma",83
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.SituacaoComportamento",100
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.SituacaoResponsabilidade",100
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.StatusExperienciaProfissional",80
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.StatusNivelEscolaridade",84
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.TipoAreaPerfil",100
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.TipoCompetencia",100
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.TipoExperienciaProfissional",89
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.VinculoProfissional",100
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.AreaCapacitacaoRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.AreaPerfilRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.AvaliacaoRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.AvalicaoComportamentalRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.ComissaoRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.CompetenciaRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.ComportamentoRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.CursoCapacitacaoRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.DiagnosticoRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.ExperienciaProfissionalRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.IdiomaRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.ItemAvaliacaoRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.ItemPreferenciaRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.MapeamentoRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.NivelEscolaridadeRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.PerfilIdiomaRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.PerfilPreferenciaRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.PerfilRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.PreferenciaRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.ResponsabilidadeRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.UnidadeMapeadaRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.UnidadeRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.UsuarioRepository",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.AreaCapacitacaoService",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.AreaPerfilService",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.ArquivoService",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.ComissaoService",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.CompetenciaService",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.ComportamentoService",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.CursoCapacitacaoService",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.DiagnosticoService",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.ExperienciaProfissionalService",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.IdiomaService",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.ItemAvaliacaoService",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.ItemPreferenciaService",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.MapeamentoService",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.NivelEscolaridadeService",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilIdiomaService",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilPreferenciaService",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilService",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.PreferenciaService",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.ResponsabilidadeService",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.UnidadeService",0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.UsuarioService",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AreaCapacitacaoServiceImpl",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AreaPerfilServiceImpl",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ArquivoServiceImpl",50
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoComportamentalService",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService",81
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ComissaoServiceImpl",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.CompetenciaServiceImpl",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ComportamentoServiceImpl",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.CursoCapacitacaoServiceImpl",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.DiagnosticoServiceImpl",69
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ExperienciaProfissionalServiceImpl",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.IdiomaServiceImpl",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ItemAvaliacaoServiceImpl",12
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ItemPreferenciaServiceImpl",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl",76
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.NivelEscolaridadeServiceImpl",19
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilIdiomaServiceImpl",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilPreferenciaServiceImpl",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilServiceImpl",61
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PreferenciaServiceImpl",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ResponsabilidadeServiceImpl",50
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UnidadeMapeadaService",0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UnidadeServiceImpl",16
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UsuarioServiceImpl",0

@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:b="http://bootsfaces.net/ui">
+
+    <h:head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+
+        <h:form>
+
+            <p:growl id="growl" sticky="true" showDetail="true"/>
+            <p:wizard flowListener="#{reservaRapidaMB.onFlowProcess}">
+                <p:tab id="personal" title="Data e Horário">
+                    <p:panel header="Personal Details">
+                        <p:messages />
+                        <p:growl id="msgs" showDetail="true" />
+                        <h:panelGrid columns="3" cellpadding="5">
+                            <p:calendar id="inline" value="#{reservaRapidaMB.reserva.dataInicial}" mode="inline">
+                                <p:ajax event="dateSelect" listener="#{statusBotoes.parametrosBotoes}" update="msgs" />
+                            </p:calendar>
+                            <div class="nav-tabs">
+                                <b:buttonGroup > 
+                                    <b:buttonGroup orientation="vertical" > 
+
+                                        <b:button class="btn btn-small" disabled="true" value="       ."/>
+                                        <b:commandButton  value="08h às 09h" class="#{statusBotoes.parametrosBotoes[0][0]}" disabled="#{statusBotoes.parametrosBotoes[0][1]}" actionListener="#{reservaRapidaMB.setHoraInicial(8)}" ></b:commandButton>
+                                        <b:commandButton  value="09h às 10h" class="#{statusBotoes.parametrosBotoes[1][0]}" disabled="#{statusBotoes.parametrosBotoes[1][1]}" actionListener="#{reservaRapidaMB.setHoraInicial(9)}" ></b:commandButton>
+                                        <b:commandButton  value="10h às 11h" class="#{statusBotoes.parametrosBotoes[2][0]}" disabled="#{statusBotoes.parametrosBotoes[2][1]}" actionListener="#{reservaRapidaMB.setHoraInicial(10)}" ></b:commandButton>
+                                        <b:commandButton  value="11h às 12h" class="#{statusBotoes.parametrosBotoes[3][0]}" disabled="#{statusBotoes.parametrosBotoes[3][1]}" actionListener="#{reservaRapidaMB.setHoraInicial(11)}" ></b:commandButton>
+
+                                    </b:buttonGroup>
+                                    <b:buttonGroup orientation="vertical" >
+                                        <b:commandButton  value="12h às 13h" class="#{statusBotoes.parametrosBotoes[4][0]}" disabled="#{statusBotoes.parametrosBotoes[4][1]}" actionListener="#{reservaRapidaMB.setHoraInicial(12)}" ></b:commandButton>
+                                        <b:commandButton  value="13h às 14h" class="#{statusBotoes.parametrosBotoes[5][0]}" disabled="#{statusBotoes.parametrosBotoes[5][1]}" actionListener="#{reservaRapidaMB.setHoraInicial(13)}" ></b:commandButton>
+                                        <b:commandButton  value="14h às 15h" class="#{statusBotoes.parametrosBotoes[6][0]}" disabled="#{statusBotoes.parametrosBotoes[6][1]}" actionListener="#{reservaRapidaMB.setHoraInicial(14)}" ></b:commandButton>
+                                        <b:commandButton  value="15h às 16h" class="#{statusBotoes.parametrosBotoes[7][0]}" disabled="#{statusBotoes.parametrosBotoes[7][1]}" actionListener="#{reservaRapidaMB.setHoraInicial(15)}" ></b:commandButton>
+                                        <b:commandButton  value="16h às 17h" class="#{statusBotoes.parametrosBotoes[8][0]}" disabled="#{statusBotoes.parametrosBotoes[8][1]}" actionListener="#{reservaRapidaMB.setHoraInicial(16)}" ></b:commandButton>
+
+                                    </b:buttonGroup>
+                                    <b:buttonGroup orientation="vertical" > 
+                                        <b:commandButton  value="17h às 18h" class="#{statusBotoes.parametrosBotoes[9][0]}"  disabled="#{statusBotoes.parametrosBotoes[9][1]}" actionListener="#{reservaRapidaMB.setHoraInicial(12)}" ></b:commandButton>
+                                        <b:commandButton  value="18h às 19h" class="#{statusBotoes.parametrosBotoes[10][0]}" disabled="#{statusBotoes.parametrosBotoes[10][1]}" actionListener="#{reservaRapidaMB.setHoraInicial(13)}" ></b:commandButton>
+                                        <b:commandButton  value="19h às 20h" class="#{statusBotoes.parametrosBotoes[11][0]}" disabled="#{statusBotoes.parametrosBotoes[11][1]}" actionListener="#{reservaRapidaMB.setHoraInicial(14)}" ></b:commandButton>
+                                        <b:commandButton  value="20h às 21h" class="#{statusBotoes.parametrosBotoes[12][0]}" disabled="#{statusBotoes.parametrosBotoes[12][1]}" actionListener="#{reservaRapidaMB.setHoraInicial(15)}" ></b:commandButton>
+                                        <b:commandButton  value="21h às 22h" class="#{statusBotoes.parametrosBotoes[12][0]}" disabled="#{statusBotoes.parametrosBotoes[13][1]}" actionListener="#{reservaRapidaMB.setHoraInicial(16)}" ></b:commandButton>
+                                    </b:buttonGroup>
+
+                                </b:buttonGroup>
+                                <!--<p:link href="faces/loginEstudante.xhtml" class="btn btn-warning" value="Login"/>-->
+                            </div>
+                        </h:panelGrid>
+                        <h:panelGrid columns="2" columnClasses="label, value">
+                            <h:outputText value="Data Inicial: *" />
+                            <p:inputText value="#{reservaRapidaMB.reserva.strDataInicial}" type="date" required="true" label="DataInicial"/>
+                            <h:outputText value="Horário: *" />
+                            <p:inputText value="#{reservaRapidaMB.strHorario}" type="time" required="true" label="Horário"/>
+
+                        </h:panelGrid>
+
+                    </p:panel>
+
+                </p:tab>
+
+                <p:tab id="address" title="Sala">
+                    <p:panel header="Address Details">
+                        <p:messages />
+                        <h:panelGrid columns="2" columnClasses="label, value">
+                            <h:outputText value="Sala: *" />
+                            <p:inputText value="#{reservaRapidaMB.reserva.sala.id}" required="true" label="ID"/>
+                            <h:outputText value="Quantidade de alunos: *" />
+                            <p:inputText value="#{reservaRapidaMB.reserva.quantidadeAlunos}" required="true" label="QuantidadeAlunos"/>
+                        </h:panelGrid>
+                    </p:panel>
+                </p:tab>
+
+                <p:tab id="contact" title="Autenticação">
+                    <p:panel header="Contact Information">
+                        <p:messages />
+                        <h:panelGrid columns="2" columnClasses="label, value">
+                            <h:outputText value="RA: *" />
+                            <p:inputText value="#{reservaRapidaMB.reserva.usuario.ra}" required="true" label="RA"/>
+                            <h:outputText value="Senha: *" />
+                            <p:password id="password" value="#{reservaRapidaMB.reserva.usuario.senha}" required="true" label="Senha" />
+                        </h:panelGrid>
+                    </p:panel>
+                </p:tab>
+
+                <p:tab id="confirm" title="Confirmação">
+                    <p:panel header="Confirmation">
+                        <h:panelGrid id="confirmation" columns="1" columnClasses="grid,grid,grid">
+                            <h:panelGrid columns="2" columnClasses="label, value">
+                                <h:outputText value="Data: " />
+                                <h:outputText value="#{reservaRapidaMB.reserva.dataInicial}" styleClass="outputLabel"/>
+
+                                <h:outputText value="Horário: " />
+                                <h:outputText value="#{reservaRapidaMB.strHorario}" styleClass="outputLabel"/>
+                            </h:panelGrid>
+
+                            <h:panelGrid columns="2" columnClasses="label, value">
+                                <h:outputText value="Sala: " />
+                                <h:outputText value="#{reservaRapidaMB.reserva.sala.id}" styleClass="outputLabel"/>
+                                <h:outputText value="Quantidade de alunos: " />
+                                <h:outputText value="#{reservaRapidaMB.reserva.quantidadeAlunos}" styleClass="outputLabel"/>
+                            </h:panelGrid>
+
+                            <h:panelGrid columns="2" columnClasses="label, value">
+                                <h:outputText value="RA: " />
+                                <h:outputText value="#{reservaRapidaMB.reserva.usuario.ra}" styleClass="outputLabel"/>
+
+                            </h:panelGrid>
+                        </h:panelGrid>
+
+                        <p:commandButton value="Submit" actionListener="#{reservaRapidaMB.reservarSala()}" update="growl" process="@this"/>
+                    </p:panel>
+                </p:tab>
+            </p:wizard>
+
+        </h:form>
+
+    </h:body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="base/base"
+	th:with="currentPage='aguardando-tratamento'">
+
+<head>
+<title>Prontuário - Pacientes aguardando tratamento</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/aluno/listagem-alunos.css}" />
+</head>
+
+<section layout:fragment="conteudo">
+
+	<div class="row">
+		<!-- BEGIN BREADCRUMBS - Mostra o caminho até a página atual -->
+		<div class="col s12 breadcrumbs valign-wrapper">
+			<a th:href="@{/}" class="breadcrumb blue-grey-text"> <i
+				class="material-icons left">home</i>
+			</a>
+			<a class="breadcrumb blue-grey-text">Triagem</a>
+		</div>
+		<!-- END BREADCRUMBS -->
+
+		<!-- BEGIN CONTAINER - Conteiner principal da aplicação -->
+		<div class="col s12">
+			<div class="card">
+				<div class="card-content">
+					<div class="row">
+
+						<form th:action="@{/plano-tratamento/aguardando-tratamento}"
+							method="POST">
+							<div class="col s6">
+								<label>* Selecione uma clínica</label> <select id="disciplina"
+									class="form-control" name="clinica">
+									<option th:each="c : ${clinicas}" th:text="${c.nome}"
+										th:value="${c.id}"></option>
+								</select>
+							</div>
+							<div class="col s6">
+								<label> Status</label> <select id="status" name="status"
+									class="form-control">
+									<option value="">Selecione um status</option>
+									<option th:each="s : ${status}" th:text="${s.descricao}"
+										th:value="${s.name()}"></option>
+								</select>
+							</div>
+							<div class="col s6 offset-s6">
+								<div class="right-align">
+									<button id="buscar" type="submit" class="btn  waves-light">Buscar</button>
+								</div>
+							</div>
+						</form>
+
+
+					</div>
+
+				</div>
+			</div>
+			<div>
+				<div class="card" th:if="${busca}">
+					<div class="card-content">
+						<p th:if="${#lists.isEmpty(tratamentos)}" class="center-align">Nenhum
+							paciente esperando tratamento para a clínica selecionada.</p>
+						<table class="mf-table striped"
+							th:unless="${#lists.isEmpty(tratamentos)}">
+							<thead>
+								<tr>
+									<th>Nome</th>
+									<th>Prioridade</th>
+									<th>Status</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="tratamento :${tratamentos}">
+									<td th:text="${tratamento.paciente.nome}"></td>
+									<td th:text="${tratamento.prioridade}"></td>
+									<td th:text="${tratamento.status.descricao}"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+	<!-- END CONTAINER -->
+
+
+</section>
+
+<section layout:fragment="js">
+
+	<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+	<script type="text/javascript" th:src="@{/js/paciente/listagem.js}"></script>
+
+</section>
+
+</html>

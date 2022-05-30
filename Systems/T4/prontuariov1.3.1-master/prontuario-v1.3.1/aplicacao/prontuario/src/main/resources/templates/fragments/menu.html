@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+
+	<th:block layout:fragment="title"></th:block>
+	<meta charset="utf-8"/>
+	<!-- BEGIN STYLESHEETS -->
+	<link th:href="@{http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900}" rel="stylesheet" type="text/css"/>
+	<link th:href="@{https://fonts.googleapis.com/icon?family=Material+Icons}" rel="stylesheet" />
+	<link type="text/css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+	<link type="text/css" rel="stylesheet" th:href="@{/css/materialadmin.css}" />
+	<link type="text/css" rel="stylesheet" th:href="@{/css/font-awesome.min.css}" />
+	<link type="text/css" rel="stylesheet" th:href="@{/css/material-design-iconic-font.min.css}" />
+	<link type="text/css" rel="stylesheet" th:href="@{/css/jquery.dataTables.min.css}" />
+	<link type="text/css" rel="stylesheet" th:href="@{/css/prontuario.css}" />
+	
+	<th:block layout:fragment="css-extras"></th:block>
+	<!-- END STYLESHEETS -->
+</head>
+
+<body class="menubar-hoverable header-fixed">
+	<input type="hidden" name="_csrf_header" th:value="${_csrf.headerName}"/>
+	<input type="hidden" name="_csrf" th:value="${_csrf.token}"/>
+
+	<!-- BEGIN HEADER-->
+	<header id="header">
+		<div class="headerbar">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="headerbar-left">
+				<ul class="header-nav header-nav-options">
+					<li class="header-nav-brand" >
+						<div class="brand-holder">
+							<a href="#">
+								<span id="logo-text" class="text-lg text-bold text-primary">PRONTUÁRIO</span>
+							</a>
+						</div>
+					</li>
+					<li id="icon-toggle">
+						<a class="btn btn-icon-toggle menubar-toggle" data-toggle="menubar" href="javascript:void(0);">
+							<i class="fa fa-bars"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- END HEADER-->
+	
+	<!-- BEGIN MENUBAR-->
+	<div id="menubar" class="menubar-inverse" th:fragment="menubar">
+		<div class="menubar-fixed-panel">
+			<div>
+				<a class="btn btn-icon-toggle btn-default menubar-toggle" data-toggle="menubar" href="javascript:void(0);">
+					<i class="fa fa-bars"></i>
+				</a>
+			</div>
+			<div class="expanded">
+				<a href="#">
+					<span class="text-lg text-bold text-primary">PRONTUÁRIO ELETRÔNICO</span>
+				</a>
+			</div>
+		</div>
+		<div class="menubar-scroll-panel">
+
+			<!-- BEGIN MAIN MENU -->
+			<ul id="main-menu" class="gui-controls">
+				<li>
+					<a href="#">
+						<span class="gui-icon"><i class="md md-person"></i></span>
+						<span class="title">Alunos</span>
+					</a>
+				</li>
+				<li>
+					<a href="/professor/cadastrar">
+						<span class="gui-icon"><i class="md md-school"></i></span>
+						<span class="title">Servidores</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="gui-icon"><i class="md md-my-library-books"></i></span>
+						<span class="title">Disciplinas</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="gui-icon"><i class="md md-group"></i></span>
+						<span class="title">Turmas</span>
+					</a>
+				</li>
+				<li>
+					<a th:href="@{/anamnese}">
+						<span class="gui-icon"><i class=" md material-icons">content_paste</i></span>
+						<span class="title">Anamneses</span>
+					</a>
+				</li>
+
+			</ul><!--end .main-menu -->
+			<!-- END MAIN MENU -->
+
+			<div class="menubar-foot-panel">
+				<small class="no-linebreak hidden-folded">
+					<span class="opacity-75">Copyright &copy; 2016</span><br/>
+					<strong>Núcleo de Práticas em Informática</strong>
+				</small>
+			</div>
+		</div><!--end .menubar-scroll-panel-->
+	</div><!--end #menubar-->
+	<!-- END MENUBAR -->
+	
+	<!-- BEGIN BASE-->
+	<div id="base">
+		<!-- BEGIN CONTENT-->
+		<div id="content">
+			<section layout:fragment="conteudo"></section>
+		</div>
+	</div>
+	
+	
+	<!-- BEGIN JAVASCRIPT -->
+	<script th:src="@{/js/libs/jquery/jquery-1.12.4.min.js}"></script>
+	<script th:src="@{/js/libs/jquery/jquery-migrate-1.2.1.min.js}"></script>
+	<script th:src="@{/js/libs/bootstrap/bootstrap.min.js}"></script>
+	<script th:src="@{/js/libs/jquery-dataTables/jquery.dataTables.min.js}"></script>
+	<script th:src="@{/js/libs/spin.js/spin.min.js}"></script>
+	<script th:src="@{/js/libs/autosize/jquery.autosize.min.js}"></script>
+	<script th:src="@{/js/libs/nanoscroller/jquery.nanoscroller.min.js}"></script>
+	<script th:src="@{/js/core/App.js}"></script>
+	<script th:src="@{/js/core/AppNavigation.js}"></script>
+	<script th:src="@{/js/core/AppForm.js}"></script>
+	<script th:href="@{https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js}"></script>
+	<script th:href="@{https://cdn.datatables.net/1.10.12/js/dataTables.material.min.js}"></script>
+	<!-- END JAVASCRIPT -->
+	
+	<th:block layout:fragment="javascript-extra"></th:block>
+</body>	
+	
+</html>

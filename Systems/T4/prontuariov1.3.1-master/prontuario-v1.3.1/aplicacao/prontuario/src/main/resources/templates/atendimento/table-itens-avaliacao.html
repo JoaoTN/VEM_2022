@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="paciente/detalhes-base"
+	th:with="currentPage='pacientes',currentSubPage='atendimentos'"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<section layout:fragment="tab-content">
+	<div id="itensAvaliacaoAtendimento">
+		<div th:fragment="itensAvaliacaoAtendimento">
+			<div class="row">
+				<span>Observação</span>
+
+				<p
+					th:text="${atendimento.avaliacao.observacao} ? ${atendimento.avaliacao.observacao} : 'Nenhuma observação'"></p>
+			</div>
+			<div class="row right-align">
+				<a
+					th:attr="atendimento = ${atendimento.id}, avaliacao = ${avaliacao.id}"
+					class="btn waves-effect waves-light tooltipped adicionar-observacao"
+					data-tooltip="Adicionar observação">Observação</a>
+			</div>
+
+			<div class="row">
+				<span>Itens avaliados</span>
+				<p th:if="${itensAvaliados.size() EQ 0}">Este atendimento não
+					possui itens avaliados!</p>
+				<div id="message-reavaliado" th:if="${reavaliado}" class="toast alert-info rounded message-reavaliado">
+					<div class="valign-wrapper">
+						<i class="material-icons green-text">check</i> <span
+							class="green-text">Item reavaliado!</span>
+					</div>
+				</div>
+
+				<table th:if="${itensAvaliados.size() > 0}">
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Peso</th>
+							<th>Nota</th>
+							<th>Reavaliar</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="item : ${itensAvaliados}">
+							<td th:text="${item.itemAvaliacao.nome}" />
+							<td th:text="${item.itemAvaliacao.peso}" />
+							<td><input type="number" min="0" max="10" id="${item.id}"
+								th:name="${item.itemAvaliacao.nome}" th:value="${item.nota}"></input></td>
+							<td><a
+								th:attr="atendimento = ${atendimento.id}, item = ${item.id}, nome = ${item.itemAvaliacao.nome}, avaliacao = ${avaliacao.id}"
+								class="waves-effect grey lighten-4 btn reavaliar-item"> <i
+									class="material-icons green-text">done</i></a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<br />
+
+			<div class="row">
+				<span>Itens a serem avaliados</span>
+				<p th:if="${itens.size() EQ 0}">Todos os itens já foram
+					avaliados!</p>
+				<table id="itens-nao-avaliados" th:if="${itens.size() > 0}">
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Peso</th>
+							<th>Nota</th>
+							<th>Avaliar</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="item : ${itens}">
+							<td th:text="${item.nome}" />
+							<td th:text="${item.peso}" />
+							<td><input type="number" min="0" max="10" id="${item.id}"
+								th:name="${item.nome}"></input></td>
+							<td><a class="waves-effect grey lighten-4 btn avaliar-item"
+								th:attr="atendimento = ${atendimento.id}, item = ${item.id}, nome = ${item.nome}, avaliacao = ${avaliacao.id}">
+									<i class="material-icons green-text">done</i>
+							</a></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+		</div>
+	</div>
+
+</section>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="fragments/base"
+>
+<title>Eventos</title>
+
+<section layout:fragment="conteudo">
+	<div class="row">
+		<div class="col m12">
+			<div class="card">
+				<div class="card-content">
+					<div class="row">
+						<div class="col s8">
+							<h3 class="header" th:text="${evento.nome}"></h3>
+							<p th:text="${evento.descricao}"></p>
+						</div>
+						<div class="col s4 right-align">
+							<a th:href="@{'/'}" title="Voltar" class="btn waves-effect grey">Voltar</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12 m3">
+							<a th:href="@{'/evento/__${evento.id}__/detalhe'}">
+								<div class="card-panel purple white-text hoverable">
+									<i class="material-icons large">class</i>
+									<h4 class="white-text">O Evento</h4>
+								</div>
+							</a>
+						</div>
+						<div class="col s12 m3">
+							<a th:href="@{'/evento/__${evento.id}__/submissoes'}">
+								<div class="card-panel teal white-text hoverable">
+									<i class="material-icons large">cloud_upload</i>
+									<h4 class="white-text">Submissões</h4>
+								</div>
+							</a>
+						</div>
+						<div class="col s12 m3" th:if="${evento.isOrganizador(#authentication.getPrincipal())} or ${evento.isRevisor(#authentication.getPrincipal())}">
+							<a th:href="@{'/evento/__${evento.id}__/revisoes'}">
+								<div class="card-panel cyan white-text hoverable">
+									<i class="material-icons large">done_all</i>
+									<h4 class="white-text">Revisões</h4>
+								</div>
+							</a>
+						</div>
+						<div class="col s12 m3">
+							<a th:href="@{'/evento/__${evento.id}__/sessoes'}">
+								<div class="card-panel green white-text hoverable">
+									<i class="material-icons large">dns</i>
+									<h4 class="white-text">Sessões</h4>
+								</div>
+							</a>
+						</div>
+						<div class="col s12 m3" th:if="${evento.isOrganizador(#authentication.getPrincipal())}">
+							<a th:href="@{'/evento/__${evento.id}__/equipe'}">
+								<div class="card-panel orange white-text hoverable">
+									<i class="material-icons large">people</i>
+									<h4 class="white-text">Equipe</h4>
+								</div>
+							</a>
+						</div>
+<!-- 						<div class="col s12 m3"> -->
+<!-- 							<a th:href="@{'/evento/__${evento.id}__/certificados'}"> -->
+<!-- 								<div class="card-panel blue white-text hoverable"> -->
+<!-- 									<i class="material-icons large">card_membership</i> -->
+<!-- 									<h4 class="white-text">Certificados</h4> -->
+<!-- 								</div> -->
+<!-- 							</a> -->
+<!-- 						</div> -->
+						<div class="col s12 m3">
+							<a th:href="@{'/evento/__${evento.id}__/atividades'}">
+								<div class="card-panel pink white-text hoverable">
+									<i class="material-icons large">today</i>
+									<h4 class="white-text">Atividades</h4>
+								</div>
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section layout:fragment="js">
+	<script type="text/javascript">
+	</script>
+</section>
+
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="fragments/base"
+>
+<title>Sessões</title>
+
+<section layout:fragment="conteudo" th:with="isOrganizador=${evento.isOrganizador(#authentication.getPrincipal())}">
+	<input type="hidden" id="isOrganizador" th:value="${isOrganizador}"/>
+	<div class="row">
+		<div class="col s12">
+			<div class="card">
+				<div class="card-content">
+					<div class="row">
+						<div class="col s8">
+							<h4 class="header">Sessões</h4>
+							<h5 th:text="${evento.nome}"></h5>
+						</div>
+						<div class="col s4 right-align">
+							<a title="Nova Sessão" class="btn waves-effect purple darken-4 modal-trigger" href="#nova-sessao" th:if="${isOrganizador}">Nova Sessão</a>
+							<a th:href="@{'/evento/__${evento.id}__'}" title="Voltar" class="btn waves-effect grey">Voltar</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<ul class="tabs tabs-fixed-width tab-demo z-depth-1">
+								<li th:if="${minhasSessoes != null and !minhasSessoes.isEmpty()}" class="tab"><a href="#minhas-sessoes">Minhas Sessões <i class="material-icons">person</i></a></li>
+								<li class="tab"><a href="#sessoes">Sessões <i class="material-icons">dns</i></a></li>
+								<li class="tab"><a href="#alocados" th:classappend="'alocados' eq ${tab} ? active">Trabalhos alocados <i class="material-icons">check</i></a></li>
+								<li class="tab" th:if="${isOrganizador}"><a href="#nao-alocados" th:classappend="'nao-alocados' eq ${tab} ? active">Trabalhos não alocados  <i class="material-icons">close</i></a></li>
+							</ul>
+							<div th:if="${minhasSessoes != null and !minhasSessoes.isEmpty()}" id="minhas-sessoes" class="col s12 mt-20">
+								<table id="tb-minhas-sessoes" class="display">
+									<thead>
+									<tr>
+										<th>Nome</th>
+										<th>Local</th>
+										<th>Data</th>
+										<th>Horário</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr th:each="sessao : ${minhasSessoes}">
+										<td><a th:href="@{/sessao/__${sessao.id}__}" th:text="${sessao.nome}"></a></td>
+										<td th:text="${sessao.local}"></td>
+										<td th:text="${sessao.dataSecao}"></td>
+										<td th:text="${sessao.horario}"></td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+							<div id="sessoes" class="col s12 mt-20">
+								<table id="tb-sessoes" class="display">
+									<thead>
+										<tr>
+											<th>Nome</th>
+											<th>Local</th>
+											<th>Data</th>
+											<th>Horário</th>
+											<th>Responsável</th>
+											<th th:if="${isOrganizador}"></th>
+										</tr>
+									</thead>
+									<tbody>
+									<tr th:each="sessao : ${sessoes}" th:attr="data-id=${sessao.id},data-nome=${sessao.nome},data-responsavel=${sessao.responsavel.id}">
+										<td><a th:href="@{/sessao/__${sessao.id}__}" th:text="${sessao.nome}"></a></td>
+										<td th:text="${sessao.local}"></td>
+										<td th:text="${sessao.dataSecao}"></td>
+										<td th:text="${sessao.horario}"></td>
+										<td th:text="${sessao.responsavel?.nome}"></td>
+										<td class="right" th:if="${isOrganizador}">
+											<a title="Excluir" href="#modal-excluir" class="btn-floating waves-effect red btn-small modal-trigger confirmacao" th:attr="data-link=@{'/sessao/__${sessao.id}__/excluir'}">
+												<i class="material-icons">delete</i>
+											</a>
+										</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+							<div id="alocados" class="col s12 mt-20">
+								<table id="tb-alocados" class="display">
+									<thead>
+									<tr>
+										<th>Título</th>
+										<th>Sessão</th>
+										<th>Autor</th>
+										<th>Trilha</th>
+										<th th:if="${isOrganizador}">Status</th>
+										<th th:if="${isOrganizador}"></th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr th:each="trabalho : ${trabalhos}" th:if="${trabalho.getTrabalhoProduct().isAlocadoSessao()}">
+										<td th:if="${isOrganizador}"><a th:href="@{/trabalho/__${trabalho.id}__}" th:text="${trabalho.titulo}"></a></td>
+										<td th:unless="${isOrganizador}" th:text="${trabalho.titulo}"></td>
+										<td th:text="${trabalho.sessao.nome}"></td>
+										<td th:text="${trabalho.autor?.nome}"></td>
+										<td th:text="${trabalho.trilha.nome}"></td>
+										<td th:if="${isOrganizador}">
+											<div class="chip white-text grey" th:if="${trabalho.getTrabalhoProduct().getResultado() eq T(ufc.quixada.npi.contest.model.Avaliacao).NAO_REVISADO}" th:text="${T(ufc.quixada.npi.contest.model.Avaliacao).NAO_REVISADO.getDescricao()}"></div>
+											<div class="chip white-text green" th:if="${trabalho.getTrabalhoProduct().getResultado() eq T(ufc.quixada.npi.contest.model.Avaliacao).APROVADO}" th:text="${T(ufc.quixada.npi.contest.model.Avaliacao).APROVADO.getDescricao()}"></div>
+											<div class="chip white-text red" th:if="${trabalho.getTrabalhoProduct().getResultado() eq T(ufc.quixada.npi.contest.model.Avaliacao).REPROVADO}" th:text="${T(ufc.quixada.npi.contest.model.Avaliacao).REPROVADO.getDescricao()}"></div>
+											<div class="chip white-text orange" th:if="${trabalho.getTrabalhoProduct().getResultado() eq T(ufc.quixada.npi.contest.model.Avaliacao).RESSALVAS}" th:text="${T(ufc.quixada.npi.contest.model.Avaliacao).RESSALVAS.getDescricao()}"></div>
+										</td>
+										<td class="right" th:if="${isOrganizador}">
+											<a title="Excluir alocação" href="#modal-excluir" class="btn-floating waves-effect red btn-small modal-trigger confirmacao" th:attr="data-link=@{'/sessao/excluir-trabalho/__${trabalho.id}__/false'}">
+												<i class="material-icons outlined">clear</i>
+											</a>
+										</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+							<div id="nao-alocados" class="col s12 mt-20" th:if="${isOrganizador}">
+								<form th:action="@{/sessao/alocar}" method="post">
+									<div class="col m4">
+										<select name="sessao">
+											<option th:each="sessao : ${sessoes}" th:value="${sessao.id}" th:text="${sessao.nome}"></option>
+										</select>
+									</div>
+									<button type="submit" class="btn waves-effect waves-light purple darken-4">Alocar trabalhos selecionados</button>
+									<div class="col m12 mt-20">
+										<table id="tb-nao-alocados" class="display">
+											<thead>
+												<tr>
+													<th>
+														<label><input id="selectAll" type="checkbox"/><span></span></label>
+													</th>
+													<th>Título</th>
+													<th>Trilha</th>
+													<th>Autor</th>
+													<th>Status</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr th:each="trabalho : ${trabalhos}" th:if="${not trabalho.getTrabalhoProduct().isAlocadoSessao()}">
+													<td class="center"><label><input class="select-trabalho" type="checkbox" name="trabalhos" th:value="${trabalho.id}"/><span></span></label></td>
+													<td><a th:href="@{/trabalho/__${trabalho.id}__}" th:text="${trabalho.titulo}"></a></td>
+													<td th:text="${trabalho.trilha.nome}"></td>
+													<td th:text="${trabalho.autor?.nome}"></td>
+													<td>
+														<div class="chip white-text grey" th:if="${trabalho.getTrabalhoProduct().getResultado() eq T(ufc.quixada.npi.contest.model.Avaliacao).NAO_REVISADO}" th:text="${T(ufc.quixada.npi.contest.model.Avaliacao).NAO_REVISADO.getDescricao()}"></div>
+														<div class="chip white-text green" th:if="${trabalho.getTrabalhoProduct().getResultado() eq T(ufc.quixada.npi.contest.model.Avaliacao).APROVADO}" th:text="${T(ufc.quixada.npi.contest.model.Avaliacao).APROVADO.getDescricao()}"></div>
+														<div class="chip white-text red" th:if="${trabalho.getTrabalhoProduct().getResultado() eq T(ufc.quixada.npi.contest.model.Avaliacao).REPROVADO}" th:text="${T(ufc.quixada.npi.contest.model.Avaliacao).REPROVADO.getDescricao()}"></div>
+														<div class="chip white-text orange" th:if="${trabalho.getTrabalhoProduct().getResultado() eq T(ufc.quixada.npi.contest.model.Avaliacao).RESSALVAS}" th:text="${T(ufc.quixada.npi.contest.model.Avaliacao).RESSALVAS.getDescricao()}"></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal Structure -->
+	<div id="nova-sessao" class="modal modal-fixed-footer">
+		<form id="form-nova-sessao" class="col s12" th:action="@{'/evento/__${evento.id}__/sessao/'}" method="post">
+			<div class="modal-content">
+				<h4>Nova Sessão</h4>
+				<div class="row">
+					<div class="input-field col s6">
+						<input id="nome" type="text" required="required" name="nome"/>
+						<label for="nome">* Nome</label>
+					</div>
+					<div class="input-field col s6">
+						<select id="responsavel" name="responsavel" class="js-data-example-ajax browser-default" required="required"></select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s6">
+						<input id="local" type="text" name="local" required="required"/>
+						<label for="local">* Local</label>
+					</div>
+					<div class="input-field col s3">
+						<input id="data" type="text" data-mask="00/00/0000" name="dataSecao" required="required"/>
+						<label for="data">* Data</label>
+					</div>
+					<div class="input-field col s3">
+						<input id="horario" type="text" data-mask="00:00 - 00:00" name="horario" required="required"/>
+						<label for="horario">* Horário</label>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" class="btn waves-effect waves-light purple darken-4">Cadastrar</button>
+				<a href="#!" class="modal-close btn-flat">Cancelar</a>
+			</div>
+		</form>
+	</div>
+</section>
+<section layout:fragment="js">
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('select').formSelect();
+			$('.modal').modal({
+				dismissible: false,
+				onCloseEnd: function () {
+					$('.js-data-example-ajax').val(null).trigger('change');
+					$('#form-nova-sessao').trigger("reset");
+				}
+			});
+			if ($('#isOrganizador').val() === 'true') {
+				var sessoes = $('#tb-sessoes').DataTable({
+					"language": {
+						url: _context + '/js/Portuguese-Brasil.json'
+					},
+					columnDefs: [
+						{targets: 5, className: 'dt-body-nowrap'},
+						{orderable: false, targets: [1, 2, 3, 5]}
+					],
+					paging: false
+
+
+				});
+				$('#tb-alocados').DataTable({
+					"language": {
+						url: _context + '/js/Portuguese-Brasil.json'
+					},
+					"order": [[1, 'asc'], [0, 'asc']],
+					columnDefs: [
+						{targets: 4, className: 'dt-body-nowrap'},
+						{orderable: false, targets: [5]},
+					],
+					"pageLength": 25
+
+
+				});
+			} else {
+				var sessoes = $('#tb-sessoes').DataTable({
+					"language": {
+						url: _context + '/js/Portuguese-Brasil.json'
+					},
+					columnDefs: [
+						{orderable: false, targets: [1, 2, 4]}
+					],
+					paging: false
+
+
+				});
+				$('#tb-alocados').DataTable({
+					"language": {
+						url: _context + '/js/Portuguese-Brasil.json'
+					},
+					"order": [[1, 'asc'], [0, 'asc']],
+					"pageLength": 25
+				});
+			}
+			$('#tb-nao-alocados').DataTable({
+				"language" : {
+					url : _context + '/js/Portuguese-Brasil.json'
+				},
+				"order": [[ 2, 'asc' ], [ 1, 'asc' ]],
+				columnDefs: [
+					{ orderable: false, targets: [0] }
+				]
+
+
+			});
+
+			$("#selectAll").change(function(e) {
+				if ($(this).is( ":checked" )) {
+					$('.select-trabalho').prop('checked', true);
+				} else {
+					$('.select-trabalho').prop('checked', false);
+				}
+			});
+
+			$('.js-data-example-ajax').select2({
+				allowClear: true,
+				minimumInputLength: 5,
+				placeholder: '* Responsável...',
+				language: {
+					"noResults": function () {
+						return "Nenhum resultado encontrado";
+					},
+					"inputTooShort": function () {
+						return "Digite pelo menos 5 caracteres..."
+					}
+				},
+				ajax: {
+					url: _context + '/api/users/findByNome',
+					dataType: 'json',
+					data: function (params) {
+						var query = {
+							search: params.term
+						}
+						return query;
+					},
+					processResults: function (data) {
+						// Transforms the top-level key of the response object from 'items' to 'results'
+						var result = $.map(data, function (obj) {
+							obj.id = obj.id || obj.id; // replace pk with your identifier
+							obj.text = obj.text || obj.nome;
+							return obj;
+						});
+						return {
+							results: result
+						};
+					},
+				},
+			});
+		});
+
+	</script>
+</section>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="fragments/base"
+>
+<title>Submissões</title>
+
+<section layout:fragment="conteudo" th:with="isOrganizador=${evento.isOrganizador(#authentication.getPrincipal())}">
+	<div class="row">
+		<div class="col s12">
+			<div class="card">
+				<div class="card-content">
+					<div class="row">
+						<div class="col s8">
+							<h4 class="header">Submissões</h4>
+							<h5 th:text="${evento.nome}"></h5>
+							<span class="red-text" th:unless="${evento.isPeriodoSubmissao()}">Período de submissão encerrado</span>
+						</div>
+						<div class="col s4 right-align">
+							<a th:if="${evento.isPeriodoSubmissao()}" th:href="@{'/trabalho/__${evento.id}__/submeter'}" title="Submeter trabalho" class="btn waves-effect purple darken-4">Submeter trabalho</a>
+							<a th:href="@{'/evento/__${evento.id}__'}" title="Voltar" class="btn waves-effect grey">Voltar</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<ul class="tabs tabs-fixed-width tab-demo z-depth-1">
+								<li class="tab"><a href="#minhas">Minhas<i class="material-icons">person</i></a></li>
+								<li class="tab" th:if="${isOrganizador}"><a href="#todas">Todas <i class="material-icons">list</i></a></li>
+								<li class="tab" th:if="${isOrganizador}"><a href="#best-paper">Best Paper <i class="material-icons">star</i></a></li>
+								<li class="tab" th:if="${isOrganizador}"><a href="#aprovadas">Aprovadas <i class="material-icons">check</i></a></li>
+								<li class="tab" th:if="${isOrganizador}"><a href="#ressalvas">Com Ressalvas <i class="material-icons">call_missed_outgoing</i></a></li>
+								<li class="tab" th:if="${isOrganizador}"><a href="#reprovadas">Reprovadas <i class="material-icons">close</i></a></li>
+								<li class="tab" th:if="${isOrganizador}"><a href="#nao-revisadas">Não revisadas <i class="material-icons">access_time</i></a></li>
+							</ul>
+							<div id="minhas" class="col s12 mt-20">
+								<table id="tb-minhas" class="display">
+									<thead>
+									<tr>
+										<th>Título</th>
+										<th>Autor</th>
+										<th>Trilha</th>
+										<th title="Modalidade de Submissão">Mod. Subm.</th>
+										<th title="Modalidade de Apresentação">Mod. Apres.</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr th:each="trabalho : ${meusTrabalhos}">
+										<td><a th:href="@{/trabalho/__${trabalho.id}__}" th:text="${trabalho.titulo}"></a></td>
+										<td th:text="${trabalho.autor?.nome}"></td>
+										<td th:text="${trabalho.trilha.nome}"></td>
+										<td th:text="${trabalho.modalidadeSubmissao?.nome}"></td>
+										<td th:text="${trabalho.modalidadeApresentacao?.nome}"></td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+							<div id="todas" class="col s12 mt-20" th:if="${isOrganizador}">
+								<table id="tb-todas" class="display">
+									<thead>
+									<tr>
+										<th>Título</th>
+										<th>Autor</th>
+										<th>Trilha</th>
+										<th title="Modalidade de Submissão">Mod. Subm.</th>
+										<th title="Modalidade de Apresentação">Mod. Apres.</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr th:each="trabalho : ${trabalhos}">
+										<td><a th:href="@{'/trabalho/__${trabalho.id}__'}" th:text="${trabalho.titulo}"></a></td>
+										<td th:text="${trabalho.autor?.nome}"></td>
+										<td th:text="${trabalho.trilha.nome}"></td>
+										<td th:text="${trabalho.modalidadeSubmissao?.nome}"></td>
+										<td th:text="${trabalho.modalidadeApresentacao?.nome}"></td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+							<div id="best-paper" class="col s12 mt-20" th:if="${isOrganizador}">
+								<table id="tb-best-paper" class="display">
+									<thead>
+									<tr>
+										<th>Título</th>
+										<th>Autor</th>
+										<th>Trilha</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr th:each="trabalho : ${trabalhos}" th:if="${trabalho.getTrabalhoProduct().isBestPaper()}">
+										<td><a th:href="@{'/trabalho/__${trabalho.id}__'}" th:text="${trabalho.titulo}"></a></td>
+										<td th:text="${trabalho.autor?.nome}"></td>
+										<td th:text="${trabalho.trilha.nome}"></td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+							<div id="aprovadas" class="col s12 mt-20" th:if="${isOrganizador}">
+								<table id="tb-aprovadas" class="display">
+									<thead>
+									<tr>
+										<th>Título</th>
+										<th>Autor</th>
+										<th>Trilha</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr th:each="trabalho : ${trabalhos}" th:if="${trabalho.getTrabalhoProduct().isAprovado()}">
+										<td><a th:href="@{'/trabalho/__${trabalho.id}__'}" th:text="${trabalho.titulo}"></a></td>
+										<td th:text="${trabalho.autor?.nome}"></td>
+										<td th:text="${trabalho.trilha.nome}"></td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+							<div id="ressalvas" class="col s12 mt-20" th:if="${isOrganizador}">
+								<table id="tb-ressalvas" class="display">
+									<thead>
+										<tr>
+											<th>Título</th>
+											<th>Autor</th>
+											<th>Trilha</th>
+										</tr>
+									</thead>
+									<tbody>
+									<tr th:each="trabalho : ${trabalhos}" th:if="${trabalho.getTrabalhoProduct().isAprovadoComRessalvas()}">
+										<td><a th:href="@{'/trabalho/__${trabalho.id}__'}" th:text="${trabalho.titulo}"></a></td>
+										<td th:text="${trabalho.autor?.nome}"></td>
+										<td th:text="${trabalho.trilha.nome}"></td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+							<div id="reprovadas" class="col s12 mt-20" th:if="${isOrganizador}">
+								<table id="tb-reprovadas" class="display">
+									<thead>
+									<tr>
+										<th>Título</th>
+										<th>Autor</th>
+										<th>Trilha</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr th:each="trabalho : ${trabalhos}" th:if="${trabalho.getTrabalhoProduct().isReprovado()}">
+										<td><a th:href="@{'/trabalho/__${trabalho.id}__'}" th:text="${trabalho.titulo}"></a></td>
+										<td th:text="${trabalho.autor?.nome}"></td>
+										<td th:text="${trabalho.trilha.nome}"></td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+							<div id="nao-revisadas" class="col s12 mt-20" th:if="${isOrganizador}">
+								<table id="tb-nao-revisadas" class="display">
+									<thead>
+									<tr>
+										<th>Título</th>
+										<th>Autor</th>
+										<th>Trilha</th>
+										<th>Revisor(es)</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr th:each="trabalho : ${trabalhos}" th:if="${not trabalho.getTrabalhoProduct().isRevisado()}">
+										<td><a th:href="@{'/trabalho/__${trabalho.id}__'}" th:text="${trabalho.titulo}"></a></td>
+										<td th:text="${trabalho.autor?.nome}"></td>
+										<td th:text="${trabalho.trilha.nome}"></td>
+										<td>
+											<span th:each="revisao, index : ${trabalho.revisoes}" class="display-inline" th:text="${index.index} + 1 eq ${trabalho.revisoes.size()} ? '__${revisao.revisor.nome}__' : '__${revisao.revisor.nome}__, '"></span>
+										</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section layout:fragment="js">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#tb-minhas').DataTable({
+				"language" : {
+					url : _context + '/js/Portuguese-Brasil.json'
+				},
+				columnDefs: [
+					{ orderable: false, targets: [1,2,3,4] }
+				]
+			});
+
+			$('#tb-todas').DataTable({
+				"language" : {
+					url : _context + '/js/Portuguese-Brasil.json'
+				}
+			});
+			$('#tb-nao-revisadas').DataTable({
+				"language" : {
+					url : _context + '/js/Portuguese-Brasil.json'
+				}
+			});
+			$('#tb-best-paper,#tb-aprovadas,#tb-ressalvas,#tb-reprovadas').DataTable({
+				"language" : {
+					url : _context + '/js/Portuguese-Brasil.json'
+				}
+			});
+		});
+
+	</script>
+</section>
+</html>

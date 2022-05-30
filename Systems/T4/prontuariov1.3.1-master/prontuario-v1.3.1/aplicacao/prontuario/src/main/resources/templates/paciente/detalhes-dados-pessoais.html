@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="paciente/detalhes-base"
+      th:with="currentPage='pacientes',currentSubPage='dados-pessoais'">
+
+<section layout:fragment="tab-content" class="card">
+
+    <div class="card-content relative-position">
+
+        <a th:href="@{/paciente/editar/} + ${paciente?.id}" th:if="${currentSubPage} == 'dados-pessoais'"
+           class="paciente__edit-button login__card-submit-button-hided btn-floating btn-large tooltipped"
+           data-tooltip="Editar Informações do Paciente">
+            <i class="material-icons white-text waves-effect waves-light">edit</i>
+        </a>
+
+        <div class="row">
+            <div class="col l6 no-padding">
+                <span class="bold-text grey-text text-darken-3">Código: </span>
+                <span class="paciente-nome light-text text-18 truncate" th:text="${paciente.id}">
+					</span>
+            </div>
+
+            <div class="col l6 no-padding">
+                <span class="bold-text grey-text text-darken-3">Nome: </span>
+                <span class="paciente-nome light-text text-18 truncate"
+                      th:text="${paciente.nome}">
+					</span>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col l6 no-padding">
+                <span class="bold-text grey-text text-darken-3">Nome da Mãe: </span>
+                <span class="paciente-nome light-text text-18 truncate"
+                      th:text="${paciente.nomeDaMae}!= '' ? ${paciente.nomeDaMae} : 'Não Especificado'">
+								</span>
+            </div>
+            <div class="col l6 no-padding">
+                <span class="bold-text grey-text text-darken-3">Data de Nascimento: </span>
+                <span class="light-text text-18 truncate">
+								<span th:text="${paciente.nascimento} ? ${#dates.format(paciente.nascimento, 'dd/MM/yyyy')} : 'Não Especificado'"
+                                      class="paciente-nascimento"></span>
+				</span>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col l6 no-padding">
+                <span class="bold-text grey-text text-darken-3">Sexo: </span>
+                <span class="light-text text-18 truncate">
+						<span th:text="${paciente.temSexo()} ? ${paciente.sexo.descricao} : 'Não Especificado'"
+                              class="paciente-idade"></span>
+				</span>
+            </div>
+
+            <div class="col l6 no-padding">
+                <span class="bold-text grey-text text-darken-3">Raça: </span>
+                <span class="light-text text-18 truncate">
+								<span th:text="${paciente.raca != null} ? ${paciente.raca.descricao} : 'Não Especificado'"></span>
+				</span>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col l6 no-padding">
+                <span class="bold-text grey-text text-darken-3">Naturalidade: </span>
+                <span class="light-text text-18 truncate">
+						<span th:text="${paciente.naturalidade}!= '' ? ${paciente.naturalidade} : 'Não Especificado'"
+                              class="paciente-idade"></span>
+				</span>
+            </div>
+
+            <div class="col l6 no-padding">
+                <span class="bold-text grey-text text-darken-3">Nacionalidade: </span>
+                <span class="light-text text-18 truncate">
+								<span th:text="${paciente.nacionalidade}!= '' ? ${paciente.nacionalidade} : 'Não Especificado'"
+                                      class="paciente-idade"></span>
+				</span>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col l6 no-padding">
+                <span class="bold-text grey-text text-darken-3">CPF: </span>
+                <span class="light-text text-18 truncate">
+						<span th:text="${paciente.cpf} != ''  ? ${paciente.cpf} : 'Não Especificado'"
+                              class="paciente-idade"></span>
+				</span>
+            </div>
+
+            <div class="col l6 no-padding">
+                <span class="bold-text grey-text text-darken-3">Cartão Nacional do SUS: </span>
+                <span class="light-text text-18 truncate">
+						<span th:text="${paciente.cns} != '' ? ${paciente.cns} : 'Não Especificado'"
+                              class="paciente-idade"></span>
+				</span>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col l6 no-padding">
+                <span class="bold-text grey-text text-darken-3">Profissão: </span>
+                <span class="light-text text-18 truncate">
+						<span th:text="${paciente.profissao}!= '' ? ${paciente.profissao} : 'Não Especificado'"
+                              class="paciente-idade"></span>
+				</span>
+            </div>
+
+            <div class="col l6 no-padding">
+                <span class="bold-text grey-text text-darken-3">Estado Civil: </span>
+                <span class="light-text text-18 truncate">
+						<span th:text="${paciente.temEstadoCivil()} ? ${paciente.estadoCivil.descricao} : 'Não Especificado'"
+                              class="paciente-idade"></span>
+				</span>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col l6 no-padding">
+                <span class="bold-text grey-text text-darken-3">Responsável: </span>
+                <span class="light-text text-18 truncate">
+						<span th:text="${paciente.responsavel} != '' ? ${paciente.responsavel} : 'Não Especificado'"
+                              class="paciente-idade"></span>
+				</span>
+            </div>
+
+            <div class="col l6 no-padding">
+                <span class="bold-text grey-text text-darken-3">Telefone: </span>
+                <span class="light-text text-18 truncate">
+						<span th:text="${paciente.telefone} != '' ? ${paciente.telefone} : 'Não Especificado'"
+                              class="paciente-idade"></span>
+				</span>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col l6 no-padding">
+                <span class="bold-text grey-text text-darken-3">Telefone 2: </span>
+                <span class="light-text text-18 truncate">
+						<span th:text="${paciente.segundoTelefone} != '' ? ${paciente.segundoTelefone} : 'Não Especificado'"
+                              class="paciente-idade"></span>
+				</span>
+            </div>
+
+            <div class="col l6 no-padding">
+                <span class="bold-text grey-text text-darken-3">Endereço: </span>
+                <span class="light-text text-18 truncate">
+								<span th:text="${paciente.endereco}  != '' ? ${paciente.endereco} : 'Não Especificado'"
+                                      class="paciente-idade"></span>
+				</span>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col l6 no-padding">
+                <span class="bold-text grey-text text-darken-3">Bairro: </span>
+                <span class="light-text text-18 truncate">
+						<span th:text="${paciente.bairro} != '' ? ${paciente.bairro} : 'Não Especificado'"
+                              class="paciente-idade"></span>
+				</span>
+            </div>
+
+            <div class="col l6 no-padding">
+                <span class="bold-text grey-text text-darken-3">Cidade: </span>
+                <span class="light-text text-18 truncate">
+						<span th:text="${paciente.cidade} != '' ? ${paciente.cidade} : 'Não Especificado'"
+                              class="paciente-idade"></span>
+				</span>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col l6 no-padding">
+                <span class="bold-text grey-text text-darken-3">Estado: </span>
+                <span class="light-text text-18 truncate">
+						<span th:text="${paciente.temEstado()} ? ${paciente.estado.descricao} : 'Não Especificado'"
+                              class="paciente-idade"></span>
+				</span>
+            </div>
+
+            <div class="col l6 no-padding">
+                <span class="bold-text grey-text text-darken-3">Pais: </span>
+                <span class="light-text text-18 truncate">
+								<span th:text="${paciente.pais}!= ''  ? ${paciente.pais} : 'Não Especificado'"
+                                      class="paciente-idade"></span>
+				</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="base/base" th:with="currentPage='avaliacao'">
+
+<head>
+
+<title>Cadastrar Avaliação</title>
+
+</head>
+
+<section layout:fragment="conteudo">
+
+	<div class="row">
+
+		<!-- BREADCRUMBS - Mostra o caminho até a página atual -->
+
+		<div class="col s12 breadcrumbs valign-wrapper">
+
+			<a th:href="@{/}" class="breadcrumb blue-grey-text"> <i
+				class="material-icons left">home</i>
+			</a> <a th:href="@{/avaliacao}" class="breadcrumb blue-grey-text">Avaliações</a>
+
+			<a class="breadcrumb blue-grey-text">Cadastrar</a>
+
+		</div>
+
+		<!-- BREADCRUMBS -->
+
+
+		<!-- CONTAINER - Conteiner principal da aplicação -->
+
+		<div class="col s12">
+			<!-- <form class="card" id="item-form"
+				th:action="@{/avaliacao/adicionar-criterio}" method="post"
+				th:object="${item}">
+				<input type="hidden" name="avaliacao" id="avaliacao"
+					th:value="${avaliacao.id}" />
+
+				<div class="card-content">
+
+					<div class="row">
+						<div class="col s6 input-field">
+							<label for="itemNome">* Nome do item</label> <input type="text"
+								class="form-control" th:field="*{nome}" id="itemNome"
+								required="required" />
+						</div>
+
+						<div class="col s6 input-field">
+							<label for="itemPeso">* Peso do item</label> <input type="number"
+								min="1" class="form-control" th:field="*{peso}" id="itemPeso"
+								required="required" />
+						</div>
+
+						<div class="row">
+							<span class="grey-text">* Campos obrigatórios</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="card-action right-align">
+					<button id="sub" type="submit" class="btn waves-effect waves-light">Adicionar
+						item</button>
+				</div>
+			</form> -->
+
+			<form class="card" id="avaliacao-form" th:action="@{/avaliacao/cadastrar}" method="post" th:object="${avaliacao}">
+				<input type="hidden" th:field="*{id}" th:value="${avaliacao.id}" />
+				<div class="card-content">
+
+					<div class="row">
+						<div class="col s12 input-field">
+							<label for="nome">* Nome</label>
+							<input type="text" class="form-control" th:field="*{nome}" id="nome" required="required" />
+						</div>
+
+						<div class="row">
+							<span class="grey-text">* Campos obrigatórios</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="card-action right-align">
+					<a th:href="@{/avaliacao}" class="btn btn-flat waves-effect">Cancelar</a>
+					<button type="submit" class="btn waves-effect waves-light">Cadastrar</button>
+				</div>
+			</form>
+		</div>
+
+
+		<!-- CONTAINER -->
+
+	</div>
+
+	<!-- <div class="col s12">
+		<div class="card">
+			<div class="card-content">
+				<p th:if="${#lists.isEmpty(avaliacao.itens)}">Nenhum item
+					adicionado!</p>
+				<table class="mf-table striped" id="table-avaliacao"
+					th:unless="${#lists.isEmpty(avaliacao.itens)}">
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Peso</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="item : ${avaliacao.itens}">
+							<td th:text="${item.nome}" />
+							<td th:text="${item.peso}" />
+							<td>
+								<div class="valign-wrapper">
+									<a
+										class="btn-floating z-depth-0 transparent waves-effect tooltipped"
+										data-tooltip="Excluir"
+										th:href="@{/avaliacao/item/} + ${item.id}"> <i
+										class="material-icons red-text">delete</i>
+									</a>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+	</div> -->
+
+</section>
+
+<section layout:fragment="js">
+
+	<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+	<script type="text/javascript" th:src="@{/material/js/dynamic-list.js}"></script>
+
+</section>
+
+</html>

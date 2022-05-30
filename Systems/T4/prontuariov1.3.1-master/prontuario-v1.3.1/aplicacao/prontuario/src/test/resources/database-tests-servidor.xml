@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	
+	<!-- Servidores -->
+	<servidor id="1" email="servidor1@email.com" matricula="555555" nome="Servidor 1" senha="1234"/>
+	<servidor id="2" email="servidor2@email.com" matricula="555556" nome="Servidor 2" senha="1234"/>
+	<servidor id="101" nome="professor 1" email="professor1@email.com" matricula="1111" senha="1111" />
+	<servidor id="102" nome="professor 2" email="professor2@email.com" matricula="2222" senha="2222" />
+	<servidor id="103" nome="professor 3" email="professor3@email.com" matricula="3333" senha="3333" />
+	
+	<!-- Papel do usuário -->
+	<papel_usuario usuario_id="101" papel="PROFESSOR" />
+	<papel_usuario usuario_id="102" papel="PROFESSOR" />
+	<papel_usuario usuario_id="103" papel="PROFESSOR" />
+
+</dataset>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="fragments/base"
+>
+<title>Revisões</title>
+
+<section layout:fragment="conteudo" th:with="isOrganizador=${evento.isOrganizador(#authentication.getPrincipal())}">
+    <input id="eventoId" type="hidden" th:value="${evento.id}"/>
+	<div class="row">
+		<div class="col s12">
+			<div class="card">
+				<div class="card-content">
+					<div class="row">
+						<div class="col s8">
+							<h4 class="header">Revisões</h4>
+							<h5 th:text="${evento.nome}"></h5>
+							<span class="red-text" th:unless="${evento.isPeriodoRevisao()}">Período de revisão encerrado</span>
+						</div>
+						<div class="col s4 right-align">
+							<a onClick="window.history.back()" title="Voltar" class="btn waves-effect grey">Voltar</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<ul class="tabs tabs-fixed-width tab-demo z-depth-1">
+								<li class="tab"><a href="#minhas">Minhas Revisões<i class="material-icons">person</i></a></li>
+								<li class="tab" th:if="${isOrganizador and evento.isAfterSubmissao()}"><a th:classappend="'revisor' eq ${tab} ? active" href="#aguardando-revisor">Aguardando Revisor(es) <i class="material-icons">people</i></a></li>
+								<li class="tab" th:if="${isOrganizador and evento.isAfterSubmissao()}"><a th:classappend="'revisao' eq ${tab} ? active" href="#aguardando-revisao">Aguardando Revisão <i class="material-icons">done</i></a></li>
+								<li class="tab" th:if="${isOrganizador and evento.isAfterSubmissao()}"><a th:classappend="'revisado' eq ${tab} ? active" href="#revisados">Revisados <i class="material-icons">done_all</i></a></li>
+							</ul>
+							<div id="minhas" class="col s12 mt-20">
+								<table id="tb-minhas" class="display">
+									<thead>
+										<tr>
+											<th>Título</th>
+											<th>Trilha</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr th:each="trabalho : ${minhasRevisoes}">
+											<td><a th:href="@{/trabalho/__${trabalho.id}__}" th:text="${trabalho.titulo}"></a></td>
+											<td th:text="${trabalho.trilha.nome}"></td>
+											<td>
+												<div class="chip white-text grey" th:if="${trabalho.getTrabalhoProduct().getRevisao(#authentication.getPrincipal()).getAvaliacao() eq T(ufc.quixada.npi.contest.model.Avaliacao).NAO_REVISADO}" th:text="${trabalho.getTrabalhoProduct().getRevisao(#authentication.getPrincipal()).getAvaliacao().getDescricao()}"></div>
+												<div class="chip white-text green" th:if="${trabalho.getTrabalhoProduct().getRevisao(#authentication.getPrincipal()).getAvaliacao() eq T(ufc.quixada.npi.contest.model.Avaliacao).APROVADO}" th:text="${trabalho.getTrabalhoProduct().getRevisao(#authentication.getPrincipal()).getAvaliacao().getDescricao()}"></div>
+												<div class="chip white-text red" th:if="${trabalho.getTrabalhoProduct().getRevisao(#authentication.getPrincipal()).getAvaliacao() eq T(ufc.quixada.npi.contest.model.Avaliacao).REPROVADO}" th:text="${trabalho.getTrabalhoProduct().getRevisao(#authentication.getPrincipal()).getAvaliacao().getDescricao()}"></div>
+												<div class="chip white-text orange" th:if="${trabalho.getTrabalhoProduct().getRevisao(#authentication.getPrincipal()).getAvaliacao() eq T(ufc.quixada.npi.contest.model.Avaliacao).RESSALVAS}" th:text="${trabalho.getTrabalhoProduct().getRevisao(#authentication.getPrincipal()).getAvaliacao().getDescricao()}"></div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+							<div id="aguardando-revisor" class="col s12 mt-20" th:if="${isOrganizador and evento.isAfterSubmissao()}">
+								<table id="tb-aguardando-revisor" class="display">
+									<thead>
+									<tr>
+										<th>Título</th>
+										<th>Autor</th>
+										<th>Trilha</th>
+										<th></th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr th:each="trabalho : ${aguardandoRevisor}">
+										<td><a th:href="@{'/trabalho/__${trabalho.id}__'}" th:text="${trabalho.titulo}"></a></td>
+										<td th:text="${trabalho.autor?.nome}"></td>
+										<td th:text="${trabalho.trilha.nome}"></td>
+										<td class="nowrap">
+											<a title="Alocar revisores" class="btn-floating waves-effect purple darken-4 modal-trigger add-revisores" href="#alocar-revisor" th:attr="data-id=${trabalho.id}"><i class="material-icons">supervisor_account</i></a>
+										</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+							<div id="aguardando-revisao" class="col s12 mt-20" th:if="${isOrganizador and evento.isAfterSubmissao()}">
+								<table id="tb-aguardando-revisao" class="display">
+									<thead>
+									<tr>
+										<th>Título</th>
+										<th>Autor</th>
+										<th>Revisor(es)</th>
+										<th></th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr th:each="trabalho : ${aguardandoRevisao}">
+										<td><a th:href="@{'/trabalho/__${trabalho.id}__'}" th:text="${trabalho.titulo}"></a></td>
+										<td th:text="${trabalho.autor?.nome}"></td>
+										<td>
+											<div class="chip white-text" th:classappend="${revisao.revisado} ? 'purple darken-4' : 'grey'" th:each="revisao : ${trabalho.revisoes}" th:inline="text">
+                                                [[${revisao.revisor.nome}]]
+                                                <a href="#modal-excluir" th:attr="data-link=@{'/revisao/__${revisao.id}__/excluir'}" class="modal-trigger confirmacao"><i class="material-icons" title="Remover Revisor">close</i></a>
+                                            </div>
+										</td>
+										<td class="nowrap">
+											<a title="Alocar revisores" class="btn-floating waves-effect purple darken-4 modal-trigger add-revisores" href="#alocar-revisor" th:attr="data-id=${trabalho.id}"><i class="material-icons">supervisor_account</i></a>
+										</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+							<div id="revisados" class="col s12 mt-20" th:if="${isOrganizador and evento.isAfterSubmissao()}">
+								<table id="tb-revisados" class="display">
+									<thead>
+									<tr>
+										<th>Título</th>
+										<th>Autor</th>
+										<th>Revisor(es)</th>
+										<th></th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr th:each="trabalho : ${revisados}" th:if="${trabalho.getTrabalhoProduct().isRevisado()}">
+										<td><a th:href="@{'/trabalho/__${trabalho.id}__'}" th:text="${trabalho.titulo}"></a></td>
+										<td th:text="${trabalho.autor?.nome}"></td>
+										<td>
+											<div class="chip purple darken-4 white-text" th:each="revisao : ${trabalho.revisoes}" th:text="${revisao.revisor.nome}"></div>
+										</td>
+										<td class="nowrap">
+											<!--<a title="Excluir" class="btn-floating waves-effect red btn-small"><i class="material-icons">delete</i></a>-->
+										</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Structure -->
+	<div id="alocar-revisor" class="modal modal-fixed-footer">
+		<form id="form-alocar-revisor" class="col s12" th:action="@{'/revisao/revisores'}" method="post">
+			<input id="trabalho" type="hidden" name="trabalho" value=""/>
+			<div class="modal-content">
+				<h4>Alocar Revisores</h4>
+				<div class="row">
+					<div class="input-field col s12">
+						<select id="revisores" name="revisores" multiple="multiple" class="js-data-example-ajax browser-default" required="required"></select>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" class="btn waves-effect waves-light purple darken-4">Alocar</button>
+				<a href="#!" class="modal-close btn-flat">Cancelar</a>
+			</div>
+		</form>
+	</div>
+</section>
+<section layout:fragment="js">
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#tb-aguardando-revisor,#tb-revisados').DataTable({
+				"language" : {
+					url : _context + '/js/Portuguese-Brasil.json'
+				},
+				columnDefs: [
+					{ orderable: false, targets: [3] }
+				]
+			});
+            $('#tb-aguardando-revisao').DataTable({
+                "language" : {
+                    url : _context + '/js/Portuguese-Brasil.json'
+                },
+                columnDefs: [
+                    { orderable: false, targets: [2,3] }
+                ]
+            });
+			$('#tb-minhas').DataTable({
+				"language" : {
+					url : _context + '/js/Portuguese-Brasil.json'
+				},
+				"order": [[ 2, "desc" ]]
+			});
+			$('.modal').modal({
+				dismissible: false,
+				onCloseEnd: function () {
+					$('.js-data-example-ajax').val(null).trigger('change');
+					$('#form-nova-sessao').trigger("reset");
+				}
+			});
+			$(".add-revisores").click(function() {
+				console.log('add revisores');
+				console.log($(this).data("id"));
+				$("#trabalho").val($(this).data("id"));
+			});
+			$('.js-data-example-ajax').select2({
+				allowClear: true,
+				minimumInputLength: 5,
+				placeholder: '* Revisores...',
+				language: {
+					"noResults": function () {
+						return "Nenhum resultado encontrado";
+					},
+					"inputTooShort": function () {
+						return "Digite pelo menos 5 caracteres..."
+					}
+				},
+				ajax: {
+					url: _context + '/api/revisores/' + $('#eventoId').val(),
+					dataType: 'json',
+					data: function (params) {
+						var query = {
+							search: params.term
+						}
+						return query;
+					},
+					processResults: function (data) {
+						// Transforms the top-level key of the response object from 'items' to 'results'
+						var result = $.map(data, function (obj) {
+							obj.id = obj.id || obj.id; // replace pk with your identifier
+							obj.text = obj.text || obj.nome;
+							return obj;
+						});
+						return {
+							results: result
+						};
+					},
+				},
+			});
+		});
+
+	</script>
+</section>
+</html>

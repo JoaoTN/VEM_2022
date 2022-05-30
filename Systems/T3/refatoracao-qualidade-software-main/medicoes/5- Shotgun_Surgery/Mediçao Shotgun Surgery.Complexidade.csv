@@ -1,0 +1,1763 @@
+Kind,Name,AvgCyclomatic,SumCyclomatic,MaxEssential,MaxNesting
+File,"AreaCapacitacao.java",1,10,1,0
+File,"AreaCapacitacaoControllerImpl.java",1,8,1,1
+File,"AreaCapacitacaoRepository.java",0,0,0,0
+File,"AreaCapacitacaoService.java",0,0,0,0
+File,"AreaCapacitacaoServiceImpl.java",1,7,1,0
+File,"AreaPerfil.java",1,8,1,0
+File,"AreaPerfilControllerImpl.java",1,9,1,1
+File,"AreaPerfilRepository.java",0,0,0,0
+File,"AreaPerfilService.java",0,0,0,0
+File,"AreaPerfilServiceImpl.java",1,7,1,0
+File,"ArquivoController.java",2,2,1,1
+File,"ArquivoService.java",0,0,0,0
+File,"ArquivoServiceImpl.java",2,5,1,1
+File,"AuthControllerImpl.java",1,9,1,1
+File,"AuthenticationRequest.java",1,7,1,0
+File,"Avaliacao.java",1,38,1,2
+File,"AvaliacaoComportamentalService.java",1,6,1,0
+File,"AvaliacaoController.java",0,0,0,0
+File,"AvaliacaoControllerImpl.java",1,28,1,2
+File,"AvaliacaoRepository.java",0,0,0,0
+File,"AvaliacaoService.java",2,78,4,3
+File,"AvalicaoComportamentalImpl.java",0,0,0,0
+File,"AvalicaoComportamentalRepository.java",0,0,0,0
+File,"CategoriaComportamento.java",1,2,1,0
+File,"Comissao.java",1,2,1,0
+File,"ComissaoRepository.java",0,0,0,0
+File,"ComissaoService.java",0,0,0,0
+File,"ComissaoServiceImpl.java",1,1,1,0
+File,"Competencia.java",1,19,3,1
+File,"CompetenciaAutoAvaliacaoDTO.java",1,7,1,0
+File,"CompetenciaControllerImpl.java",1,5,1,1
+File,"CompetenciaDTO.java",1,5,1,0
+File,"CompetenciaRepository.java",0,0,0,0
+File,"CompetenciaService.java",0,0,0,0
+File,"CompetenciaServiceImpl.java",1,5,1,1
+File,"Comportamento.java",1,39,1,1
+File,"ComportamentoController.java",0,0,0,0
+File,"ComportamentoControllerImpl.java",2,53,1,1
+File,"ComportamentoRepository.java",0,0,0,0
+File,"ComportamentoSearch.java",1,12,1,0
+File,"ComportamentoService.java",0,0,0,0
+File,"ComportamentoServiceImpl.java",1,10,1,0
+File,"ComportamentoSpecification.java",1,27,1,2
+File,"CorsFilter.java",3,3,1,1
+File,"CursoCapacitacao.java",1,19,3,1
+File,"CursoCapacitacaoController.java",0,0,0,0
+File,"CursoCapacitacaoControllerImpl.java",2,16,5,4
+File,"CursoCapacitacaoRepository.java",0,0,0,0
+File,"CursoCapacitacaoService.java",0,0,0,0
+File,"CursoCapacitacaoServiceImpl.java",1,5,1,0
+File,"CustomResponses.java",1,6,1,0
+File,"DadosPessoais.java",1,14,1,0
+File,"DadosProfissionais.java",1,16,1,0
+File,"DesempenhoController.java",0,0,0,0
+File,"DesempenhoControllerImpl.java",5,15,1,2
+File,"Diagnostico.java",1,28,1,0
+File,"DiagnosticoController.java",0,0,0,0
+File,"DiagnosticoControllerImpl.java",1,18,1,1
+File,"DiagnosticoRepository.java",0,0,0,0
+File,"DiagnosticoService.java",0,0,0,0
+File,"DiagnosticoServiceImpl.java",1,26,3,3
+File,"Dificuldade.java",1,7,1,0
+File,"EscalaAvaliacao.java",1,8,1,0
+File,"Escolaridade.java",1,6,1,0
+File,"Etapa.java",1,2,1,0
+File,"EtapaResponsabilidade.java",1,2,1,0
+File,"ExceptionHandlingController.java",1,7,1,0
+File,"ExceptionResponse.java",1,14,1,0
+File,"ExperienciaProfissional.java",1,23,3,2
+File,"ExperienciaProfissionalControllerImpl.java",2,16,4,3
+File,"ExperienciaProfissionalRepository.java",0,0,0,0
+File,"ExperienciaProfissionalService.java",0,0,0,0
+File,"ExperienciaProfissionalServiceImpl.java",1,5,1,0
+File,"FileUploadException.java",1,1,1,0
+File,"FormacaoAcademicaController.java",0,0,0,0
+File,"GestaoCompetenciaApplication.java",1,2,1,0
+File,"GestaoCompetenciaException.java",1,1,1,0
+File,"IPermissaoNormalizacao.java",0,0,0,0
+File,"Idioma.java",1,10,3,1
+File,"IdiomaControllerImpl.java",1,11,1,2
+File,"IdiomaRepository.java",0,0,0,0
+File,"IdiomaService.java",0,0,0,0
+File,"IdiomaServiceImpl.java",1,5,1,0
+File,"Impacto.java",1,6,1,0
+File,"InvalidJwtAuthenticationException.java",1,1,1,0
+File,"ItemAvaliacao.java",1,16,1,1
+File,"ItemAvaliacaoController.java",0,0,0,0
+File,"ItemAvaliacaoControllerImpl.java",1,15,1,1
+File,"ItemAvaliacaoRepository.java",0,0,0,0
+File,"ItemAvaliacaoSearch.java",1,14,1,0
+File,"ItemAvaliacaoService.java",0,0,0,0
+File,"ItemAvaliacaoServiceImpl.java",1,10,1,1
+File,"ItemAvaliacaoSpecification.java",3,6,1,1
+File,"ItemPreferencia.java",1,11,3,1
+File,"ItemPreferenciaControllerImpl.java",1,7,1,1
+File,"ItemPreferenciaRepository.java",0,0,0,0
+File,"ItemPreferenciaService.java",0,0,0,0
+File,"ItemPreferenciaServiceImpl.java",1,5,1,0
+File,"JwtConfigurer.java",1,2,1,0
+File,"JwtTokenFilter.java",1,7,1,2
+File,"JwtTokenProvider.java",1,9,1,1
+File,"Lotacao.java",1,2,1,0
+File,"Mapeamento.java",1,45,3,1
+File,"MapeamentoControllerImpl.java",1,19,1,1
+File,"MapeamentoRepository.java",0,0,0,0
+File,"MapeamentoService.java",0,0,0,0
+File,"MapeamentoServiceImpl.java",1,33,3,3
+File,"MinioConfig.java",2,16,1,2
+File,"MinioPorperties.java",1,10,1,0
+File,"Monitoramento.java",1,11,1,0
+File,"NivelEscolaridade.java",1,20,1,0
+File,"NivelEscolaridadeController.java",2,14,5,4
+File,"NivelEscolaridadeRepository.java",0,0,0,0
+File,"NivelEscolaridadeService.java",0,0,0,0
+File,"NivelEscolaridadeServiceImpl.java",1,7,1,2
+File,"NivelIdioma.java",1,6,1,0
+File,"NotAllowedException.java",1,1,1,0
+File,"NotaDTO.java",1,6,1,0
+File,"Perfil.java",1,33,3,1
+File,"PerfilControllerImpl.java",1,14,1,2
+File,"PerfilIdioma.java",1,14,1,0
+File,"PerfilIdiomaControllerImpl.java",1,15,3,3
+File,"PerfilIdiomaKey.java",1,6,1,0
+File,"PerfilIdiomaRepository.java",0,0,0,0
+File,"PerfilIdiomaService.java",0,0,0,0
+File,"PerfilIdiomaServiceImpl.java",1,7,1,0
+File,"PerfilPreferencia.java",1,11,1,0
+File,"PerfilPreferenciaControllerImpl.java",2,16,3,3
+File,"PerfilPreferenciaKey.java",1,6,1,0
+File,"PerfilPreferenciaRepository.java",0,0,0,0
+File,"PerfilPreferenciaService.java",0,0,0,0
+File,"PerfilPreferenciaServiceImpl.java",1,7,1,0
+File,"PerfilRepository.java",0,0,0,0
+File,"PerfilService.java",0,0,0,0
+File,"PerfilServiceImpl.java",1,9,1,1
+File,"Preferencia.java",1,4,1,0
+File,"PreferenciaControllerImpl.java",1,6,1,1
+File,"PreferenciaRepository.java",0,0,0,0
+File,"PreferenciaService.java",0,0,0,0
+File,"PreferenciaServiceImpl.java",1,4,1,0
+File,"ResourceAlreadyExistsException.java",1,1,1,0
+File,"ResourceNotFoundException.java",1,4,1,0
+File,"Responsabilidade.java",1,86,4,2
+File,"ResponsabilidadeControllerImpl.java",2,63,3,4
+File,"ResponsabilidadeFilter.java",1,6,1,0
+File,"ResponsabilidadeRepository.java",0,0,0,0
+File,"ResponsabilidadeSearch.java",1,8,1,0
+File,"ResponsabilidadeService.java",0,0,0,0
+File,"ResponsabilidadeServiceImpl.java",1,8,1,0
+File,"ResponsabilidadeSpecification.java",5,11,1,2
+File,"ServletInitializer.java",1,1,1,0
+File,"SituacaoComportamento.java",1,2,1,0
+File,"SituacaoResponsabilidade.java",1,2,1,0
+File,"StandardError.java",1,9,1,0
+File,"StatusExperienciaProfissional.java",1,5,1,0
+File,"StatusNivelEscolaridade.java",1,5,1,0
+File,"SwaggerConfig.java",1,3,1,0
+File,"TipoAreaPerfil.java",1,2,1,0
+File,"TipoCompetencia.java",1,2,1,0
+File,"TipoExperienciaProfissional.java",1,7,1,0
+File,"Unidade.java",1,23,3,1
+File,"UnidadeControllerImpl.java",2,32,1,3
+File,"UnidadeMapeada.java",1,11,1,1
+File,"UnidadeMapeadaControllerImpl.java",2,2,1,1
+File,"UnidadeMapeadaRepository.java",0,0,0,0
+File,"UnidadeMapeadaService.java",1,3,1,0
+File,"UnidadeRepository.java",0,0,0,0
+File,"UnidadeService.java",0,0,0,0
+File,"UnidadeServiceImpl.java",1,8,3,2
+File,"UserDetailsCustom.java",2,2,1,1
+File,"Usuario.java",1,37,3,1
+File,"UsuarioController.java",0,0,0,0
+File,"UsuarioControllerImpl.java",1,1,1,0
+File,"UsuarioRepository.java",0,0,0,0
+File,"UsuarioService.java",0,0,0,0
+File,"UsuarioServiceImpl.java",1,10,1,0
+File,"VinculoProfissional.java",1,2,1,0
+File,"WebMvcConfigurer.java",1,1,1,0
+File,"WebSecurityConfig.java",1,2,1,0
+Package,"br",0,0,0,0
+Package,"br.ufc",0,0,0,0
+Package,"br.ufc.quixada",0,0,0,0
+Package,"br.ufc.quixada.npi",0,0,0,0
+Package,"br.ufc.quixada.npi.gestaocompetencia",1,3,1,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.GestaoCompetenciaApplication",1,2,1,0
+Public Static Method,"br.ufc.quixada.npi.gestaocompetencia.GestaoCompetenciaApplication.main",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.GestaoCompetenciaApplication.passwordEncoder",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.ServletInitializer",1,1,1,0
+Protected Method,"br.ufc.quixada.npi.gestaocompetencia.ServletInitializer.configure",,1,,0
+Package,"br.ufc.quixada.npi.gestaocompetencia.config",1,52,1,2
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.config.CorsFilter",3,3,1,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.CorsFilter.doFilter",,3,,1
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.config.JwtConfigurer",1,2,1,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.config.JwtConfigurer.JwtConfigurer",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.JwtConfigurer.configure",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.config.JwtTokenFilter",1,7,1,2
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.config.JwtTokenFilter.JwtTokenFilter",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.config.JwtTokenFilter.criarAutenticacao",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.JwtTokenFilter.doFilter",,2,,1
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.config.JwtTokenFilter.emitirErroAoCriarAutenticacao",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.config.JwtTokenProvider",1,9,1,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.JwtTokenProvider.createRefreshToken",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.JwtTokenProvider.createToken",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.JwtTokenProvider.getAuthentication",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.JwtTokenProvider.getUsername",,1,,0
+Protected Method,"br.ufc.quixada.npi.gestaocompetencia.config.JwtTokenProvider.init",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.JwtTokenProvider.resolveToken",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.JwtTokenProvider.validateToken",,2,,1
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.config.MinioConfig",2,16,1,2
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.config.MinioConfig.MinioConfig",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.config.MinioConfig.checkBucketExistence",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.config.MinioConfig.createBucket",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.MinioConfig.getPrivateObject",,3,,2
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.config.MinioConfig.initClient",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.MinioConfig.removePrivateFile",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.MinioConfig.uploadPrivateFile",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.MinioConfig.uploadPublicFile",,3,,2
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.config.MinioPorperties",1,10,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.MinioPorperties.getAccesskey",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.MinioPorperties.getBucketName",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.MinioPorperties.getEndpoint",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.MinioPorperties.getPort",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.MinioPorperties.getSecretkey",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.MinioPorperties.setAccesskey",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.MinioPorperties.setBucketName",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.MinioPorperties.setEndpoint",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.MinioPorperties.setPort",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.MinioPorperties.setSecretkey",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.config.UserDetailsCustom",2,2,1,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.UserDetailsCustom.loadUserByUsername",,2,,1
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.config.WebMvcConfigurer",1,1,1,0
+Protected Method,"br.ufc.quixada.npi.gestaocompetencia.config.WebMvcConfigurer.addResourceHandlers",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.config.WebSecurityConfig",1,2,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.config.WebSecurityConfig.authenticationManagerBean",,1,,0
+Protected Method,"br.ufc.quixada.npi.gestaocompetencia.config.WebSecurityConfig.configure",,1,,0
+Package,"br.ufc.quixada.npi.gestaocompetencia.controller",0,0,0,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.controller.AvaliacaoController",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.AvaliacaoController.addAvaliacao",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.AvaliacaoController.addAvaliacaoComportamental",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.AvaliacaoController.deleteAvaliacao",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.AvaliacaoController.find",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.AvaliacaoController.findAll",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.AvaliacaoController.findLast",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.AvaliacaoController.getAllAvaliacaoByUserAndUnidade",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.AvaliacaoController.getAvaliacaoByTipoAvaliacaoAndUsuario",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.AvaliacaoController.putAtualizacaoComportamental",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.controller.ComportamentoController",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.ComportamentoController.consolidarComportamentos",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.ComportamentoController.delete",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.ComportamentoController.desconsolidarComportamento",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.ComportamentoController.findByCategoria",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.ComportamentoController.findById",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.ComportamentoController.findByMapeamento",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.ComportamentoController.getStatus",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.ComportamentoController.restaurarComportamento",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.ComportamentoController.save",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.ComportamentoController.update",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.controller.CursoCapacitacaoController",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.CursoCapacitacaoController.create",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.CursoCapacitacaoController.delete",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.CursoCapacitacaoController.findAll",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.CursoCapacitacaoController.update",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.controller.DesempenhoController",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.DesempenhoController.getAvaliacoes",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.DesempenhoController.getAvaliacoesServidores",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.controller.DiagnosticoController",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.DiagnosticoController.create",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.DiagnosticoController.delete",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.DiagnosticoController.find",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.DiagnosticoController.findAll",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.DiagnosticoController.findByUsuario",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.DiagnosticoController.findLastUser",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.DiagnosticoController.findSecondaryUser",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.DiagnosticoController.update",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.DiagnosticoController.verifySecondaryAccess",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.controller.FormacaoAcademicaController",0,0,0,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.controller.ItemAvaliacaoController",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.ItemAvaliacaoController.delete",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.ItemAvaliacaoController.filterItemAvaliacao",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.ItemAvaliacaoController.find",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.ItemAvaliacaoController.findAllByAvaliacao",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.ItemAvaliacaoController.update",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.controller.UsuarioController",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.controller.UsuarioController.find",,0,,0
+Package,"br.ufc.quixada.npi.gestaocompetencia.controller.impl",1,408,5,4
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AreaCapacitacaoControllerImpl",1,8,1,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AreaCapacitacaoControllerImpl.create",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AreaCapacitacaoControllerImpl.delete",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AreaCapacitacaoControllerImpl.find",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AreaCapacitacaoControllerImpl.findAll",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AreaCapacitacaoControllerImpl.update",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AreaPerfilControllerImpl",1,9,1,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AreaPerfilControllerImpl.create",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AreaPerfilControllerImpl.delete",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AreaPerfilControllerImpl.find",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AreaPerfilControllerImpl.findAll",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AreaPerfilControllerImpl.update",,2,,1
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ArquivoController",2,2,1,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ArquivoController.find",,2,,1
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AuthControllerImpl",1,9,1,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AuthControllerImpl.getPermissoes",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AuthControllerImpl.getUnidadeLotacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AuthControllerImpl.hasSubchefia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AuthControllerImpl.isChefia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AuthControllerImpl.isComissao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AuthControllerImpl.isViceChefia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AuthControllerImpl.signin",,2,,1
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AuthenticationRequest",1,7,1,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AuthenticationRequest.AuthenticationRequest",,1,,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AuthenticationRequest.AuthenticationRequest",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AuthenticationRequest.getEmail",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AuthenticationRequest.getPassword",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AuthenticationRequest.getUsername",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AuthenticationRequest.setEmail",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AuthenticationRequest.setPassword",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AvaliacaoControllerImpl",1,28,1,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AvaliacaoControllerImpl.addAvaliacao",,6,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AvaliacaoControllerImpl.addAvaliacaoComportamental",,4,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AvaliacaoControllerImpl.avaliar",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AvaliacaoControllerImpl.deleteAvaliacao",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AvaliacaoControllerImpl.find",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AvaliacaoControllerImpl.find",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AvaliacaoControllerImpl.findAll",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AvaliacaoControllerImpl.findItens",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AvaliacaoControllerImpl.findWithJustificativas",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AvaliacaoControllerImpl.getAllAvaliacaoByUserAndUnidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AvaliacaoControllerImpl.getAvaliacaoByTipoAvaliacaoAndUsuario",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AvaliacaoControllerImpl.hasNoAvaliacoes",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AvaliacaoControllerImpl.justificarAvaliacao",,3,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AvaliacaoControllerImpl.putAtualizacaoComportamental",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AvaliacaoControllerImpl.removerJustificativa",,2,,1
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.AvalicaoComportamentalImpl",0,0,0,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.CompetenciaControllerImpl",1,5,1,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.CompetenciaControllerImpl.getCompetenciasComportamentais",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.CompetenciaControllerImpl.getCompetenciasResponsabilidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.CompetenciaControllerImpl.getCompetenciasTecnicas",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.CompetenciaControllerImpl.save",,2,,1
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl",2,53,1,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.consolidarComportamentos",,5,,1
+Lambda Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.consolidarComportamentos.(for_loop_1).(lambda_expr_1)",,1,,0
+Lambda Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.consolidarComportamentos.(for_loop_1).(lambda_expr_2)",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.delete",,7,,1
+Lambda Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.delete.(lambda_expr_1)",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.desconsolidarComportamento",,5,,1
+Lambda Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.desconsolidarComportamento.(lambda_expr_1)",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.excluirComportamentos",,3,,1
+Lambda Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.excluirComportamentos.(lambda_expr_1)",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.findByCategoria",,3,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.findByDiagnostico",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.findById",,3,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.findByMapeamento",,2,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.getStatus",,2,,1
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.isMembroComissao",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.pertenceMapeamento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.restaurarComportamento",,4,,1
+Lambda Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.restaurarComportamento.(lambda_expr_1)",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.save",,4,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.update",,6,,1
+Lambda Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.update.(lambda_expr_1)",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.vincularComportamentos",,5,,1
+Lambda Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.vincularComportamentos.(for_loop_2).(lambda_expr_1)",,1,,0
+Lambda Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ComportamentoControllerImpl.vincularComportamentos.(for_loop_2).(lambda_expr_2)",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.CursoCapacitacaoControllerImpl",2,16,5,4
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.CursoCapacitacaoControllerImpl.create",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.CursoCapacitacaoControllerImpl.delete",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.CursoCapacitacaoControllerImpl.findAll",,2,,1
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.CursoCapacitacaoControllerImpl.findPerfil",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.CursoCapacitacaoControllerImpl.getCursoCapacitacaoResponseEntity",,6,,4
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.CursoCapacitacaoControllerImpl.update",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.CursoCapacitacaoControllerImpl.validCursoCapacitacao",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.CursoCapacitacaoControllerImpl.validDatasCursoCapacitacao",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.DesempenhoControllerImpl",5,15,1,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.DesempenhoControllerImpl.getAvaliacoes",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.DesempenhoControllerImpl.getAvaliacoesServidores",,10,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.DesempenhoControllerImpl.setDados",,2,,1
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.DiagnosticoControllerImpl",1,18,1,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.DiagnosticoControllerImpl.create",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.DiagnosticoControllerImpl.delete",,4,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.DiagnosticoControllerImpl.find",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.DiagnosticoControllerImpl.findAll",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.DiagnosticoControllerImpl.findByUsuario",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.DiagnosticoControllerImpl.findLastUser",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.DiagnosticoControllerImpl.findSecondaryUser",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.DiagnosticoControllerImpl.isMembroComissao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.DiagnosticoControllerImpl.update",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.DiagnosticoControllerImpl.verifySecondaryAccess",,2,,1
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ExceptionHandlingController",1,7,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ExceptionHandlingController.fileUpload",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ExceptionHandlingController.handleAll",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ExceptionHandlingController.handleArgumentInvalid",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ExceptionHandlingController.handleResourceNotFound",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ExceptionHandlingController.invalidJwtAuthentication",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ExceptionHandlingController.notAllowed",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ExceptionHandlingController.resourceAlreadyExist",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ExperienciaProfissionalControllerImpl",2,16,4,3
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ExperienciaProfissionalControllerImpl.create",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ExperienciaProfissionalControllerImpl.delete",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ExperienciaProfissionalControllerImpl.findAll",,2,,1
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ExperienciaProfissionalControllerImpl.findPerfil",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ExperienciaProfissionalControllerImpl.getExperienciaProfissionalResponseEntity",,5,,3
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ExperienciaProfissionalControllerImpl.save",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ExperienciaProfissionalControllerImpl.update",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ExperienciaProfissionalControllerImpl.validExperienciaProfissional",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.IdiomaControllerImpl",2,11,1,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.IdiomaControllerImpl.create",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.IdiomaControllerImpl.delete",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.IdiomaControllerImpl.find",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.IdiomaControllerImpl.findAll",,4,,2
+Lambda Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.IdiomaControllerImpl.findAll.(for_loop_1).(lambda_expr_1)",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.IdiomaControllerImpl.update",,2,,1
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ItemAvaliacaoControllerImpl",1,15,1,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ItemAvaliacaoControllerImpl.delete",,2,,1
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ItemAvaliacaoControllerImpl.existeUmChefeEAvaliacoesNaoVazio",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ItemAvaliacaoControllerImpl.existeUmSubChefeEAvaliacoesNaoVazio",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ItemAvaliacaoControllerImpl.existeUmViceChefe",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ItemAvaliacaoControllerImpl.filterItemAvaliacao",,3,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ItemAvaliacaoControllerImpl.find",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ItemAvaliacaoControllerImpl.findAllByAvaliacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ItemAvaliacaoControllerImpl.findAllByTipo",,4,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ItemAvaliacaoControllerImpl.update",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ItemPreferenciaControllerImpl",1,7,1,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ItemPreferenciaControllerImpl.create",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ItemPreferenciaControllerImpl.delete",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ItemPreferenciaControllerImpl.find",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ItemPreferenciaControllerImpl.findAll",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ItemPreferenciaControllerImpl.update",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.MapeamentoControllerImpl",1,19,1,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.MapeamentoControllerImpl.create",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.MapeamentoControllerImpl.delete",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.MapeamentoControllerImpl.find",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.MapeamentoControllerImpl.findAll",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.MapeamentoControllerImpl.findAllUnidadesMapeadas",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.MapeamentoControllerImpl.findAllUser",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.MapeamentoControllerImpl.findLastUser",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.MapeamentoControllerImpl.findSecondaryUser",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.MapeamentoControllerImpl.findUnidadesMapeadas",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.MapeamentoControllerImpl.getFinalizados",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.MapeamentoControllerImpl.getStatus",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.MapeamentoControllerImpl.subnidadesInNormalizacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.MapeamentoControllerImpl.unidadesInNormalizacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.MapeamentoControllerImpl.update",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.MapeamentoControllerImpl.verifySecondaryAccess",,2,,1
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.NivelEscolaridadeController",2,14,5,4
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.NivelEscolaridadeController.create",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.NivelEscolaridadeController.delete",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.NivelEscolaridadeController.findByFormacao",,2,,1
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.NivelEscolaridadeController.findPerfil",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.NivelEscolaridadeController.getNivelEscolaridadeResponseEntity",,6,,4
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.NivelEscolaridadeController.update",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilControllerImpl",1,14,1,2
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilControllerImpl.adicionarNovaAreaCapacitacaoAoPerfil",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilControllerImpl.atualizarAreaCapacitacao",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilControllerImpl.create",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilControllerImpl.findByUsuario",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilControllerImpl.getOrCreate",,2,,1
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilControllerImpl.modificarAreaCapacitacaoExistenteNoPerfil",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilControllerImpl.update",,3,,2
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilControllerImpl.verificarPerfilValido",,2,,1
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilIdiomaControllerImpl",1,15,3,3
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilIdiomaControllerImpl.create",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilIdiomaControllerImpl.deletarPerfilIdioma",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilIdiomaControllerImpl.delete",,3,,2
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilIdiomaControllerImpl.existeUmPerfiliIdiomaEOPerfilCorresponde",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilIdiomaControllerImpl.find",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilIdiomaControllerImpl.findPerfil",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilIdiomaControllerImpl.setDadosPerfilIdioma",,4,,3
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilIdiomaControllerImpl.update",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilPreferenciaControllerImpl",2,16,3,3
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilPreferenciaControllerImpl.findPerfil",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilPreferenciaControllerImpl.getItemPreferencia",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilPreferenciaControllerImpl.getOrCreate",,4,,3
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilPreferenciaControllerImpl.setPerfilPreferencia",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilPreferenciaControllerImpl.update",,3,,2
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PerfilPreferenciaControllerImpl.validItemPreferencia",,3,,2
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PreferenciaControllerImpl",1,6,1,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PreferenciaControllerImpl.create",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PreferenciaControllerImpl.delete",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PreferenciaControllerImpl.find",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PreferenciaControllerImpl.findAll",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.PreferenciaControllerImpl.update",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl",2,63,3,4
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.cadastroResponsabilidadeUpdate",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.consolidacaoResponsabilidadeUpdate",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.consolidarCompetenciasChefia",,3,,2
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.consolidarCompetenciasConsolidado",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.consolidarResponsabilidades",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.delete",,7,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.deleteResponsabilidadeNormalizacao",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.desconsolidarResponsabilidade",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.desvalidarResponsabilidade",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.findAllByUsuario",,3,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.findConsolidadas",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.findConsolidadasAutoavaliacao",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.findConsolidadasByUnidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.getResponsabilidadeNormalizacao",,3,,1
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.getResponsabilidadesDaAutoAvalicao",,4,,3
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.hasPermissionCRUD",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.isMembroComissao",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.normalizacaoResponsabilidadeUpdate",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.restaurarResponsabilidadeNormalizacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.save",,4,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.update",,3,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.updateResponsabilidadeNormalizacao",,5,,1
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.validacaoResponsabilidadeUpdate",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.ResponsabilidadeControllerImpl.validarResponsabilidades",,5,,4
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.UnidadeControllerImpl",2,32,1,3
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.UnidadeControllerImpl.find",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.UnidadeControllerImpl.findAll",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.UnidadeControllerImpl.findAllByGestor",,6,,3
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.UnidadeControllerImpl.findAllUnidadesByUnidade",,5,,3
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.UnidadeControllerImpl.findAllUnidadesWithMapeamento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.UnidadeControllerImpl.findByUnidadePai",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.UnidadeControllerImpl.findByUsuario",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.UnidadeControllerImpl.findServidores",,7,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.UnidadeControllerImpl.findSubunidades",,5,,3
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.UnidadeControllerImpl.getUnidadeAndSubunidades",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.UnidadeControllerImpl.relateUnidadeToMapeamento",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.UnidadeMapeadaControllerImpl",2,2,1,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.UnidadeMapeadaControllerImpl.create",,2,,1
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.UsuarioControllerImpl",1,1,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.controller.impl.UsuarioControllerImpl.find",,1,,0
+Package,"br.ufc.quixada.npi.gestaocompetencia.docs",1,9,1,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.docs.CustomResponses",0,0,0,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.docs.CustomResponses.AuthResponse",1,2,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.docs.CustomResponses.AuthResponse.getToken",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.docs.CustomResponses.AuthResponse.getUsername",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.docs.CustomResponses.InternalServerError",1,2,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.docs.CustomResponses.InternalServerError.getError",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.docs.CustomResponses.InternalServerError.getStatus",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.docs.CustomResponses.NotAlowedResponse",1,2,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.docs.CustomResponses.NotAlowedResponse.getStatus",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.docs.CustomResponses.NotAlowedResponse.setStatus",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.docs.SwaggerConfig",1,3,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.docs.SwaggerConfig.apiDoc",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.docs.SwaggerConfig.defaultAuth",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.docs.SwaggerConfig.securityContext",,1,,0
+Package,"br.ufc.quixada.npi.gestaocompetencia.exception",1,32,1,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.exception.ExceptionResponse",1,8,1,0
+Public Static Class,"br.ufc.quixada.npi.gestaocompetencia.exception.ExceptionResponse.ExceptionResponseBuilder",1,6,1,0
+Private Constructor,"br.ufc.quixada.npi.gestaocompetencia.exception.ExceptionResponse.ExceptionResponseBuilder.ExceptionResponseBuilder",,1,,0
+Public Static Method,"br.ufc.quixada.npi.gestaocompetencia.exception.ExceptionResponse.ExceptionResponseBuilder.anExceptionResponseBuilder",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.ExceptionResponse.ExceptionResponseBuilder.build",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.ExceptionResponse.ExceptionResponseBuilder.withError",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.ExceptionResponse.ExceptionResponseBuilder.withMessage",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.ExceptionResponse.ExceptionResponseBuilder.withStatus",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.ExceptionResponse.getError",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.ExceptionResponse.getMessage",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.ExceptionResponse.getStatus",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.ExceptionResponse.getTimestamp",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.ExceptionResponse.setError",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.ExceptionResponse.setMessage",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.ExceptionResponse.setStatus",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.ExceptionResponse.setTimestamp",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.exception.FileUploadException",1,1,1,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.exception.FileUploadException.FileUploadException",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.exception.GestaoCompetenciaException",1,1,1,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.exception.GestaoCompetenciaException.GestaoCompetenciaException",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.exception.InvalidJwtAuthenticationException",1,1,1,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.exception.InvalidJwtAuthenticationException.InvalidJwtAuthenticationException",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.exception.NotAllowedException",1,1,1,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.exception.NotAllowedException.NotAllowedException",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.exception.ResourceAlreadyExistsException",1,1,1,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.exception.ResourceAlreadyExistsException.ResourceAlreadyExistsException",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.exception.ResourceNotFoundException",1,4,1,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.exception.ResourceNotFoundException.ResourceNotFoundException",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.ResourceNotFoundException.getFieldName",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.ResourceNotFoundException.getFieldValue",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.ResourceNotFoundException.getResourceName",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.exception.StandardError",1,9,1,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.exception.StandardError.StandardError",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.StandardError.getError",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.StandardError.getMessage",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.StandardError.getPath",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.StandardError.getStatus",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.StandardError.setError",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.StandardError.setMessage",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.StandardError.setPath",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.exception.StandardError.setStatus",,1,,0
+Package,"br.ufc.quixada.npi.gestaocompetencia.model",1,644,4,2
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.AreaCapacitacao",1,10,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.AreaCapacitacao.addNovaAreaCapacitacaoAoperfil",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.AreaCapacitacao.getCompetencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.AreaCapacitacao.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.AreaCapacitacao.getNome",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.AreaCapacitacao.getUsuario",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.AreaCapacitacao.modificarAreaCapacitacaoExistenteNoPerfil",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.AreaCapacitacao.setCompetencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.AreaCapacitacao.setId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.AreaCapacitacao.setNome",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.AreaCapacitacao.setUsuario",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.AreaPerfil",1,8,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.AreaPerfil.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.AreaPerfil.getNome",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.AreaPerfil.getTipo",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.AreaPerfil.getUsuario",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.AreaPerfil.setId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.AreaPerfil.setNome",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.AreaPerfil.setTipo",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.AreaPerfil.setUsuario",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao",1,34,1,2
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.Perspectiva",1,2,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.Perspectiva.valueOf",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.Perspectiva.values",,1,,0
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.TipoAvaliacao",1,2,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.TipoAvaliacao.valueOf",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.TipoAvaliacao.values",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.addAllItens",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.addItem",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.gerarMap",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.getAvaliado",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.getAvaliador",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.getDiagnostico",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.getItens",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.getItensAplicaveis",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.getJustificativa",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.getPerspectiva",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.getTipo",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.getUnidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.isAvaliador",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.isIgnorada",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.pegarResponsabilidades",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.setAvaliado",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.setAvaliador",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.setDadosAvaliacaoBase",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.setDiagnostico",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.setId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.setIgnorada",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.setJustificativa",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.setPerspectiva",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.setTipo",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Avaliacao.setUnidade",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Comissao",1,2,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comissao.getUsuario",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comissao.setUsuario",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Competencia",1,19,3,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Competencia.equals",,3,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Competencia.getDescricao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Competencia.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Competencia.getNome",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Competencia.getTipo",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Competencia.getUnidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Competencia.hashCode",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Competencia.isExcluida",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Competencia.isValidada",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Competencia.setDescricao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Competencia.setExcluida",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Competencia.setId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Competencia.setNome",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Competencia.setTipo",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Competencia.setUnidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Competencia.setValidada",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Competencia.toString",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento",1,39,1,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.consolidar",,3,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.getCategoria",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.getCompetencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.getDescricao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.getDescricaoAtualizada",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.getImportancia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.getMapeamento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.getResponsavelComissao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.getServidor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.getUnidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.isConsolidado",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.isExcluido",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.isValid",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.setCategoria",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.setCompetencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.setConsolidado",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.setDescricao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.setDescricaoAtualizada",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.setExcluido",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.setId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.setImportancia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.setMapeamento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.setResponsavelComissao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.setServidor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.setUnidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.toString",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.updateAtravesDaNormalizacaoComportamental",,5,,1
+Lambda Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.updateAtravesDaNormalizacaoComportamental.(lambda_expr_1)",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.updateAtravesDoCadastroDeComportamento",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Comportamento.vincular",,3,,1
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSearch",1,12,1,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSearch.ComportamentoSearch",,1,,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSearch.ComportamentoSearch",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSearch.getCompetencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSearch.getIncluirSubUnidades",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSearch.getMapeamento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSearch.getSituacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSearch.getUnidades",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSearch.setCompetencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSearch.setIncluirSubUnidades",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSearch.setMapeamento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSearch.setSituacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSearch.setUnidades",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSpecification",1,27,1,2
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSpecification.ComportamentoSpecification",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSpecification.addPredicadoQuandoSituacaoIgualAAssociados",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSpecification.addPredicadoQuandoSituacaoIgualAEditados",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSpecification.addPredicadoQuandoSituacaoIgualAExcluidos",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSpecification.addPredicadoQuandoSituacaoIgualANaoAssociados",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSpecification.addPredicadoQuandoSituacaoIgualANaoConsilidados",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSpecification.addPredicadoQuandoSituacaoIgualATodosOuOriginais",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSpecification.addPredicadoQuandoSitucaoIgualAConsolidados",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSpecification.comparaSituacao",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSpecification.criarPredicadoIsFalse",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSpecification.criarPredicadoIsNotNull",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSpecification.criarPredicadoIsNull",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSpecification.criarPredicadoIsTrue",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSpecification.criarPredicadoNotEqual",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSpecification.getPredicadoSitucaoIgualAEditados",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ComportamentoSpecification.toPredicate",,12,,2
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.CursoCapacitacao",1,19,3,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.CursoCapacitacao.equals",,3,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.CursoCapacitacao.getCargaHoraria",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.CursoCapacitacao.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.CursoCapacitacao.getInicio",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.CursoCapacitacao.getInstituicao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.CursoCapacitacao.getNome",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.CursoCapacitacao.getPerfil",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.CursoCapacitacao.getTermino",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.CursoCapacitacao.hashCode",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.CursoCapacitacao.setCargaHoraria",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.CursoCapacitacao.setId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.CursoCapacitacao.setInicio",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.CursoCapacitacao.setInstituicao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.CursoCapacitacao.setNome",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.CursoCapacitacao.setPerfil",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.CursoCapacitacao.setTermino",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.CursoCapacitacao.validar",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.DadosPessoais",1,14,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosPessoais.getDataNasc",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosPessoais.getDeficiencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosPessoais.getEndereco",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosPessoais.getNome",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosPessoais.getNomeSocial",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosPessoais.getSexo",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosPessoais.getTelefone",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosPessoais.setDataNasc",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosPessoais.setDeficiencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosPessoais.setEndereco",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosPessoais.setNome",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosPessoais.setNomeSocial",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosPessoais.setSexo",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosPessoais.setTelefone",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.DadosProfissionais",1,16,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosProfissionais.getCargo",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosProfissionais.getEnderecoFuncional",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosProfissionais.getFuncao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosProfissionais.getImagem",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosProfissionais.getLotacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosProfissionais.getSiape",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosProfissionais.getTelefoneFuncional",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosProfissionais.getVinculo",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosProfissionais.setCargo",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosProfissionais.setEnderecoFuncional",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosProfissionais.setFuncao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosProfissionais.setImagem",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosProfissionais.setLotacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosProfissionais.setSiape",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosProfissionais.setTelefoneFuncional",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.DadosProfissionais.setVinculo",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico",1,28,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.getCriadoEm",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.getDatasDiagnostico",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.getDescricao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.getFimComportamental",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.getFimResponsabilidadeChefia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.getFimResponsabilidadeServidor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.getInicioComportamental",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.getInicioResponsabilidadeChefia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.getInicioResponsabilidadeServidor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.getMapeamento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.getNome",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.isPeriodoAvaliacaoComportamental",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.isPeriodoAvaliacaoRespChefia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.isPeriodoAvaliacaoRespServidores",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.setCriadoEm",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.setDescricao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.setFimComportamental",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.setFimResponsabilidadeChefia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.setFimResponsabilidadeServidor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.setId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.setInicioComportamental",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.setInicioResponsabilidadeChefia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.setInicioResponsabilidadeServidor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.setMapeamento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.setNome",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.validarPrazo",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Diagnostico.validarPrazos",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional",1,23,3,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional.getAreasProfissional",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional.getCargo",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional.getInicio",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional.getInstituicao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional.getPerfil",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional.getStatus",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional.getTermino",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional.getTipo",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional.processar",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional.setAreasProfissional",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional.setCargo",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional.setId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional.setInicio",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional.setInstituicao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional.setPerfil",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional.setStatus",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional.setTermino",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional.setTipo",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional.validar",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ExperienciaProfissional.validarDatas",,1,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.model.IPermissaoNormalizacao",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.model.IPermissaoNormalizacao.hasEditingPermission",,0,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Idioma",1,10,3,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Idioma.equals",,3,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Idioma.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Idioma.getNome",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Idioma.getUsuario",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Idioma.hashCode",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Idioma.setId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Idioma.setNome",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Idioma.setUsuario",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacao",1,16,1,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacao.getAvaliacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacao.getFator",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacao.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacao.getNota",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacao.getResponsabilidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacao.isAvaliador",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacao.isNaoAplica",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacao.prepararPutAtualizacaoComportamental",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacao.setAvaliacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacao.setFator",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacao.setId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacao.setNaoAplica",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacao.setNota",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacao.setResponsabilidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacao.update",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacaoSearch",1,14,1,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacaoSearch.ItemAvaliacaoSearch",,1,,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacaoSearch.ItemAvaliacaoSearch",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacaoSearch.getAvaliacoes",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacaoSearch.getAvaliador",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacaoSearch.getComportamentos",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacaoSearch.getNotas",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacaoSearch.getResponsabilidades",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacaoSearch.getVisualizador",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacaoSearch.setAvaliacoes",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacaoSearch.setAvaliador",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacaoSearch.setComportamentos",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacaoSearch.setNotas",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacaoSearch.setResponsabilidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacaoSearch.setVisualizador",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacaoSpecification",3,6,1,1
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacaoSpecification.ItemAvaliacaoSpecification",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemAvaliacaoSpecification.toPredicate",,5,,1
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.ItemPreferencia",1,11,3,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemPreferencia.equals",,3,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemPreferencia.getDescricao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemPreferencia.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemPreferencia.getPreferencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemPreferencia.hashCode",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemPreferencia.setDescricao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemPreferencia.setId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemPreferencia.setPreferencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ItemPreferencia.toString",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento",1,45,3,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.addAllUnidadesMapeadas",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.addUnidadeMapeada",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.equals",,3,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.getDescricao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.getFimPerComportComissao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.getFimPerComportServidor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.getFimPerRespChefiaSuperior",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.getFimPerRespCom",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.getFimPerRespConsol",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.getFimPerRespGestor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.getInicioPerComportComissao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.getInicioPerComportServidor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.getInicioPerRespChefiaSuperior",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.getInicioPerRespCom",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.getInicioPerRespConsol",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.getInicioPerRespGestor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.getNome",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.getUnidadesMapeadas",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.hashCode",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.isPeriodoCadastroComportamentos",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.isPeriodoEdicaoChefiaResponsabilidades",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.isPeriodoEdicaoComissaoResponsabilidades",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.isPeriodoEdicaoConsolidacaoResponsabilidades",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.isPeriodoGestorEdicaoResponsabilidades",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.isPeriodoNormalizacaoComportamentos",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.setDescricao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.setFimPerComportComissao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.setFimPerComportServidor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.setFimPerRespChefiaSuperior",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.setFimPerRespCom",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.setFimPerRespConsol",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.setFimPerRespGestor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.setId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.setInicioPerComportComissao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.setInicioPerComportServidor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.setInicioPerRespChefiaSuperior",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.setInicioPerRespCom",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.setInicioPerRespConsol",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.setInicioPerRespGestor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Mapeamento.setNome",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Monitoramento",1,11,1,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.Monitoramento.Monitoramento",,1,,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.Monitoramento.Monitoramento",,1,,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.Monitoramento.Monitoramento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Monitoramento.getDinamicaRealizada",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Monitoramento.getEmail",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Monitoramento.getNome",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Monitoramento.getQtd",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Monitoramento.setDinamicaRealizada",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Monitoramento.setEmail",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Monitoramento.setNome",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Monitoramento.setQtd",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.NivelEscolaridade",1,20,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.NivelEscolaridade.getCurso",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.NivelEscolaridade.getEscolaridade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.NivelEscolaridade.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.NivelEscolaridade.getInicio",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.NivelEscolaridade.getInstituicao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.NivelEscolaridade.getPerfil",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.NivelEscolaridade.getResidenciaEm",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.NivelEscolaridade.getStatus",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.NivelEscolaridade.getTermino",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.NivelEscolaridade.setCurso",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.NivelEscolaridade.setEscolaridade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.NivelEscolaridade.setId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.NivelEscolaridade.setInicio",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.NivelEscolaridade.setInstituicao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.NivelEscolaridade.setPerfil",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.NivelEscolaridade.setResidenciaEm",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.NivelEscolaridade.setStatus",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.NivelEscolaridade.setTermino",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.NivelEscolaridade.validar",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.NivelEscolaridade.validarDatas",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil",1,33,3,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.equals",,3,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.getAreasCapacitacaoInstrutor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.getAreasCultura",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.getAreasCulturaInstrutor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.getAreasEsporte",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.getAreasEsporteInstrutor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.getAreasPesquisa",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.getAreasProfissional",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.getCurriculumLattes",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.getInstrutorCapacitacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.getInstrutorCultura",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.getInstrutorEsporte",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.getPathCurriculum",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.getUsuario",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.hashCode",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.setAreasCapacitacaoInstrutor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.setAreasCultura",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.setAreasCulturaInstrutor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.setAreasEsporte",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.setAreasEsporteInstrutor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.setAreasPesquisa",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.setAreasProfissional",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.setCurriculumLattes",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.setId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.setInstrutorCapacitacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.setInstrutorCultura",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.setInstrutorEsporte",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.setPathCurriculum",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.setUsuario",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Perfil.verificarValidade",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdioma",1,14,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdioma.getCompreensao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdioma.getEscrita",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdioma.getFala",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdioma.getIdioma",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdioma.getLeitura",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdioma.getPerfil",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdioma.getPerfilIdiomaKey",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdioma.setCompreensao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdioma.setEscrita",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdioma.setFala",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdioma.setIdioma",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdioma.setLeitura",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdioma.setPerfil",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdioma.setPerfilIdiomaKey",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdiomaKey",1,6,1,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdiomaKey.PerfilIdiomaKey",,1,,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdiomaKey.PerfilIdiomaKey",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdiomaKey.getIdiomaId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdiomaKey.getPerfilId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdiomaKey.setIdiomaId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilIdiomaKey.setPerfilId",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilPreferencia",1,11,1,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilPreferencia.PerfilPreferencia",,1,,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilPreferencia.PerfilPreferencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilPreferencia.getItemPreferencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilPreferencia.getPerfil",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilPreferencia.getPerfilPreferenciaKey",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilPreferencia.getPreferencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilPreferencia.setItemPreferencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilPreferencia.setPerfil",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilPreferencia.setPerfilPreferenciaKey",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilPreferencia.setPreferencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilPreferencia.toString",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilPreferenciaKey",1,6,1,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilPreferenciaKey.PerfilPreferenciaKey",,1,,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilPreferenciaKey.PerfilPreferenciaKey",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilPreferenciaKey.getPerfilId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilPreferenciaKey.getPreferenciaId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilPreferenciaKey.setPerfilId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.PerfilPreferenciaKey.setPreferenciaId",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Preferencia",1,4,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Preferencia.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Preferencia.getNome",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Preferencia.setId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Preferencia.setNome",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade",1,86,4,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.atualizarConsolidacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.atualizarNormalizacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.atualizarValidacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.cadastroUpdate",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.consolidar",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.desconsolidar",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.desvalidar",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getCompetencias",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getCompetenciasAtuais",,4,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getCompetenciasChefia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getCompetenciasComissao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getCompetenciasConsolidado",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getDificuldade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getDificuldadeAtual",,4,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getDificuldadeChefia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getDificuldadeComissao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getDificuldadeConsolidado",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getImpacto",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getImpactoAtual",,4,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getImpactoChefia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getImpactoComissao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getImpactoConsolidado",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getImportancia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getMapeamento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getTitulo",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getTituloAtual",,4,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getTituloChefia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getTituloComissao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getTituloConsolidado",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getUnidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getUsuarioChefia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getUsuarioComissao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getUsuarioConsolidacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.getUsuarioGestor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.isConsolidada",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.isEditada",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.isExcluida",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.isValidada",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setCompetencias",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setCompetenciasChefia",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setCompetenciasComissao",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setCompetenciasConsolidado",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setConsolidada",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setDificuldade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setDificuldadeChefia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setDificuldadeComissao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setDificuldadeConsolidado",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setEditada",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setExcluida",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setImpacto",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setImpactoChefia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setImpactoComissao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setImpactoConsolidado",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setImportancia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setMapeamento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setTitulo",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setTituloChefia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setTituloComissao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setTituloConsolidado",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setUnidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setUsuarioChefia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setUsuarioComissao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setUsuarioConsolidacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setUsuarioGestor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.setValidada",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Responsabilidade.validacaoUpdate",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.ResponsabilidadeFilter",1,6,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ResponsabilidadeFilter.getSituacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ResponsabilidadeFilter.getSubunidades",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ResponsabilidadeFilter.getUnidades",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ResponsabilidadeFilter.setSituacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ResponsabilidadeFilter.setSubunidades",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ResponsabilidadeFilter.setUnidades",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.ResponsabilidadeSearch",1,8,1,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.ResponsabilidadeSearch.ResponsabilidadeSearch",,1,,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.ResponsabilidadeSearch.ResponsabilidadeSearch",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ResponsabilidadeSearch.getMapeamento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ResponsabilidadeSearch.getSituacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ResponsabilidadeSearch.getUnidades",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ResponsabilidadeSearch.setMapeamento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ResponsabilidadeSearch.setSituacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ResponsabilidadeSearch.setUnidades",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.ResponsabilidadeSpecification",5,11,1,2
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.ResponsabilidadeSpecification.ResponsabilidadeSpecification",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.ResponsabilidadeSpecification.toPredicate",,10,,2
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade",1,23,3,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade.equals",,3,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade.getChefe",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade.getNome",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade.getSigla",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade.getUnidadePai",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade.getViceChefe",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade.hasPermissionCRUD",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade.hashCode",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade.isChefe",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade.isChefeOrViceChefeUnidadePai",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade.isExcluida",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade.isViceChefe",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade.prepararMapUnidades",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade.setChefe",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade.setExcluida",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade.setId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade.setNome",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade.setSigla",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade.setUnidadePai",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Unidade.setViceChefe",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.UnidadeMapeada",1,11,1,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.UnidadeMapeada.addAllUnidades",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.UnidadeMapeada.addUnidade",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.UnidadeMapeada.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.UnidadeMapeada.getMapeamento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.UnidadeMapeada.getUnidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.UnidadeMapeada.getUnidades",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.UnidadeMapeada.setId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.UnidadeMapeada.setMapeamento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.UnidadeMapeada.setUnidade",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario",1,37,3,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.equals",,3,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.existeUmChefe",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.existeUmViceChefe",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.getAuthorities",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.getChefe",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.getDadosPessoais",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.getDadosProfissionais",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.getEmail",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.getPassword",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.getPerfil",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.getRoles",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.getUnidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.getUsername",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.getViceChefe",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.hashCode",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.isAccountNonExpired",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.isAccountNonLocked",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.isCredentialsNonExpired",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.isEnabled",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.isHabilitado",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.isSubordinado",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.prepararMapServidores",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.setDadosPessoais",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.setDadosProfissionais",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.setEmail",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.setHabilitado",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.setId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.setPassword",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.setPerfil",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.setUnidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.toString",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.verificarSeEhChefe",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.Usuario.verificarSeEhViceChefe",,1,,0
+Package,"br.ufc.quixada.npi.gestaocompetencia.model.dto",1,18,1,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.dto.CompetenciaAutoAvaliacaoDTO",1,7,1,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.dto.CompetenciaAutoAvaliacaoDTO.CompetenciaAutoAvaliacaoDTO",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.dto.CompetenciaAutoAvaliacaoDTO.getAvaliacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.dto.CompetenciaAutoAvaliacaoDTO.getCompetencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.dto.CompetenciaAutoAvaliacaoDTO.getComportamento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.dto.CompetenciaAutoAvaliacaoDTO.setAvaliacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.dto.CompetenciaAutoAvaliacaoDTO.setCompetencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.dto.CompetenciaAutoAvaliacaoDTO.setComportamento",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.dto.CompetenciaDTO",1,5,1,0
+Public Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.dto.CompetenciaDTO.CompetenciaDTO",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.dto.CompetenciaDTO.getCompetencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.dto.CompetenciaDTO.getSomatorioImportancias",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.dto.CompetenciaDTO.setCompetencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.dto.CompetenciaDTO.setSomatorioImportancias",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.model.dto.NotaDTO",1,6,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.dto.NotaDTO.addNotaAvaliacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.dto.NotaDTO.getNotaAvaliacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.dto.NotaDTO.getNotaResultado",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.dto.NotaDTO.setNotaAvaliacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.dto.NotaDTO.setNotaResultado",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.dto.NotaDTO.toString",,1,,0
+Package,"br.ufc.quixada.npi.gestaocompetencia.model.enums",1,68,1,0
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.CategoriaComportamento",1,2,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.CategoriaComportamento.valueOf",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.CategoriaComportamento.values",,1,,0
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Dificuldade",1,7,1,0
+Private Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Dificuldade.Dificuldade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Dificuldade.getDescricao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Dificuldade.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Dificuldade.getValor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Dificuldade.toString",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Dificuldade.valueOf",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Dificuldade.values",,1,,0
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.EscalaAvaliacao",1,8,1,0
+Private Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.enums.EscalaAvaliacao.EscalaAvaliacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.EscalaAvaliacao.getDescricao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.EscalaAvaliacao.getEscala",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.EscalaAvaliacao.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.EscalaAvaliacao.getRating",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.EscalaAvaliacao.getValor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.EscalaAvaliacao.valueOf",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.EscalaAvaliacao.values",,1,,0
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Escolaridade",1,6,1,0
+Private Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Escolaridade.Escolaridade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Escolaridade.ehPrecisoLimparCurso",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Escolaridade.getDescricao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Escolaridade.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Escolaridade.valueOf",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Escolaridade.values",,1,,0
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Etapa",1,2,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Etapa.valueOf",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Etapa.values",,1,,0
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.EtapaResponsabilidade",1,2,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.EtapaResponsabilidade.valueOf",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.EtapaResponsabilidade.values",,1,,0
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Impacto",1,6,1,0
+Private Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Impacto.Impacto",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Impacto.getDescricao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Impacto.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Impacto.getValor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Impacto.valueOf",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Impacto.values",,1,,0
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Lotacao",1,2,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Lotacao.valueOf",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.Lotacao.values",,1,,0
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.NivelIdioma",1,6,1,0
+Private Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.enums.NivelIdioma.NivelIdioma",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.NivelIdioma.getDescricao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.NivelIdioma.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.NivelIdioma.getValor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.NivelIdioma.valueOf",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.NivelIdioma.values",,1,,0
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.SituacaoComportamento",1,2,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.SituacaoComportamento.valueOf",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.SituacaoComportamento.values",,1,,0
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.SituacaoResponsabilidade",1,2,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.SituacaoResponsabilidade.valueOf",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.SituacaoResponsabilidade.values",,1,,0
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.StatusExperienciaProfissional",1,5,1,0
+Private Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.enums.StatusExperienciaProfissional.StatusExperienciaProfissional",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.StatusExperienciaProfissional.getDescricao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.StatusExperienciaProfissional.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.StatusExperienciaProfissional.valueOf",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.StatusExperienciaProfissional.values",,1,,0
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.StatusNivelEscolaridade",1,5,1,0
+Private Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.enums.StatusNivelEscolaridade.StatusNivelEscolaridade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.StatusNivelEscolaridade.getDescricao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.StatusNivelEscolaridade.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.StatusNivelEscolaridade.valueOf",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.StatusNivelEscolaridade.values",,1,,0
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.TipoAreaPerfil",1,2,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.TipoAreaPerfil.valueOf",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.TipoAreaPerfil.values",,1,,0
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.TipoCompetencia",1,2,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.TipoCompetencia.valueOf",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.TipoCompetencia.values",,1,,0
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.TipoExperienciaProfissional",1,7,1,0
+Private Constructor,"br.ufc.quixada.npi.gestaocompetencia.model.enums.TipoExperienciaProfissional.TipoExperienciaProfissional",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.TipoExperienciaProfissional.getDescricao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.TipoExperienciaProfissional.getId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.TipoExperienciaProfissional.setDescricao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.TipoExperienciaProfissional.setId",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.TipoExperienciaProfissional.valueOf",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.TipoExperienciaProfissional.values",,1,,0
+Public Enum Type,"br.ufc.quixada.npi.gestaocompetencia.model.enums.VinculoProfissional",1,2,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.VinculoProfissional.valueOf",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.model.enums.VinculoProfissional.values",,1,,0
+Package,"br.ufc.quixada.npi.gestaocompetencia.repository",0,0,0,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.AreaCapacitacaoRepository",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.AreaCapacitacaoRepository.findAllByCompetencia",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.AreaCapacitacaoRepository.findAllByUsuario",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.AreaCapacitacaoRepository.findByUsuarioAndCompetencia",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.AreaPerfilRepository",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.AreaPerfilRepository.findAllByTipoAndUsuario",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.AreaPerfilRepository.findAllByTipoEquals",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.AreaPerfilRepository.findAllByUsuario",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.AvaliacaoRepository",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.AvaliacaoRepository.findAvaliacao",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.AvaliacaoRepository.findAvaliacaoByAvaliado",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.AvaliacaoRepository.findAvaliacaoByAvaliador",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.AvaliacaoRepository.findAvaliacaoDiagnosticoByAvaliado",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.AvaliacaoRepository.findAvaliacaoDiagnosticoByAvaliador",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.AvaliacaoRepository.findByAvaliadorAndAvaliadoAndTipoAndIgnoradaFalse",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.AvaliacaoRepository.findByAvaliadorAndTipoAndIgnoradaFalse",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.AvaliacaoRepository.findByAvaliadorAndUnidade",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.AvaliacaoRepository.findByUnidade",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.AvaliacaoRepository.findIgnoradas",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.AvaliacaoRepository.findItemAvaliacaoByAvaliado",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.AvaliacaoRepository.findJustificadasUnidade",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.AvaliacaoRepository.findJustificadasUsuario",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.AvalicaoComportamentalRepository",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.AvalicaoComportamentalRepository.findByAvaliacao",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.AvalicaoComportamentalRepository.findByAvaliacaoAndFator",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.ComissaoRepository",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.ComissaoRepository.findByUsuario",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.CompetenciaRepository",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.CompetenciaRepository.findAllByTipoEqualsAndUnidadeIsNull",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.CompetenciaRepository.findByTipo",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.CompetenciaRepository.findByUnidadeAndTipo",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.CompetenciaRepository.findCompetencias",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.CompetenciaRepository.getComportamentosComportamentais",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.ComportamentoRepository",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.ComportamentoRepository.countByServidorAndMapeamentoAndExcluidoFalse",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.ComportamentoRepository.findByMapeamento",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.ComportamentoRepository.findByMapeamentoAndConsolidadoTrueOrderByDescricaoAtualizada",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.ComportamentoRepository.findByServidorAndMapeamentoAndCategoria",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.CursoCapacitacaoRepository",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.CursoCapacitacaoRepository.findAllByPerfil",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.DiagnosticoRepository",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.DiagnosticoRepository.findAllByUnidade",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.DiagnosticoRepository.findFirstByUsuario",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.DiagnosticoRepository.findLast",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.DiagnosticoRepository.isIniciado",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.ExperienciaProfissionalRepository",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.ExperienciaProfissionalRepository.findAllByPerfil",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.IdiomaRepository",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.IdiomaRepository.findAllByUsuario",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.ItemAvaliacaoRepository",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.ItemAvaliacaoRepository.findByAvaliacaoAndFator",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.ItemAvaliacaoRepository.findByAvaliacaoAndResponsabilidade",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.ItemPreferenciaRepository",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.ItemPreferenciaRepository.findByPreferencia",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.MapeamentoRepository",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.MapeamentoRepository.findAll",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.MapeamentoRepository.findAllByUnidade",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.MapeamentoRepository.findAllSubunidadesInPerComportComissao",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.MapeamentoRepository.findAllSubunidadesInPerRespCom",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.MapeamentoRepository.findAllSubunidadesInPerRespConsol",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.MapeamentoRepository.findAllUnidadesInPerComportComissao",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.MapeamentoRepository.findAllUnidadesInPerRespChefiaSuperior",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.MapeamentoRepository.findAllUnidadesMapeadasByMapeamento",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.MapeamentoRepository.findByUnidadeAndMapeamento",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.MapeamentoRepository.findLast",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.MapeamentoRepository.findParentUnidades",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.MapeamentoRepository.findUnidades",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.MapeamentoRepository.getFinalizados",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.NivelEscolaridadeRepository",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.NivelEscolaridadeRepository.findAllByPerfil",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.PerfilIdiomaRepository",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.PerfilIdiomaRepository.findAllByIdioma",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.PerfilIdiomaRepository.findAllByPerfil",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.PerfilIdiomaRepository.findAllByPerfilAndIdioma",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.PerfilPreferenciaRepository",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.PerfilPreferenciaRepository.findByPerfil",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.PerfilPreferenciaRepository.findByPerfilAndPreferencia",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.PerfilPreferenciaRepository.findByPreferencia",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.PerfilRepository",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.PerfilRepository.findByUsuario",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.PerfilRepository.findPathCurriculum",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.PreferenciaRepository",0,0,0,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.ResponsabilidadeRepository",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.ResponsabilidadeRepository.findByUnidadeAndMapeamento",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.ResponsabilidadeRepository.findByUnidadeAndMapeamentoAndConsolidadaTrue",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.ResponsabilidadeRepository.findByUsuarioGestor",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.UnidadeMapeadaRepository",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.UnidadeMapeadaRepository.findByMapeamento",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.UnidadeMapeadaRepository.findByUnidade",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.UnidadeMapeadaRepository.findFirstMapeamentoByUnidade",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.UnidadeRepository",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.UnidadeRepository.findAllFromMapeamento",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.UnidadeRepository.findAllSubunidadesByUnidade",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.UnidadeRepository.findAllUnidadesByChefe",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.UnidadeRepository.findAllWithMapeamento",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.UnidadeRepository.findByUnidadePai",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.repository.UsuarioRepository",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.UsuarioRepository.countByUnidade",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.UsuarioRepository.countByUsuariosConcluidosUnidade",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.UsuarioRepository.findByEmail",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.UsuarioRepository.findByUnidade",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.UsuarioRepository.hasUnidadesFilhas",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.UsuarioRepository.isChefia",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.repository.UsuarioRepository.isViceChefia",,0,,0
+Package,"br.ufc.quixada.npi.gestaocompetencia.service",0,0,0,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.AreaCapacitacaoService",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.AreaCapacitacaoService.create",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.AreaCapacitacaoService.delete",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.AreaCapacitacaoService.findAll",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.AreaCapacitacaoService.findByCompetencia",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.AreaCapacitacaoService.findByUsuario",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.AreaCapacitacaoService.findByUsuarioAndCompetencia",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.AreaCapacitacaoService.update",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.AreaPerfilService",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.AreaPerfilService.create",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.AreaPerfilService.delete",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.AreaPerfilService.findAll",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.AreaPerfilService.findByTipo",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.AreaPerfilService.findByTipoAndUsuario",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.AreaPerfilService.findByUsuario",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.AreaPerfilService.update",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.ArquivoService",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ArquivoService.uploadProfileImage",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.ComissaoService",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ComissaoService.isMembroComissao",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.CompetenciaService",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.CompetenciaService.findById",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.CompetenciaService.getCompetencias",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.CompetenciaService.getComportamentosComportamentais",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.CompetenciaService.save",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.ComportamentoService",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ComportamentoService.countByServidorAndMapeamento",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ComportamentoService.delete",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ComportamentoService.deleteByComissao",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ComportamentoService.findByCategoria",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ComportamentoService.findById",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ComportamentoService.findByMapeamento",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ComportamentoService.findConsolidadosByMapeamento",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ComportamentoService.save",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ComportamentoService.search",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ComportamentoService.update",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.CursoCapacitacaoService",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.CursoCapacitacaoService.create",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.CursoCapacitacaoService.delete",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.CursoCapacitacaoService.findAll",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.CursoCapacitacaoService.findByPerfil",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.CursoCapacitacaoService.update",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.DiagnosticoService",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.DiagnosticoService.create",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.DiagnosticoService.delete",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.DiagnosticoService.findAll",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.DiagnosticoService.findAllSecondary",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.DiagnosticoService.findByUsuario",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.DiagnosticoService.findLast",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.DiagnosticoService.findbyUnidade",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.DiagnosticoService.getDiagnosticoAvaliacao",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.DiagnosticoService.update",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.DiagnosticoService.validarDatas",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.DiagnosticoService.validarPrazos",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.DiagnosticoService.verifyAccess",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.DiagnosticoService.verifySecondaryAccess",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.ExperienciaProfissionalService",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ExperienciaProfissionalService.create",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ExperienciaProfissionalService.delete",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ExperienciaProfissionalService.findAll",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ExperienciaProfissionalService.findByPerfil",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ExperienciaProfissionalService.update",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.IdiomaService",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.IdiomaService.create",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.IdiomaService.delete",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.IdiomaService.findAll",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.IdiomaService.findByUsuario",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.IdiomaService.update",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.ItemAvaliacaoService",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ItemAvaliacaoService.avaliar",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ItemAvaliacaoService.delete",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ItemAvaliacaoService.findAll",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ItemAvaliacaoService.findByFator",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ItemAvaliacaoService.findByResponsabilidade",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ItemAvaliacaoService.save",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ItemAvaliacaoService.search",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ItemAvaliacaoService.update",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.ItemPreferenciaService",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ItemPreferenciaService.create",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ItemPreferenciaService.delete",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ItemPreferenciaService.findAll",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ItemPreferenciaService.findByPreferencia",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ItemPreferenciaService.update",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.MapeamentoService",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.MapeamentoService.create",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.MapeamentoService.delete",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.MapeamentoService.findAll",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.MapeamentoService.findAllByUnidade",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.MapeamentoService.findAllSecondary",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.MapeamentoService.findAllSubunidadesInNormalizacao",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.MapeamentoService.findAllUnidadesInNormalizacao",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.MapeamentoService.findAllUnidadesMapeadas",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.MapeamentoService.findByUnidade",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.MapeamentoService.findLastMapeamento",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.MapeamentoService.findMapeamentoByUsuario",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.MapeamentoService.getFinalizados",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.MapeamentoService.getUnidadesByMapeamento",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.MapeamentoService.isEmAndamento",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.MapeamentoService.pertence",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.MapeamentoService.update",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.MapeamentoService.verifyAccess",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.MapeamentoService.verifySecondaryAccess",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.NivelEscolaridadeService",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.NivelEscolaridadeService.create",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.NivelEscolaridadeService.delete",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.NivelEscolaridadeService.findAll",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.NivelEscolaridadeService.findByPerfil",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.NivelEscolaridadeService.update",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilIdiomaService",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilIdiomaService.create",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilIdiomaService.delete",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilIdiomaService.findAll",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilIdiomaService.findByIdioma",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilIdiomaService.findByPerfil",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilIdiomaService.findByPerfilAndIdioma",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilIdiomaService.update",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilPreferenciaService",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilPreferenciaService.create",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilPreferenciaService.delete",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilPreferenciaService.findAll",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilPreferenciaService.findByPerfil",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilPreferenciaService.findByPerfilAndPreferencia",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilPreferenciaService.findByPreferencia",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilPreferenciaService.update",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilService",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilService.create",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilService.delete",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilService.findByUsuario",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.PerfilService.update",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.PreferenciaService",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.PreferenciaService.create",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.PreferenciaService.delete",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.PreferenciaService.findAll",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.PreferenciaService.update",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.ResponsabilidadeService",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ResponsabilidadeService.delete",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ResponsabilidadeService.findAll",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ResponsabilidadeService.findAll",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ResponsabilidadeService.findById",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ResponsabilidadeService.findConsolidadas",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ResponsabilidadeService.save",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ResponsabilidadeService.search",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.ResponsabilidadeService.update",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.UnidadeService",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.UnidadeService.findAll",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.UnidadeService.findAllSubunidadesByUnidade",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.UnidadeService.findAllUnidadesByGestor",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.UnidadeService.findAllWithMapeamento",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.UnidadeService.findByUnidadePai",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.UnidadeService.hasPermissionRead",,0,,0
+Public Interface,"br.ufc.quixada.npi.gestaocompetencia.service.UsuarioService",0,0,0,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.UsuarioService.countByUnidade",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.UsuarioService.countByUsuariosConcluidosUnidade",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.UsuarioService.findByEmail",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.UsuarioService.findByUnidade",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.UsuarioService.hasUnidadesFilhas",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.UsuarioService.isChefia",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.UsuarioService.isViceChefia",,0,,0
+Abstract Method,"br.ufc.quixada.npi.gestaocompetencia.service.UsuarioService.update",,0,,0
+Package,"br.ufc.quixada.npi.gestaocompetencia.service.impl",1,271,4,3
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AreaCapacitacaoServiceImpl",1,7,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AreaCapacitacaoServiceImpl.create",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AreaCapacitacaoServiceImpl.delete",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AreaCapacitacaoServiceImpl.findAll",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AreaCapacitacaoServiceImpl.findByCompetencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AreaCapacitacaoServiceImpl.findByUsuario",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AreaCapacitacaoServiceImpl.findByUsuarioAndCompetencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AreaCapacitacaoServiceImpl.update",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AreaPerfilServiceImpl",1,7,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AreaPerfilServiceImpl.create",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AreaPerfilServiceImpl.delete",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AreaPerfilServiceImpl.findAll",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AreaPerfilServiceImpl.findByTipo",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AreaPerfilServiceImpl.findByTipoAndUsuario",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AreaPerfilServiceImpl.findByUsuario",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AreaPerfilServiceImpl.update",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ArquivoServiceImpl",2,5,1,1
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ArquivoServiceImpl.getOriginalLengthInBytes",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ArquivoServiceImpl.uploadProfileImage",,3,,1
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoComportamentalService",1,6,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoComportamentalService.createAvaliacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoComportamentalService.deleteAvaliacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoComportamentalService.findByAvaliacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoComportamentalService.findByAvaliacaoAndFator",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoComportamentalService.put",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoComportamentalService.updateAvaliacao",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService",2,78,4,3
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.avaliar",,2,,1
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.createBase",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.createComplex",,4,,2
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.createComplexAvaliacaoPares",,6,,3
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.createComplexAvaliacaoSubordinado",,4,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.createComplexSecondaryAccess",,10,,3
+Lambda Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.createComplexSecondaryAccess.(lambda_expr_1)",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.createSimple",,4,,1
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.criarAvaliacaoParesLimiteAleatorioMaiorQue10",,4,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.delete",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.executarRotinaAvaliacaoNaoRealizada",,5,,1
+Lambda Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.executarRotinaAvaliacaoNaoRealizada.(lambda_expr_1)",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.existeUmViceChefe",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.find",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.findAvaliacoes",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.findAvaliacoesByAvaliadorAndAvaliadoAndTipo",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.findAvaliacoesJustificadasUnidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.findAvaliacoesJustificadasUsuario",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.findByAvaliado",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.findByAvaliadorAndUnidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.findById",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.findComplete",,5,,2
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.getAvaliacaoComplexa",,2,,1
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.getAvaliacaoComplexaSecondaryAcess",,2,,1
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.getAvaliacaoSimples",,2,,1
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.hasNoAvaliacoes",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.justificar",,11,,3
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.obterResultadoAvaliacao",,3,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.postAvaliacao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.AvaliacaoService.removerJustificativa",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ComissaoServiceImpl",1,1,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ComissaoServiceImpl.isMembroComissao",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.CompetenciaServiceImpl",1,5,1,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.CompetenciaServiceImpl.findById",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.CompetenciaServiceImpl.getCompetencias",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.CompetenciaServiceImpl.getComportamentosComportamentais",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.CompetenciaServiceImpl.save",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ComportamentoServiceImpl",1,10,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ComportamentoServiceImpl.countByServidorAndMapeamento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ComportamentoServiceImpl.delete",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ComportamentoServiceImpl.deleteByComissao",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ComportamentoServiceImpl.findByCategoria",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ComportamentoServiceImpl.findById",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ComportamentoServiceImpl.findByMapeamento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ComportamentoServiceImpl.findConsolidadosByMapeamento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ComportamentoServiceImpl.save",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ComportamentoServiceImpl.search",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ComportamentoServiceImpl.update",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.CursoCapacitacaoServiceImpl",1,5,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.CursoCapacitacaoServiceImpl.create",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.CursoCapacitacaoServiceImpl.delete",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.CursoCapacitacaoServiceImpl.findAll",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.CursoCapacitacaoServiceImpl.findByPerfil",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.CursoCapacitacaoServiceImpl.update",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.DiagnosticoServiceImpl",1,26,3,3
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.DiagnosticoServiceImpl.create",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.DiagnosticoServiceImpl.delete",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.DiagnosticoServiceImpl.findAll",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.DiagnosticoServiceImpl.findAllSecondary",,4,,3
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.DiagnosticoServiceImpl.findByUnidadePai",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.DiagnosticoServiceImpl.findByUsuario",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.DiagnosticoServiceImpl.findLast",,2,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.DiagnosticoServiceImpl.findbyUnidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.DiagnosticoServiceImpl.getDiagnosticoAvaliacao",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.DiagnosticoServiceImpl.update",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.DiagnosticoServiceImpl.validarDatas",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.DiagnosticoServiceImpl.validarPrazos",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.DiagnosticoServiceImpl.verifyAccess",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.DiagnosticoServiceImpl.verifySecondaryAccess",,3,,2
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ExperienciaProfissionalServiceImpl",1,5,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ExperienciaProfissionalServiceImpl.create",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ExperienciaProfissionalServiceImpl.delete",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ExperienciaProfissionalServiceImpl.findAll",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ExperienciaProfissionalServiceImpl.findByPerfil",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ExperienciaProfissionalServiceImpl.update",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.IdiomaServiceImpl",1,5,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.IdiomaServiceImpl.create",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.IdiomaServiceImpl.delete",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.IdiomaServiceImpl.findAll",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.IdiomaServiceImpl.findByUsuario",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.IdiomaServiceImpl.update",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ItemAvaliacaoServiceImpl",1,10,1,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ItemAvaliacaoServiceImpl.avaliar",,3,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ItemAvaliacaoServiceImpl.delete",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ItemAvaliacaoServiceImpl.findAll",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ItemAvaliacaoServiceImpl.findByFator",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ItemAvaliacaoServiceImpl.findByResponsabilidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ItemAvaliacaoServiceImpl.save",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ItemAvaliacaoServiceImpl.search",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ItemAvaliacaoServiceImpl.update",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ItemPreferenciaServiceImpl",1,5,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ItemPreferenciaServiceImpl.create",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ItemPreferenciaServiceImpl.delete",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ItemPreferenciaServiceImpl.findAll",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ItemPreferenciaServiceImpl.findByPreferencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ItemPreferenciaServiceImpl.update",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl",1,33,3,3
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl.create",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl.delete",,3,,1
+Lambda Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl.delete.(lambda_expr_1)",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl.findAll",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl.findAllByUnidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl.findAllSecondary",,4,,3
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl.findAllSubunidadesInNormalizacao",,4,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl.findAllUnidadesInNormalizacao",,3,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl.findAllUnidadesMapeadas",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl.findByUnidade",,2,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl.findByUnidadePai",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl.findLastMapeamento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl.findMapeamentoByUsuario",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl.getFinalizados",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl.getUnidadesByMapeamento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl.isEmAndamento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl.pertence",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl.update",,2,,0
+Lambda Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl.update.(lambda_expr_1)",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl.verifyAccess",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.MapeamentoServiceImpl.verifySecondaryAccess",,3,,2
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.NivelEscolaridadeServiceImpl",1,7,1,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.NivelEscolaridadeServiceImpl.create",,3,,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.NivelEscolaridadeServiceImpl.delete",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.NivelEscolaridadeServiceImpl.findAll",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.NivelEscolaridadeServiceImpl.findByPerfil",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.NivelEscolaridadeServiceImpl.update",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilIdiomaServiceImpl",1,7,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilIdiomaServiceImpl.create",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilIdiomaServiceImpl.delete",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilIdiomaServiceImpl.findAll",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilIdiomaServiceImpl.findByIdioma",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilIdiomaServiceImpl.findByPerfil",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilIdiomaServiceImpl.findByPerfilAndIdioma",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilIdiomaServiceImpl.update",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilPreferenciaServiceImpl",1,7,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilPreferenciaServiceImpl.create",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilPreferenciaServiceImpl.delete",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilPreferenciaServiceImpl.findAll",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilPreferenciaServiceImpl.findByPerfil",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilPreferenciaServiceImpl.findByPerfilAndPreferencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilPreferenciaServiceImpl.findByPreferencia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilPreferenciaServiceImpl.update",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilServiceImpl",1,9,1,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilServiceImpl.create",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilServiceImpl.delete",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilServiceImpl.deleteCurriculum",,2,,1
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilServiceImpl.deleteCurriculumByPath",,2,,1
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilServiceImpl.findByUsuario",,1,,0
+Private Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilServiceImpl.findPathCurriculum",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PerfilServiceImpl.update",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PreferenciaServiceImpl",1,4,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PreferenciaServiceImpl.create",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PreferenciaServiceImpl.delete",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PreferenciaServiceImpl.findAll",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.PreferenciaServiceImpl.update",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ResponsabilidadeServiceImpl",1,8,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ResponsabilidadeServiceImpl.delete",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ResponsabilidadeServiceImpl.findAll",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ResponsabilidadeServiceImpl.findAll",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ResponsabilidadeServiceImpl.findById",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ResponsabilidadeServiceImpl.findConsolidadas",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ResponsabilidadeServiceImpl.save",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ResponsabilidadeServiceImpl.search",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.ResponsabilidadeServiceImpl.update",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UnidadeMapeadaService",1,3,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UnidadeMapeadaService.create",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UnidadeMapeadaService.delete",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UnidadeMapeadaService.findByMapeamento",,1,,0
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UnidadeServiceImpl",1,8,3,2
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UnidadeServiceImpl.findAll",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UnidadeServiceImpl.findAllSubunidadesByUnidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UnidadeServiceImpl.findAllUnidadesByGestor",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UnidadeServiceImpl.findAllWithMapeamento",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UnidadeServiceImpl.findByUnidadePai",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UnidadeServiceImpl.hasPermissionRead",,3,,2
+Public Class,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UsuarioServiceImpl",1,10,1,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UsuarioServiceImpl.countByUnidade",,2,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UsuarioServiceImpl.countByUsuariosConcluidosUnidade",,2,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UsuarioServiceImpl.findByEmail",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UsuarioServiceImpl.findByUnidade",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UsuarioServiceImpl.hasUnidadesFilhas",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UsuarioServiceImpl.isChefia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UsuarioServiceImpl.isViceChefia",,1,,0
+Public Method,"br.ufc.quixada.npi.gestaocompetencia.service.impl.UsuarioServiceImpl.update",,1,,0

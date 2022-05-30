@@ -1,0 +1,2 @@
+Não existe um arquivo csv para a medição do atributo de tamanho porque não foi possível gerá-lo no Understand. 
+Desta forma, adicionamos um arquivo .udb que permite visualizar tal medição.

@@ -1,0 +1,26 @@
+.anamnese__btn-floating {
+	position: absolute;
+	bottom: -28px;
+	right: 28px;
+}
+
+.anamnese__hide-form {
+	display: none;
+}
+
+.drag {
+	cursor: pointer;
+	handle: '.tabela-perguntas' ;
+}
+
+tr.primeiro > td{
+	padding-top: 35px;
+}
+
+tr.ultimo > td{
+	padding-bottom: 35px;
+}
+
+.ordem{
+	font-weight: bold;
+}

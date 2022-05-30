@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dataset>
+
+	<odontograma id="1" />
+	
+	<paciente id="1" nome="Paciente Um" cpf="12345678900" odontograma_id="1"/>
+	
+	<aluno id="1" nome="Aluno Um" email="aluno1@email.com" matricula="850912" ano_ingresso="2015" semestre_ingresso="1" />
+	
+	<tipo_patologia id="1" descricao="Carie" nome="Carie" />
+	<tipo_patologia id="2" descricao="Tartaro" nome="Tartaro" />
+	
+	<tratamento id="1" data="2016-11-14 10:00:00" descricao="tratamento do paciente" responsavel_id="1" />
+	
+	<patologia id="1" data="2016-11-14 10:00:00" dente="D11" descricao="Diagnóstico de cárie" face="O" local="FACE" odontograma_id="1" tipo_id="1" />
+	<patologia id="2" data="2016-11-14 10:00:00" dente="D12" descricao="Diagnóstico de tártaro" face="D" local="FACE" odontograma_id="1" tipo_id="2" />
+	<patologia id="3" data="2016-11-14 10:00:00" dente="D13" descricao="Diagnóstico de cárie" face="O" local="FACE" odontograma_id="1" tipo_id="1" tratamento_id="1" />
+	
+</dataset>

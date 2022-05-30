@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="error/error-base"
+    th:with="currentPage='pagina-modelo'">
+
+	<head>
+	
+	    <title>Erro</title>
+	    
+	</head>
+
+	<section layout:fragment="conteudo" class="centered-layout full relative-position">
+		<div class="circular-card card no-margin teal">
+			<span class="error-label white-text">403</span>
+		</div>
+		<span class="bold-text text-48 deep-orange-text">ACESSO NEGADO
+			<i class="mdi mdi-emoticon-sad bold-text text-48 deep-orange-text"></i>
+		</span>
+	</section>
+
+	<section layout:fragment="js">
+	
+		<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+			
+	</section>
+
+</html>

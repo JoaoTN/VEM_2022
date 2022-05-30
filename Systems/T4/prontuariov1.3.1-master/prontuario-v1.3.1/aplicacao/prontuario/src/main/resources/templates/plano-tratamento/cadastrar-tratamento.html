@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="paciente/detalhes-base"
+	th:with="currentPage='pacientes',currentSubPage='tratamentos'">
+
+<section layout:fragment="tab-content">
+	<div th:fragment="cadastrarTratamento">
+		<form class="card" th:action="@{/paciente/plano-tratamento/cadastrar}" method="post"
+			th:object="${tratamento}">
+			<input type="hidden" name="paciente" th:value="${paciente.id}" /> 
+			<input
+				type="hidden" name="responsavel" id="responsavel"
+				th:value="${#authentication.principal.id}" />
+
+			<div class="card-content">
+
+				<div class="row">
+
+					<div class="col l6 m6 s12">
+						<div class="input-field">
+							<select th:field="${tratamento.clinica}" id="clinica" class="form-control">
+								<option th:each="clinica : ${clinicas}" th:value="${clinica.id}"
+									th:text="${clinica.nome}">
+								</option>
+							</select> <label for="clinica">Clínica</label>
+						</div>
+					</div>
+
+					<div class="col l6 m6 s12">
+						<div class="input-field">
+							<select th:fragment="campo-prioridade" name="prioridade"
+								id="prioridade" class="form-control"
+								th:field="${tratamento.prioridade}">
+								<option th:value="1" th:text="${1}" />
+                                <option th:value="2" th:text="${2}" />
+                                <option th:value="3" th:text="${3}" />
+                                <option th:value="4" th:text="${4}" />
+                                <option th:value="5" th:text="${5}" />
+							</select> <label for="prioridade">Prioridade</label>
+						</div>
+					</div>
+
+				</div>
+				
+				
+
+			</div>
+
+			<div class="card-action right-align">
+
+				<a th:href="@{/paciente/} + ${paciente.id} + @{/tratamentos}"
+					class="btn btn-flat waves-effect">Cancelar</a>
+				<button type="submit" class="btn waves-effect waves-light">Salvar</button>
+
+			</div>
+
+		</form>
+
+	</div>
+</section>
+
+<section layout:fragment="js-paciente">
+
+	<!-- SCRIPTS - Coloque aqui os scripts desta página -->
+	<script type="text/javascript"
+		th:src="@{/js/atendimento/cadastro-atendimento.js}"></script>
+
+</section>
+
+</html>
