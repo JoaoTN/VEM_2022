@@ -1,4 +1,4 @@
-<h3 align="left"> VEM 2022 </h3>
+<h3 align="left"> SEET 2022 </h3>
 
 <h1 align="left">Perceptions and Difficulties of Software Engineering Students in
 Code Smells Refactoring</h1>
